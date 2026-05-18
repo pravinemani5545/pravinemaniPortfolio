@@ -1,0 +1,18 @@
+---
+const { variant = 'default' } = Astro.props;
+---
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© PRAVINE MANI · 2026 · TORONTO</span>
+    <div class="right">
+      <a href="/services/">SERVICES</a>
+      <a href="/work/">WORK</a>
+      <a href="/ai/">AI</a>
+      <a href="/stack/">STACK</a>
+      <a href="/now/">NOW</a>
+      <a href="/contact/">CONTACT</a>
+      <a href="https://aiopsforge.dev">AIOPSFORGE</a>
+    </div>
+    <span>{variant === 'case-study' ? 'CASE STUDY · 2026-05' : 'BUILDING IN PUBLIC · 24 HR REPLIES'}</span>
+  </div>
+</footer>

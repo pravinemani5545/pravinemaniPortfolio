@@ -1,0 +1,413 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="AI — Pravine Mani · workflows, skills, MCPs, dev process"
+  description="How I use AI day-to-day. Custom Claude Code skills, MCP servers I plug into, Vercel cron + serverless workflow patterns, and the dev process around Plan Mode + sub-agents."
+>
+
+<section class="page-hero">
+  <div class="breadcrumb"><span class="gr">$</span> cat ~/ai/manifest.md <span class="you">→ how i use ai in daily work</span></div>
+  <h1>How I use AI.<br><span class="accent">Workflows · skills · MCPs · process.</span></h1>
+  <p class="lead">Less marketing, more <strong style="color: var(--text-primary);">infrastructure notes</strong>. Below is the actual surface — the workflows I run on a schedule, the Claude Code skills I install across machines, the MCP servers plugged into my main editor, and the dev process I default to when shipping. Borrow freely. Reach out if anything is unclear.</p>
+</section>
+
+<!-- ===== 1. WORKFLOWS ===== -->
+<section class="section" id="workflows">
+  <div class="section-head reveal">
+    <div class="label">01 · workflows</div>
+    <h2>What I run on a schedule.</h2>
+    <p>Code-first automation. Every workflow below lives in a git repo, runs on <strong style="color: var(--text-primary);">Vercel cron + serverless functions</strong>, costs zero platform fees, and is debuggable when it breaks. No n8n, no Make, no Zapier.</p>
+  </div>
+
+  <div class="ai-grid">
+    <div class="ai-card reveal" data-acc="green">
+      <div class="ai-card-head">
+        <span class="num">01</span>
+        <span class="freq">DAILY · 06:00 ET</span>
+      </div>
+      <h3>Morning operations brief</h3>
+      <p>Claude reads my Plausible analytics, GitHub commits, Whop new-member events, and Beehiiv subscriber delta from the past 24h. Outputs a 5-line summary into a Slack DM. Cron job + Anthropic API + Resend.</p>
+      <div class="ai-card-stack">
+        <span class="chip">Vercel Cron</span><span class="chip">Anthropic API</span><span class="chip">Plausible API</span><span class="chip">Slack Webhook</span>
+      </div>
+    </div>
+
+    <div class="ai-card reveal" data-acc="red">
+      <div class="ai-card-head">
+        <span class="num">02</span>
+        <span class="freq">DAILY · 09:00 ET</span>
+      </div>
+      <h3>Competitor watch</h3>
+      <p>Scrapes a list of competitor sites' new content via Firecrawl, summarizes diffs vs yesterday, surfaces anything that crosses a relevance threshold. Stores everything in Vercel KV so I can read back across days.</p>
+      <div class="ai-card-stack">
+        <span class="chip">Vercel Cron</span><span class="chip">Firecrawl</span><span class="chip">Claude 4.7</span><span class="chip">Vercel KV</span>
+      </div>
+    </div>
+
+    <div class="ai-card reveal" data-acc="purple">
+      <div class="ai-card-head">
+        <span class="num">03</span>
+        <span class="freq">WEEKLY · MON 08:00</span>
+      </div>
+      <h3>Newsletter draft generator</h3>
+      <p>Pulls the week's shipped commits across my repos, my notable Obsidian notes (tagged <code>#newsletter</code>), and saved highlights. Drafts the Beehiiv issue in Markdown. I edit, then publish — Claude doesn't ship copy on its own.</p>
+      <div class="ai-card-stack">
+        <span class="chip">Vercel Cron</span><span class="chip">GitHub API</span><span class="chip">Obsidian MCP</span><span class="chip">Beehiiv API</span>
+      </div>
+    </div>
+
+    <div class="ai-card reveal" data-acc="blue">
+      <div class="ai-card-head">
+        <span class="num">04</span>
+        <span class="freq">EVENT · LEAD CAPTURE</span>
+      </div>
+      <h3>Lead enrichment + routing</h3>
+      <p>Webhook fires when a contact form submits. Claude enriches name+company via web search, classifies fit against my ICP, scores urgency from the message text, drops the row into Supabase + Slack with a recommended action.</p>
+      <div class="ai-card-stack">
+        <span class="chip">Vercel Function</span><span class="chip">Claude 4.7</span><span class="chip">Supabase</span><span class="chip">Slack</span>
+      </div>
+    </div>
+
+    <div class="ai-card reveal" data-acc="green">
+      <div class="ai-card-head">
+        <span class="num">05</span>
+        <span class="freq">EVENT · CLIENT ENGAGEMENT</span>
+      </div>
+      <h3>Client onboarding sequence</h3>
+      <p>Stripe payment triggers a sequence: signed-contract PDF generation, Notion workspace clone with kickoff template, scheduling-link email, day-1 onboarding video Loom-link delivery. Driven by a single state machine in Vercel.</p>
+      <div class="ai-card-stack">
+        <span class="chip">Vercel Function</span><span class="chip">Stripe Webhook</span><span class="chip">Notion API</span><span class="chip">Resend</span>
+      </div>
+    </div>
+
+    <div class="ai-card reveal" data-acc="red">
+      <div class="ai-card-head">
+        <span class="num">06</span>
+        <span class="freq">CONTINUOUS · HEADLESS</span>
+      </div>
+      <h3>Claude Code headless agent</h3>
+      <p>Long-running Claude Code session that watches a queue of issues in a private repo, picks one off at a time, drafts a PR, runs tests, asks me for review only when blocked. Pattern: <code>claude code --headless</code> wrapped in a process supervisor.</p>
+      <div class="ai-card-stack">
+        <span class="chip">Claude Code Headless</span><span class="chip">GitHub API</span><span class="chip">Sub-agents</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="section-head reveal">
+    <div class="label">02 · claude code skills</div>
+    <h2>Slash commands I install on every machine.</h2>
+    <p>Custom skills live at <code>~/.claude/skills/</code>. Each one is a markdown spec + optional helper scripts that Claude invokes when I type <code>/&lt;name&gt;</code>. The first three are mine; the rest came from <a href="https://github.com/elia-alberti" target="_blank">EliaAlberti's stack</a>. Source: <a href="https://github.com/pravinemani5545/personalClaudeSkills" target="_blank">github.com/pravinemani5545/personalClaudeSkills</a>.</p>
+  </div>
+
+  <div class="skill-list">
+    <div class="skill-row reveal">
+      <div class="cmd">/growth-sprint</div>
+      <div class="src">MINE</div>
+      <div class="desc"><strong>30-day outbound + content sprint planner.</strong> Takes your goal (MRR, leads, list growth), drafts a per-week schedule with the specific channel mix, message cadence, and content blocks. Outputs to a calendar-ready markdown.</div>
+    </div>
+    <div class="skill-row reveal">
+      <div class="cmd">/design-system</div>
+      <div class="src">MINE</div>
+      <div class="desc"><strong>Apply Terminal DS to any project.</strong> Guided interview (accent, vibe, theme, motion, exclusions), then writes the tokens + per-page style integrations. The same skill produced this site.</div>
+    </div>
+    <div class="skill-row reveal">
+      <div class="cmd">/artifact</div>
+      <div class="src">MINE</div>
+      <div class="desc"><strong>Convert any conversation into a saveable artifact.</strong> Strips back-and-forth, structures the output, asks where to save (Obsidian vault, GitHub gist, file in repo). Used for spec drafting + post-mortems.</div>
+    </div>
+    <div class="skill-row reveal">
+      <div class="cmd">/preserve</div>
+      <div class="src">ELIAALBERTI</div>
+      <div class="desc"><strong>Update CLAUDE.md with current-session learnings.</strong> Catches phase changes, decisions, new file structure, blockers — appends to the project's CLAUDE.md with size-policed sections (auto-archives older than 7 days).</div>
+    </div>
+    <div class="skill-row reveal">
+      <div class="cmd">/compress</div>
+      <div class="src">ELIAALBERTI</div>
+      <div class="desc"><strong>Summarize a long conversation into a resumable note.</strong> Output goes to <code>~/.claude/compress/</code> with a date stamp. Paired with <code>/resume</code> to pick up later without spinning up full context.</div>
+    </div>
+    <div class="skill-row reveal">
+      <div class="cmd">/resume</div>
+      <div class="src">ELIAALBERTI</div>
+      <div class="desc"><strong>Load a compressed conversation back into context.</strong> Reads the latest <code>/compress</code> output, gives Claude the resume + the user's stated next step. Avoids re-explaining 30 messages of background.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. MCP SERVERS ===== -->
+<section class="section" id="mcp">
+  <div class="section-head reveal">
+    <div class="label">03 · mcp servers</div>
+    <h2>What's plugged into Claude.</h2>
+    <p>MCP (Model Context Protocol) lets Claude talk directly to apps. Below is what runs in my Claude Code config. Half are official Anthropic servers; the rest are community / self-hosted. The Obsidian one is patched locally — upstream has been abandoned.</p>
+  </div>
+
+  <div class="mcp-grid">
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">context7</span><span class="badge">DOCS</span></div><p>Up-to-date library docs without web search. Most-used by far — every framework question goes through it first.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">github</span><span class="badge">CORE</span></div><p>Read repos, search code, list/comment PRs, file issues. Replaces 80% of the <code>gh</code> CLI for me.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">obsidian</span><span class="badge">SELF-HOST</span></div><p>Read/write notes in my vault. Patched locally (PR #44 applied) — upstream abandoned.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">supabase</span><span class="badge">DATA</span></div><p>Query + write to my Supabase projects. Saves the round-trip through their dashboard for ad-hoc tasks.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">playwright</span><span class="badge">TESTING</span></div><p>Drive a browser from Claude. Visual diff checks, scroll-state debugging, scraping with real DOM.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">notion</span><span class="badge">DOCS</span></div><p>Create pages, search workspaces, comment on docs. Used heavily during client onboarding sequences.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">gmail</span><span class="badge">COMMS</span></div><p>Search threads, draft replies, manage labels. Mostly for triaging incoming during heads-down sessions.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google calendar</span><span class="badge">SCHED</span></div><p>List/create/update events. Lets Claude propose meeting times around my actual availability.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google drive</span><span class="badge">STORE</span></div><p>Read docs from Drive into context, create new docs, share. Less use than the others but indispensable when needed.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">figma</span><span class="badge">DESIGN</span></div><p>Read design files into Claude for layout reference. Useful when porting a Figma spec to code.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">canva</span><span class="badge">DESIGN</span></div><p>Asset generation for newsletter headers + social posts. The result is rarely shipped as-is, but it's a fast first draft.</p></div>
+  </div>
+
+  <div class="mcp-note reveal">
+    <strong>NOTE:</strong> Obsidian MCP transport wedges silently after the first tool call in a session — Claude Code transport layer issue, not the server. Fix: <code>/mcp</code> reconnect. Documented in my CLAUDE.md so I don't burn a session debugging it again.
+  </div>
+</section>
+
+<!-- ===== 4. DEV PROCESS ===== -->
+<section class="section" id="process">
+  <div class="section-head reveal">
+    <div class="label">04 · dev process</div>
+    <h2>How AI fits into the actual work.</h2>
+    <p>Less about prompts, more about workflow. The four patterns below are the actual moves I make day-to-day. None of them require buying anything.</p>
+  </div>
+
+  <div class="process-grid-ai">
+    <div class="proc-card reveal">
+      <div class="proc-num">01</div>
+      <h3>Plan Mode first, code after.</h3>
+      <p>For anything touching 3+ files or with unclear scope, I open Plan Mode before touching code. Claude proposes the approach, I push back, we converge. Then exit plan mode and ship. Cuts ~70% of "build the wrong thing" rework.</p>
+      <div class="proc-tag">PLAN MODE</div>
+    </div>
+
+    <div class="proc-card reveal">
+      <div class="proc-num">02</div>
+      <h3>Sub-agents for parallel research.</h3>
+      <p>When I need to explore 5+ files or check 3+ different code paths, I spawn Explore sub-agents in parallel rather than serial reads. Main context stays clean, sub-agents return distilled findings. Faster + cheaper.</p>
+      <div class="proc-tag">SUB-AGENTS</div>
+    </div>
+
+    <div class="proc-card reveal">
+      <div class="proc-num">03</div>
+      <h3>Multi-window orchestration.</h3>
+      <p>Tabbed Claude Code sessions — one per project — so I can switch context without losing thread. Combined with <code>/compress</code> + <code>/resume</code>, I can pick up a week-old task in 60 seconds.</p>
+      <div class="proc-tag">MULTI-WINDOW</div>
+    </div>
+
+    <div class="proc-card reveal">
+      <div class="proc-num">04</div>
+      <h3>Headless mode for autonomous tasks.</h3>
+      <p>Claude Code <code>--headless</code> runs in CI / on a server, no terminal needed. I use it for nightly repo grooming (dependency PRs, lint fixes, doc updates), data pipeline rebuilds, and the long-running issue-triage agent above.</p>
+      <div class="proc-tag">HEADLESS</div>
+    </div>
+
+    <div class="proc-card reveal">
+      <div class="proc-num">05</div>
+      <h3>Hooks for guardrails.</h3>
+      <p>Pre-commit hooks call Claude to review the diff before it's committed. Pre-push hooks gate against direct pushes to <code>main</code>. Stop-hook on long-running sessions to summarize state. All in <code>~/.claude/settings.json</code>.</p>
+      <div class="proc-tag">HOOKS</div>
+    </div>
+
+    <div class="proc-card reveal">
+      <div class="proc-num">06</div>
+      <h3>Memory + CLAUDE.md per project.</h3>
+      <p>Every project has a CLAUDE.md with conventions, known bugs, gotchas. Claude reads it on session start. <code>/preserve</code> keeps it fresh. Cuts context-rebuild time to near-zero across sessions.</p>
+      <div class="proc-tag">MEMORY</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section">
+  <div class="ai-cta reveal">
+    <h2>Want to apply this to your business?<br><span class="acc">Book a 30-min call.</span></h2>
+    <p>If any of the workflows above sound useful — competitor watch, lead enrichment, morning briefs, client onboarding — they're <strong>productized</strong>. The 30-min call ends with a written quote.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Book the call →</a>
+      <a href="/services/" class="cta-btn secondary">See services</a>
+    </div>
+  </div>
+</section>
+
+</Base>
+
+<style is:global>
+.reveal { opacity: 0; transform: translateY(16px); transition: all 600ms cubic-bezier(0.2, 0, 0, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.section-head p code,
+.skill-row .desc code,
+.mcp-card p code,
+.mcp-note code,
+.proc-card p code,
+.ai-cta p code,
+.ai-card p code {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.88em;
+  color: var(--green); background: var(--bg-tertiary);
+  padding: 1px 6px; border: 1px solid var(--border);
+}
+
+/* AI cards (workflows) */
+.ai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 1100px) { .ai-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px) { .ai-grid { grid-template-columns: 1fr; } }
+
+.ai-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  padding: 24px 26px; display: flex; flex-direction: column; gap: 14px;
+  position: relative; transition: all 300ms cubic-bezier(0.2,0,0,1);
+}
+.ai-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--card-accent, var(--green)); opacity: 0.85;
+}
+.ai-card[data-acc="green"] { --card-accent: var(--green); }
+.ai-card[data-acc="red"] { --card-accent: var(--red); }
+.ai-card[data-acc="purple"] { --card-accent: #a855f7; }
+.ai-card[data-acc="blue"] { --card-accent: var(--blue); }
+.ai-card:hover { border-color: var(--card-accent); transform: translateY(-3px); }
+
+.ai-card-head { display: flex; justify-content: space-between; align-items: center; }
+.ai-card-head .num {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em;
+  color: var(--card-accent); text-transform: uppercase; font-weight: 600;
+}
+.ai-card-head .freq {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em;
+  color: var(--text-dim); text-transform: uppercase;
+}
+.ai-card h3 {
+  font-family: 'Space Grotesk', sans-serif; font-size: clamp(18px, 1.4vw, 22px);
+  font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.25;
+}
+.ai-card p {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px;
+  color: var(--text-secondary); line-height: 1.6;
+}
+.ai-card-stack { display: flex; gap: 5px; flex-wrap: wrap; margin-top: auto; padding-top: 8px; }
+.ai-card-stack .chip {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 3px 8px;
+  background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-secondary);
+}
+
+/* Skill list */
+.skill-list { background: var(--bg-card); border: 1px solid var(--border); }
+.skill-row {
+  display: grid; grid-template-columns: 220px 110px 1fr;
+  gap: 22px; align-items: center;
+  padding: 18px 24px; border-bottom: 1px solid var(--border);
+  transition: background 150ms;
+}
+.skill-row:last-child { border-bottom: none; }
+.skill-row:hover { background: var(--bg-card-hover, var(--bg-secondary)); }
+.skill-row .cmd {
+  font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--green); font-weight: 600;
+}
+.skill-row .src {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em;
+  color: var(--text-dim); text-transform: uppercase;
+  padding: 4px 10px; border: 1px solid var(--border); width: max-content;
+}
+.skill-row .desc {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px;
+  color: var(--text-secondary); line-height: 1.55;
+}
+.skill-row .desc strong { color: var(--text-primary); }
+@media (max-width: 900px) {
+  .skill-row { grid-template-columns: 1fr; gap: 6px; padding: 14px 18px; }
+}
+
+/* MCP grid */
+.mcp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 980px) { .mcp-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .mcp-grid { grid-template-columns: 1fr; } }
+
+.mcp-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;
+  transition: all 200ms;
+}
+.mcp-card:hover { border-color: var(--border-green); transform: translateY(-2px); }
+.mcp-head { display: flex; align-items: center; gap: 10px; }
+.mcp-head .dot { width: 7px; height: 7px; }
+.mcp-head .name {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px;
+  color: var(--text-primary); font-weight: 600;
+}
+.mcp-head .badge {
+  margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 9px;
+  letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase;
+  padding: 2px 7px; border: 1px solid var(--border);
+}
+.mcp-card p {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px;
+  color: var(--text-secondary); line-height: 1.55;
+}
+
+.mcp-note {
+  background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid #ffd84a;
+  padding: 16px 20px; margin-top: 18px;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55;
+}
+.mcp-note strong { color: #ffd84a; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; display: inline-block; margin-right: 6px; }
+
+/* Process grid */
+.process-grid-ai { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+@media (max-width: 980px) { .process-grid-ai { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .process-grid-ai { grid-template-columns: 1fr; } }
+
+.proc-card {
+  background: var(--bg-card); padding: 24px 26px;
+  display: flex; flex-direction: column; gap: 12px;
+  position: relative; overflow: hidden;
+  transition: background 200ms;
+}
+.proc-card:hover { background: var(--bg-card-hover, var(--bg-secondary)); }
+.proc-num {
+  font-family: 'Space Grotesk', sans-serif; font-size: 64px; font-weight: 700;
+  color: var(--bg-tertiary); line-height: 0.9; letter-spacing: -0.03em;
+  position: absolute; right: -4px; bottom: -18px; opacity: 0.6; pointer-events: none;
+}
+.proc-card > * { position: relative; z-index: 1; }
+.proc-card h3 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600;
+  color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.3;
+}
+.proc-card p {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 14px;
+  color: var(--text-secondary); line-height: 1.6;
+}
+.proc-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.14em; color: var(--green); text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Final CTA */
+.ai-cta {
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+  border: 1px solid var(--border-green);
+  padding: 48px 40px; text-align: center; position: relative; overflow: hidden;
+}
+.ai-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,255,65,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ai-cta > * { position: relative; z-index: 1; }
+.ai-cta h2 {
+  font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em;
+  margin-bottom: 14px; line-height: 1.15;
+}
+.ai-cta h2 .acc { color: var(--green); }
+.ai-cta p {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 16.5px;
+  color: var(--text-secondary); line-height: 1.6;
+  margin-bottom: 24px; max-width: 620px; margin-left: auto; margin-right: auto;
+}
+.ai-cta p strong { color: var(--text-primary); }
+</style>
