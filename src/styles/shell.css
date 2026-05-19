@@ -190,7 +190,7 @@ body.nav-locked { overflow: hidden; }
   .section { padding: 56px 22px; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .nav-toggle { display: inline-flex; }
   .nav-links {
     display: none;
