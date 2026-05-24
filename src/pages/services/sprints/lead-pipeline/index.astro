@@ -1,0 +1,84 @@
+---
+import Base from '../../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Lead Pipeline Sprint",
+  "serviceType": "Build Sprint",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Fixed-scope 7-day build of a Facebook Lead Ads → CRM → lifecycle email pipeline. Code-first on Vercel + Supabase + Resend.",
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4500" } },
+  "url": "https://pravinemani.com/services/sprints/lead-pipeline/"
+};
+---
+
+<Base title="Lead Pipeline Sprint — 7-day Build · Pravine Mani" description="Fixed-scope 7-day Lead Pipeline Sprint. Facebook Lead Ads → HMAC webhook → CRM → lifecycle email. Built code-first on Vercel + Supabase + Resend. From $4,500." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <a href="/services/marketing-automation/" style="color: var(--text-dim);">marketing automation</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">lead pipeline sprint</span>
+  </div>
+  <h1>Lead Pipeline Sprint.<br><span class="accent">7 days. $4,500. Shipped.</span></h1>
+  <p class="lead">A productized 7-day build of an end-to-end lead pipeline — Facebook Lead Ads or LinkedIn Lead Gen → HMAC-verified webhook → CRM or Supabase → admin dashboard → lifecycle email. Idempotent. Observable. Yours forever.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+    <a href="/work/case-studies/cisnet/" class="cta-btn secondary">See it shipped at CISNET</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sprint-grid">
+    <div class="sprint-col">
+      <h2>What you get</h2>
+      <ul>
+        <li>Facebook Lead Ads OR LinkedIn Lead Gen Forms webhook handler</li>
+        <li>HMAC signature verification on every event</li>
+        <li>Supabase storage with idempotency keys + retry-safe writes</li>
+        <li>Admin dashboard surface (sales sees the leads)</li>
+        <li>Resend or Postmark transactional flow (Day-0 / Day-2 / Day-7)</li>
+        <li>Slack/email notification on high-signal events</li>
+        <li>14 days of post-ship support included</li>
+        <li>Full source + deployment guide + Loom walkthrough</li>
+      </ul>
+    </div>
+    <div class="sprint-col">
+      <h2>How it goes</h2>
+      <ul>
+        <li><strong>Day 0</strong> — 30-min scoping call (free). Pick lead source, CRM, email vendor.</li>
+        <li><strong>Day 1–2</strong> — Webhook handler + HMAC + Supabase schema</li>
+        <li><strong>Day 3–4</strong> — Admin dashboard + Slack hook</li>
+        <li><strong>Day 5–6</strong> — Resend lifecycle sequences + copy</li>
+        <li><strong>Day 7</strong> — Deploy, smoke-test with live FB form, handoff Loom</li>
+        <li><strong>+14 days</strong> — Bug fixes + small adjustments included</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sprint-foot">
+    <div class="sprint-meta">
+      <span class="badge">FROM $4,500 · 7-DAY</span>
+      <span class="badge">REMOTE · 50% UPFRONT</span>
+      <span class="badge">YOU OWN THE CODE</span>
+    </div>
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+  </div>
+</section>
+
+</Base>
+<style is:global>
+.sprint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 32px; }
+@media (max-width: 880px) { .sprint-grid { grid-template-columns: 1fr; } }
+.sprint-col h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.8vw, 28px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.015em; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.sprint-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.sprint-col ul li { padding-left: 20px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
+.sprint-col ul li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.sprint-col ul li strong { color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.06em; }
+.sprint-foot { background: var(--bg-card); border: 1px solid var(--border-green); padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.sprint-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.sprint-meta .badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; padding: 5px 10px; border: 1px solid var(--green); }
+</style>

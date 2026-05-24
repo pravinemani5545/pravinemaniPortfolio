@@ -1,0 +1,72 @@
+---
+import Base from '../../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom MCP Server Sprint",
+  "serviceType": "Build Sprint",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Fixed-scope 5-day build of a custom Model Context Protocol server for your domain workflow. Tool registration, Zod-validated inputs, eval suite, Claude Code installable.",
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "3500" } },
+  "url": "https://pravinemani.com/services/sprints/mcp-server/"
+};
+---
+
+<Base title="MCP Server Sprint — 5-day Build · Pravine Mani" description="Fixed-scope 5-day build of a custom Model Context Protocol server for your domain workflow. Tool registration, Zod inputs, eval suite. From $3,500." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <a href="/services/ai/" style="color: var(--text-dim);">ai</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">mcp server sprint</span>
+  </div>
+  <h1>MCP Server Sprint.<br><span class="accent">5 days. $3,500. Claude-ready.</span></h1>
+  <p class="lead">A productized 5-day build of a custom Model Context Protocol server for your domain — Claude Code (or any MCP-compatible agent) can call your APIs, databases, and internal tools as first-class actions. Includes typed inputs, eval suite, and the repo template.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+    <a href="/services/ai/" class="cta-btn secondary">Back to AI services</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sprint-grid">
+    <div class="sprint-col">
+      <h2>What you get</h2>
+      <ul>
+        <li>Custom MCP server in TypeScript</li>
+        <li>3–6 tools registered, scoped to your domain</li>
+        <li>Zod-validated inputs + typed errors</li>
+        <li>HMAC verification on any external triggers</li>
+        <li>Eval suite — 10 golden inputs, runs in CI</li>
+        <li>Deployment to Vercel or your stack</li>
+        <li>Claude Code skill that auto-installs the server</li>
+        <li>Repo template + README + Loom handoff</li>
+      </ul>
+    </div>
+    <div class="sprint-col">
+      <h2>How it goes</h2>
+      <ul>
+        <li><strong>Day 0</strong> — 30-min scoping call (free). Lock the 3–6 tools.</li>
+        <li><strong>Day 1</strong> — Server scaffold + tool definitions + Zod schemas</li>
+        <li><strong>Day 2–3</strong> — Tool implementations + auth + tests</li>
+        <li><strong>Day 4</strong> — Eval suite + CI hook</li>
+        <li><strong>Day 5</strong> — Deploy + Claude Code skill + handoff Loom</li>
+        <li><strong>+14 days</strong> — Bug fixes + small tool additions included</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sprint-foot">
+    <div class="sprint-meta">
+      <span class="badge">FROM $3,500 · 5-DAY</span>
+      <span class="badge">REMOTE · 50% UPFRONT</span>
+      <span class="badge">YOU OWN THE CODE</span>
+    </div>
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+  </div>
+</section>
+
+</Base>

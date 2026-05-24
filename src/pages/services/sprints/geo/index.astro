@@ -1,0 +1,71 @@
+---
+import Base from '../../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "GEO / AI-Search Sprint",
+  "serviceType": "Build Sprint",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Fixed-scope 3-day build of GEO / AI-search visibility — llms.txt, passage-level schema, FAQPage markup, brand-mention audit. Optimized for Perplexity, ChatGPT, Claude, Google AI Overviews.",
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2500" } },
+  "url": "https://pravinemani.com/services/sprints/geo/"
+};
+---
+
+<Base title="GEO / AI-Search Sprint — 3-day Build · Pravine Mani" description="Fixed-scope 3-day build of GEO / AI-search visibility — llms.txt, passage schema, FAQPage, brand-mention audit. Built for Perplexity, ChatGPT, Claude, Google AI Overviews. From $2,500." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <a href="/services/seo/" style="color: var(--text-dim);">seo + geo</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">geo / ai-search sprint</span>
+  </div>
+  <h1>GEO / AI-Search Sprint.<br><span class="accent">3 days. $2,500. AI-search ready.</span></h1>
+  <p class="lead">A productized 3-day build for AI search visibility — llms.txt designed properly, passage-level schema, FAQPage + HowTo markup, brand-mention audit across AI-cited sources. Built for Perplexity, ChatGPT search, Claude, and Google AI Overviews.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+    <a href="/services/seo/" class="cta-btn secondary">Back to SEO + GEO</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sprint-grid">
+    <div class="sprint-col">
+      <h2>What you get</h2>
+      <ul>
+        <li>Curated llms.txt covering services, case studies, contact</li>
+        <li>Passage-level schema on key pages (one-sentence answers + dl)</li>
+        <li>FAQPage + HowTo JSON-LD where they earn the SERP feature</li>
+        <li>robots.txt explicitly allowlisting AI crawlers</li>
+        <li>Brand-mention audit across Perplexity + ChatGPT + Claude</li>
+        <li>Citation-readiness scorecard with prioritized fixes</li>
+        <li>30-day execution plan for the rest</li>
+        <li>7 days of post-ship support included</li>
+      </ul>
+    </div>
+    <div class="sprint-col">
+      <h2>How it goes</h2>
+      <ul>
+        <li><strong>Day 0</strong> — 30-min scoping call (free). Identify priority pages.</li>
+        <li><strong>Day 1</strong> — Audit current state (Search Console, AI citations, schema gaps)</li>
+        <li><strong>Day 2</strong> — llms.txt + Schema.org + robots updates shipped</li>
+        <li><strong>Day 3</strong> — Page-level passage citability rewrites + handoff Loom</li>
+        <li><strong>+7 days</strong> — Indexing watch + small adjustments included</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sprint-foot">
+    <div class="sprint-meta">
+      <span class="badge">FROM $2,500 · 3-DAY</span>
+      <span class="badge">REMOTE · 50% UPFRONT</span>
+      <span class="badge">YOU OWN THE CODE</span>
+    </div>
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+  </div>
+</section>
+
+</Base>

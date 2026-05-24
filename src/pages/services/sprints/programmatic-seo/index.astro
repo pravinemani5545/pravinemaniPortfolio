@@ -1,0 +1,72 @@
+---
+import Base from '../../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Programmatic SEO Sprint",
+  "serviceType": "Build Sprint",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Fixed-scope 7-day build of 50+ programmatic SEO pages with Schema.org + sitemap + internal-link graph. Real indexing, zero thin-content risk.",
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4500" } },
+  "url": "https://pravinemani.com/services/sprints/programmatic-seo/"
+};
+---
+
+<Base title="Programmatic SEO Sprint — 50+ Indexable Pages in 7 Days · Pravine Mani" description="Fixed-scope 7-day build of 50+ programmatic SEO pages with Schema.org + sitemap + internal-link graph. Indexed, ranking, no thin content. From $4,500." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <a href="/services/seo/" style="color: var(--text-dim);">seo + geo</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">programmatic seo sprint</span>
+  </div>
+  <h1>Programmatic SEO Sprint.<br><span class="accent">50+ indexable pages in 7 days. $4,500.</span></h1>
+  <p class="lead">A productized 7-day build of a real programmatic SEO surface — cert × city, service × geo, industry × use-case, whatever pair fits your business. Schema.org per page, sitemap segmentation, internal-link graph, zero thin-content risk.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+    <a href="/work/case-studies/cisnet/" class="cta-btn secondary">See 200+ pages at CISNET</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sprint-grid">
+    <div class="sprint-col">
+      <h2>What you get</h2>
+      <ul>
+        <li>Content matrix design (which pairs ship, which to skip)</li>
+        <li>50+ programmatic pages generated from a structured data model</li>
+        <li>Per-page Schema.org JSON-LD (Service / Product / Course / Local)</li>
+        <li>Segmented sitemap.xml + robots.txt + llms.txt</li>
+        <li>Internal-link graph between pages</li>
+        <li>Thin-content safeguards (per-page uniqueness rules)</li>
+        <li>Submission to Google Search Console + Bing Webmaster Tools</li>
+        <li>14 days of post-ship support included</li>
+      </ul>
+    </div>
+    <div class="sprint-col">
+      <h2>How it goes</h2>
+      <ul>
+        <li><strong>Day 0</strong> — 30-min scoping call (free). Lock the cert × city pair (or your equivalent).</li>
+        <li><strong>Day 1–2</strong> — Content matrix + data model + template skeleton</li>
+        <li><strong>Day 3–4</strong> — Schema.org + 50+ page generation</li>
+        <li><strong>Day 5</strong> — Sitemap + internal-link graph + llms.txt</li>
+        <li><strong>Day 6–7</strong> — Search Console submission + crawl validation + handoff</li>
+        <li><strong>+14 days</strong> — Bug fixes + indexing-watch + small adjustments included</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sprint-foot">
+    <div class="sprint-meta">
+      <span class="badge">FROM $4,500 · 7-DAY</span>
+      <span class="badge">REMOTE · 50% UPFRONT</span>
+      <span class="badge">YOU OWN THE CODE</span>
+    </div>
+    <a href="/contact/" class="cta-btn">Book the sprint →</a>
+  </div>
+</section>
+
+</Base>
