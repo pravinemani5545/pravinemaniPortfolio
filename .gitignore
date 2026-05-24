@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# vercel
+.vercel/
+
+# claude code session logs (local only)
+CC-Session-Logs/
