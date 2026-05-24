@@ -1,8 +1,49 @@
 ---
 import Base from '../../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "CISNET — Marketing site + SEO + admin portal rebuild",
+      "description": "3-month solo engagement migrating a Toronto IT certification training company off legacy PHP onto Next.js 16 with 200+ programmatic SEO pages, 70+ individually-mapped redirects, and a custom admin portal.",
+      "datePublished": "2025-12-01",
+      "dateModified": "2026-05-24",
+      "image": "https://pravinemani.com/og-default.png",
+      "author": {
+        "@type": "Person",
+        "name": "Pravine Manivannan",
+        "url": "https://pravinemani.com/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Pravine Manivannan",
+        "url": "https://pravinemani.com/"
+      },
+      "mainEntityOfPage": "https://pravinemani.com/work/case-studies/cisnet/",
+      "about": ["Programmatic SEO", "Next.js", "Marketing Automation", "Schema.org"]
+    },
+    {
+      "@type": "Service",
+      "name": "Marketing site + SEO + admin portal rebuild",
+      "serviceType": "Custom Build",
+      "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+      "areaServed": "Toronto, Canada"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pravinemani.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://pravinemani.com/work/" },
+        { "@type": "ListItem", "position": 3, "name": "Case Studies", "item": "https://pravinemani.com/work/case-studies/" },
+        { "@type": "ListItem", "position": 4, "name": "CISNET", "item": "https://pravinemani.com/work/case-studies/cisnet/" }
+      ]
+    }
+  ]
+};
 ---
 
-<Base title="CISNET — Case Study · Pravine Mani" description="Marketing site + SEO infrastructure rebuild for a Toronto IT certification training company. 200+ pSEO pages, 70+ redirects, full lead pipeline, shipped in 3 months." footerVariant="case-study">
+<Base title="CISNET — Case Study · Pravine Mani" description="Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. 200+ pSEO pages, custom admin portal, lead pipeline. 3 months solo." footerVariant="case-study" jsonLd={jsonLd}>
 
 
 <section class="page-hero">

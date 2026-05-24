@@ -1,0 +1,136 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Case Studies — Pravine Mani",
+  "description": "Public case studies of client engagements: full builds, what was scoped, what shipped.",
+  "url": "https://pravinemani.com/work/case-studies/"
+};
+---
+
+<Base title="Case Studies — Pravine Mani · AI, SEO & Marketing Automation Work" description="Public case studies of client engagements. CISNET — Next.js 16 migration, 200+ programmatic SEO pages, custom admin portal. More to come." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/work/" style="color: var(--text-dim);">work</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">case studies</span>
+  </div>
+  <h1>Case studies.<br><span class="accent">The work, fully unredacted.</span></h1>
+  <p class="lead">Public client case studies — what was scoped, what shipped, what got measured. Three more case studies in the publishing queue; this index will grow as approvals land.</p>
+</section>
+
+<section class="section">
+  <div class="cs-grid">
+
+    <a href="/work/case-studies/cisnet/" class="cs-card cs-live">
+      <div class="cs-head">
+        <div class="cs-logo">CIS<span class="acc">NET</span></div>
+        <div class="cs-meta">
+          <span class="status">CLIENT · LIVE</span>
+          <span class="when">2025-Q4 · 3 MO</span>
+        </div>
+      </div>
+      <div class="cs-body">
+        <h3>Marketing site + SEO + admin portal rebuild</h3>
+        <p>Toronto IT certification training company. Full migration off legacy PHP onto Next.js 16 with 200+ programmatic SEO pages, 70+ individually-mapped redirects, full Facebook Lead Ads + Stripe pipeline, and a custom admin portal for leads, enrollments, content, and payments. Shipped, live, ranking authority preserved through cutover.</p>
+        <div class="cs-stack">
+          <span class="chip">Next.js 16</span><span class="chip">Supabase</span><span class="chip">Stripe</span><span class="chip">Resend</span><span class="chip">FB Lead Ads API</span><span class="chip">Schema.org × 7</span>
+        </div>
+        <div class="cs-numbers">
+          <div class="m"><span class="k">PSEO PAGES</span><span class="v"><span class="bl">200+</span></span></div>
+          <div class="m"><span class="k">LEGACY REDIRECTS</span><span class="v">70+</span></div>
+          <div class="m"><span class="k">ADMIN PORTAL</span><span class="v"><span class="bl">FULL</span></span></div>
+          <div class="m"><span class="k">DELIVERY</span><span class="v">3 MO</span></div>
+        </div>
+        <span class="cs-cta">Read the case study →</span>
+      </div>
+    </a>
+
+    <div class="cs-card cs-coming">
+      <div class="cs-head">
+        <div class="cs-logo">[ REDACTED ]</div>
+        <div class="cs-meta">
+          <span class="status placeholder">DRAFTING · NDA HOLD</span>
+          <span class="when">2026-Q1 · 4 WK</span>
+        </div>
+      </div>
+      <div class="cs-body">
+        <h3>AI Workflow Sprint · Lead-triage agent</h3>
+        <p>Custom Claude Code skill + MCP server for a Toronto consultancy. Auto-classifies inbound leads, routes high-intent to the founder's inbox with summary + ICP score, drops the rest into a nurture pipeline. Approval pending; case study publishes Q3 2026.</p>
+        <div class="cs-stack">
+          <span class="chip">Claude Code</span><span class="chip">MCP</span><span class="chip">Supabase</span><span class="chip">Resend</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-card cs-coming">
+      <div class="cs-head">
+        <div class="cs-logo">[ REDACTED ]</div>
+        <div class="cs-meta">
+          <span class="status placeholder">DRAFTING · NDA HOLD</span>
+          <span class="when">2026-Q2 · 1 WK</span>
+        </div>
+      </div>
+      <div class="cs-body">
+        <h3>Programmatic SEO + GEO Audit</h3>
+        <p>Fixed-scope audit week for a SaaS company on AI search visibility. Schema gaps, llms.txt design, passage-citability rewrites, and a 30-day execution plan. Approval pending; case study publishes Q3 2026.</p>
+        <div class="cs-stack">
+          <span class="chip">Schema.org</span><span class="chip">llms.txt</span><span class="chip">GEO</span><span class="chip">Search Console</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cs-footer reveal">
+    <h2>Have a project that should be the next case study?<br><span class="accent">Let's scope it.</span></h2>
+    <p>Engagements taken on a first-come basis with capacity caps. Audits and sprints are usually scoped within a week of the call.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+      <a href="/services/" class="cta-btn secondary">See engagement shapes</a>
+    </div>
+  </div>
+</section>
+
+</Base>
+<style is:global>
+.cs-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.cs-card { background: var(--bg-card); border: 1px solid var(--border); padding: 0; position: relative; overflow: hidden; transition: all var(--dur-base, 200ms) var(--ease); display: block; }
+.cs-card.cs-live::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #dc2626; opacity: 0.85; }
+.cs-card.cs-live:hover { border-color: #dc2626; transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4); }
+.cs-card.cs-coming { opacity: 0.7; cursor: default; }
+.cs-card.cs-coming::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--text-dim); opacity: 0.4; }
+.cs-head { display: grid; grid-template-columns: 200px 1fr; gap: 0; align-items: stretch; }
+.cs-head .cs-logo { background: var(--bg-tertiary); border-right: 1px solid var(--border); padding: 22px 24px; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; min-height: 90px; }
+.cs-head .cs-logo .acc { color: #dc2626; }
+.cs-head .cs-meta { padding: 22px 28px; display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+.cs-head .cs-meta .status { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #dc2626; text-transform: uppercase; padding: 3px 8px; border: 1px solid #dc2626; width: max-content; }
+.cs-head .cs-meta .status.placeholder { color: var(--text-dim); border-color: var(--text-dim); }
+.cs-head .cs-meta .when { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; }
+.cs-body { padding: 24px 30px; display: flex; flex-direction: column; gap: 14px; }
+.cs-body h3 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 1.7vw, 26px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.015em; line-height: 1.2; }
+.cs-body p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(14.5px, 1.05vw, 17px); color: var(--text-secondary); line-height: 1.6; }
+.cs-stack { display: flex; gap: 5px; flex-wrap: wrap; }
+.cs-stack .chip { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-secondary); }
+.cs-numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding-top: 8px; }
+.cs-numbers .m { display: flex; flex-direction: column; gap: 3px; padding: 8px 12px; background: var(--bg-tertiary); border: 1px solid var(--border); }
+.cs-numbers .m .k { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; }
+.cs-numbers .m .v { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.cs-numbers .m .v .bl { color: #dc2626; }
+.cs-cta { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #dc2626; text-transform: uppercase; padding-top: 8px; border-top: 1px solid var(--border); margin-top: 4px; }
+.cs-card:hover .cs-cta { color: var(--text-primary); }
+@media (max-width: 720px) {
+  .cs-head { grid-template-columns: 1fr; }
+  .cs-head .cs-logo { border-right: none; border-bottom: 1px solid var(--border); }
+  .cs-numbers { grid-template-columns: repeat(2, 1fr); }
+}
+
+.cs-footer { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%); border: 1px solid var(--border-green); padding: 44px 36px; text-align: center; position: relative; overflow: hidden; margin-top: 32px; }
+.cs-footer::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center top, rgba(0,255,65,0.06) 0%, transparent 60%); pointer-events: none; }
+.cs-footer > * { position: relative; z-index: 1; }
+.cs-footer h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; }
+.cs-footer h2 .accent { color: var(--green); }
+.cs-footer p { font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+</style>

@@ -1,10 +1,19 @@
 ---
 import Base from '../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How I use AI — workflows, skills, MCPs, dev process",
+  "description": "How Pravine Mani uses AI daily — custom Claude Code skills, MCP servers, Vercel cron workflow patterns.",
+  "url": "https://pravinemani.com/ai/",
+  "author": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" }
+};
 ---
 
 <Base
   title="AI — Pravine Mani · workflows, skills, MCPs, dev process"
-  description="How I use AI day-to-day. Custom Claude Code skills, MCP servers I plug into, Vercel cron + serverless workflow patterns, and the dev process around Plan Mode + sub-agents."
+  description="How I use AI daily — custom Claude Code skills, MCP servers, Vercel cron workflow patterns, and the dev process around Plan Mode + sub-agents."
+  jsonLd={jsonLd}
 >
 
 <section class="page-hero">

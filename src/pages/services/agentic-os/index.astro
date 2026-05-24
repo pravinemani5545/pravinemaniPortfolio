@@ -1,0 +1,113 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Agentic OS — Multi-Agent Systems Consulting",
+  "serviceType": "AI Agent Systems Consulting",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Multi-agent orchestration systems, sub-agent design, concurrent-agent evals, and the trade-off analysis on when more agents stop being a win.",
+  "url": "https://pravinemani.com/services/agentic-os/"
+};
+---
+
+<Base title="Agentic OS — Multi-Agent Systems Consulting · Pravine Mani" description="Multi-agent orchestration, sub-agent design, concurrent-agent evals, and the trade-off analysis on when more agents stop being a win. Toronto consultancy." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">agentic os</span>
+  </div>
+  <h1>Agentic OS.<br><span class="accent">Multi-agent systems that don't drift.</span></h1>
+  <p class="lead">When a single agent isn't enough — and three is already too many. Multi-agent orchestration with sub-agent design, inter-agent state, concurrent-execution evals, and a real answer to <em>"what breaks past five concurrent agents?"</em> built from a year of bench work.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+    <a href="/services/" class="cta-btn secondary">All engagement shapes</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-cta reveal" style="border-color: var(--red); margin-bottom: 24px;">
+    <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 8px; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">▍ R&amp;D · OPEN FOR FIRST-MOVER ENGAGEMENTS</p>
+    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 0;">Agentic OS is the newest focus area — productized from internal R&amp;D into client work in 2026. Earlier engagements priced as design-partner sprints. <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Tell me what you're building →</a></p>
+  </div>
+
+  <div class="vert-grid">
+
+    <article class="vert-card" id="builds">
+      <div class="vert-head"><span class="vert-id">01</span><h2>Multi-agent builds</h2></div>
+      <p>End-to-end agent systems with multiple specialized workers, an orchestrator, an evaluator, and structured outputs at every boundary. Built on Claude + MCP, runs on Vercel / Supabase / Modal where it fits.</p>
+      <ul>
+        <li>Orchestrator / worker / evaluator patterns</li>
+        <li>Inter-agent state via shared filesystem or vector store</li>
+        <li>Cost ceilings per task + per user</li>
+        <li>Production observability via Langfuse or Helicone</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="orchestration">
+      <div class="vert-head"><span class="vert-id">02</span><h2>Orchestration audit</h2></div>
+      <p>You have agents. They mostly work. Sometimes they loop. Sometimes they exceed budget. This is the audit that finds the orchestration bug before the next demo.</p>
+      <ul>
+        <li>Tool-use graph review (what calls what, when)</li>
+        <li>Failure mode taxonomy from real production logs</li>
+        <li>Hard ceilings + fallback paths recommendations</li>
+        <li>Written report + 30-day fix plan</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="subagents">
+      <div class="vert-head"><span class="vert-id">03</span><h2>Sub-agent design</h2></div>
+      <p>When to spawn a sub-agent vs an in-process tool call vs a separate process. The decision tree most teams get wrong. Token cost vs latency vs isolation, with the trade-off math made explicit.</p>
+      <ul>
+        <li>Sub-agent boundary recommendations per workflow</li>
+        <li>Context-isolation patterns for parallel work</li>
+        <li>Sync vs async fan-out</li>
+        <li>The "when not to fan out" rules nobody documents</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="evals">
+      <div class="vert-head"><span class="vert-id">04</span><h2>Concurrent-agent evals</h2></div>
+      <p>Single-agent eval suites are well-understood. Multi-agent ones aren't. A real harness for "does this system still work with 5 concurrent agents under load" — the question every team should be asking before shipping.</p>
+      <ul>
+        <li>Concurrent-execution test harness</li>
+        <li>Race-condition + ordering-violation detection</li>
+        <li>Cost regression alerts</li>
+        <li>CI integration via Promptfoo or custom runner</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head reveal">
+    <div class="title-block">
+      <div class="label">how it works</div>
+      <h2>Engagement shapes for Agentic OS.</h2>
+      <p>Same four engagement shapes across all focus areas. Full ladder + pricing brackets at <a href="/services/">/services</a>.</p>
+    </div>
+  </div>
+  <div class="vert-engagements">
+    <a href="/services/#audit" class="vert-eng"><span class="lab">ORCHESTRATION AUDIT</span><span class="when">FIXED-SCOPE WEEK · MID 4-FIG</span></a>
+    <a href="/services/#sprint" class="vert-eng"><span class="lab">AGENT SPRINT</span><span class="when">FIXED-SCOPE BUILD · MID 4-FIG</span></a>
+    <a href="/services/#advisory" class="vert-eng"><span class="lab">ADVISORY RETAINER</span><span class="when">MONTHLY · LOW 4-FIG/MO</span></a>
+    <a href="/services/#custom" class="vert-eng"><span class="lab">CUSTOM BUILD</span><span class="when">QUOTE-BASED · LOW 5-FIG+</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-cta reveal">
+    <h2>Have an agent system that's drifting at scale?<br><span class="accent">Let's scope it.</span></h2>
+    <p>30 minutes. Zero pitch. You describe what's running and what's breaking; I tell you whether the orchestration model is the problem or the prompts are.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+      <a href="/services/ai/" class="cta-btn secondary">See standard AI workflows</a>
+    </div>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,136 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI Workflow Consulting",
+  "serviceType": "AI Consulting",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Production-grade AI workflows, custom MCP servers, agent systems, and prompt + eval suites — built code-first on Claude Code + Vercel.",
+  "url": "https://pravinemani.com/services/ai/"
+};
+---
+
+<Base title="AI Workflow Consulting — Claude Code, MCP, Agents · Pravine Mani" description="Production AI workflows, custom MCP servers, agent systems, and eval suites — built code-first on Claude Code + Vercel. Toronto consultancy." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">ai</span>
+  </div>
+  <h1>AI workflows.<br><span class="accent">Production-grade. Code-first.</span></h1>
+  <p class="lead">Custom AI workflows shipped on a code-first stack — Claude Code, Vercel cron, MCP servers, Supabase. No n8n. No Make. No platform fee. Engagement shapes scoped to fit, from a fixed-scope audit week to a multi-week custom build.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+    <a href="/services/" class="cta-btn secondary">All engagement shapes</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-grid">
+
+    <article class="vert-card" id="workflows">
+      <div class="vert-head"><span class="vert-id">01</span><h2>Workflow automation</h2></div>
+      <p>Daily briefings. Lead-routing. Inbox triage. Competitor watch. Daily metric digests. Any workflow with a clear input + output that should be shipped as code, not strung through SaaS.</p>
+      <ul>
+        <li>Vercel cron + serverless on your account</li>
+        <li>Anthropic API with prompt caching from day one</li>
+        <li>Typed outputs (Zod or Pydantic) — no free-text parsing</li>
+        <li>14 days of post-ship support included</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="mcp">
+      <div class="vert-head"><span class="vert-id">02</span><h2>Custom MCP servers</h2></div>
+      <p>Wrap your domain logic as a Model Context Protocol server so Claude (or any MCP-compatible agent) can call your APIs, databases, and internal tools as first-class actions.</p>
+      <ul>
+        <li>Tool registration, Zod-validated inputs, typed errors</li>
+        <li>HMAC verification on every external trigger</li>
+        <li>Repo template + README + Loom handoff</li>
+        <li>Pairs with custom Claude Code skills (CLI installable)</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="agents">
+      <div class="vert-head"><span class="vert-id">03</span><h2>Agent systems</h2></div>
+      <p>Multi-step agents with tool use, structured outputs, and sane fallback behavior. Single-agent or fan-out; live observability via Langfuse or Helicone; cost ceilings per user.</p>
+      <ul>
+        <li>Orchestrator / worker / evaluator patterns where they fit</li>
+        <li>Sub-agent spawning when parallelism is the win</li>
+        <li>Idempotency keys + exponential backoff</li>
+        <li>For deeper multi-agent / concurrency work, see <a href="/services/agentic-os/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Agentic OS</a></li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="evals">
+      <div class="vert-head"><span class="vert-id">04</span><h2>Prompt + eval suites</h2></div>
+      <p>A golden dataset of 30–100 inputs with expected outputs, scored on every prompt change. Runs in CI. PRs that drop eval score block merge. This is the discipline that separates a demo from a product.</p>
+      <ul>
+        <li>Promptfoo (free) or Braintrust setups</li>
+        <li>Regression harness + report on every PR</li>
+        <li>Prompts versioned in git like code</li>
+        <li>Output: you own a real test suite, not just a working demo</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head reveal">
+    <div class="title-block">
+      <div class="label">how it works</div>
+      <h2>Engagement shapes for AI work.</h2>
+      <p>Same four engagement shapes across all focus areas. Full ladder + pricing brackets at <a href="/services/">/services</a>.</p>
+    </div>
+  </div>
+  <div class="vert-engagements">
+    <a href="/services/#audit" class="vert-eng"><span class="lab">SYSTEM AUDIT</span><span class="when">FIXED-SCOPE WEEK · MID 4-FIG</span></a>
+    <a href="/services/#sprint" class="vert-eng"><span class="lab">BUILD SPRINT</span><span class="when">FIXED-SCOPE BUILD · MID 4-FIG</span></a>
+    <a href="/services/#advisory" class="vert-eng"><span class="lab">ADVISORY RETAINER</span><span class="when">MONTHLY · LOW 4-FIG/MO</span></a>
+    <a href="/services/#custom" class="vert-eng"><span class="lab">CUSTOM BUILD</span><span class="when">QUOTE-BASED · LOW 5-FIG+</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-cta reveal">
+    <h2>Have an AI workflow that's eating your week?<br><span class="accent">Let's scope it.</span></h2>
+    <p>30 minutes. Zero pitch. You describe the workflow; I tell you whether AI is the right fix and which engagement matches.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+      <a href="/work/case-studies/cisnet/" class="cta-btn secondary">Read the CISNET case study</a>
+    </div>
+  </div>
+</section>
+
+</Base>
+<style is:global>
+.vert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 880px) { .vert-grid { grid-template-columns: 1fr; } }
+.vert-card { background: var(--bg-card); border: 1px solid var(--border); padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; position: relative; scroll-margin-top: 92px; }
+.vert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.6; }
+.vert-head { display: flex; align-items: baseline; gap: 14px; }
+.vert-id { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--text-dim); }
+.vert-card h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.7vw, 28px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.012em; line-height: 1.2; }
+.vert-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(14.5px, 1.05vw, 17px); color: var(--text-secondary); line-height: 1.6; }
+.vert-card ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.vert-card ul li { padding-left: 18px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.vert-card ul li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.vert-card ul li strong { color: var(--text-primary); }
+
+.vert-engagements { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.vert-eng { background: var(--bg-card); padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; transition: background var(--dur-micro, 150ms) var(--ease); }
+.vert-eng:hover { background: var(--bg-card-hover, var(--bg-secondary)); }
+.vert-eng .lab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; }
+.vert-eng .when { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; }
+@media (max-width: 720px) { .vert-engagements { grid-template-columns: 1fr; } }
+
+.vert-cta { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%); border: 1px solid var(--border-green); padding: 44px 36px; text-align: center; position: relative; overflow: hidden; }
+.vert-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center top, rgba(0,255,65,0.06) 0%, transparent 60%); pointer-events: none; }
+.vert-cta > * { position: relative; z-index: 1; }
+.vert-cta h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; }
+.vert-cta h2 .accent { color: var(--green); }
+.vert-cta p { font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+</style>

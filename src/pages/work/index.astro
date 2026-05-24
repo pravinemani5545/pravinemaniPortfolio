@@ -1,8 +1,20 @@
 ---
 import Base from '../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Work — Pravine Mani",
+  "description": "Active builds and shipped work across AI, SEO + GEO, marketing automation, and Agentic OS.",
+  "url": "https://pravinemani.com/work/",
+  "hasPart": [
+    { "@type": "CreativeWork", "name": "CISNET — Marketing site + SEO + admin portal", "url": "https://pravinemani.com/work/case-studies/cisnet/" },
+    { "@type": "CreativeWork", "name": "AIOpsForge", "url": "https://aiopsforge.dev" },
+    { "@type": "CreativeWork", "name": "personalClaudeSkills", "url": "https://github.com/pravinemani5545/personalClaudeSkills" }
+  ]
+};
 ---
 
-<Base title="Work — Pravine Mani" description="What I'm building right now + what I've shipped. AIOpsForge, aifounder.ca, personalClaudeSkills, CISNET client work, and more.">
+<Base title="Work & Case Studies — AI, SEO & Marketing Automation · Pravine Mani" description="Selected work: CISNET case study, AIOpsForge, personalClaudeSkills, plus active builds. Real artifacts, public GitHub history, capacity-capped engagements." jsonLd={jsonLd}>
 
 
 <section class="page-hero">
@@ -182,9 +194,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Supabase</span><span class="chip">Recharts</span>
         </div>
         <div class="links">
-          <a class="dim">→ Private build</a>
+          <span class="dim">→ Private build</span>
           <span class="sep">·</span>
-          <a class="dim">16 commits / 30d</a>
+          <span class="dim">16 commits / 30d</span>
         </div>
       </div>
     </div>
@@ -218,9 +230,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Next.js</span><span class="chip">ElevenLabs</span><span class="chip">Claude API</span><span class="chip">Vercel</span>
         </div>
         <div class="links">
-          <a class="dim">→ Closed alpha</a>
+          <span class="dim">→ Closed alpha</span>
           <span class="sep">·</span>
-          <a class="dim">10 commits / 30d</a>
+          <span class="dim">10 commits / 30d</span>
         </div>
       </div>
     </div>
@@ -256,9 +268,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Claude API</span><span class="chip">TypeScript</span><span class="chip">MCP</span><span class="chip">Sub-agents</span>
         </div>
         <div class="links">
-          <a class="dim">→ Research only</a>
+          <span class="dim">→ Research only</span>
           <span class="sep">·</span>
-          <a class="dim">4 commits / 30d</a>
+          <span class="dim">4 commits / 30d</span>
         </div>
       </div>
     </div>
@@ -380,9 +392,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">MongoDB</span><span class="chip">Clerk</span>
         </div>
         <div class="links">
-          <a class="dim">→ Archive</a>
+          <span class="dim">→ Archive</span>
           <span class="sep">·</span>
-          <a class="dim">Demo on request</a>
+          <span class="dim">Demo on request</span>
         </div>
       </div>
     </div>
@@ -416,9 +428,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Next.js</span><span class="chip">MongoDB</span><span class="chip">Puppeteer</span><span class="chip">Cheerio</span>
         </div>
         <div class="links">
-          <a class="dim">→ Archived</a>
+          <span class="dim">→ Archived</span>
           <span class="sep">·</span>
-          <a class="dim">Code available on request</a>
+          <span class="dim">Code available on request</span>
         </div>
       </div>
     </div>
@@ -452,9 +464,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Next.js</span><span class="chip">MongoDB</span><span class="chip">OAuth</span><span class="chip">TypeScript</span>
         </div>
         <div class="links">
-          <a class="dim">→ Code archived</a>
+          <span class="dim">→ Code archived</span>
           <span class="sep">·</span>
-          <a class="dim">Walkthrough available</a>
+          <span class="dim">Walkthrough available</span>
         </div>
       </div>
     </div>
@@ -487,9 +499,9 @@ import Base from '../../layouts/Base.astro';
           <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind</span><span class="chip">RapidAPI</span>
         </div>
         <div class="links">
-          <a class="dim">→ Archived</a>
+          <span class="dim">→ Archived</span>
           <span class="sep">·</span>
-          <a class="dim">Available on request</a>
+          <span class="dim">Available on request</span>
         </div>
       </div>
     </div>

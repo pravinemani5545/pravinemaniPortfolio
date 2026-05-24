@@ -1,8 +1,28 @@
 ---
 import Base from '../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact — Pravine Mani",
+  "description": "Free 30-min scoping call. Written quote within 24 hours.",
+  "url": "https://pravinemani.com/contact/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Pravine Manivannan",
+    "email": "pravinemaniva@gmail.com",
+    "url": "https://pravinemani.com/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "consulting inquiry",
+      "email": "pravinemaniva@gmail.com",
+      "areaServed": "Worldwide",
+      "availableLanguage": "English"
+    }
+  }
+};
 ---
 
-<Base title="Contact — Pravine Mani" description="Book a 30-min scoping call, email, or DM. 2 freelance slots open this quarter.">
+<Base title="Contact — Book a 30-min Scoping Call · Pravine Mani" description="Book a 30-min scoping call, send a brief, or email. Free, ends with a written quote within 24 hours. Toronto / remote, AI · SEO · marketing automation." jsonLd={jsonLd}>
 
 
 <section class="page-hero">

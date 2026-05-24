@@ -5,6 +5,7 @@ const isActive = (href: string) => {
   if (normalized === '/') return path === '/';
   return path === normalized || path.startsWith(normalized + '/');
 };
+const servicesActive = isActive('/services');
 ---
 <nav class="site-nav">
   <div class="nav-inner">
@@ -21,7 +22,56 @@ const isActive = (href: string) => {
       <span class="bar"></span>
     </button>
     <div class="nav-links" id="primary-nav">
-      <a href="/services/" class:list={[isActive('/services') && 'active']}>Services</a>
+
+      <div class={`nav-item has-dropdown ${servicesActive ? 'active' : ''}`}>
+        <a
+          href="/services/"
+          class={`nav-trigger ${servicesActive ? 'active' : ''}`}
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Services <span class="caret" aria-hidden="true">▾</span>
+        </a>
+        <div class="nav-dropdown" role="menu">
+          <div class="dropdown-inner">
+            <div class="dropdown-grid">
+              <div class="dropdown-col">
+                <div class="dropdown-col-head"><span class="dot gr"></span>AI</div>
+                <a href="/services/ai/">Workflow automation</a>
+                <a href="/services/ai/#mcp">MCP servers</a>
+                <a href="/services/ai/#agents">Agent systems</a>
+                <a href="/services/ai/#evals">Prompt + eval suites</a>
+              </div>
+              <div class="dropdown-col">
+                <div class="dropdown-col-head"><span class="dot bl"></span>SEO + GEO</div>
+                <a href="/services/seo/">Programmatic SEO</a>
+                <a href="/services/seo/#schema">Schema + structured data</a>
+                <a href="/services/seo/#geo">GEO / AI search</a>
+                <a href="/services/seo/#local">Local SEO</a>
+              </div>
+              <div class="dropdown-col">
+                <div class="dropdown-col-head"><span class="dot pu"></span>Marketing Automation</div>
+                <a href="/services/marketing-automation/">Lead pipelines</a>
+                <a href="/services/marketing-automation/#email">Lifecycle email</a>
+                <a href="/services/marketing-automation/#crm">CRM + webhooks</a>
+                <a href="/services/marketing-automation/#stripe">Stripe + subscriptions</a>
+              </div>
+              <div class="dropdown-col">
+                <div class="dropdown-col-head"><span class="dot rd"></span>Agentic OS</div>
+                <a href="/services/agentic-os/">Multi-agent builds</a>
+                <a href="/services/agentic-os/#orchestration">Orchestration audit</a>
+                <a href="/services/agentic-os/#subagents">Sub-agent design</a>
+                <a href="/services/agentic-os/#evals">Concurrent-agent evals</a>
+              </div>
+            </div>
+            <div class="dropdown-actions">
+              <a href="/services/" class="dropdown-action">All services →</a>
+              <a href="/contact/" class="dropdown-action primary">Book a 30-min call →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <a href="/work/" class:list={[isActive('/work') && 'active']}>Work</a>
       <a href="/ai/" class:list={[isActive('/ai') && 'active']}>AI</a>
       <a href="/writing/" class:list={[isActive('/writing') && 'active']}>Writing</a>
@@ -47,6 +97,19 @@ const isActive = (href: string) => {
         toggle.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('nav-locked');
       });
+    });
+  }
+  // Mobile: tap services to expand dropdown inline instead of navigating
+  const trigger = document.querySelector<HTMLAnchorElement>('.nav-trigger');
+  const item = document.querySelector<HTMLElement>('.nav-item.has-dropdown');
+  if (trigger && item) {
+    trigger.addEventListener('click', (e) => {
+      const isMobile = window.matchMedia('(max-width: 980px)').matches;
+      if (isMobile) {
+        e.preventDefault();
+        const open = item.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(open));
+      }
     });
   }
 </script>

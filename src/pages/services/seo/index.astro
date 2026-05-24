@@ -1,0 +1,108 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Programmatic SEO + GEO Consulting",
+  "serviceType": "Search Engine Optimization Consulting",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Programmatic SEO, structured-data schema, GEO + AI-search visibility, and local SEO — built on Next.js + Vercel with measurable indexation lift.",
+  "url": "https://pravinemani.com/services/seo/"
+};
+---
+
+<Base title="Programmatic SEO + GEO Consulting · Pravine Mani" description="Programmatic SEO, structured data, GEO + AI-search visibility, local SEO. Built on Next.js + Vercel with measurable indexation lift. Toronto consultancy." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">seo + geo</span>
+  </div>
+  <h1>Programmatic SEO + GEO.<br><span class="accent">Engineered for AI search.</span></h1>
+  <p class="lead">Search visibility built on Next.js + structured data, not WordPress plugins. Programmatic surfaces at scale, schema for every page type, llms.txt for AI-search crawlers, and a redirect playbook that preserves ranking authority through migrations.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+    <a href="/work/case-studies/cisnet/" class="cta-btn secondary">See the CISNET case study</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-grid">
+
+    <article class="vert-card" id="pseo">
+      <div class="vert-head"><span class="vert-id">01</span><h2>Programmatic SEO</h2></div>
+      <p>Cert × city. Service × neighbourhood. Industry × use-case. Generate hundreds of indexable pages from a structured content model with real internal-link graphs and per-page schema.</p>
+      <ul>
+        <li>Content matrix design (which pairs, which not)</li>
+        <li>Next.js dynamic routing + static generation</li>
+        <li>Sitemap segmentation by surface</li>
+        <li>Thin-content safeguards built in</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="schema">
+      <div class="vert-head"><span class="vert-id">02</span><h2>Schema + structured data</h2></div>
+      <p>JSON-LD per page type. Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite. Rich-result eligibility verified in Google Search Console.</p>
+      <ul>
+        <li>Schema.org modeling for your domain</li>
+        <li>Validation via Rich Results Test + Schema.org validator</li>
+        <li>BreadcrumbList on every deep page</li>
+        <li>FAQPage + HowTo where they earn the SERP feature</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="geo">
+      <div class="vert-head"><span class="vert-id">03</span><h2>GEO / AI search</h2></div>
+      <p>AI Overviews, ChatGPT search, Perplexity, Bing Copilot, Claude — your site needs to be citable, not just rankable. Passage-level structure, llms.txt, brand-mention signals.</p>
+      <ul>
+        <li>llms.txt + per-section H3 question form</li>
+        <li>One-sentence answers up top, definition lists where they fit</li>
+        <li>Robots.txt explicitly allowlisting AI crawlers</li>
+        <li>Brand mention monitoring across LLM-cited sources</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="local">
+      <div class="vert-head"><span class="vert-id">04</span><h2>Local SEO</h2></div>
+      <p>For service businesses serving named geographies. Google Business Profile, NAP consistency, location pages that don't read as doorways, review velocity.</p>
+      <ul>
+        <li>GBP audit + categorization + photo cadence</li>
+        <li>Location landing pages with real local content</li>
+        <li>Citation cleanup across major directories</li>
+        <li>Local schema + ReviewSnippet wiring</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head reveal">
+    <div class="title-block">
+      <div class="label">how it works</div>
+      <h2>Engagement shapes for SEO work.</h2>
+      <p>Same four engagement shapes across all focus areas. Full ladder + pricing brackets at <a href="/services/">/services</a>.</p>
+    </div>
+  </div>
+  <div class="vert-engagements">
+    <a href="/services/#audit" class="vert-eng"><span class="lab">SEO + GEO AUDIT</span><span class="when">FIXED-SCOPE WEEK · MID 4-FIG</span></a>
+    <a href="/services/#sprint" class="vert-eng"><span class="lab">PSEO SPRINT</span><span class="when">FIXED-SCOPE BUILD · MID 4-FIG</span></a>
+    <a href="/services/#advisory" class="vert-eng"><span class="lab">ADVISORY RETAINER</span><span class="when">MONTHLY · LOW 4-FIG/MO</span></a>
+    <a href="/services/#custom" class="vert-eng"><span class="lab">SITE REBUILD</span><span class="when">QUOTE-BASED · LOW 5-FIG+</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-cta reveal">
+    <h2>Need 200+ programmatic pages without losing ranking authority?<br><span class="accent">Let's scope it.</span></h2>
+    <p>The CISNET case study walks through 200+ pSEO pages indexed in 6 weeks with 70+ legacy URLs preserved through a hand-mapped redirect strategy.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+      <a href="/work/case-studies/cisnet/" class="cta-btn secondary">Read the case study</a>
+    </div>
+  </div>
+</section>
+
+</Base>

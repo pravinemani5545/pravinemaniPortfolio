@@ -1,8 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Writing — Pravine Mani",
+  "description": "Essays on AI ops, programmatic SEO + GEO, and the code-first operator stack.",
+  "url": "https://pravinemani.com/writing/",
+  "author": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" }
+};
 ---
 
-<Base title="Writing — Pravine Mani" description="Essays + notes on AI automation, solo operator workflows, and shipping production-grade AI systems.">
+<Base title="Writing — Essays on AI Ops, SEO & Code-First · Pravine Mani" description="Long-form essays on AI workflows, programmatic SEO + GEO, and the code-first operator stack. Drafting now: CPR shared memory layer for Claude Code." jsonLd={jsonLd}>
 
 
 <section class="page-hero">

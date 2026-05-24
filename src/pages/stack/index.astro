@@ -1,8 +1,15 @@
 ---
 import Base from '../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Operator Stack",
+  "description": "Tools Pravine Mani uses daily for AI, SEO, and marketing automation consulting.",
+  "url": "https://pravinemani.com/stack/"
+};
 ---
 
-<Base title="Stack — Pravine Mani" description="The operator stack — every tool I use daily, what it does, what it costs, and what I deliberately avoid.">
+<Base title="Operator Stack — Tools I Build With Daily · Pravine Mani" description="Opinionated operator stack: Claude Code, Vercel, Next.js, Supabase, MCP. Daily tools, real costs, and what I deliberately avoid (n8n, Make, Zapier)." jsonLd={jsonLd}>
 
 
 <section class="page-hero">

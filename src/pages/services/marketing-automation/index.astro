@@ -1,0 +1,108 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Marketing Automation Consulting",
+  "serviceType": "Marketing Automation Consulting",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Lead pipelines, lifecycle email, CRM + webhook wiring, Stripe subscriptions. Code-first marketing infrastructure on Vercel + Resend + Supabase.",
+  "url": "https://pravinemani.com/services/marketing-automation/"
+};
+---
+
+<Base title="Marketing Automation Consulting — Lead Pipelines · Pravine Mani" description="Lead pipelines, lifecycle email, CRM + webhook wiring, Stripe subscriptions. Code-first marketing infrastructure on Vercel + Resend + Supabase." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/services/" style="color: var(--text-dim);">services</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">marketing automation</span>
+  </div>
+  <h1>Marketing automation.<br><span class="accent">In code. Without the SaaS tax.</span></h1>
+  <p class="lead">Lead capture, CRM wiring, lifecycle email, subscription payments — all built as code on Vercel, Resend, Supabase, Stripe. No Zapier. No Make. No $300/mo platform fee. The same primitives, owned forever, debuggable when something breaks.</p>
+  <div class="cta-row">
+    <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+    <a href="/services/" class="cta-btn secondary">All engagement shapes</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-grid">
+
+    <article class="vert-card" id="pipelines">
+      <div class="vert-head"><span class="vert-id">01</span><h2>Lead pipelines</h2></div>
+      <p>From Facebook Lead Ads or LinkedIn Lead Gen Forms through HMAC-verified webhooks into Supabase or your CRM. Observable, idempotent, debuggable.</p>
+      <ul>
+        <li>FB Lead Ads / LinkedIn Lead Gen webhook → CRM</li>
+        <li>HMAC signature verification on every event</li>
+        <li>Idempotency keys to survive retries safely</li>
+        <li>Admin portal surface so sales sees the leads</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="email">
+      <div class="vert-head"><span class="vert-id">02</span><h2>Lifecycle email</h2></div>
+      <p>Onboarding sequences, activation nudges, dunning, re-engagement. Resend or Postmark transactional + Beehiiv or Kit for broadcast. Founder-style copy, reply-bait subjects.</p>
+      <ul>
+        <li>Day-2 / Day-7 / Day-14 sequences calibrated to product</li>
+        <li>Reply-bait subject patterns (not the "Welcome to..." template)</li>
+        <li>Suppression + bounce handling baked in</li>
+        <li>Open + reply tracking surfaced in the admin portal</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="crm">
+      <div class="vert-head"><span class="vert-id">03</span><h2>CRM + webhooks</h2></div>
+      <p>HubSpot, Attio, Pipedrive — pick one, wire it properly. Or skip CRM and build a Supabase-backed admin portal that does only what you need. The right call depends on team size.</p>
+      <ul>
+        <li>Two-way sync with your CRM</li>
+        <li>Webhook fan-out (one event → many destinations)</li>
+        <li>Slack notifications on high-signal events</li>
+        <li>Decision matrix: when to skip the CRM entirely</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="stripe">
+      <div class="vert-head"><span class="vert-id">04</span><h2>Stripe + subscriptions</h2></div>
+      <p>Stripe Checkout + Customer Portal + Webhooks. Idempotent event handlers. Dunning emails wired through your lifecycle stack. Annual plans, coupons, metered billing where it fits.</p>
+      <ul>
+        <li>Stripe Checkout in 60 lines, not a Zapier graph</li>
+        <li>Webhook handler with idempotency-key store</li>
+        <li>Dunning + grace periods, cancellation flows</li>
+        <li>Revenue dashboards in the admin portal</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head reveal">
+    <div class="title-block">
+      <div class="label">how it works</div>
+      <h2>Engagement shapes for marketing automation.</h2>
+      <p>Same four engagement shapes across all focus areas. Full ladder + pricing brackets at <a href="/services/">/services</a>.</p>
+    </div>
+  </div>
+  <div class="vert-engagements">
+    <a href="/services/#audit" class="vert-eng"><span class="lab">FUNNEL AUDIT</span><span class="when">FIXED-SCOPE WEEK · MID 4-FIG</span></a>
+    <a href="/services/#sprint" class="vert-eng"><span class="lab">PIPELINE SPRINT</span><span class="when">FIXED-SCOPE BUILD · MID 4-FIG</span></a>
+    <a href="/services/#advisory" class="vert-eng"><span class="lab">ADVISORY RETAINER</span><span class="when">MONTHLY · LOW 4-FIG/MO</span></a>
+    <a href="/services/#custom" class="vert-eng"><span class="lab">FULL-STACK BUILD</span><span class="when">QUOTE-BASED · LOW 5-FIG+</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-cta reveal">
+    <h2>Tired of paying $300/mo to glue together what code does for free?<br><span class="accent">Let's scope it.</span></h2>
+    <p>30 minutes. Zero pitch. You describe the pipeline; I tell you whether code-first beats your current stack and where the wins land.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
+      <a href="/work/case-studies/cisnet/" class="cta-btn secondary">See the CISNET pipeline</a>
+    </div>
+  </div>
+</section>
+
+</Base>
