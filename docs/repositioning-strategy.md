@@ -226,8 +226,45 @@ Next iterations (in priority order):
 
 ---
 
-## 7. Decision log
+## 7. Search Console / SEO infrastructure — submission steps
+
+The site now ships with the infrastructure Search Console needs. To finish wiring it up:
+
+1. **Verify the property in Google Search Console** at https://search.google.com/search-console
+   - Add property: `https://pravinemani.com` (Domain property recommended — uses DNS TXT verification)
+   - DNS verification: Add the TXT record GSC provides to your domain registrar
+   - Alternative: HTML meta tag — uncomment the `<meta name="google-site-verification">` line in `src/layouts/Base.astro` and paste the token from GSC
+
+2. **Submit the sitemap** in Search Console → Sitemaps → add `sitemap-index.xml`
+   - The build generates this automatically at `https://pravinemani.com/sitemap-index.xml`
+   - Lists all 10 site pages with the correct canonical hostname
+
+3. **Submit to Bing Webmaster Tools** at https://www.bing.com/webmasters
+   - Same domain verification flow
+   - Submit the same sitemap URL — Bing powers ChatGPT search + Copilot
+
+4. **What's already in place**
+   - `public/robots.txt` allows all crawlers + explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended (for GEO visibility)
+   - `public/llms.txt` ships a curated brief for AI search crawlers (Perplexity, ChatGPT, Claude)
+   - `@astrojs/sitemap` integration auto-generates `sitemap-index.xml` + `sitemap-0.xml` on every build
+   - `astro.config.mjs` sets `site: 'https://pravinemani.com'` + `trailingSlash: 'always'` so all URLs canonicalize the same way
+   - `Base.astro` outputs: canonical URL, OG tags (og:title/description/url/image/site_name/locale), Twitter Card tags (summary_large_image, @pravinemani), JSON-LD Person schema on the homepage
+
+5. **What still needs work (next pass)**
+   - Build a real `/og-default.png` image (currently referenced but not present in `public/`). Recommended: 1200×630 PNG with the Terminal DS aesthetic.
+   - Per-page custom OG images for the case study and any high-traffic landing pages.
+   - Add `BreadcrumbList` JSON-LD to deep pages (work, case study).
+   - Add `LocalBusiness` or `ProfessionalService` schema once business details are finalized.
+   - Once the three service sub-pages exist, add their own structured data.
+
+---
+
+## 8. Decision log
 
 - **2026-05-24** — Chose "consultancy" as the category label. Considered "studio", "operator", "practice" — rejected for SEO discoverability reasons. Will pair with operator-voice differentiation in body copy.
 - **2026-05-24** — Hero H1 set to: *"AI, SEO, and marketing automation consultancy. Built like an operator. Sold by the project."* — Option B of three drafts.
 - **2026-05-24** — Vague-ified specific slot counts on services page rather than committing to new engagement structure. Will be reversed once Section 2 open questions are answered.
+- **2026-05-24** — Trimmed homepage copy ~22% (1822→1419 words) and fixed X handle `@pravine` → `@pravinemani`.
+- **2026-05-24** — Switched homepage voice register toward "Thariq Shihipar meets Dan Koe" (short declarative paragraphs, sentence fragments for emphasis, `the work` subjects instead of `I`). Applied across hero lead, service descriptions, process steps, about cards, FAQ answers.
+- **2026-05-24** — Published per-tier pricing brackets using the vaguest format ("FROM MID 4-FIG" / "FROM LOW 4-FIG / MO" / "FROM LOW 5-FIG") so a $500-budget buyer self-filters without locking in a published dollar number.
+- **2026-05-24** — Shipped SEO infrastructure: `@astrojs/sitemap`, `site` config, expanded `robots.txt` with explicit AI-crawler allows, `llms.txt` brief for GEO, canonical/OG/Twitter meta in Base.astro, JSON-LD Person schema already in place. Ready for Search Console submission.

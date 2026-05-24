@@ -8,14 +8,19 @@ interface Props {
   description?: string;
   footerVariant?: 'default' | 'case-study';
   jsonLd?: object;
+  ogImage?: string;
 }
 
 const {
   title,
-  description = 'Pravine Mani — solo operator shipping production-grade AI workflows. AIOpsForge founder. Based in Toronto.',
+  description = 'Pravine Mani — Toronto consultancy across AI workflows, programmatic SEO + GEO, and marketing automation. Built like an operator.',
   footerVariant = 'default',
   jsonLd,
+  ogImage = '/og-default.png',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://pravinemani.com').toString();
+const ogImageURL = new URL(ogImage, Astro.site ?? 'https://pravinemani.com').toString();
 ---
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
@@ -24,6 +29,28 @@ const {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pravine Mani" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@pravinemani" />
+  <meta name="twitter:creator" content="@pravinemani" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
+
+  <!-- Search Console verification (paste content value from GSC) -->
+  <!-- <meta name="google-site-verification" content="REPLACE_WITH_GSC_TOKEN" /> -->
+
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

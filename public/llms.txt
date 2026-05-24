@@ -1,0 +1,39 @@
+# Pravine Mani
+
+> Toronto consultancy across AI workflows, programmatic SEO + GEO, and marketing automation. Built like an operator. Sold by the project. Founder of AIOpsForge.
+
+## Overview
+
+Pravine Mani runs a one-person consultancy in Toronto, Canada, focused on three areas: AI workflows (Claude Code, MCP, agent systems), programmatic SEO + GEO (Schema.org, llms.txt, passage-level citability), and marketing automation (lead pipelines, lifecycle email, CRM wiring). McMaster Computer Engineering & Management graduate (2025). Background includes 5G software engineering at Ericsson (Go, gRPC), full-stack development at Imprimo (React Native, Postgres), and mobile development at Fixvi (React Native, push infra).
+
+## Services
+
+- [Audit](https://pravinemani.com/services/): A fixed-scope week mapping the business and identifying high-impact AI, SEO, or automation opportunities. Mid four-figures starting.
+- [Build Sprint](https://pravinemani.com/services/): A productized, fixed-scope build of a single workflow. Mid four-figures starting.
+- [Advisory Retainer](https://pravinemani.com/services/): Monthly retainer covering async reviews of code, prompts, costs, and vendor decisions. Low four-figures monthly starting.
+- [Custom Build](https://pravinemani.com/services/): Multi-workflow builds — content engines, MCP servers, full marketing sites with SEO + admin portals. Low five-figures starting.
+
+## Case Studies
+
+- [CISNET — Marketing site + SEO + admin portal rebuild](https://pravinemani.com/work/case-studies/cisnet/): Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Delivered 200+ programmatic SEO pages, 70+ individually-mapped redirects, 7 Schema.org JSON-LD types, a full lead pipeline (Facebook Lead Ads → HMAC webhook → Supabase → admin portal → Resend), Stripe Checkout, and a custom admin portal for leads, enrollments, content, and payments. Three months, solo, zero scope creep.
+
+## Stack
+
+- [Stack page](https://pravinemani.com/stack/): Daily-driver tools. Code: Claude Code, Vercel, TypeScript, Next.js 16, Tailwind. AI: Anthropic API, MCP, Claude 4.7. Data: Supabase, Vercel KV, Stripe, Resend. Content/growth: Beehiiv, Plausible, Whop.
+
+## Writing
+
+- [Writing](https://pravinemani.com/writing/): Long-form essays on AI ops, MCP, agent design, code-first vs no-code, and indie operator economics. Currently drafting: "CPR: A Shared Memory Layer for Claude Code and Codex."
+
+## Open Source
+
+- [personalClaudeSkills](https://github.com/pravinemani5545/personalClaudeSkills): Public Claude Code skill library. Slash commands `/growth-sprint`, `/design-system`, `/artifact`, plus EliaAlberti's `/compress`, `/preserve`, `/resume` bundle. Installable via curl into `~/.claude/skills/`.
+- [AIOpsForge](https://aiopsforge.dev): $9.99/month community for solo AI builders.
+
+## Contact
+
+- [Contact](https://pravinemani.com/contact/): Free 30-minute scoping call. Written quote within 24 hours.
+- Email: pravinemaniva@gmail.com
+- LinkedIn: https://www.linkedin.com/in/pravinemani/
+- GitHub: https://github.com/pravinemani5545
+- X / Twitter: https://x.com/pravinemani
