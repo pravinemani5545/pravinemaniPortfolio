@@ -14,6 +14,105 @@ const jsonLd = {
     "https://aiopsforge.dev"
   ]
 };
+
+// ===== Live GitHub commit feed (build-time fetch) =====
+// Refreshes on every Vercel deploy. Falls back to a hardcoded list if the
+// GitHub API rate-limits or fails. Authenticates if GITHUB_TOKEN env var is set.
+interface GHCommit { sha: string; repo: string; type: string; message: string; }
+const fallbackCommits: GHCommit[] = [
+  { sha: '5f13041', repo: 'portfolio',     type: 'feat',  message: 'right-size desktop headings' },
+  { sha: '70f714d', repo: 'portfolio',     type: 'feat',  message: 'de-anonymize CISNET testimonial' },
+  { sha: 'f384c87', repo: 'portfolio',     type: 'feat',  message: 'FormSubmit intake + anchor IDs' },
+  { sha: '4800cda', repo: 'portfolio',     type: 'feat',  message: 'sprint sub-pages + manifesto' },
+  { sha: 'bb08299', repo: 'portfolio',     type: 'feat',  message: 'numbers + pain bands' },
+];
+const fallbackCadence = '~32 / 30d';
+const fallbackTimestamp = '06:42 toronto';
+
+let commits: GHCommit[] = fallbackCommits;
+let cadence: string = fallbackCadence;
+let commitCount30d: number = 62;
+let lastTimestamp: string = fallbackTimestamp;
+let lastDate: string = '2026-05-18';
+
+try {
+  const headers: Record<string, string> = {
+    'Accept': 'application/vnd.github+json',
+    'User-Agent': 'pravinemani.com-build',
+  };
+  const token = import.meta.env.GITHUB_TOKEN;
+  if (token) headers.Authorization = `Bearer ${token}`;
+
+  // Step 1 — discover repos with activity in the last 30 days via the events API
+  // (events PushEvent payloads omit the commits array on this account; that's
+  // why we fan out to /repos/<repo>/commits per repo below.)
+  const eventsRes = await fetch('https://api.github.com/users/pravinemani5545/events/public?per_page=100', { headers });
+  const activeRepos = new Set<string>();
+  if (eventsRes.ok) {
+    const events = await eventsRes.json() as any[];
+    for (const e of events) {
+      if (e.type === 'PushEvent' && e.repo?.name) {
+        activeRepos.add(e.repo.name);
+        if (activeRepos.size >= 6) break;
+      }
+    }
+  }
+  // Always include the portfolio repo even if events miss it
+  activeRepos.add('pravinemani5545/pravinemaniPortfolio');
+
+  // Step 2 — fetch latest commits per repo (parallel)
+  const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+  const allCommits: (GHCommit & { dateMs: number })[] = [];
+
+  await Promise.all([...activeRepos].slice(0, 6).map(async (repo) => {
+    try {
+      const r = await fetch(
+        `https://api.github.com/repos/${repo}/commits?per_page=30&since=${since}&author=pravinemani5545`,
+        { headers }
+      );
+      if (!r.ok) return;
+      const data = await r.json() as any[];
+      if (!Array.isArray(data)) return;
+      const repoShort = repo.split('/').pop()!.slice(0, 16);
+      for (const c of data) {
+        const fullMsg = ((c.commit?.message) || '').split('\n')[0];
+        const colonIdx = fullMsg.indexOf(':');
+        const hasType = colonIdx > 0 && colonIdx < 12;
+        allCommits.push({
+          sha: (c.sha || '').slice(0, 7),
+          repo: repoShort,
+          type: hasType ? fullMsg.slice(0, colonIdx) : 'commit',
+          message: (() => {
+            const raw = hasType ? fullMsg.slice(colonIdx + 1).trim() : fullMsg;
+            return raw.length > 42 ? raw.slice(0, 40).trimEnd() + '…' : raw;
+          })(),
+          dateMs: new Date(c.commit?.author?.date || c.commit?.committer?.date || 0).getTime(),
+        });
+      }
+    } catch (_e) { /* ignore single-repo failure */ }
+  }));
+
+  if (allCommits.length >= 3) {
+    // sort newest first
+    allCommits.sort((a, b) => b.dateMs - a.dateMs);
+
+    commits = allCommits.slice(0, 5).map(({ sha, repo, type, message }) => ({ sha, repo, type, message }));
+    commitCount30d = allCommits.length;
+    cadence = `~${commitCount30d} / 30d`;
+
+    const latestMs = allCommits[0].dateMs;
+    if (latestMs) {
+      const d = new Date(latestMs);
+      const hhmm = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Toronto' });
+      lastTimestamp = `${hhmm} toronto`;
+      lastDate = d.toLocaleDateString('en-CA', { timeZone: 'America/Toronto' });
+    }
+  }
+} catch (_err) {
+  // silently keep the fallback
+}
+
+// `lastDate` already in YYYY-MM-DD via en-CA locale (or fallback ISO format)
 ---
 
 <Base title="Pravine Mani — AI, SEO & Marketing Automation Consultancy · Toronto" description="Toronto consultancy across AI workflows, programmatic SEO + GEO, and marketing automation. Code-first, fixed-scope. Engagements scoped on a free 30-minute call." jsonLd={jsonLd}>
@@ -54,14 +153,16 @@ const jsonLd = {
         <span class="stat"><span class="pulse"></span>LIVE</span>
       </div>
       <div class="body">
-        <div class="ln"><span class="cmt">// 2026-05-18 · 06:42 toronto</span></div>
+        <div class="ln"><span class="cmt">// {lastDate} · {lastTimestamp}</span></div>
         <div class="ln"><span class="gr">$</span> git log --oneline -5</div>
-        <div class="ln"><span class="yl">47e5dda</span> <span class="dim">fix:</span> community hub abs paths</div>
-        <div class="ln"><span class="yl">382531e</span> <span class="dim">fix:</span> strip .html, cleanUrls</div>
-        <div class="ln"><span class="yl">0ac5153</span> <span class="dim">fix:</span> atmospheric glow clip</div>
-        <div class="ln"><span class="yl">7541e1e</span> <span class="dim">feat:</span> content enrichment</div>
-        <div class="ln"><span class="yl">95e061c</span> <span class="dim">feat:</span> ds tokens integration</div>
-        <div class="ln"><span class="cmt">// shipping cadence: <span class="gr">~32 / 30d</span></span></div>
+        {commits.map(c => (
+          <div class="ln">
+            <span class="yl">{c.sha}</span>{' '}
+            {c.type !== 'commit' && <><span class="dim">{c.type}:</span>{' '}</>}
+            {c.message}
+          </div>
+        ))}
+        <div class="ln"><span class="cmt">// shipping cadence: <span class="gr">{cadence}</span></span></div>
         <div class="ln"><span class="gr">$</span> ls ~/services</div>
         <div class="ln"><span class="gr">▸</span> AI · <span class="gr">accepting</span></div>
         <div class="ln"><span class="bl">▸</span> SEO + GEO · <span class="gr">accepting</span></div>
@@ -70,7 +171,7 @@ const jsonLd = {
         <div class="ln"><span class="gr">$</span><span class="cursor"></span></div>
       </div>
       <div class="feet">
-        <div class="m"><div class="k">COMMITS / 30D</div><div class="v"><span class="gr">62</span></div></div>
+        <div class="m"><div class="k">COMMITS / 30D</div><div class="v"><span class="gr">{commitCount30d}</span></div></div>
         <div class="m"><div class="k">SHIPS / WEEK</div><div class="v">~3</div></div>
       </div>
     </div>
@@ -83,7 +184,7 @@ const jsonLd = {
   <div class="numbers-inner">
     <div class="n-cell"><span class="k">SHIPPED CASE STUDIES</span><span class="v"><span class="gr">1</span> <span class="dim">+ 2 NDA</span></span></div>
     <div class="n-cell"><span class="k">PSEO PAGES (CISNET)</span><span class="v"><span class="gr">200+</span></span></div>
-    <div class="n-cell"><span class="k">COMMITS / 30D</span><span class="v"><span class="gr">62</span></span></div>
+    <div class="n-cell"><span class="k">COMMITS / 30D</span><span class="v"><span class="gr">{commitCount30d}</span></span></div>
     <div class="n-cell"><span class="k">AIOPSFORGE URLS LIVE</span><span class="v"><span class="gr">51</span></span></div>
     <div class="n-cell"><span class="k">BASED IN</span><span class="v">TORONTO, ON</span></div>
     <div class="n-cell"><span class="k">MCMASTER COMP ENG</span><span class="v">'25</span></div>
@@ -100,7 +201,7 @@ const jsonLd = {
       <span class="sep">·</span>
       <span class="ticker-item"><span class="pu">SKILL</span> · /growth-sprint v1.2 pushed to GitHub</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="gr">62 COMMITS</span> across 5 repos · 30 days</span>
+      <span class="ticker-item"><span class="gr">{commitCount30d} COMMITS</span> across public repos · 30 days</span>
       <span class="sep">·</span>
       <span class="ticker-item">607 Claude Code sessions · last 30d</span>
       <span class="sep">·</span>
@@ -114,7 +215,7 @@ const jsonLd = {
       <span class="sep">·</span>
       <span class="ticker-item"><span class="pu">SKILL</span> · /growth-sprint v1.2 pushed to GitHub</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="gr">62 COMMITS</span> across 5 repos · 30 days</span>
+      <span class="ticker-item"><span class="gr">{commitCount30d} COMMITS</span> across public repos · 30 days</span>
       <span class="sep">·</span>
       <span class="ticker-item">607 Claude Code sessions · last 30d</span>
       <span class="sep">·</span>
@@ -331,7 +432,7 @@ const jsonLd = {
       <h2>Currently building + already shipped.</h2>
       <p>Two groups, split by status. Full picture at <a href="/work/">/work</a>.</p>
     </div>
-    <div class="meta">UPDATED 2026-05-18 · <span class="gr">62 COMMITS / 30D</span></div>
+    <div class="meta">UPDATED {lastDate} · <span class="gr">{commitCount30d} COMMITS / 30D</span></div>
   </div>
 
   <div class="work-table reveal">

@@ -39,19 +39,27 @@ const jsonLd = {
   <h1>Solo operator. AI · SEO · marketing automation.<br><span class="accent">Toronto, Canada.</span></h1>
   <p class="lead">Short version: I help solo founders + small teams ship AI, SEO, and marketing automation that compounds. Productized, fixed-scope engagements. No retainer creep. Building AIOpsForge on the side as a $9.99/month community.</p>
 
-  <div class="about-portrait" aria-hidden="true">
-    <div class="portrait-frame">
-      <div class="portrait-monogram">PM</div>
+  <div class="about-portrait">
+    <figure class="portrait-frame">
       <div class="portrait-chrome">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
         <span class="tag">~/identity</span>
         <span class="live">● LIVE</span>
       </div>
-      <div class="portrait-meta">
+      <img
+        src="/about-photo.jpg"
+        alt="Pravine Manivannan — Toronto-based AI, SEO, and marketing automation consultant"
+        width="800"
+        height="800"
+        loading="eager"
+        decoding="async"
+        class="portrait-img"
+      />
+      <figcaption class="portrait-meta">
         <span>PRAVINE MANIVANNAN</span>
         <span class="gr">TORONTO · 2025-PRESENT</span>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -173,17 +181,14 @@ const jsonLd = {
 .portrait-frame .portrait-chrome .dot { width: 7px; height: 7px; background: var(--border); display: inline-block; }
 .portrait-frame .portrait-chrome .tag { margin-left: 6px; flex: 1; }
 .portrait-frame .portrait-chrome .live { color: var(--green); }
-.portrait-monogram {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 96px; font-weight: 700;
-  color: var(--green);
-  letter-spacing: -0.03em; line-height: 1;
-  padding: 60px 0;
-  text-align: center;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,255,65,0.08) 0%, transparent 60%),
-    radial-gradient(circle at 1px 1px, #1a1a1a 1px, transparent 0);
-  background-size: 100%, 14px 14px;
+.portrait-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  filter: contrast(1.02) saturate(0.95);
+  background: var(--bg-tertiary);
 }
 .portrait-meta {
   display: flex; flex-direction: column; gap: 4px;
