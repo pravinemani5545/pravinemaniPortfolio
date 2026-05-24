@@ -15,10 +15,10 @@ Pravine Mani runs a one-person consultancy in Toronto, Canada, focused on four a
 
 ## Engagement Shapes
 
-- [Workflow Probe](https://pravinemani.com/services/#probe): 90-minute Loom walkthrough + one-page written recommendation. Low three-figures starting. Cheapest on-ramp.
-- [System Audit](https://pravinemani.com/services/#audit): A fixed-scope week mapping the business and identifying high-impact opportunities across any focus area. Mid four-figures starting.
-- [Build Sprint](https://pravinemani.com/services/#sprint): A productized, fixed-scope build of a single workflow. Mid four-figures starting.
-- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow builds — content engines, MCP servers, full marketing sites with SEO + admin portals. Low five-figures starting.
+- [Free Workflow Teardown](https://pravinemani.com/services/#teardown): 30-minute live call (or async Loom + brief). One workflow mapped, 2-3 automation opportunities identified, verbal ROI estimate, recommended next step. $0, 5 slots per month.
+- [System Audit](https://pravinemani.com/services/#audit): A fixed-scope week mapping the business and identifying high-impact opportunities across any focus area. **Founding rate: $1,500 (3 slots).** Standard rate after: mid four-figures.
+- [Build Sprint](https://pravinemani.com/services/#sprint): A productized, fixed-scope build of a single workflow. **Founding rate: $2,500 (3 slots).** Standard rate after: mid four-figures.
+- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow builds — content engines, MCP servers, full marketing sites with SEO + admin portals. From $12K, milestone-paid.
 
 ## Case Studies
 

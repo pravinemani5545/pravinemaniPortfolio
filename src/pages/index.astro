@@ -252,14 +252,35 @@ try {
   <div class="section-head reveal">
     <div class="title-block">
       <div class="label">what i do</div>
-      <h2>Three ways to put me to work.</h2>
-      <p>Productized engagement shapes across AI, SEO + GEO, marketing automation, and Agentic OS. Fixed scope, no retainer creep. Pricing on the call. <a href="/services/">Full service descriptions →</a></p>
+      <h2>Four ways to put me to work.</h2>
+      <p>Productized engagement shapes across AI, SEO + GEO, marketing automation, and Agentic OS. Fixed scope, no retainer creep. <strong style="color: var(--text-primary);">Founding pricing live on Audit + Sprint</strong> — 3 slots per tier. <a href="/services/">Full service descriptions →</a></p>
     </div>
   </div>
 
   <div class="services-grid">
 
-    <div class="service-card featured reveal">
+    <div class="service-card reveal">
+      <div class="head">
+        <span class="id"><span class="num">00 ·</span> FREE WORKFLOW TEARDOWN</span>
+        <span class="price" style="color: #ffd84a;">FREE · TOP-OF-FUNNEL</span>
+      </div>
+      <div class="body">
+        <h3>Send me one workflow you hate doing. I'll map the automation.</h3>
+        <p>30-min live call (or async Loom + brief). I map one workflow, identify the 2–3 highest-leverage automation moves, hand back a verbal ROI estimate. No pitch, no obligation, no slides.</p>
+        <ul>
+          <li>One workflow mapped end-to-end</li>
+          <li>2–3 specific automation opportunities</li>
+          <li>Verbal ROI + recommended next step</li>
+          <li>No deck. No deliverable doc. Just signal.</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <span class="meta" style="color: #ffd84a;">$0 · 5 SLOTS / MO</span>
+        <a href="/contact/" class="cta">→ BOOK TEARDOWN</a>
+      </div>
+    </div>
+
+    <div class="service-card featured reveal" data-delay="1">
       <div class="head">
         <span class="id"><span class="num">01 ·</span> SYSTEM AUDIT</span>
         <span class="price">FIXED-SCOPE WEEK · MOST POPULAR</span>
@@ -275,12 +296,12 @@ try {
         </ul>
       </div>
       <div class="foot">
-        <span class="meta">FROM MID 4-FIG · LIMITED</span>
+        <span class="meta"><strong style="color: var(--green);">FOUNDING 3: $1,500</strong> · 3 SLOTS OPEN</span>
         <a href="/services/" class="cta">→ BOOK AUDIT</a>
       </div>
     </div>
 
-    <div class="service-card reveal" data-delay="1">
+    <div class="service-card reveal" data-delay="2">
       <div class="head">
         <span class="id"><span class="num">02 ·</span> BUILD SPRINT</span>
         <span class="price">FIXED-SCOPE BUILD</span>
@@ -296,12 +317,12 @@ try {
         </ul>
       </div>
       <div class="foot">
-        <span class="meta">FROM MID 4-FIG · LIMITED</span>
+        <span class="meta"><strong style="color: var(--green);">FOUNDING 3: $2,500</strong> · 3 SLOTS OPEN</span>
         <a href="/services/" class="cta">→ BOOK SPRINT</a>
       </div>
     </div>
 
-    <div class="service-card reveal" data-delay="2">
+    <div class="service-card reveal" data-delay="3">
       <div class="head">
         <span class="id"><span class="num">03 ·</span> CUSTOM BUILD</span>
         <span class="price">QUOTE-BASED</span>
@@ -317,7 +338,7 @@ try {
         </ul>
       </div>
       <div class="foot">
-        <span class="meta">FROM LOW 5-FIG · LIMITED</span>
+        <span class="meta">FROM $12K · MILESTONE-PAID</span>
         <a href="/services/" class="cta">→ START SCOPING</a>
       </div>
     </div>
@@ -781,8 +802,8 @@ a { color: inherit; text-decoration: none; }
 .section-head .meta .gr { color: var(--green); }
 
 /* ===== SERVICES GRID ===== */
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-@media (max-width: 1024px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 720px) { .services-grid { grid-template-columns: 1fr; } }
 .service-card { background: var(--bg-card); border: 1px solid var(--border); padding: 0; transition: all 250ms cubic-bezier(0.2,0,0,1); display: flex; flex-direction: column; position: relative; overflow: hidden; }
 .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--card-accent, var(--green)); opacity: 0; transition: opacity 200ms; }
 .service-card:hover::before { opacity: 1; }
@@ -955,9 +976,10 @@ a { color: inherit; text-decoration: none; }
 .footer-inner a:hover { color: var(--green); }
 
 /* Per-card glow rotation */
-.service-card:nth-child(1) { --card-accent: var(--green); }
-.service-card:nth-child(2) { --card-accent: var(--red); }
-.service-card:nth-child(3) { --card-accent: var(--blue); }
+.service-card:nth-child(1) { --card-accent: #ffd84a; }
+.service-card:nth-child(2) { --card-accent: var(--green); }
+.service-card:nth-child(3) { --card-accent: var(--red); }
+.service-card:nth-child(4) { --card-accent: var(--blue); }
 
 /* ===== NUMBERS BAND ===== */
 .numbers-band {
