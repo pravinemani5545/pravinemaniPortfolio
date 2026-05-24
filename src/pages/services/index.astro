@@ -26,12 +26,59 @@ import Base from '../../layouts/Base.astro';
   </div>
 </div>
 
+<!-- Canadian grant callout -->
+<div class="grant-callout reveal">
+  <div class="grant-inner">
+    <span class="grant-flag">CA · GRANT</span>
+    <div class="grant-body">
+      <span class="grant-h">Canadian small business?</span>
+      <span class="grant-sub">Up to <strong>$15K of an engagement</strong> can be grant-covered through federal programs like <strong>CDAP</strong> (Canada Digital Adoption Program) and <strong>IRAP</strong> (NRC Industrial Research Assistance). I scope inside those grant frameworks regularly.</span>
+    </div>
+    <a href="/contact/" class="grant-cta">Talk grant fit →</a>
+  </div>
+</div>
+
 <!-- ===== PRIMARY ENGAGEMENTS ===== -->
 <section class="section">
   <div class="section-head reveal">
     <div class="label">primary engagements</div>
-    <h2>The four ways to put me to work.</h2>
-    <p>Productized so we both know what we're building toward. The audit is the right starting point for "we're not sure what to automate." Sprint is "we know exactly what we want." Advisory is for builders already shipping. Custom is for anything bigger.</p>
+    <h2>Five ways to put me to work.</h2>
+    <p>Productized so we both know what we're building toward. The probe is the cheapest on-ramp. The audit is "we're not sure what to automate." Sprint is "we know exactly what we want." Advisory is for builders already shipping. Custom is for anything bigger.</p>
+  </div>
+
+  <!-- 00 · WORKFLOW PROBE -->
+  <div class="tier-card reveal" id="probe">
+    <div class="tier-head">
+      <div class="left">
+        <div class="row1" style="color: #ffd84a;"><span class="pulse" style="background: #ffd84a;"></span>00 · WORKFLOW PROBE</div>
+        <h3>One-workflow Loom walkthrough + a written recommendation.</h3>
+      </div>
+      <div class="right">
+        <div class="time" style="color: #ffd84a;">90-MIN ENGAGEMENT</div>
+        <div class="slots">CHEAPEST ON-RAMP</div>
+      </div>
+    </div>
+    <div class="tier-body">
+      <div class="col">
+        <h4>WHAT YOU GET</h4>
+        <p>You send a Loom of one workflow (or a 5-bullet description). I send back a 15–25 min Loom walkthrough + a 1-page written recommendation: what to keep, what to rip out, what the AI/SEO/automation upgrade looks like, and rough cost.</p>
+        <p><strong>Right starting point</strong> if a full audit feels too big — or you want a real opinion before booking a call.</p>
+      </div>
+      <div class="col">
+        <h4>DELIVERABLES</h4>
+        <ul>
+          <li>15–25 min recorded Loom walkthrough</li>
+          <li>1-page written recommendation (PDF)</li>
+          <li>Specific next-step + rough scope/cost</li>
+          <li>30 min Slack/email follow-up window</li>
+          <li>Credit toward a Sprint or Custom Build</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tier-foot">
+      <span class="meta">FROM LOW 3-FIG · REMOTE · ASYNC</span>
+      <a href="/contact/">→ REQUEST PROBE</a>
+    </div>
   </div>
 
   <!-- 01 · AUDIT -->
@@ -183,6 +230,52 @@ import Base from '../../layouts/Base.astro';
       <span class="meta">FROM LOW 5-FIG · MILESTONE PAYMENTS</span>
       <a href="/contact/">→ START SCOPING</a>
     </div>
+  </div>
+</section>
+
+<!-- ===== WHO I'M NOT FOR (filter block) ===== -->
+<section class="section" id="not-for">
+  <div class="section-head reveal">
+    <div class="label" style="color: var(--red);">honest filter</div>
+    <h2>Who I'm <em>not</em> for.</h2>
+    <p>Saves both of us the call. If any of these are you, the engagement won't work — and I'd rather say so up front than waste your time.</p>
+  </div>
+
+  <div class="not-for-grid">
+    <div class="not-for-card reveal">
+      <div class="x">✗</div>
+      <h4>Enterprises with procurement cycles</h4>
+      <p>You need a vendor MSA, a 6-week security review, and a SOC 2 audit before signing. I'm one person — that overhead breaks the economics. Hire a real agency.</p>
+    </div>
+    <div class="not-for-card reveal">
+      <div class="x">✗</div>
+      <h4>n8n / Make / Zapier rebuilds only</h4>
+      <p>If you want a no-code workflow strung together in a visual editor, I'm the wrong consultant. I work in code. If your stack is correct as-is, I'll say so and refund.</p>
+    </div>
+    <div class="not-for-card reveal">
+      <div class="x">✗</div>
+      <h4>Sub-$2K projects</h4>
+      <p>Below mid four-figures, the scoping overhead is bigger than the work. Use the <a href="#probe">Workflow Probe</a> ($200-500) for one-off advice — or hire a freelance dev.</p>
+    </div>
+    <div class="not-for-card reveal">
+      <div class="x">✗</div>
+      <h4>Hourly billing engagements</h4>
+      <p>Every engagement is fixed-scope, fixed-price. Hourly aligns nobody's incentives. If you need T&amp;M billing, we won't be able to work together.</p>
+    </div>
+    <div class="not-for-card reveal">
+      <div class="x">✗</div>
+      <h4>AI-safety / AGI / RLHF research</h4>
+      <p>Not my lane. Hire someone closer to the frontier labs. I build ops workflows, not alignment models.</p>
+    </div>
+    <div class="not-for-card reveal">
+      <div class="x">✗</div>
+      <h4>Customer-service chatbot work</h4>
+      <p>Saturated category. Intercom Fin, Forethought, Ada exist and are better at it than I'll ever be. I'll send you to them.</p>
+    </div>
+  </div>
+
+  <div class="not-for-foot">
+    <p>If you're still here after that filter — <a href="/contact/">book a 30-min call</a>. Quick fit-check, free, ends with a written quote within 24 hours.</p>
   </div>
 </section>
 
@@ -404,10 +497,36 @@ import Base from '../../layouts/Base.astro';
 .tier-foot a.secondary { background: transparent; color: var(--green); border: 1px solid var(--green); }
 .tier-foot a.secondary:hover { background: var(--green); color: var(--bg-primary); }
 
-.tier-card:nth-of-type(1) { --card-accent: var(--green); }
-.tier-card:nth-of-type(2) { --card-accent: var(--red); }
-.tier-card:nth-of-type(3) { --card-accent: #a855f7; }
-.tier-card:nth-of-type(4) { --card-accent: var(--blue); }
+.tier-card:nth-of-type(1) { --card-accent: #ffd84a; }
+.tier-card:nth-of-type(2) { --card-accent: var(--green); }
+.tier-card:nth-of-type(3) { --card-accent: var(--red); }
+.tier-card:nth-of-type(4) { --card-accent: #a855f7; }
+.tier-card:nth-of-type(5) { --card-accent: var(--blue); }
+
+/* Canadian grant callout */
+.grant-callout { max-width: 1440px; margin: 0 auto 28px; padding: 0 clamp(20px, 2.5vw, 48px); }
+.grant-inner { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 18px 24px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--green); }
+.grant-flag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; padding: 5px 10px; border: 1px solid var(--green); white-space: nowrap; }
+.grant-body { display: flex; flex-direction: column; gap: 4px; }
+.grant-h { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; }
+.grant-sub { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.grant-sub strong { color: var(--text-primary); }
+.grant-cta { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--green); text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--green); white-space: nowrap; transition: all var(--dur-micro, 150ms) var(--ease); }
+.grant-cta:hover { background: var(--green); color: var(--bg-primary); }
+@media (max-width: 720px) { .grant-inner { grid-template-columns: 1fr; gap: 10px; } .grant-cta { text-align: center; } }
+
+/* Who I'm not for filter block */
+.not-for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.not-for-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--red); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+.not-for-card .x { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--red); font-weight: 700; line-height: 1; }
+.not-for-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
+.not-for-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.not-for-card p a { color: var(--green); border-bottom: 1px dashed var(--green); }
+.not-for-foot { margin-top: 24px; padding: 18px 24px; background: var(--bg-tertiary); border: 1px solid var(--border-green); text-align: center; }
+.not-for-foot p { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); }
+.not-for-foot p a { color: var(--green); border-bottom: 1px dashed var(--green); font-weight: 600; }
+@media (max-width: 900px) { .not-for-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .not-for-grid { grid-template-columns: 1fr; } }
 
 /* Specific builds grid (smaller, more compact) */
 .builds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 32px; }

@@ -78,6 +78,18 @@ const jsonLd = {
   </div>
 </section>
 
+<!-- ===== NUMBERS BAND ===== -->
+<section class="numbers-band">
+  <div class="numbers-inner">
+    <div class="n-cell"><span class="k">SHIPPED CASE STUDIES</span><span class="v"><span class="gr">1</span> <span class="dim">+ 2 NDA</span></span></div>
+    <div class="n-cell"><span class="k">PSEO PAGES (CISNET)</span><span class="v"><span class="gr">200+</span></span></div>
+    <div class="n-cell"><span class="k">COMMITS / 30D</span><span class="v"><span class="gr">62</span></span></div>
+    <div class="n-cell"><span class="k">AIOPSFORGE URLS LIVE</span><span class="v"><span class="gr">51</span></span></div>
+    <div class="n-cell"><span class="k">BASED IN</span><span class="v">TORONTO, ON</span></div>
+    <div class="n-cell"><span class="k">MCMASTER COMP ENG</span><span class="v">'25</span></div>
+  </div>
+</section>
+
 <!-- ===== TICKER ===== -->
 <div class="ticker-wrap">
   <div class="ticker">
@@ -113,6 +125,33 @@ const jsonLd = {
     </div>
   </div>
 </div>
+
+<!-- ===== PAIN BAND ===== -->
+<section class="section pain-section">
+  <div class="section-head reveal">
+    <div class="title-block">
+      <div class="label" style="color: var(--red);">three things eating your week</div>
+      <h2>The expensive parts you've already noticed.</h2>
+    </div>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card reveal">
+      <div class="pain-id">01</div>
+      <h3>You're paying $300/mo to glue together what code does for free.</h3>
+      <p>n8n Cloud. Make. Zapier. Each subscription is the price of admission for one workflow. Same workflow in Vercel cron + serverless: $0/mo platform, ~$0.20/day in API tokens, fully versioned in git.</p>
+    </div>
+    <div class="pain-card reveal">
+      <div class="pain-id">02</div>
+      <h3>An AI agent could finish your week in 30 seconds. You're doing it manually.</h3>
+      <p>Lead triage. Inbox classification. Daily reporting. Competitor watch. Each one is a 6-hour drain on your week and a one-day build to ship as a real workflow.</p>
+    </div>
+    <div class="pain-card reveal">
+      <div class="pain-id">03</div>
+      <h3>Your competitors are showing up in AI search. You're not.</h3>
+      <p>Perplexity, ChatGPT search, Google AI Overviews all pull from passage-level schema and llms.txt. Most sites still optimize for Position 1 that nobody clicks anymore. The new SEO is being the passage Google quotes inside the overview.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ===== SERVICES ===== -->
 <section class="section" id="services">
@@ -856,4 +895,85 @@ a { color: inherit; text-decoration: none; }
 .service-card:nth-child(2) { --card-accent: var(--red); }
 .service-card:nth-child(3) { --card-accent: #a855f7; }
 .service-card:nth-child(4) { --card-accent: var(--blue); }
+
+/* ===== NUMBERS BAND ===== */
+.numbers-band {
+  max-width: 1440px; margin: 0 auto;
+  padding: 0 clamp(20px, 2.5vw, 48px) 24px;
+}
+@media (min-width: 2000px) { .numbers-band { max-width: 1760px; } }
+@media (min-width: 3000px) { .numbers-band { max-width: 2200px; } }
+.numbers-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.numbers-inner .n-cell {
+  background: var(--bg-card);
+  padding: clamp(14px, 1.2vw, 22px) clamp(16px, 1.4vw, 24px);
+  display: flex; flex-direction: column; gap: 5px;
+}
+.numbers-inner .n-cell .k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(9px, 0.65vw, 11px);
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.numbers-inner .n-cell .v {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(16px, 1.3vw, 22px);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.numbers-inner .n-cell .v .gr { color: var(--green); }
+.numbers-inner .n-cell .v .dim { color: var(--text-dim); font-size: 0.7em; }
+@media (max-width: 980px) { .numbers-inner { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .numbers-inner { grid-template-columns: repeat(2, 1fr); } }
+
+/* ===== PAIN BAND ===== */
+.pain-section { padding-top: clamp(40px, 4vw, 64px); padding-bottom: clamp(40px, 4vw, 64px); }
+.pain-section .section-head { margin-bottom: clamp(24px, 2.5vw, 36px); }
+.pain-section .label { color: var(--red) !important; }
+.pain-section .label::before { content: '╭─ '; color: var(--text-dim); }
+.pain-section .label::after { content: ' ─╮'; color: var(--text-dim); }
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.pain-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--red);
+  padding: 26px 28px;
+  display: flex; flex-direction: column; gap: 12px;
+  transition: all var(--dur-base, 200ms) var(--ease);
+}
+.pain-card:hover { border-left-color: var(--red); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,0,0,0.4); }
+.pain-card .pain-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--red);
+  text-transform: uppercase;
+}
+.pain-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(18px, 1.4vw, 22px);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+}
+.pain-card p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: clamp(14px, 1vw, 16px);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+@media (max-width: 900px) { .pain-grid { grid-template-columns: 1fr; } }
 </style>
