@@ -65,6 +65,66 @@ const jsonLd = {
 
   </div>
 
+  <section class="intake-section">
+    <div class="intake-head">
+      <div class="label">written intake · 4 fields</div>
+      <h2>Or send a structured brief.</h2>
+      <p>Same info I'd ask on the call, in writing. Read personally — reply within 24 hours on weekdays. Lands directly in my inbox via FormSubmit.</p>
+    </div>
+
+    <form class="intake-form" action="https://formsubmit.co/pravinemaniva@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New scoping inquiry — pravinemani.com" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_honey" />
+      <input type="hidden" name="_next" value="https://pravinemani.com/contact/?sent=1" />
+
+      <div class="intake-row">
+        <label for="name">Your name + company</label>
+        <input id="name" type="text" name="name" autocomplete="name" required placeholder="e.g. Jane Doe, Acme Co." />
+      </div>
+
+      <div class="intake-row">
+        <label for="email">Email to reply to</label>
+        <input id="email" type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+      </div>
+
+      <div class="intake-row">
+        <label for="broken">What's broken / what do you want shipped?</label>
+        <textarea id="broken" name="problem" rows="4" required placeholder="A workflow eating your week. A lead pipeline that doesn't work. SEO ranking authority on a migration. A specific AI agent that should exist."></textarea>
+      </div>
+
+      <div class="intake-row intake-row-grid">
+        <div>
+          <label for="when">When do you need it?</label>
+          <select id="when" name="timeline" required>
+            <option value="">Pick one…</option>
+            <option>This week</option>
+            <option>This month</option>
+            <option>This quarter</option>
+            <option>No rush — exploring</option>
+          </select>
+        </div>
+        <div>
+          <label for="budget">Rough budget</label>
+          <select id="budget" name="budget" required>
+            <option value="">Pick a bracket…</option>
+            <option>$200–500 (Workflow Probe)</option>
+            <option>Mid 4-figures (Audit / Sprint)</option>
+            <option>Low 4-figures / mo (Advisory)</option>
+            <option>Low 5-figures+ (Custom)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="intake-actions">
+        <button type="submit" class="btn intake-submit">Send brief →</button>
+        <span class="intake-foot">I read every one personally. No follow-up sequence, no list signup.</span>
+      </div>
+    </form>
+  </section>
+
   <div class="direct-channels">
     <h4>All channels at a glance</h4>
     <div class="channel"><span class="k">EMAIL</span><span class="v"><a href="mailto:pravinemaniva@gmail.com">pravinemaniva@gmail.com</a></span><span class="speed">~24 HRS</span></div>
@@ -115,4 +175,54 @@ const jsonLd = {
 .scheduling-note p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .scheduling-note p strong { color: var(--text-primary); }
 @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } .channel { grid-template-columns: 1fr; gap: 4px; } }
+
+/* ===== Structured intake form ===== */
+.intake-section { margin: 36px 0 24px; padding: 28px 30px; background: var(--bg-card); border: 1px solid var(--border); position: relative; }
+.intake-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.85; }
+.intake-head { margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.intake-head .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; margin-bottom: 8px; }
+.intake-head h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.9vw, 30px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.018em; line-height: 1.2; margin-bottom: 8px; }
+.intake-head p { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.55; max-width: 64ch; }
+
+.intake-form { display: flex; flex-direction: column; gap: 18px; }
+.intake-form input[name="_honey"] { display: none !important; }
+.intake-row { display: flex; flex-direction: column; gap: 6px; }
+.intake-row label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
+.intake-row input, .intake-row textarea, .intake-row select {
+  width: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color var(--dur-micro, 150ms) var(--ease);
+}
+.intake-row input:focus, .intake-row textarea:focus, .intake-row select:focus {
+  border-color: var(--green);
+}
+.intake-row input::placeholder, .intake-row textarea::placeholder { color: var(--text-dim); }
+.intake-row textarea { resize: vertical; font-family: 'IBM Plex Sans', sans-serif; line-height: 1.5; }
+.intake-row select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--text-dim) 50%), linear-gradient(135deg, var(--text-dim) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 32px; }
+.intake-row-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.intake-row-grid > div { display: flex; flex-direction: column; gap: 6px; }
+@media (max-width: 600px) { .intake-row-grid { grid-template-columns: 1fr; } }
+
+.intake-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 6px; }
+.intake-submit { display: inline-flex; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 22px; background: var(--green); color: var(--bg-primary); border: none; cursor: pointer; transition: all var(--dur-micro, 150ms) var(--ease); }
+.intake-submit:hover { background: var(--text-primary); }
+.intake-foot { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: var(--text-dim); }
 </style>
+<script>
+  // Show a confirmation message if the form just submitted (FormSubmit redirects back with ?sent=1)
+  if (window.location.search.includes('sent=1')) {
+    const section = document.querySelector('.intake-section');
+    if (section) {
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--green); border-left: 2px solid var(--green); padding: 14px 18px; margin-bottom: 18px; font-family: \'IBM Plex Sans\', sans-serif; font-size: 14px; color: var(--text-primary);';
+      banner.textContent = 'Brief received. I read every one personally — reply within 24 hours on weekdays.';
+      section.prepend(banner);
+    }
+  }
+</script>
