@@ -15,10 +15,10 @@ Pravine Mani runs a one-person consultancy in Toronto, Canada, focused on four a
 
 ## Engagement Shapes
 
-- [Audit](https://pravinemani.com/services/): A fixed-scope week mapping the business and identifying high-impact opportunities across any focus area. Mid four-figures starting.
-- [Build Sprint](https://pravinemani.com/services/): A productized, fixed-scope build of a single workflow. Mid four-figures starting.
-- [Advisory Retainer](https://pravinemani.com/services/): Monthly retainer covering async reviews of code, prompts, costs, and vendor decisions. Low four-figures monthly starting.
-- [Custom Build](https://pravinemani.com/services/): Multi-workflow builds — content engines, MCP servers, full marketing sites with SEO + admin portals. Low five-figures starting.
+- [Workflow Probe](https://pravinemani.com/services/#probe): 90-minute Loom walkthrough + one-page written recommendation. Low three-figures starting. Cheapest on-ramp.
+- [System Audit](https://pravinemani.com/services/#audit): A fixed-scope week mapping the business and identifying high-impact opportunities across any focus area. Mid four-figures starting.
+- [Build Sprint](https://pravinemani.com/services/#sprint): A productized, fixed-scope build of a single workflow. Mid four-figures starting.
+- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow builds — content engines, MCP servers, full marketing sites with SEO + admin portals. Low five-figures starting.
 
 ## Case Studies
 
