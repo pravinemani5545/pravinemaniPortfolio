@@ -228,8 +228,8 @@ body.nav-locked { overflow: hidden; }
 .page-hero .breadcrumb .you { color: var(--text-primary); }
 .page-hero h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(40px, 5.4vw, 84px);
-  font-weight: 600; line-height: 1.04; letter-spacing: -0.032em;
+  font-size: clamp(36px, 4.4vw, 64px);
+  font-weight: 600; line-height: 1.08; letter-spacing: -0.028em;
   color: var(--text-primary); margin-bottom: clamp(18px, 1.8vw, 28px);
   text-wrap: balance;
   background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
