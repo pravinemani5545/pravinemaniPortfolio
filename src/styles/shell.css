@@ -372,3 +372,48 @@ body.nav-locked { overflow: hidden; }
   background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%);
   max-width: 1200px; margin: 0 auto;
 }
+
+/* ===== Shared service-vertical page patterns ===== */
+/* Used by /services/ai/, /services/seo/, /services/marketing-automation/, /services/agentic-os/ */
+.vert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 880px) { .vert-grid { grid-template-columns: 1fr; } }
+.vert-card { background: var(--bg-card); border: 1px solid var(--border); padding: 26px 28px; display: flex; flex-direction: column; gap: 12px; position: relative; scroll-margin-top: 92px; transition: all var(--dur-base, 200ms) var(--ease); }
+.vert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.6; }
+.vert-card:hover { border-color: var(--border-green); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,0,0,0.4); }
+.vert-card:hover::before { opacity: 1; }
+.vert-head { display: flex; align-items: baseline; gap: 14px; }
+.vert-id { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--text-dim); }
+.vert-card h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.7vw, 28px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.012em; line-height: 1.2; }
+.vert-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(14.5px, 1.05vw, 17px); color: var(--text-secondary); line-height: 1.6; }
+.vert-card ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.vert-card ul li { padding-left: 18px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.vert-card ul li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.vert-card ul li strong { color: var(--text-primary); }
+.vert-card a { color: var(--green); border-bottom: 1px dashed var(--green); }
+
+.vert-engagements { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.vert-eng { background: var(--bg-card); padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; transition: background var(--dur-micro, 150ms) var(--ease); }
+.vert-eng:hover { background: var(--bg-card-hover, var(--bg-secondary)); }
+.vert-eng .lab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; }
+.vert-eng .when { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; }
+@media (max-width: 720px) { .vert-engagements { grid-template-columns: 1fr; } }
+
+.vert-cta { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%); border: 1px solid var(--border-green); padding: 44px 36px; text-align: center; position: relative; overflow: hidden; }
+.vert-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center top, rgba(0,255,65,0.06) 0%, transparent 60%); pointer-events: none; }
+.vert-cta > * { position: relative; z-index: 1; }
+.vert-cta h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 2.8vw, 32px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
+.vert-cta h2 .accent { color: var(--green); }
+.vert-cta p { font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; max-width: 640px; margin-left: auto; margin-right: auto; }
+
+/* ===== Shared sprint sub-page patterns ===== */
+/* Used by /services/sprints/lead-pipeline/, /programmatic-seo/, /mcp-server/, /geo/ */
+.sprint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 32px; }
+@media (max-width: 880px) { .sprint-grid { grid-template-columns: 1fr; } }
+.sprint-col h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.8vw, 28px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.015em; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.sprint-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.sprint-col ul li { padding-left: 20px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
+.sprint-col ul li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.sprint-col ul li strong { color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.06em; }
+.sprint-foot { background: var(--bg-card); border: 1px solid var(--border-green); padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.sprint-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.sprint-meta .badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; padding: 5px 10px; border: 1px solid var(--green); }
