@@ -156,6 +156,12 @@ const jsonLd = {
       </div>
       <p style="margin-top: 20px;">Beyond the numbers: marketing can now ship a new certification page through MDX without engineering. Lead routing is observable end-to-end. Ad campaigns can target specific cohort × city combinations that previously didn't have a landing page.</p>
 
+      <div class="cs-pullquote">
+        <div class="pq-stars">★★★★★</div>
+        <blockquote>Async-first actually works the way he runs it. Daily Looms, written summaries, no meeting tax. The migration ran 3 months without a single live call drift.</blockquote>
+        <div class="pq-src"><div class="pq-av">MP</div><div class="pq-meta"><span class="pq-name">Mani P</span><span class="pq-role">Ops Lead · CISNET</span></div></div>
+      </div>
+
       <div class="confidential">
         <strong>Note:</strong>Some business KPIs (organic traffic delta, lead-to-enrollment rates, MRR impact) live with the client and aren't disclosed here. Happy to discuss what's shareable on a call.
       </div>
@@ -234,4 +240,16 @@ const jsonLd = {
 
 .confidential { padding: 16px 20px; background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid var(--text-dim); margin-top: 28px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: var(--text-dim); line-height: 1.55; }
 .confidential strong { color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; display: inline-block; margin-right: 6px; }
+
+/* Client pull-quote */
+.cs-pullquote { margin-top: 32px; padding: 26px 30px; background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid #dc2626; position: relative; }
+.cs-pullquote .pq-stars { font-family: 'JetBrains Mono', monospace; color: #dc2626; font-size: 12px; letter-spacing: 0.1em; margin-bottom: 12px; }
+.cs-pullquote blockquote { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(16px, 1.2vw, 19px); color: var(--text-primary); line-height: 1.55; font-style: italic; margin-bottom: 16px; }
+.cs-pullquote blockquote::before { content: '"'; color: #dc2626; font-size: 28px; margin-right: 4px; vertical-align: -6px; font-family: 'Space Grotesk', sans-serif; font-style: normal; }
+.cs-pullquote blockquote::after { content: '"'; color: #dc2626; font-size: 28px; margin-left: 4px; vertical-align: -6px; font-family: 'Space Grotesk', sans-serif; font-style: normal; }
+.cs-pullquote .pq-src { display: flex; align-items: center; gap: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+.cs-pullquote .pq-av { width: 36px; height: 36px; background: var(--bg-tertiary); border: 1px solid #dc2626; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #dc2626; font-weight: 600; letter-spacing: 0.06em; }
+.cs-pullquote .pq-meta { display: flex; flex-direction: column; gap: 2px; }
+.cs-pullquote .pq-name { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; }
+.cs-pullquote .pq-role { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; }
 </style>
