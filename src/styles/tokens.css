@@ -2,7 +2,7 @@
    Adapted from Terminal Design System. Import before page-specific styles.
 
    This file provides the design foundation. Page-specific inline <style>
-   blocks can override any variable here — CSS source order guarantees
+   blocks can override any variable here. CSS source order guarantees
    the inline definition wins.
 
    Usage: <link rel="stylesheet" href="/design-system/tokens.css">
@@ -13,7 +13,7 @@
 
 :root {
 
-  /* ========== COLORS — DARK (DEFAULT) ========== */
+  /* ========== COLORS. DARK (DEFAULT) ========== */
 
   /* Backgrounds */
   --bg-primary: #0a0a0a;
@@ -26,26 +26,26 @@
   --text-primary: #f0f0f0;
   --text-secondary: #999999;
   --text-dim: #666666;
-  --text-muted: #444444;           /* NEW — dividers-as-text, rare */
+  --text-muted: #444444;           /* NEW, dividers-as-text, rare */
 
   /* Borders */
   --border: #2a2a2a;
-  --border-strong: #3a3a3a;        /* NEW — emphasized borders */
+  --border-strong: #3a3a3a;        /* NEW, emphasized borders */
   --border-green: rgba(0, 255, 65, 0.2);
 
-  /* Accent — terminal green */
+  /* Accent, terminal green */
   --green: #00FF41;
   --green-dim: #00cc34;
   --green-glow: rgba(0, 255, 65, 0.15);
   --green-glow-strong: rgba(0, 255, 65, 0.3);
-  --accent-soft: rgba(0, 255, 65, 0.08);   /* NEW — subtle hover fills */
-  --accent-glow: rgba(0, 255, 65, 0.12);   /* NEW — focused/active glow */
-  --selection-bg: rgba(0, 255, 65, 0.2);    /* NEW — text selection */
+  --accent-soft: rgba(0, 255, 65, 0.08);   /* NEW, subtle hover fills */
+  --accent-glow: rgba(0, 255, 65, 0.12);   /* NEW, focused/active glow */
+  --selection-bg: rgba(0, 255, 65, 0.2);    /* NEW, text selection */
 
   /* Status */
   --red: #ff4444;
   --red-dim: rgba(255, 68, 68, 0.15);
-  --warn: #ffb020;                  /* NEW — warning/pending */
+  --warn: #ffb020;                  /* NEW, warning/pending */
   --blue: #4488ff;
 
   /* ========== FONTS ========== */
@@ -104,7 +104,7 @@
 
   /* ========== RADIUS ========== */
 
-  --radius: 0;  /* DO NOT CHANGE — zero border-radius is a brand rule */
+  --radius: 0;  /* DO NOT CHANGE, zero border-radius is a brand rule */
 
   /* ========== MOTION ========== */
 

@@ -11,18 +11,18 @@ Pravine Mani runs a one-person consultancy in Toronto, Canada, focused on four a
 - [AI workflows](https://pravinemani.com/services/ai/): Custom workflows, MCP servers, agent systems, prompt + eval suites. Code-first on Claude Code + Vercel.
 - [SEO + GEO](https://pravinemani.com/services/seo/): Programmatic SEO at scale, Schema.org structured data, AI-search visibility (llms.txt + passage citability), local SEO.
 - [Marketing automation](https://pravinemani.com/services/marketing-automation/): Lead pipelines, lifecycle email, CRM + webhook wiring, Stripe subscriptions. Vercel + Resend + Supabase.
-- [Agentic OS](https://pravinemani.com/services/agentic-os/): Multi-agent orchestration systems, sub-agent design, concurrent-agent evals. R&D stage — open for first-mover engagements.
+- [Agentic OS](https://pravinemani.com/services/agentic-os/): Multi-agent orchestration systems, sub-agent design, and concurrent-agent evaluation. R&D stage; open for first-mover engagements.
 
 ## Engagement Shapes
 
-- [Scoping Call](https://pravinemani.com/services/#scoping-call): 30-minute scoping call. Free, by appointment. The default starting point for every engagement — walk through one workflow, decide whether an Audit / Sprint / Custom fits.
+- [Scoping Call](https://pravinemani.com/services/#scoping-call): 30-minute scoping call. Free, by appointment. The default starting point for every engagement: we walk through one workflow and determine whether an Audit, Sprint, or Custom build fits.
 - [System Audit](https://pravinemani.com/services/#audit): A fixed-scope week mapping the business and identifying high-impact opportunities across any focus area. From $4,500.
 - [Build Sprint](https://pravinemani.com/services/#sprint): A productized, fixed-scope build of a single workflow. From $4,500.
-- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow builds — content engines, MCP servers, full marketing sites with SEO + admin portals. From $12K, milestone-paid.
+- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow builds such as content engines, MCP servers, and full marketing sites with SEO and admin portals. From $12K, milestone-paid.
 
 ## Case Studies
 
-- [CISNET — Marketing site + SEO + admin portal rebuild](https://pravinemani.com/work/case-studies/cisnet/): Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Delivered 200+ programmatic SEO pages, 70+ individually-mapped redirects, 7 Schema.org JSON-LD types, a full lead pipeline (Facebook Lead Ads → HMAC webhook → Supabase → admin portal → Resend), Stripe Checkout, and a custom admin portal for leads, enrollments, content, and payments. Three months, solo, zero scope creep.
+- [CISNET: Marketing site + SEO + admin portal rebuild](https://pravinemani.com/work/case-studies/cisnet/): Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Delivered 200+ programmatic SEO pages, 70+ individually-mapped redirects, 7 Schema.org JSON-LD types, a full lead pipeline (Facebook Lead Ads → HMAC webhook → Supabase → admin portal → Resend), Stripe Checkout, and a custom admin portal for leads, enrollments, content, and payments. Three months, solo, zero scope creep.
 
 ## Stack
 

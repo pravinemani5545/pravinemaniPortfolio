@@ -1,4 +1,4 @@
-# Future plans — engagement shapes parked for later
+# Future plans, engagement shapes parked for later
 
 This file holds engagement-shape concepts that aren't on the live site yet.
 Either too early-stage, too speculative, or pending more signal on demand.
@@ -32,7 +32,7 @@ real demand signal for "monthly advisory."
 
 **Body copy:**
 > For founders already building who need a second brain. Async DMs, video
-> reviews, prompt + cost + architecture audits. Not implementation — the
+> reviews, prompt + cost + architecture audits. Not implementation, the
 > feedback that prevents the wrong build.
 
 **Deliverables (homepage card):**
@@ -41,7 +41,7 @@ real demand signal for "monthly advisory."
 - Cost audits + vendor strategy
 - Month-to-month · no lock-in
 
-**Deliverables (services-page tier card — fuller version):**
+**Deliverables (services-page tier card, fuller version):**
 - 2× 60-min video calls / month
 - Async Slack review channel
 - Code · prompt · cost audits on request

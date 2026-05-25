@@ -1,15 +1,15 @@
-# pravine.dev — portfolio
+# pravine.dev, portfolio
 
-Solo operator portfolio for Pravine Mani — services, work, AI workflows, writing, stack, contact.
+Solo operator portfolio for Pravine Mani, services, work, AI workflows, writing, stack, contact.
 
 Built with **Astro 6** + **Tailwind v4**. Static output. Auto-deployed to Vercel on push to `main`.
 
 ## Stack
 
-- [Astro](https://astro.build) — static site framework
-- [Tailwind v4](https://tailwindcss.com) — CSS utility framework (via Vite plugin)
-- Terminal Design System — dark-first, mono+display+body fonts, one accent (#00FF41)
-- [Plausible](https://plausible.io) — analytics
+- [Astro](https://astro.build), static site framework
+- [Tailwind v4](https://tailwindcss.com). CSS utility framework (via Vite plugin)
+- Terminal Design System, dark-first, mono+display+body fonts, one accent (#00FF41)
+- [Plausible](https://plausible.io), analytics
 
 ## Local dev
 
@@ -33,7 +33,7 @@ src/
     services/index.astro   # /services/
     work/index.astro       # /work/
     work/case-studies/cisnet/index.astro
-    ai/index.astro         # /ai/  — workflows, skills, MCPs, process
+    ai/index.astro         # /ai/, workflows, skills, MCPs, process
     writing/index.astro
     stack/index.astro
     now/index.astro

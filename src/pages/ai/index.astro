@@ -3,23 +3,23 @@ import Base from '../../layouts/Base.astro';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "How I use AI — workflows, skills, MCPs, dev process",
-  "description": "How Pravine Mani uses AI daily — custom Claude Code skills, MCP servers, Vercel cron workflow patterns.",
+  "headline": "How I use AI · workflows, skills, MCPs, dev process",
+  "description": "How Pravine Mani uses AI daily, custom Claude Code skills, MCP servers, Vercel cron workflow patterns.",
   "url": "https://pravinemani.com/ai/",
   "author": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" }
 };
 ---
 
 <Base
-  title="AI — Pravine Mani · workflows, skills, MCPs, dev process"
-  description="How I use AI daily — custom Claude Code skills, MCP servers, Vercel cron workflow patterns, and the dev process around Plan Mode + sub-agents."
+  title="AI · Pravine Mani · workflows, skills, MCPs, dev process"
+  description="How I use AI daily, custom Claude Code skills, MCP servers, Vercel cron workflow patterns, and the dev process around Plan Mode + sub-agents."
   jsonLd={jsonLd}
 >
 
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/ai/manifest.md <span class="you">→ how i use ai in daily work</span></div>
   <h1>How I use AI.<br><span class="accent">Workflows · skills · MCPs · process.</span></h1>
-  <p class="lead">Less marketing, more <strong style="color: var(--text-primary);">infrastructure notes</strong>. Below is the actual surface — the workflows I run on a schedule, the Claude Code skills I install across machines, the MCP servers plugged into my main editor, and the dev process I default to when shipping. Borrow freely. Reach out if anything is unclear.</p>
+  <p class="lead">Less marketing, more <strong style="color: var(--text-primary);">infrastructure notes</strong>. Below is the actual surface: the workflows I run on a schedule, the Claude Code skills I install across machines, the MCP servers plugged into my main editor, and the dev process I default to when shipping. Borrow freely. Reach out if anything is unclear.</p>
 </section>
 
 <!-- ===== 1. WORKFLOWS ===== -->
@@ -61,7 +61,7 @@ const jsonLd = {
         <span class="freq">WEEKLY · MON 08:00</span>
       </div>
       <h3>Newsletter draft generator</h3>
-      <p>Pulls the week's shipped commits across my repos, my notable Obsidian notes (tagged <code>#newsletter</code>), and saved highlights. Drafts the Beehiiv issue in Markdown. I edit, then publish — Claude doesn't ship copy on its own.</p>
+      <p>Pulls the week's shipped commits across my repos, my notable Obsidian notes (tagged <code>#newsletter</code>), and saved highlights. Drafts the Beehiiv issue in Markdown. I edit, then publish; Claude does not ship copy on its own.</p>
       <div class="ai-card-stack">
         <span class="chip">Vercel Cron</span><span class="chip">GitHub API</span><span class="chip">Obsidian MCP</span><span class="chip">Beehiiv API</span>
       </div>
@@ -132,7 +132,7 @@ const jsonLd = {
     <div class="skill-row reveal">
       <div class="cmd">/preserve</div>
       <div class="src">ELIAALBERTI</div>
-      <div class="desc"><strong>Update CLAUDE.md with current-session learnings.</strong> Catches phase changes, decisions, new file structure, blockers — appends to the project's CLAUDE.md with size-policed sections (auto-archives older than 7 days).</div>
+      <div class="desc"><strong>Update CLAUDE.md with current-session learnings.</strong> Catches phase changes, decisions, new file structure, and blockers; appends to the project's CLAUDE.md with size-policed sections (auto-archives entries older than seven days).</div>
     </div>
     <div class="skill-row reveal">
       <div class="cmd">/compress</div>
@@ -152,13 +152,13 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">03 · mcp servers</div>
     <h2>What's plugged into Claude.</h2>
-    <p>MCP (Model Context Protocol) lets Claude talk directly to apps. Below is what runs in my Claude Code config. Half are official Anthropic servers; the rest are community / self-hosted. The Obsidian one is patched locally — upstream has been abandoned.</p>
+    <p>MCP (Model Context Protocol) lets Claude talk directly to applications. Below is what runs in my Claude Code config. Half are official Anthropic servers; the rest are community or self-hosted. The Obsidian server is patched locally; upstream has been abandoned.</p>
   </div>
 
   <div class="mcp-grid">
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">context7</span><span class="badge">DOCS</span></div><p>Up-to-date library docs without web search. Most-used by far — every framework question goes through it first.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">context7</span><span class="badge">DOCS</span></div><p>Up-to-date library docs without web search. Most-used by far; every framework question goes through it first.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">github</span><span class="badge">CORE</span></div><p>Read repos, search code, list/comment PRs, file issues. Replaces 80% of the <code>gh</code> CLI for me.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">obsidian</span><span class="badge">SELF-HOST</span></div><p>Read/write notes in my vault. Patched locally (PR #44 applied) — upstream abandoned.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">obsidian</span><span class="badge">SELF-HOST</span></div><p>Read/write notes in my vault. Patched locally (PR #44 applied); upstream abandoned.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">supabase</span><span class="badge">DATA</span></div><p>Query + write to my Supabase projects. Saves the round-trip through their dashboard for ad-hoc tasks.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">playwright</span><span class="badge">TESTING</span></div><p>Drive a browser from Claude. Visual diff checks, scroll-state debugging, scraping with real DOM.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">notion</span><span class="badge">DOCS</span></div><p>Create pages, search workspaces, comment on docs. Used heavily during client onboarding sequences.</p></div>
@@ -170,7 +170,7 @@ const jsonLd = {
   </div>
 
   <div class="mcp-note reveal">
-    <strong>NOTE:</strong> Obsidian MCP transport wedges silently after the first tool call in a session — Claude Code transport layer issue, not the server. Fix: <code>/mcp</code> reconnect. Documented in my CLAUDE.md so I don't burn a session debugging it again.
+    <strong>NOTE:</strong> The Obsidian MCP transport wedges silently after the first tool call in a session. This is a Claude Code transport-layer issue, not a server problem. Fix: <code>/mcp</code> reconnect. Documented in my CLAUDE.md to avoid losing another session to the same debug.
   </div>
 </section>
 
@@ -200,7 +200,7 @@ const jsonLd = {
     <div class="proc-card reveal">
       <div class="proc-num">03</div>
       <h3>Multi-window orchestration.</h3>
-      <p>Tabbed Claude Code sessions — one per project — so I can switch context without losing thread. Combined with <code>/compress</code> + <code>/resume</code>, I can pick up a week-old task in 60 seconds.</p>
+      <p>Tabbed Claude Code sessions, one per project, so context-switches do not lose state. Combined with <code>/compress</code> and <code>/resume</code>, I can pick up a week-old task in 60 seconds.</p>
       <div class="proc-tag">MULTI-WINDOW</div>
     </div>
 
@@ -231,7 +231,7 @@ const jsonLd = {
 <section class="section">
   <div class="ai-cta reveal">
     <h2>Want to apply this to your business?<br><span class="acc">Book a 30-min call.</span></h2>
-    <p>If any of the workflows above sound useful — competitor watch, lead enrichment, morning briefs, client onboarding — they're <strong>productized</strong>. The 30-min call ends with a written quote.</p>
+    <p>If any of the workflows above sound useful (competitor watch, lead enrichment, morning briefs, client onboarding), they are <strong>productized</strong>. The 30-minute call ends with a written quote.</p>
     <div class="cta-row" style="justify-content: center;">
       <a href="/contact/" class="cta-btn">Book the call →</a>
       <a href="/services/" class="cta-btn secondary">See services</a>

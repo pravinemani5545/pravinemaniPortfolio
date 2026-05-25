@@ -1,6 +1,6 @@
-# Repositioning Strategy — AI · SEO · Marketing Automation Consultancy
+# Repositioning Strategy. AI · SEO · Marketing Automation Consultancy
 
-> Internal planning doc. Tracks the repositioning currently in flight (May 2026): from "AI automation for solo founders" to a Toronto consultancy across three focus areas — AI, SEO + GEO, and marketing automation.
+> Internal planning doc. Tracks the repositioning currently in flight (May 2026): from "AI automation for solo founders" to a Toronto consultancy across three focus areas. AI, SEO + GEO, and marketing automation.
 >
 > Items kept deliberately vague on the live site (specific slot counts, exact engagement timings, deliverable counts) are captured here for the next iteration once Pravine has finalized the execution shape.
 
@@ -13,15 +13,15 @@ Current positioning is too narrow ("AI automation for solo founders, code-first 
 - **SMBs** that need SEO + marketing automation work and have starting noticing the AI angle
 - **Operators inside larger teams** who want fractional AI/SEO/marketing-tech help
 
-New positioning: a Toronto consultancy organized around three focus areas — AI, SEO + GEO, marketing automation — with the same operator-voice, code-first delivery underneath. "Consultancy" label for search/category; operator voice for differentiation inside that category.
+New positioning: a Toronto consultancy organized around three focus areas. AI, SEO + GEO, marketing automation, with the same operator-voice, code-first delivery underneath. "Consultancy" label for search/category; operator voice for differentiation inside that category.
 
-Comparison anchor: [signalandform.ca](https://signalandform.ca/) (Vancouver) — same lane, opposite aesthetic. Do not copy their copy register; their generic agency-speak is the gap we exploit.
+Comparison anchor: [signalandform.ca](https://signalandform.ca/) (Vancouver), same lane, opposite aesthetic. Do not copy their copy register; their generic agency-speak is the gap we exploit.
 
 ---
 
 ## 2. Vertical × Engagement Matrix (parked for finalization)
 
-The site currently shows three vertical labels (AI / SEO + GEO / Marketing Automation) and the four legacy engagement shapes (Audit / Sprint / Advisory / Custom). The intended matrix below is **not yet locked in** — published only as flexible descriptors until the operational specifics are decided.
+The site currently shows three vertical labels (AI / SEO + GEO / Marketing Automation) and the four legacy engagement shapes (Audit / Sprint / Advisory / Custom). The intended matrix below is **not yet locked in**, published only as flexible descriptors until the operational specifics are decided.
 
 |                            | **AI**                                                            | **SEO + GEO**                                                       | **Marketing Automation**                                          |
 | -------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -35,7 +35,7 @@ The site currently shows three vertical labels (AI / SEO + GEO / Marketing Autom
 - [ ] Lock in the exact Audit length (current site says "fixed-scope week"; previously committed 5 days)
 - [ ] Decide whether Sprint stays at 48 hours or stretches to 3-day / 5-day depending on vertical
 - [ ] Decide Advisory hours/month (previously 10) and number of seats
-- [ ] Define what "Custom" minimum size is — anything > Sprint cost?
+- [ ] Define what "Custom" minimum size is, anything > Sprint cost?
 - [ ] Decide whether to publish indicative pricing brackets or stay quote-only
 - [ ] Decide on slot counts to advertise publicly (previously: 2 audits / quarter, 3 sprints / month, 3 advisory seats)
 
@@ -52,7 +52,7 @@ When the structure is locked, swap these back in via search-and-replace in `src/
 
 ---
 
-## 3. Site Surface — Work Plan (sequenced)
+## 3. Site Surface. Work Plan (sequenced)
 
 In rough priority order. None of these requires diluting voice.
 
@@ -103,7 +103,7 @@ In rough priority order. None of these requires diluting voice.
 
 ---
 
-## 4. LinkedIn Rewrite (apply manually — bot fetch is auth-walled)
+## 4. LinkedIn Rewrite (apply manually, bot fetch is auth-walled)
 
 ### Headline (choose one)
 
@@ -116,22 +116,22 @@ Skip emoji stack. Reads junior.
 ### About section (300 words, paste verbatim and adjust)
 
 ```
-I run a Toronto consultancy focused on AI, SEO, and marketing automation — production work, not slide decks.
+I run a Toronto consultancy focused on AI, SEO, and marketing automation, production work, not slide decks.
 
 Most "AI consultants" sell you Notion docs. I scope, build, and ship the actual workflow. CISNET hired me for a 3-month migration: legacy PHP → Next.js 16, 200+ programmatic SEO pages, full lead pipeline with Facebook Lead Ads + Stripe, and a custom admin portal. Shipped, live, ranking authority preserved through 70+ individually-mapped redirects.
 
 What I cover:
-• AI — workflow automation, internal agents, custom MCP servers, prompt + eval systems
-• SEO + GEO — programmatic SEO, schema, AI-search visibility (llms.txt, passage citability), site rebuilds
-• Marketing automation — lead pipelines, lifecycle email, CRM wiring, campaign infra
+• AI, workflow automation, internal agents, custom MCP servers, prompt + eval systems
+• SEO + GEO, programmatic SEO, schema, AI-search visibility (llms.txt, passage citability), site rebuilds
+• Marketing automation, lead pipelines, lifecycle email, CRM wiring, campaign infra
 
 Engagement shapes: audit → build sprint → monthly advisory → custom build. Fixed-scope, written specs, no retainer creep.
 
-I also run AIOpsForge — a $9.99/month paid community for solo AI builders — and write at pravinemani.com.
+I also run AIOpsForge, a $9.99/month paid community for solo AI builders, and write at pravinemani.com.
 
 McMaster Computer Engineering & Management '25. Background: Ericsson 5G (Go, gRPC), Imprimo (React Native, Postgres), Fixvi (React Native, push infra). Currently Toronto.
 
-Best way to reach me: book a 30-min call at pravinemani.com/contact — free, ends with a quote.
+Best way to reach me: book a 30-min call at pravinemani.com/contact, free, ends with a quote.
 ```
 
 ### Featured (pin 3, in this order)
@@ -148,7 +148,7 @@ Best way to reach me: book a 30-min call at pravinemani.com/contact — free, en
 - Add **AIOpsForge** as separate entry (Founder, parallel venture)
 - Polish bullet copy on Ericsson / Imprimo / Fixvi to remove redundant phrases ("by leveraging", "in order to")
 
-### Skills (in this priority order — LinkedIn weights the first three highest)
+### Skills (in this priority order. LinkedIn weights the first three highest)
 
 1. AI Consulting
 2. SEO
@@ -171,7 +171,7 @@ Best way to reach me: book a 30-min call at pravinemani.com/contact — free, en
 19. Webflow
 20. Framer
 
-Drop anything that doesn't serve the new positioning (Verilog, RPi, embedded — leave on the LaTeX résumé only).
+Drop anything that doesn't serve the new positioning (Verilog, RPi, embedded, leave on the LaTeX résumé only).
 
 ### Services tab
 
@@ -181,11 +181,11 @@ Enable LinkedIn's "Provide Services" feature. Add AI Consulting, SEO Consulting,
 
 One post per week, format: short hook + 3–5 short paragraphs + sometimes an image of a real artifact. First 8 post subjects:
 
-1. CISNET admin portal — one-paragraph case study + screenshot
+1. CISNET admin portal, one-paragraph case study + screenshot
 2. Why no n8n / why code-first
 3. How a Build Sprint actually gets scoped (the 5-day artifact list)
 4. What broke at 5 concurrent agents (from agentic-os)
-5. The Terminal Design System — one specific pattern (chrome / glow palette algorithm)
+5. The Terminal Design System, one specific pattern (chrome / glow palette algorithm)
 6. AIOpsForge week-in-review
 7. CPR essay or excerpts
 8. Before/after Lighthouse + Search Console screenshot from CISNET
@@ -201,7 +201,7 @@ Engage with replies same-day. LinkedIn boosts posts with author replies in the f
 - First-person voice in body copy
 - Live commit / activity feeds (best social-proof move on the site)
 - Stack / Now / AI / Writing pages (unfakeable credibility surfaces)
-- The opinion-load ("no n8n glue", "stitch together SaaS") — kept where it lands
+- The opinion-load ("no n8n glue", "stitch together SaaS"), kept where it lands
 
 ---
 
@@ -226,14 +226,14 @@ Next iterations (in priority order):
 
 ---
 
-## 7. Search Console / SEO infrastructure — submission steps
+## 7. Search Console / SEO infrastructure, submission steps
 
 The site now ships with the infrastructure Search Console needs. To finish wiring it up:
 
 1. **Verify the property in Google Search Console** at https://search.google.com/search-console
-   - Add property: `https://pravinemani.com` (Domain property recommended — uses DNS TXT verification)
+   - Add property: `https://pravinemani.com` (Domain property recommended, uses DNS TXT verification)
    - DNS verification: Add the TXT record GSC provides to your domain registrar
-   - Alternative: HTML meta tag — uncomment the `<meta name="google-site-verification">` line in `src/layouts/Base.astro` and paste the token from GSC
+   - Alternative: HTML meta tag, uncomment the `<meta name="google-site-verification">` line in `src/layouts/Base.astro` and paste the token from GSC
 
 2. **Submit the sitemap** in Search Console → Sitemaps → add `sitemap-index.xml`
    - The build generates this automatically at `https://pravinemani.com/sitemap-index.xml`
@@ -241,7 +241,7 @@ The site now ships with the infrastructure Search Console needs. To finish wirin
 
 3. **Submit to Bing Webmaster Tools** at https://www.bing.com/webmasters
    - Same domain verification flow
-   - Submit the same sitemap URL — Bing powers ChatGPT search + Copilot
+   - Submit the same sitemap URL. Bing powers ChatGPT search + Copilot
 
 4. **What's already in place**
    - `public/robots.txt` allows all crawlers + explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended (for GEO visibility)
@@ -261,12 +261,12 @@ The site now ships with the infrastructure Search Console needs. To finish wirin
 
 ## 8. Decision log
 
-- **2026-05-24** — Chose "consultancy" as the category label. Considered "studio", "operator", "practice" — rejected for SEO discoverability reasons. Will pair with operator-voice differentiation in body copy.
-- **2026-05-24** — Hero H1 set to: *"AI, SEO, and marketing automation consultancy. Built like an operator. Sold by the project."* — Option B of three drafts.
-- **2026-05-24** — Vague-ified specific slot counts on services page rather than committing to new engagement structure. Will be reversed once Section 2 open questions are answered.
-- **2026-05-24** — Trimmed homepage copy ~22% (1822→1419 words) and fixed X handle `@pravine` → `@pravinemani`.
-- **2026-05-24** — Switched homepage voice register toward "Thariq Shihipar meets Dan Koe" (short declarative paragraphs, sentence fragments for emphasis, `the work` subjects instead of `I`). Applied across hero lead, service descriptions, process steps, about cards, FAQ answers.
-- **2026-05-24** — Published per-tier pricing brackets using the vaguest format ("FROM MID 4-FIG" / "FROM LOW 4-FIG / MO" / "FROM LOW 5-FIG") so a $500-budget buyer self-filters without locking in a published dollar number.
-- **2026-05-24** — Shipped SEO infrastructure: `@astrojs/sitemap`, `site` config, expanded `robots.txt` with explicit AI-crawler allows, `llms.txt` brief for GEO, canonical/OG/Twitter meta in Base.astro, JSON-LD Person schema already in place. Ready for Search Console submission.
-- **2026-05-24** — Full audit recommendations shipped across 4 commits (`26dad19`, `bb08299`, `4800cda`, `f384c87`). 10 → 20 pages. Critical bugs fixed (404 OG image, broken homepage CTAs, dead-link spans, missing JSON-LD across 7 pages). Added: Agentic OS as 4th vertical, Services dropdown mega-menu, 4 vertical sub-pages, 4 named productized sprint pages with prices, `/work/case-studies/` index, `/why-code-first/` manifesto, homepage numbers + pain bands, Workflow Probe tier, "Who I'm not for" filter, CDAP/IRAP grant callout, `/about/` portrait placeholder + bottom CTA, FormSubmit contact intake form.
-- **2026-05-24** — **CISNET testimonial de-anonymized.** S.R. → "Mani P · Ops Lead · CISNET" on homepage testimonial band. Same quote added as a styled pull-quote on the CISNET case study page (with the CISNET-red border + initialed avatar). Per the audit, this was the single highest-leverage credibility lift. Other 3 homepage testimonials (J.K., M., D.) remain initialed pending future client approvals.
+- **2026-05-24**. Chose "consultancy" as the category label. Considered "studio", "operator", "practice", rejected for SEO discoverability reasons. Will pair with operator-voice differentiation in body copy.
+- **2026-05-24**. Hero H1 set to: *"AI, SEO, and marketing automation consultancy. Built like an operator. Sold by the project."*. Option B of three drafts.
+- **2026-05-24**. Vague-ified specific slot counts on services page rather than committing to new engagement structure. Will be reversed once Section 2 open questions are answered.
+- **2026-05-24**. Trimmed homepage copy ~22% (1822→1419 words) and fixed X handle `@pravine` → `@pravinemani`.
+- **2026-05-24**. Switched homepage voice register toward "Thariq Shihipar meets Dan Koe" (short declarative paragraphs, sentence fragments for emphasis, `the work` subjects instead of `I`). Applied across hero lead, service descriptions, process steps, about cards, FAQ answers.
+- **2026-05-24**. Published per-tier pricing brackets using the vaguest format ("FROM MID 4-FIG" / "FROM LOW 4-FIG / MO" / "FROM LOW 5-FIG") so a $500-budget buyer self-filters without locking in a published dollar number.
+- **2026-05-24**. Shipped SEO infrastructure: `@astrojs/sitemap`, `site` config, expanded `robots.txt` with explicit AI-crawler allows, `llms.txt` brief for GEO, canonical/OG/Twitter meta in Base.astro, JSON-LD Person schema already in place. Ready for Search Console submission.
+- **2026-05-24**. Full audit recommendations shipped across 4 commits (`26dad19`, `bb08299`, `4800cda`, `f384c87`). 10 → 20 pages. Critical bugs fixed (404 OG image, broken homepage CTAs, dead-link spans, missing JSON-LD across 7 pages). Added: Agentic OS as 4th vertical, Services dropdown mega-menu, 4 vertical sub-pages, 4 named productized sprint pages with prices, `/work/case-studies/` index, `/why-code-first/` manifesto, homepage numbers + pain bands, Workflow Probe tier, "Who I'm not for" filter, CDAP/IRAP grant callout, `/about/` portrait placeholder + bottom CTA, FormSubmit contact intake form.
+- **2026-05-24**. **CISNET testimonial de-anonymized.** S.R. → "Mani P · Ops Lead · CISNET" on homepage testimonial band. Same quote added as a styled pull-quote on the CISNET case study page (with the CISNET-red border + initialed avatar). Per the audit, this was the single highest-leverage credibility lift. Other 3 homepage testimonials (J.K., M., D.) remain initialed pending future client approvals.

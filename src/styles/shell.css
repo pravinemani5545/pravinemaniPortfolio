@@ -205,7 +205,7 @@ body.nav-locked { overflow: hidden; }
 @media (min-width: 3000px) { .page-hero { max-width: 2200px; } }
 @media (min-width: 4400px) { .page-hero { max-width: 2800px; } }
 
-/* Full-viewport glow that escapes the max-width container — no more squared edges */
+/* Full-viewport glow that escapes the max-width container, no more squared edges */
 .page-hero::before {
   content: ''; position: absolute;
   top: 0; left: 50%; transform: translateX(-50%);
