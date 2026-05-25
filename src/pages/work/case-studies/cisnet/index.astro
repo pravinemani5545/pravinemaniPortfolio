@@ -72,8 +72,8 @@ const jsonLd = {
     <div class="lab-col"><span class="num">01 / 05</span><span>THE PROBLEM</span></div>
     <div class="body-col">
       <h2>Legacy PHP that couldn't grow.</h2>
-      <p>CISNET's existing site was a hand-coded PHP build from 2014. Maintainable in the sense that one person knew where everything was, and breakable in the sense that <strong>nobody else could ship into it without an outage</strong>. Marketing wanted to add new certification pages, run paid campaigns into specific cohorts, and capture leads into a CRM. Engineering reality was: every new page was a Friday deploy with the lights flickering.</p>
-      <p>The deeper issue: SEO momentum. The legacy site ranked for ~70 cert-related queries. Any redesign that didn't preserve those URLs risked tanking organic traffic for a quarter or more, and the business depended on that organic flow for ~40% of intake.</p>
+      <p>CISNET's existing site was a hand-coded PHP build from 2014. Maintainable in the sense that one person knew where everything was. Breakable in the sense that <strong>nobody else could ship into it without an outage</strong>. Marketing wanted to add new certification pages, run paid campaigns into specific cohorts, and capture leads into a CRM. Engineering reality: every new page was a Friday deploy with the lights flickering.</p>
+      <p>The deeper issue: SEO momentum. The legacy site ranked for ~70 cert-related queries. Any redesign that didn't preserve those URLs risked tanking organic traffic for a quarter or more. The business depended on that organic flow for ~40% of intake.</p>
       <ul>
         <li><strong>Brittle stack:</strong> PHP 5.6, no test suite, manual FTP deploys</li>
         <li><strong>No lead infrastructure:</strong> contact-form-to-email only, no CRM, no admin view</li>
@@ -88,13 +88,13 @@ const jsonLd = {
     <div class="lab-col"><span class="num">02 / 05</span><span>THE APPROACH</span></div>
     <div class="body-col">
       <h2>Next.js 16 + programmatic SEO + lead infrastructure.</h2>
-      <p>Three parallel workstreams over 12 weeks. <strong>Stream 1 (weeks 1-4):</strong> stand up the Next.js 16, Supabase, and Vercel foundation; port the marketing pages 1:1; run the redirect map in development. <strong>Stream 2 (weeks 4-8):</strong> programmatic SEO. Generate 200+ certification × city pages from a structured content model, then ship sitemap.xml plus seven distinct schema types (Course, LocalBusiness, FAQPage, etc.). <strong>Stream 3 (weeks 8-12):</strong> lead pipeline. Facebook Lead Ads webhook with HMAC verification, Supabase storage, admin portal, Resend transactional email, and Stripe Checkout for the paid courses.</p>
-      <p>The hardest call early on: <strong>how aggressive to be on the redirect strategy</strong>. The decision was to map every legacy URL individually rather than rely on Next.js catch-all rewrites. Slower to build, but Google indexed the new URLs with full link equity inside six weeks rather than six months.</p>
+      <p>Three parallel workstreams over 12 weeks. <strong>Stream 1 (weeks 1-4):</strong> stand up the Next.js 16 + Supabase + Vercel foundation. Port the marketing pages 1:1. Run the redirect map in dev. <strong>Stream 2 (weeks 4-8):</strong> programmatic SEO. Generate 200+ cert × city pages from a structured content model. Ship sitemap.xml + 7 distinct schema types (Course, LocalBusiness, FAQPage, etc.). <strong>Stream 3 (weeks 8-12):</strong> lead pipeline. Facebook Lead Ads webhook with HMAC verification, Supabase storage, admin portal, Resend transactional email, Stripe Checkout for the paid courses.</p>
+      <p>Hardest call early on: <strong>how aggressive to be on the redirect strategy</strong>. Decided to map every legacy URL individually rather than rely on Next.js catch-all rewrites. Slower to build. But Google indexed the new URLs with full link equity inside 6 weeks rather than 6 months.</p>
       <ul>
         <li><strong>Foundation:</strong> Next.js 16 (app router), TypeScript strict, Supabase, Vercel</li>
         <li><strong>SEO surface:</strong> 200+ pSEO pages generated from a cert × city matrix</li>
         <li><strong>Redirects:</strong> 70+ legacy URLs mapped individually (not catch-all)</li>
-        <li><strong>Schema:</strong> seven types: Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite</li>
+        <li><strong>Schema:</strong> 7 types: Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite</li>
         <li><strong>Lead pipeline:</strong> FB Lead Ads → HMAC-verified webhook → Supabase → admin portal → Resend</li>
         <li><strong>Payments:</strong> Stripe Checkout + course-enrollment webhook</li>
       </ul>
@@ -106,7 +106,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">03 / 05</span><span>THE STACK</span></div>
     <div class="body-col">
       <h2>Boring, fast, debuggable.</h2>
-      <p>The default opinionated stack: Next.js, Supabase, and Vercel. A CMS was considered for the marketing pages, but editorial volume did not warrant the operational overhead. Page content lives in MDX inside the repo; engineers ship copy through pull requests.</p>
+      <p>Default opinionated stack: Next.js + Supabase + Vercel. Could've used a CMS for the marketing pages but the editorial volume didn't warrant the operational tax. Page content lives in MDX in the repo. Engineers ship copy through PRs.</p>
       <div class="stack-flat">
         <span class="chip daily">Next.js 16</span>
         <span class="chip daily">TypeScript</span>
@@ -129,7 +129,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">04 / 05</span><span>THE TIMELINE</span></div>
     <div class="body-col">
       <h2>12 weeks, 3 streams, no scope creep.</h2>
-      <p>Scope was locked in week 0. Anything that came up afterward went into a "v2 list"; none of it shipped during the engagement.</p>
+      <p>Locked scope in week 0. Anything that came up after went into a "v2 list." None of it shipped during the engagement.</p>
       <div class="timeline-rail">
         <div class="step"><span class="when">WK 0</span><span class="what"><strong>Kickoff + scope lock.</strong> Written spec signed. Redirect map drafted from server logs.</span></div>
         <div class="step"><span class="when">WK 1–4</span><span class="what"><strong>Foundation stream.</strong> Next.js 16 scaffold, marketing pages 1:1 port, Supabase schema, Vercel deploys, redirect map in dev.</span></div>
@@ -171,7 +171,7 @@ const jsonLd = {
   <!-- Final CTA -->
   <div class="final-cta reveal">
     <h2>Need similar work for your business?<br><span class="acc">Let's scope it.</span></h2>
-    <p>If you are facing a similar surface area (legacy stack to migrate, SEO to preserve, lead infrastructure to build), the 30-minute call is free and ends with a written quote.</p>
+    <p>If you're looking at a similar surface (legacy stack to migrate, SEO to preserve, lead infrastructure to build), the 30-min call is free and ends with a written quote.</p>
     <div class="cta-row" style="justify-content: center;">
       <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
       <a href="/services/" class="cta-btn secondary">See services</a>

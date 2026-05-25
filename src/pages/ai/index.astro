@@ -19,7 +19,7 @@ const jsonLd = {
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/ai/manifest.md <span class="you">→ how i use ai in daily work</span></div>
   <h1>How I use AI.<br><span class="accent">Workflows · skills · MCPs · process.</span></h1>
-  <p class="lead">Less marketing, more <strong style="color: var(--text-primary);">infrastructure notes</strong>. Below is the actual surface: the workflows I run on a schedule, the Claude Code skills I install across machines, the MCP servers plugged into my main editor, and the dev process I default to when shipping. Borrow freely. Reach out if anything is unclear.</p>
+  <p class="lead">Less marketing. More <strong style="color: var(--text-primary);">infrastructure notes</strong>. Below is the actual surface: the workflows I run on a schedule, the Claude Code skills I install across machines, the MCP servers plugged into my main editor, the dev process I default to when shipping. Borrow freely. Reach out if anything's unclear.</p>
 </section>
 
 <!-- ===== 1. WORKFLOWS ===== -->
@@ -61,7 +61,7 @@ const jsonLd = {
         <span class="freq">WEEKLY · MON 08:00</span>
       </div>
       <h3>Newsletter draft generator</h3>
-      <p>Pulls the week's shipped commits across my repos, my notable Obsidian notes (tagged <code>#newsletter</code>), and saved highlights. Drafts the Beehiiv issue in Markdown. I edit, then publish; Claude does not ship copy on its own.</p>
+      <p>Pulls the week's shipped commits across my repos, my notable Obsidian notes (tagged <code>#newsletter</code>), and saved highlights. Drafts the Beehiiv issue in Markdown. I edit, then publish. Claude doesn't ship copy on its own.</p>
       <div class="ai-card-stack">
         <span class="chip">Vercel Cron</span><span class="chip">GitHub API</span><span class="chip">Obsidian MCP</span><span class="chip">Beehiiv API</span>
       </div>
@@ -132,7 +132,7 @@ const jsonLd = {
     <div class="skill-row reveal">
       <div class="cmd">/preserve</div>
       <div class="src">ELIAALBERTI</div>
-      <div class="desc"><strong>Update CLAUDE.md with current-session learnings.</strong> Catches phase changes, decisions, new file structure, and blockers; appends to the project's CLAUDE.md with size-policed sections (auto-archives entries older than seven days).</div>
+      <div class="desc"><strong>Update CLAUDE.md with current-session learnings.</strong> Catches phase changes, decisions, new file structure, blockers. Appends to the project's CLAUDE.md with size-policed sections (auto-archives older than 7 days).</div>
     </div>
     <div class="skill-row reveal">
       <div class="cmd">/compress</div>
@@ -152,7 +152,7 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">03 · mcp servers</div>
     <h2>What's plugged into Claude.</h2>
-    <p>MCP (Model Context Protocol) lets Claude talk directly to applications. Below is what runs in my Claude Code config. Half are official Anthropic servers; the rest are community or self-hosted. The Obsidian server is patched locally; upstream has been abandoned.</p>
+    <p>MCP (Model Context Protocol) lets Claude talk directly to apps. Below is what runs in my Claude Code config. Half are official Anthropic servers. The rest are community / self-hosted. The Obsidian one is patched locally. Upstream's been abandoned.</p>
   </div>
 
   <div class="mcp-grid">
@@ -170,7 +170,7 @@ const jsonLd = {
   </div>
 
   <div class="mcp-note reveal">
-    <strong>NOTE:</strong> The Obsidian MCP transport wedges silently after the first tool call in a session. This is a Claude Code transport-layer issue, not a server problem. Fix: <code>/mcp</code> reconnect. Documented in my CLAUDE.md to avoid losing another session to the same debug.
+    <strong>NOTE:</strong> Obsidian MCP transport wedges silently after the first tool call in a session. Claude Code transport-layer issue, not the server. Fix: <code>/mcp</code> reconnect. Documented in my CLAUDE.md so I don't burn another session debugging it.
   </div>
 </section>
 
@@ -200,7 +200,7 @@ const jsonLd = {
     <div class="proc-card reveal">
       <div class="proc-num">03</div>
       <h3>Multi-window orchestration.</h3>
-      <p>Tabbed Claude Code sessions, one per project, so context-switches do not lose state. Combined with <code>/compress</code> and <code>/resume</code>, I can pick up a week-old task in 60 seconds.</p>
+      <p>Tabbed Claude Code sessions, one per project. Switch context without losing thread. Combined with <code>/compress</code> + <code>/resume</code>, I pick up a week-old task in 60 seconds.</p>
       <div class="proc-tag">MULTI-WINDOW</div>
     </div>
 
@@ -231,7 +231,7 @@ const jsonLd = {
 <section class="section">
   <div class="ai-cta reveal">
     <h2>Want to apply this to your business?<br><span class="acc">Book a 30-min call.</span></h2>
-    <p>If any of the workflows above sound useful (competitor watch, lead enrichment, morning briefs, client onboarding), they are <strong>productized</strong>. The 30-minute call ends with a written quote.</p>
+    <p>If any of the workflows above sound useful (competitor watch, lead enrichment, morning briefs, client onboarding), they're <strong>productized</strong>. The 30-min call ends with a written quote.</p>
     <div class="cta-row" style="justify-content: center;">
       <a href="/contact/" class="cta-btn">Book the call →</a>
       <a href="/services/" class="cta-btn secondary">See services</a>
