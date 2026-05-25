@@ -220,40 +220,13 @@ try {
   </div>
 </div>
 
-<!-- ===== PAIN BAND ===== -->
-<section class="section pain-section">
-  <div class="section-head reveal">
-    <div class="title-block">
-      <div class="label" style="color: var(--red);">three things eating your week</div>
-      <h2>The expensive parts you've already noticed.</h2>
-    </div>
-  </div>
-  <div class="pain-grid">
-    <div class="pain-card reveal">
-      <div class="pain-id">01</div>
-      <h3>You're paying $300/mo to glue together what code does for free.</h3>
-      <p>n8n Cloud. Make. Zapier. Each subscription is the price of admission for one workflow. Same workflow in Vercel cron + serverless: $0/mo platform, ~$0.20/day in API tokens, fully versioned in git.</p>
-    </div>
-    <div class="pain-card reveal">
-      <div class="pain-id">02</div>
-      <h3>An AI agent could finish your week in 30 seconds. You're doing it manually.</h3>
-      <p>Lead triage. Inbox classification. Daily reporting. Competitor watch. Each one is a 6-hour drain on your week and a one-day build to ship as a real workflow.</p>
-    </div>
-    <div class="pain-card reveal">
-      <div class="pain-id">03</div>
-      <h3>Your competitors are showing up in AI search. You're not.</h3>
-      <p>Perplexity, ChatGPT search, Google AI Overviews all pull from passage-level schema and llms.txt. Most sites still optimize for Position 1 that nobody clicks anymore. The new SEO is being the passage Google quotes inside the overview.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ===== SERVICES ===== -->
 <section class="section" id="services">
   <div class="section-head reveal">
     <div class="title-block">
       <div class="label">what i do</div>
       <h2>Four ways to put me to work.</h2>
-      <p>Productized engagement shapes across AI, SEO + GEO, marketing automation, and Agentic OS. Fixed scope, no retainer creep. <strong style="color: var(--text-primary);">Founding pricing live on Audit + Sprint</strong> — 3 slots per tier. <a href="/services/">Full service descriptions →</a></p>
+      <p>Productized engagement shapes across AI, SEO + GEO, marketing automation, and Agentic OS. Fixed scope, no retainer creep. Pricing brackets shown; final number lands in writing within 24 hours of the call. <a href="/services/">Full service descriptions →</a></p>
     </div>
   </div>
 
@@ -261,22 +234,22 @@ try {
 
     <div class="service-card reveal">
       <div class="head">
-        <span class="id"><span class="num">00 ·</span> FREE WORKFLOW TEARDOWN</span>
-        <span class="price" style="color: #ffd84a;">FREE · TOP-OF-FUNNEL</span>
+        <span class="id"><span class="num">00 ·</span> SCOPING CALL</span>
+        <span class="price">30 MIN · BY APPOINTMENT</span>
       </div>
       <div class="body">
-        <h3>Send me one workflow you hate doing. I'll map the automation.</h3>
-        <p>30-min live call (or async Loom + brief). I map one workflow, identify the 2–3 highest-leverage automation moves, hand back a verbal ROI estimate. No pitch, no obligation, no slides.</p>
+        <h3>A 30-minute scoping call. No deck, no obligation.</h3>
+        <p>The default starting point for every engagement. We talk through what's broken, sharpen scope, and decide whether one of the engagement shapes below fits. If it doesn't, I'll say so.</p>
         <ul>
-          <li>One workflow mapped end-to-end</li>
-          <li>2–3 specific automation opportunities</li>
-          <li>Verbal ROI + recommended next step</li>
-          <li>No deck. No deliverable doc. Just signal.</li>
+          <li>One workflow walked through together</li>
+          <li>Honest signal on whether AI is the right fix</li>
+          <li>Written quote within 24 hrs if there's a fit</li>
+          <li>Always free, no follow-up sequence</li>
         </ul>
       </div>
       <div class="foot">
-        <span class="meta" style="color: #ffd84a;">$0 · 5 SLOTS / MO</span>
-        <a href="/contact/" class="cta">→ BOOK TEARDOWN</a>
+        <span class="meta">FREE</span>
+        <a href="/contact/" class="cta">→ BOOK CALL</a>
       </div>
     </div>
 
@@ -296,7 +269,7 @@ try {
         </ul>
       </div>
       <div class="foot">
-        <span class="meta"><strong style="color: var(--green);">FOUNDING 3: $1,500</strong> · 3 SLOTS OPEN</span>
+        <span class="meta">FROM $4,500 · LIMITED</span>
         <a href="/services/" class="cta">→ BOOK AUDIT</a>
       </div>
     </div>
@@ -307,7 +280,7 @@ try {
         <span class="price">FIXED-SCOPE BUILD</span>
       </div>
       <div class="body">
-        <h3>Ship the one workflow that's been on your list for months.</h3>
+        <h3>One workflow, scoped and shipped in a fixed window.</h3>
         <p>Fixed scope locked on day one. Deployed + documented by end. If the workflow isn't specific enough to one-line, the sprint isn't a fit — and I'll say so on the call.</p>
         <ul>
           <li>One workflow · clear input + output</li>
@@ -317,7 +290,7 @@ try {
         </ul>
       </div>
       <div class="foot">
-        <span class="meta"><strong style="color: var(--green);">FOUNDING 3: $2,500</strong> · 3 SLOTS OPEN</span>
+        <span class="meta">FROM $4,500 · LIMITED</span>
         <a href="/services/" class="cta">→ BOOK SPRINT</a>
       </div>
     </div>
@@ -976,7 +949,7 @@ a { color: inherit; text-decoration: none; }
 .footer-inner a:hover { color: var(--green); }
 
 /* Per-card glow rotation */
-.service-card:nth-child(1) { --card-accent: #ffd84a; }
+.service-card:nth-child(1) { --card-accent: var(--text-dim); }
 .service-card:nth-child(2) { --card-accent: var(--green); }
 .service-card:nth-child(3) { --card-accent: var(--red); }
 .service-card:nth-child(4) { --card-accent: var(--blue); }
@@ -997,19 +970,19 @@ a { color: inherit; text-decoration: none; }
 }
 .numbers-inner .n-cell {
   background: var(--bg-card);
-  padding: clamp(14px, 1.2vw, 22px) clamp(16px, 1.4vw, 24px);
-  display: flex; flex-direction: column; gap: 5px;
+  padding: clamp(10px, 0.9vw, 14px) clamp(14px, 1.2vw, 20px);
+  display: flex; flex-direction: column; gap: 3px;
 }
 .numbers-inner .n-cell .k {
   font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(9px, 0.65vw, 11px);
+  font-size: clamp(8px, 0.6vw, 10px);
   letter-spacing: 0.14em;
   color: var(--text-dim);
   text-transform: uppercase;
 }
 .numbers-inner .n-cell .v {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(16px, 1.3vw, 22px);
+  font-size: clamp(13px, 1vw, 16px);
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.01em;

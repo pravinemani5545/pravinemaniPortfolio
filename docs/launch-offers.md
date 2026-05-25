@@ -197,3 +197,20 @@ sprints sold (6 founding clients total). Once trigger hits:
 - **2026-05-24** — Broken Automation Rescue added as a cold-outreach
   hook (Hook B) but NOT as a separate visible tier — it's a flavored
   Sprint when it lands.
+- **2026-05-24 (later)** — **Toned the public-facing site down to
+  Option A (premium-with-edge).** Removed the "FOUNDING 3: $X · 3
+  SLOTS OPEN" public countdown badges (too salesy for the technical-
+  buyer audience), removed the homepage pain band, renamed the Free
+  Workflow Teardown → Scoping Call (less infomercial). Numbers band
+  styling reduced to ~75% of previous size for restraint.
+  - **Founding rates are now an off-site lever.** Public site shows
+    standard brackets only: Audit "FROM $4,500", Sprint "FROM $4,500",
+    Custom "FROM $12K". The $1,500 / $2,500 founding rates remain
+    available — surfaced verbally on the scoping call when budget is
+    a sticking point, or as a soft mention in the availability band
+    ("currently scoping first cohort at reduced rates").
+  - **Pricing standard rates updated:** Audit and Sprint both
+    advertised at $4,500 (was previously listed as "from mid 4-fig"
+    privately, now public). Floor on negotiation: $3,500 for Audit
+    and Sprint; $10K for Custom. The founding $1,500 / $2,500
+    numbers stay parked here for verbal offers only.
