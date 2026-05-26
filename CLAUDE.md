@@ -2,6 +2,12 @@
 
 This site is built like an essay, not a brochure. Every copy edit lands in the same voice as the rest of the site, or it doesn't ship.
 
+## The reader
+
+A technical operator who already builds. Not someone being sold to. They came here to see if I do real work, what I build with, and how. They don't need to be persuaded. They need to be informed enough to decide for themselves.
+
+The site exists to document the practice. Not to sell it. If the work is good, the work sells. If the prose has to do the selling, the work isn't good enough.
+
 ## Voice — Dan Koe meets Thariq Shihipar
 
 The target is **declarative, concrete, conviction-loaded**. Two reference influences:
@@ -93,18 +99,75 @@ Default: **use them.** This is direct register, not legal-formal.
 - `I'll`, `you're`, `don't`, `won't`, `can't`, `isn't`, `we're`, `that's`, `here's`, `you'll`, `it's`
 - Avoid only when the sentence reads stronger uncontracted (rare).
 
+## Anti-pitch rules
+
+This is the hardest rule and the one I keep failing. The site keeps drifting into "landing page voice." Fix it.
+
+### One CTA per page, at most
+
+The contact button on a section closer is a tell. If a page ends `Headline question? Pitch close. Book a 30-min call →`, it reads like a sales page. The reader doesn't need to be asked four times.
+
+- **Homepage:** hero CTA + one closing CTA. That's it.
+- **Contact page:** all the CTAs you want (the page is the CTA).
+- **Every other page:** at most one quiet, one-line link to /contact/ at the bottom. Often zero. Let the page end on substance.
+
+### Banned closings
+
+These formulas appeared 8+ times across the site at once. They scream "sales page." Never write any of them again:
+
+- `Have a workflow eating your week? Let's scope it.`
+- `30 minutes. Zero pitch.`
+- `You describe the problem. I tell you whether AI is the fix.`
+- `Real quote in writing within 24 hours.`
+- `Ends with a written quote.`
+- `Operator-to-operator.` (it's fine on /contact/ once. Cut everywhere else.)
+- "Quick fit-check."
+
+If a page needs a quiet pointer to /contact/ at the bottom, write one line. Examples that pass:
+
+- "Available for new engagements. [Discuss a project →](/contact/)"
+- "More on what I build: [/services/](/services/) or [/contact/](/contact/)."
+- "If a similar problem fits, [the contact page is here](/contact/)."
+
+### Banned framing
+
+- "What you get" / "What you receive" / "You'll get" / "You walk away with"
+  Just describe what's in the engagement. The reader infers the value.
+- "We help you / I help you" (when followed by a benefit-promise)
+- "Imagine a world where..."
+- "Tired of...?"
+- "Paying $X to...?" as a hook
+- "Need similar work for your business?"
+
+### Banned sales positioning
+
+- "The 30-minute call is free" repeated more than once per page
+- "No retainer creep" / "No scope creep" repeated. Say it once on /services/ and let it stand.
+- Repeating the response time ("within 24 hours") on every section. Say it once on /contact/.
+
+### When in doubt, describe — don't sell
+
+```
+NO   "Have a workflow eating your week?
+      Let's scope it.
+      30-min call. Zero pitch. You describe the problem.
+      I tell you whether AI is the fix and which engagement matches.
+      Real quote in writing within 24 hours.
+      [Book the call →]"
+
+YES  (just end the section on the actual content.
+      One quiet link to /contact/ at the bottom of the page, if at all.)
+```
+
 ## Signature phrases — keep these
 
-These are positioning. Don't rewrite them:
+These earned their keep. Don't rewrite them. Don't repeat them either.
 
-- "Built like an operator. Sold by the project."
-- "No pitch."
-- "Zero pitch."
-- "Operator-to-operator."
-- "I ship. You review."
+- "Built like an operator. Sold by the project." (hero tagline only)
 - "$0 platform fee."
 - "Code-first."
 - "Fixed scope. Fixed price."
+- "I ship. You review." (process step heading on homepage only)
 
 ## What to remove on every pass
 
@@ -118,6 +181,9 @@ These are positioning. Don't rewrite them:
 - "Stakeholders" — name them (founders, sales, ops)
 - "Synergies" — never
 - "Ecosystem" (loosely used) — never
+- "Zero pitch" / "No pitch" as a slogan (kept appearing as filler bravado)
+- "Let's scope it" (appeared 9 times — every section closer)
+- "Operator-to-operator" (kept being used as a hook word)
 
 ## Page-by-page tone tightness
 
