@@ -4,7 +4,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Why code-first · the counter-argument to n8n, Make, and Zapier in 2026",
-  "description": "Why I refuse no-code automation rebuilds and what code-first delivers instead. $0/mo platform fees, version control, full observability, no vendor lock-in.",
+  "description": "Why I refuse no-code automation rebuilds. What code-first gives you instead. $0/mo platform fees. Version control. Full observability. No vendor lock-in.",
   "datePublished": "2026-05-24",
   "dateModified": "2026-05-24",
   "image": "https://pravinemani.com/og-default.png",
@@ -14,12 +14,12 @@ const jsonLd = {
 };
 ---
 
-<Base title="Why Code-First · The Counter-Argument to n8n, Make & Zapier · Pravine Mani" description="Why I refuse no-code automation rebuilds. The math: $0/mo platform vs $300/mo glue, plus version control, observability, and no vendor lock-in." jsonLd={jsonLd}>
+<Base title="Why Code-First · The Counter-Argument to n8n, Make & Zapier · Pravine Mani" description="Why I refuse no-code automation rebuilds. The math: $0/mo platform vs $300/mo glue. Plus version control. Observability. No vendor lock-in." jsonLd={jsonLd}>
 
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/why-code-first.md <span class="you">→ the counter-argument</span></div>
   <h1>Why code-first.<br><span class="accent">The argument against n8n, Make, and Zapier.</span></h1>
-  <p class="lead">I get the same question on every call: "can you just build it in n8n?" The answer is no. I'll turn down the gig before we even price it. Here's the full counter-argument. In numbers, mechanics, and pattern.</p>
+  <p class="lead">Every call ends with the same question: "can you just build it in n8n?" The answer is no. I'll turn down the gig before we even price it. Here's the full counter-argument. Numbers. Mechanics. Pattern.</p>
 </section>
 
 <section class="section manifesto">
@@ -27,7 +27,7 @@ const jsonLd = {
   <div class="manifesto-body">
 
     <h2>The cost math.</h2>
-    <p>Take a workflow that fires 100 times a day: a daily brief, a lead-routing pipeline, an AI inbox triage. Real-world numbers I've seen at my desk this month:</p>
+    <p>Take a workflow that fires 100 times a day. A daily brief. A lead-routing pipeline. An AI inbox triage. Real numbers from my desk this month:</p>
 
     <div class="compare">
       <div class="compare-col">
@@ -59,20 +59,20 @@ const jsonLd = {
     <h2>The four reasons.</h2>
 
     <h3>01 · Code is owned. Subscriptions are rented.</h3>
-    <p>Stop paying the n8n bill and your business stops working. The workflow doesn't exist outside their UI. The credentials are in their vault. The logic is hostage to their pricing changes. With code-first, you stop paying me and the workflow keeps running. It's in your git repo, on your Vercel project, hitting your APIs. The dependency is on services you already pay for.</p>
+    <p>Stop paying the n8n bill and your business stops working. The workflow doesn't exist outside their UI. The credentials live in their vault. The logic is hostage to their pricing changes. Stop paying me and the workflow keeps running. It's in your git repo. On your Vercel project. Hitting your APIs. The dependency is on services you already pay for.</p>
 
     <h3>02 · Versioned in git. Reviewable. Revertible.</h3>
-    <p>Every change to a code-first workflow is a commit. Every commit has a diff, an author, a timestamp, a CI run, a deploy preview. You can roll back a bad change in 60 seconds. In n8n, the change happens inside a visual editor on someone else's server. No diff. No review. No rollback unless you remembered to export the JSON before clicking save.</p>
+    <p>Every change to a code-first workflow is a commit. Every commit has a diff, an author, a timestamp, a CI run, a deploy preview. Roll back a bad change in 60 seconds. In n8n, the change happens inside a visual editor on someone else's server. No diff. No review. No rollback unless you remembered to export the JSON before clicking save.</p>
 
     <h3>03 · Observable. Debuggable at 3am.</h3>
-    <p>When the workflow breaks at 3am (and it will), code-first gives you Vercel logs, Sentry traces, Plausible events. All in one observability stack you already understand. n8n gives you a UI screen showing "node failed" with no stack trace, no API response body, no way to replay the event locally. I've watched founders lose 4 hours on a single missing API key because the no-code tool wouldn't tell them which call failed.</p>
+    <p>When the workflow breaks at 3am (and it will), code-first gives you Vercel logs. Sentry traces. Plausible events. All in one observability stack you already understand. n8n gives you a UI screen showing "node failed" with no stack trace, no API response body, no way to replay the event locally. I've watched founders lose 4 hours on a single missing API key because the no-code tool wouldn't tell them which call failed.</p>
 
     <h3>04 · The integration library is a feature, not a moat.</h3>
     <p>n8n's pitch is the 500+ integrations. Real talk: most engagements use 3 of them. The other 497 are dead weight pushing the price up. For the 3 you need: an Anthropic SDK call is ~12 lines of TypeScript. A Stripe webhook handler is 60 lines. A Supabase query is one line. You're paying $20/mo for visual versions of code that fits in a single file.</p>
 
     <h2>What I'd actually recommend.</h2>
-    <p>If you have one workflow and you're not technical, <strong>use Zapier or n8n.</strong> It's correct for that use case. The math doesn't kick in until you have 3+ workflows, want to ship features fast, and operating cost starts mattering.</p>
-    <p>If you have 3+ workflows or you want to actually own the asset, <strong>hire someone to build the code-first version.</strong> Could be me. Could be a freelance dev with the same opinions. The math compounds fast once you're past the first workflow because every additional workflow costs roughly the same: zero platform delta, ~$0.20/day in API tokens.</p>
+    <p>One workflow and you're not technical? <strong>Use Zapier or n8n.</strong> It's correct for that use case. The math doesn't kick in until you have 3+ workflows, want to ship features fast, and operating cost starts mattering.</p>
+    <p>3+ workflows or you want to own the asset? <strong>Hire someone to build the code-first version.</strong> Could be me. Could be a freelance dev with the same opinions. The math compounds fast once you're past the first workflow. Every additional workflow costs roughly the same: zero platform delta, ~$0.20/day in API tokens.</p>
 
     <h2>The stack I default to.</h2>
     <ul class="stack-list">
@@ -85,13 +85,13 @@ const jsonLd = {
       <li><strong>Auth:</strong> Supabase Auth (or Clerk if you want a managed surface)</li>
       <li><strong>Version control:</strong> GitHub + Vercel preview deploys</li>
     </ul>
-    <p>Total platform cost for a 3-workflow business: <strong>typically $73 / year + API tokens</strong>. Compare against your current bill.</p>
+    <p>Total platform cost for a 3-workflow business: <strong>$73 / year + API tokens</strong>. Compare against your current bill.</p>
 
   </div>
 
   <div class="manifesto-cta reveal">
     <h2>Have a workflow you're stitching together in SaaS?<br><span class="accent">Let's scope the code-first version.</span></h2>
-    <p>30 minutes. Zero pitch. You describe what you're paying for and what you want it to do. I tell you whether code-first beats your current stack and where the wins land. In writing, same day.</p>
+    <p>30 minutes. Zero pitch. You describe what you're paying for. What you want it to do. I tell you whether code-first beats your current stack and where the wins land. In writing. Same day.</p>
     <div class="cta-row" style="justify-content: center;">
       <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
       <a href="/services/" class="cta-btn secondary">See engagement shapes</a>

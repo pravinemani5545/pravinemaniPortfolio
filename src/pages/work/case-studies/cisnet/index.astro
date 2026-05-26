@@ -43,7 +43,7 @@ const jsonLd = {
 };
 ---
 
-<Base title="CISNET · Case Study · Pravine Mani" description="Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. 200+ pSEO pages, custom admin portal, lead pipeline. 3 months solo." footerVariant="case-study" jsonLd={jsonLd}>
+<Base title="CISNET · Case Study · Pravine Mani" description="Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. 200+ pSEO pages. Custom admin portal. Lead pipeline. 3 months. Solo." footerVariant="case-study" jsonLd={jsonLd}>
 
 
 <section class="page-hero">
@@ -55,7 +55,7 @@ const jsonLd = {
     <span class="you">cisnet</span>
   </div>
   <h1>CISNET: IT certification training.<br><span class="accent" style="color: #dc2626; -webkit-text-fill-color: #dc2626;">Marketing site + SEO rebuild.</span></h1>
-  <p class="lead">Migrated a Toronto IT certification training company off a legacy PHP stack onto Next.js 16 with full programmatic SEO, lead pipeline, and admin portal. Three months. Solo. Ranking authority preserved through a 70+ URL redirect map.</p>
+  <p class="lead">Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Full programmatic SEO. Lead pipeline. Admin portal. Three months. Solo. Ranking authority preserved through a 70+ URL redirect map.</p>
 
   <div class="cs-hero-meta">
     <div class="cell"><div class="k">CLIENT</div><div class="v">IT Training · Toronto</div></div>
@@ -72,8 +72,8 @@ const jsonLd = {
     <div class="lab-col"><span class="num">01 / 05</span><span>THE PROBLEM</span></div>
     <div class="body-col">
       <h2>Legacy PHP that couldn't grow.</h2>
-      <p>CISNET's existing site was a hand-coded PHP build from 2014. Maintainable in the sense that one person knew where everything was. Breakable in the sense that <strong>nobody else could ship into it without an outage</strong>. Marketing wanted to add new certification pages, run paid campaigns into specific cohorts, and capture leads into a CRM. Engineering reality: every new page was a Friday deploy with the lights flickering.</p>
-      <p>The deeper issue: SEO momentum. The legacy site ranked for ~70 cert-related queries. Any redesign that didn't preserve those URLs risked tanking organic traffic for a quarter or more. The business depended on that organic flow for ~40% of intake.</p>
+      <p>CISNET's existing site was a hand-coded PHP build from 2014. Maintainable because one person knew where everything was. Breakable because <strong>nobody else could ship into it without an outage</strong>. Marketing wanted new certification pages. Paid campaigns into specific cohorts. Leads captured into a CRM. Engineering reality: every new page was a Friday deploy with the lights flickering.</p>
+      <p>The deeper issue was SEO momentum. The legacy site ranked for ~70 cert-related queries. Any redesign that didn't preserve those URLs risked tanking organic traffic for a quarter or more. The business depended on that organic flow for ~40% of intake.</p>
       <ul>
         <li><strong>Brittle stack:</strong> PHP 5.6, no test suite, manual FTP deploys</li>
         <li><strong>No lead infrastructure:</strong> contact-form-to-email only, no CRM, no admin view</li>
@@ -88,8 +88,8 @@ const jsonLd = {
     <div class="lab-col"><span class="num">02 / 05</span><span>THE APPROACH</span></div>
     <div class="body-col">
       <h2>Next.js 16 + programmatic SEO + lead infrastructure.</h2>
-      <p>Three parallel workstreams over 12 weeks. <strong>Stream 1 (weeks 1-4):</strong> stand up the Next.js 16 + Supabase + Vercel foundation. Port the marketing pages 1:1. Run the redirect map in dev. <strong>Stream 2 (weeks 4-8):</strong> programmatic SEO. Generate 200+ cert × city pages from a structured content model. Ship sitemap.xml + 7 distinct schema types (Course, LocalBusiness, FAQPage, etc.). <strong>Stream 3 (weeks 8-12):</strong> lead pipeline. Facebook Lead Ads webhook with HMAC verification, Supabase storage, admin portal, Resend transactional email, Stripe Checkout for the paid courses.</p>
-      <p>Hardest call early on: <strong>how aggressive to be on the redirect strategy</strong>. Decided to map every legacy URL individually rather than rely on Next.js catch-all rewrites. Slower to build. But Google indexed the new URLs with full link equity inside 6 weeks rather than 6 months.</p>
+      <p>Three parallel workstreams over 12 weeks. <strong>Stream 1 (weeks 1-4):</strong> stand up the Next.js 16 + Supabase + Vercel foundation. Port the marketing pages 1:1. Run the redirect map in dev. <strong>Stream 2 (weeks 4-8):</strong> programmatic SEO. Generate 200+ cert × city pages from a structured content model. Ship sitemap.xml + 7 distinct schema types. <strong>Stream 3 (weeks 8-12):</strong> lead pipeline. Facebook Lead Ads webhook with HMAC verification. Supabase storage. Admin portal. Resend transactional email. Stripe Checkout for paid courses.</p>
+      <p>Hardest call early on: <strong>how aggressive to be on the redirect strategy.</strong> I mapped every legacy URL individually rather than rely on Next.js catch-all rewrites. Slower to build. Google indexed the new URLs with full link equity inside 6 weeks. Not 6 months.</p>
       <ul>
         <li><strong>Foundation:</strong> Next.js 16 (app router), TypeScript strict, Supabase, Vercel</li>
         <li><strong>SEO surface:</strong> 200+ pSEO pages generated from a cert × city matrix</li>
@@ -106,7 +106,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">03 / 05</span><span>THE STACK</span></div>
     <div class="body-col">
       <h2>Boring, fast, debuggable.</h2>
-      <p>Default opinionated stack: Next.js + Supabase + Vercel. Could've used a CMS for the marketing pages but the editorial volume didn't warrant the operational tax. Page content lives in MDX in the repo. Engineers ship copy through PRs.</p>
+      <p>Default opinionated stack: Next.js + Supabase + Vercel. Could've used a CMS for the marketing pages. Editorial volume didn't warrant the operational tax. Page content lives in MDX in the repo. Engineers ship copy through PRs.</p>
       <div class="stack-flat">
         <span class="chip daily">Next.js 16</span>
         <span class="chip daily">TypeScript</span>
@@ -128,7 +128,7 @@ const jsonLd = {
   <div class="cs-section reveal">
     <div class="lab-col"><span class="num">04 / 05</span><span>THE TIMELINE</span></div>
     <div class="body-col">
-      <h2>12 weeks, 3 streams, no scope creep.</h2>
+      <h2>12 weeks. 3 streams. No scope creep.</h2>
       <p>Locked scope in week 0. Anything that came up after went into a "v2 list." None of it shipped during the engagement.</p>
       <div class="timeline-rail">
         <div class="step"><span class="when">WK 0</span><span class="what"><strong>Kickoff + scope lock.</strong> Written spec signed. Redirect map drafted from server logs.</span></div>
@@ -145,16 +145,16 @@ const jsonLd = {
     <div class="lab-col"><span class="num">05 / 05</span><span>THE IMPACT</span></div>
     <div class="body-col">
       <h2>What it enabled.</h2>
-      <p>The headline numbers from the engagement (technical surface metrics; business KPIs are CISNET's to disclose):</p>
+      <p>Headline numbers from the engagement. Technical surface only. Business KPIs are CISNET's to disclose.</p>
       <div class="impact-grid">
-        <div class="impact-card"><div class="k">PSEO PAGES</div><div class="v">200+</div><div class="desc">Cert × city programmatic pages, indexed within 6 weeks of cutover.</div></div>
-        <div class="impact-card"><div class="k">LEGACY URLS PRESERVED</div><div class="v">70+</div><div class="desc">Individually-mapped redirects; ranking authority preserved on every URL.</div></div>
+        <div class="impact-card"><div class="k">PSEO PAGES</div><div class="v">200+</div><div class="desc">Cert × city programmatic pages. Indexed within 6 weeks of cutover.</div></div>
+        <div class="impact-card"><div class="k">LEGACY URLS PRESERVED</div><div class="v">70+</div><div class="desc">Individually-mapped redirects. Ranking authority preserved on every URL.</div></div>
         <div class="impact-card"><div class="k">SCHEMA TYPES</div><div class="v">7</div><div class="desc">Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite.</div></div>
-        <div class="impact-card"><div class="k">LIGHTHOUSE PERF</div><div class="v">98+</div><div class="desc">Production performance score across all marketing routes.</div></div>
-        <div class="impact-card"><div class="k">ADMIN PORTAL</div><div class="v">FULL</div><div class="desc">Custom portal for leads, enrollments, content, and payments; built from scratch on Next.js and Supabase.</div></div>
-        <div class="impact-card"><div class="k">DELIVERED IN</div><div class="v">3 MO</div><div class="desc">Fixed-price, fixed-scope. Zero scope creep across 3 streams.</div></div>
+        <div class="impact-card"><div class="k">LIGHTHOUSE PERF</div><div class="v">98+</div><div class="desc">Production performance score across every marketing route.</div></div>
+        <div class="impact-card"><div class="k">ADMIN PORTAL</div><div class="v">FULL</div><div class="desc">Custom portal for leads, enrollments, content, payments. Built from scratch on Next.js + Supabase.</div></div>
+        <div class="impact-card"><div class="k">DELIVERED IN</div><div class="v">3 MO</div><div class="desc">Fixed-price. Fixed-scope. Zero scope creep across 3 streams.</div></div>
       </div>
-      <p style="margin-top: 20px;">Beyond the numbers: marketing can now ship a new certification page through MDX without engineering. Lead routing is observable end-to-end. Ad campaigns can target specific cohort × city combinations that previously didn't have a landing page.</p>
+      <p style="margin-top: 20px;">Beyond the numbers: marketing ships new certification pages through MDX without engineering. Lead routing is observable end-to-end. Ad campaigns target specific cohort × city combinations that previously had no landing page.</p>
 
       <div class="cs-pullquote">
         <div class="pq-stars">★★★★★</div>
@@ -163,7 +163,7 @@ const jsonLd = {
       </div>
 
       <div class="confidential">
-        <strong>Note:</strong>Some business KPIs (organic traffic delta, lead-to-enrollment rates, MRR impact) live with the client and aren't disclosed here. Happy to discuss what's shareable on a call.
+        <strong>Note:</strong> Some business KPIs (organic traffic delta, lead-to-enrollment rates, MRR impact) live with the client. Not disclosed here. Happy to discuss what's shareable on a call.
       </div>
     </div>
   </div>
@@ -171,7 +171,7 @@ const jsonLd = {
   <!-- Final CTA -->
   <div class="final-cta reveal">
     <h2>Need similar work for your business?<br><span class="acc">Let's scope it.</span></h2>
-    <p>If you're looking at a similar surface (legacy stack to migrate, SEO to preserve, lead infrastructure to build), the 30-min call is free and ends with a written quote.</p>
+    <p>Same surface area: legacy stack to migrate, SEO to preserve, lead infrastructure to build. The 30-min call is free. Ends with a written quote.</p>
     <div class="cta-row" style="justify-content: center;">
       <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
       <a href="/services/" class="cta-btn secondary">See services</a>
