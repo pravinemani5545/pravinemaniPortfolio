@@ -4,7 +4,7 @@
 
 ## Overview
 
-Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas: AI workflows (Claude Code, MCP, agent systems), programmatic SEO + GEO (Schema.org, llms.txt, passage-level citability), marketing automation (lead pipelines, lifecycle email, CRM wiring), and Agentic OS (multi-agent orchestration, sub-agent design, concurrent-agent evals). McMaster Computer Engineering & Management graduate (2025). Background: 5G software engineering at Ericsson (Go, gRPC). Full-stack development at Imprimo (React Native, Postgres). Mobile development at Fixvi (React Native, push infra).
+Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas: AI workflows (Claude Code, MCP, agent systems), programmatic SEO + GEO (Schema.org, llms.txt, passage-level citability), marketing automation (lead pipelines, lifecycle email, CRM wiring), and Agentic OS (multi-agent orchestration, sub-agent design, concurrent-agent evals). McMaster Computer Engineering & Management graduate (2025). Engineering background in production web app development with TypeScript, Next.js, Supabase, Vercel, and the Anthropic API. Independent practice since February 2026. Five engagement shapes: Scoping Call (free), Audit, Sprint, Custom, Ops Retainer. Quote on scope.
 
 ## Focus Areas
 
