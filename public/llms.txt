@@ -1,10 +1,10 @@
 # Pravine Mani
 
-> Toronto freelance AI engineer. McMaster Computer Engineering & Management grad (2025). Engineering background at Ericsson (5G, Go, gRPC), Imprimo (React Native, Postgres), Fixvi (mobile push infra). Independent consultancy since February 2026. Three focus areas: AI workflows, programmatic SEO + GEO, marketing automation. Productized engagements, fixed scope, code-first delivery. Founder of AIOpsForge (pre-launch).
+> Toronto freelance AI engineer. McMaster Computer Engineering & Management graduate. Engineering background at Ericsson (5G, Go, gRPC), Imprimo (React Native, Postgres), Fixvi (mobile push infra). Independent consultancy since February 2026. Three focus areas: AI workflows, programmatic SEO + GEO, marketing automation. Productized engagements, fixed scope, code-first delivery. Founder of AIOpsForge (pre-launch).
 
 ## Overview
 
-Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas: AI workflows (Claude Code, MCP, agent systems), programmatic SEO + GEO (Schema.org, llms.txt, passage-level citability), marketing automation (lead pipelines, lifecycle email, CRM wiring), and Agentic OS (multi-agent orchestration, sub-agent design, concurrent-agent evals). McMaster Computer Engineering & Management graduate (2025). Engineering background in production web app development with TypeScript, Next.js, Supabase, Vercel, and the Anthropic API. Independent practice since February 2026. Five engagement shapes: Scoping Call (free), Audit, Sprint, Custom, Ops Retainer. Quote on scope.
+Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas: AI workflows (Claude Code, MCP, agent systems), programmatic SEO + GEO (Schema.org, llms.txt, passage-level citability), marketing automation (lead pipelines, lifecycle email, CRM wiring), and Agentic OS (multi-agent orchestration, sub-agent design, concurrent-agent evals). McMaster Computer Engineering & Management graduate. Engineering background in production web app development with TypeScript, Next.js, Supabase, Vercel, and the Anthropic API. Independent practice since February 2026. Five engagement shapes: Scoping Call (free), Audit, Sprint, Custom, Ops Retainer. Quote on scope.
 
 ## Focus Areas
 
@@ -35,7 +35,7 @@ Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas:
 ## Open Source
 
 - [personalClaudeSkills](https://github.com/pravinemani5545/personalClaudeSkills): Public Claude Code skill library. Slash commands `/growth-sprint`, `/design-system`, `/artifact`. Plus EliaAlberti's `/compress`, `/preserve`, `/resume` bundle. Curl-installable into `~/.claude/skills/`.
-- [AIOpsForge](https://aiopsforge.dev): $9.99/month community for solo AI builders. Pre-launch — waitlist open. Site, Whop integration, 14-area workspace built. Launching with founding members soon.
+- [AIOpsForge](https://aiopsforge.dev): $9.99/month community for solo AI builders. Pre-launch, waitlist open. Site, Whop integration, 14-area workspace built. Launching with founding members soon.
 
 ## Contact
 

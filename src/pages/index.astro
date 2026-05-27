@@ -440,34 +440,34 @@ try {
   </div>
 
   <div class="faq-strip reveal">
-    <div class="faq-item">
-      <div>
-        <div class="q">How does pricing work?</div>
-        <div class="a">Every paid engagement is quoted on scope. The free 30-minute scoping call ends with a written quote within 24 hours covering deliverables, milestones, timeline, and the total price. Once the quote is accepted and the agreement is signed, the price is locked for the agreed scope. There is no hourly billing and no scope-creep invoicing. Audit and Sprint engagements are billed 50 percent on signing and 50 percent at delivery. Custom builds are milestone-paid against a staged schedule. The Ops Retainer is billed monthly and is cancellable with 30 days' notice.</div>
-      </div>
-      <div class="num">01 / 10</div>
-    </div>
-    <div class="faq-item">
-      <div>
-        <div class="q">Do you build on n8n, Make, or Zapier?</div>
-        <div class="a">Not as the primary execution layer for production work. Visual no-code platforms add a recurring subscription that exists outside the project repository, cannot be reviewed in pull requests, and stops functioning when the subscription lapses. Vercel cron jobs and serverless functions implement the same workflow as code in the client's own repository, deployed to infrastructure the client already pays for, versioned in git, and debuggable through standard production logs. For a non-technical team operating a single workflow, a visual platform is often the right choice. For three or more workflows, or any situation where ongoing ownership matters, the code-first version produces a better result. <a href="/why-code-first/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Full architectural argument here.</a></div>
-      </div>
-      <div class="num">02 / 10</div>
-    </div>
-    <div class="faq-item">
-      <div>
-        <div class="q">What does "solo by choice" mean for delivery risk?</div>
-        <div class="a">Every line of code on the engagement is written and reviewed by me directly. No subcontracting, no junior staff fill-in, no agency layer. The trade-off is that if I am unavailable for a week, the project pauses rather than being handed to a stranger who would need to ramp on the context. The engagement contract includes a refund clause for milestones that miss agreed delivery dates, and Custom builds use staged milestone payments to limit client exposure. In exchange, the engagement runs without handoff friction, without project-management overhead, and with decisions made in hours rather than weeks because there is no internal chain of approval.</div>
-      </div>
-      <div class="num">03 / 10</div>
-    </div>
-    <div class="faq-item">
-      <div>
-        <div class="q">Can you work in our existing stack instead of yours?</div>
-        <div class="a">For most modern stacks, yes: Next.js, Astro, Supabase, Django, Rails, Laravel, FastAPI, Postgres, Vercel, and Cloudflare are all in scope. If the existing stack is operating well, I will build inside it without re-platforming. The exception is when the existing stack is the root cause of the problem the engagement is meant to solve — for example, WordPress used for programmatic SEO at scale, or a critical lead pipeline running through a single Zapier zap. In those cases I will say so on the scoping call and recommend either a migration plan or a different consultant. Approximately one in five scoping calls reaches that conclusion.</div>
-      </div>
-      <div class="num">04 / 10</div>
-    </div>
+    <details class="faq-item">
+      <summary>
+        <span class="q">How does pricing work?</span>
+        <span class="num">01 / 10</span>
+      </summary>
+      <div class="a">Quoted on scope after the free 30-min call. Written quote within 24 hours; price locks once signed. Audit and Sprint are 50/50, Custom is milestone-paid, Ops Retainer is monthly.</div>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="q">Do you build on n8n, Make, or Zapier?</span>
+        <span class="num">02 / 10</span>
+      </summary>
+      <div class="a">Not as the primary execution layer. Vercel cron and serverless functions run the same workflows as code in your repo, owned outright. Visual no-code is fine for a single workflow on a non-technical team. <a href="/why-code-first/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Full argument here.</a></div>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="q">What does "solo by choice" mean for delivery risk?</span>
+        <span class="num">03 / 10</span>
+      </summary>
+      <div class="a">Every line is written by me. Contract includes a refund clause on missed milestones; Custom builds are staged-payment. Trade-off: if I'm out a week, the project pauses rather than getting handed off.</div>
+    </details>
+    <details class="faq-item">
+      <summary>
+        <span class="q">Can you work in our existing stack instead of yours?</span>
+        <span class="num">04 / 10</span>
+      </summary>
+      <div class="a">Yes for most modern stacks (Next.js, Astro, Supabase, Django, Rails, Laravel, FastAPI). Exception: if your existing stack is the root cause of the problem we're solving, I'll say so on the call and quote a migration instead.</div>
+    </details>
   </div>
 </section>
 
@@ -801,14 +801,19 @@ a { color: inherit; text-decoration: none; }
 .now-list .item.now .check { color: #ffd84a; }
 @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
 
-/* ===== FAQ teaser ===== */
+/* ===== FAQ teaser (collapsible <details>/<summary>) ===== */
 .faq-strip { background: var(--bg-card); border: 1px solid var(--border); }
-.faq-item { padding: 18px 26px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: baseline; transition: background 150ms; }
+.faq-item { border-bottom: 1px solid var(--border); transition: background 150ms; }
 .faq-item:last-child { border-bottom: none; }
 .faq-item:hover { background: var(--bg-card-hover, var(--bg-secondary)); }
-.faq-item .q { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 6px; }
-.faq-item .a { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; max-width: 760px; }
+.faq-item summary { padding: 18px 26px; cursor: pointer; list-style: none; display: grid; grid-template-columns: 1fr auto auto; gap: 18px; align-items: baseline; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; color: var(--green); font-size: 18px; padding-top: 2px; transition: transform 200ms; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .q { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.3; }
 .faq-item .num { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; padding-top: 2px; }
+.faq-item .a { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.6; max-width: 760px; padding: 0 26px 18px; }
+.faq-item .a a { color: var(--green); }
 
 /* ===== CONTACT ===== */
 .contact-band { background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: clamp(64px, 6vw, 110px) clamp(20px, 2.5vw, 48px); position: relative; overflow: hidden; }

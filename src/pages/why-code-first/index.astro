@@ -27,7 +27,7 @@ const jsonLd = {
   <div class="manifesto-body">
 
     <h2>The cost math.</h2>
-    <p>Consider a workflow that runs 100 times a day — a daily operations brief, a lead-routing pipeline, an AI-assisted inbox triage. The comparison below uses representative figures from a recent client engagement.</p>
+    <p>Consider a workflow that runs 100 times a day, a daily operations brief, a lead-routing pipeline, an AI-assisted inbox triage. The comparison below uses representative figures from a recent client engagement.</p>
 
     <div class="compare">
       <div class="compare-col">
@@ -68,7 +68,7 @@ const jsonLd = {
     <p>When a workflow fails in production, code-first deployments produce structured Vercel logs, Sentry traces, and analytics events through a stack the client's engineering team already understands. Visual workflow platforms typically surface failures as a generic "node failed" message in their UI, without a stack trace, the failing API response body, or a way to replay the event locally. Debugging time for the same class of error is meaningfully different across the two approaches.</p>
 
     <h3>04 · The integration library is a feature, not a moat.</h3>
-    <p>Visual workflow platforms market large integration catalogues — 500-plus connectors in some cases. In practice, most client engagements rely on three to five of those integrations. The remaining integrations contribute to the platform's pricing without contributing to the workflow's function. For the three to five that are actually needed, the equivalent code is typically short: an Anthropic SDK call is approximately 12 lines, a Stripe webhook handler is around 60 lines, a Supabase query is a single line.</p>
+    <p>Visual workflow platforms market large integration catalogues. 500-plus connectors in some cases. In practice, most client engagements rely on three to five of those integrations. The remaining integrations contribute to the platform's pricing without contributing to the workflow's function. For the three to five that are actually needed, the equivalent code is typically short: an Anthropic SDK call is approximately 12 lines, a Stripe webhook handler is around 60 lines, a Supabase query is a single line.</p>
 
     <h2>When the no-code option is appropriate.</h2>
     <p>For a non-technical team running a single workflow, a visual platform like Zapier or n8n is often the correct choice. The cost and lock-in concerns above do not apply meaningfully at that scale, and the platform's strength is making one-off automations accessible without engineering effort.</p>
