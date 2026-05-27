@@ -35,7 +35,7 @@ Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas:
 ## Open Source
 
 - [personalClaudeSkills](https://github.com/pravinemani5545/personalClaudeSkills): Public Claude Code skill library. Slash commands `/growth-sprint`, `/design-system`, `/artifact`. Plus EliaAlberti's `/compress`, `/preserve`, `/resume` bundle. Curl-installable into `~/.claude/skills/`.
-- [AIOpsForge](https://aiopsforge.dev): $9.99/month community for solo AI builders.
+- [AIOpsForge](https://aiopsforge.dev): $9.99/month community for solo AI builders. Pre-launch — waitlist open. Site, Whop integration, 14-area workspace built. Launching with founding members soon.
 
 ## Contact
 
