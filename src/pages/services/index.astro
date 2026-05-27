@@ -8,7 +8,7 @@ import Base from '../../layouts/Base.astro';
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cd ~/services <span class="you">→ what i build</span></div>
   <h1>Four engagement shapes.</h1>
-  <p class="lead">Four focus areas: <a href="/services/ai/">AI</a>, <a href="/services/seo/">SEO + GEO</a>, <a href="/services/marketing-automation/">marketing automation</a>, <a href="/services/agentic-os/">Agentic OS</a>. Four engagement shapes: free scoping call, Audit, Sprint, Custom. Pricing brackets on every card.</p>
+  <p class="lead">Four focus areas: <a href="/services/ai/">AI</a>, <a href="/services/seo/">SEO + GEO</a>, <a href="/services/marketing-automation/">marketing automation</a>, <a href="/services/agentic-os/">Agentic OS</a>. Four engagement shapes: free scoping call, Audit, Sprint, Custom. Pricing brackets on every card. Written quote within 24 hrs of the call.</p>
   <div class="cta-row">
     <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
     <a href="#builds" class="cta-btn secondary">See sample builds</a>
@@ -22,18 +22,6 @@ import Base from '../../layouts/Base.astro';
       <span class="lab">AVAILABILITY</span>
       <span class="h"><span class="acc">First cohort, reduced rates.</span> Ask on the call.</span>
     </div>
-  </div>
-</div>
-
-<!-- Canadian grant callout -->
-<div class="grant-callout reveal">
-  <div class="grant-inner">
-    <span class="grant-flag">CA · GRANT</span>
-    <div class="grant-body">
-      <span class="grant-h">Canadian small business?</span>
-      <span class="grant-sub">Up to <strong>$15K of an engagement</strong> grant-covered through <strong>CDAP</strong> (Canada Digital Adoption Program) or <strong>IRAP</strong> (NRC Industrial Research Assistance). I scope inside those frameworks regularly.</span>
-    </div>
-    <a href="/contact/" class="grant-cta">Talk grant fit →</a>
   </div>
 </div>
 
@@ -195,6 +183,33 @@ import Base from '../../layouts/Base.astro';
   </div>
 </section>
 
+<!-- ===== WHO THIS WORKS FOR (positive filter) ===== -->
+<section class="section" id="for">
+  <div class="section-head reveal">
+    <div class="label">who this works for</div>
+    <h2>The shape of buyer this fits.</h2>
+    <p>Three concrete subtypes. If you recognize yourself here, the engagement is built for you.</p>
+  </div>
+
+  <div class="for-grid">
+    <div class="for-card reveal">
+      <div class="check">✓</div>
+      <h4>Bootstrapped SaaS founders</h4>
+      <p>$200K-$3M ARR, 1-8 people. Already technical. Need workflows shipped: onboarding sequences, billing webhooks, AI-augmented features, internal ops automation.</p>
+    </div>
+    <div class="for-card reveal">
+      <div class="check">✓</div>
+      <h4>Marketing / creative / content agencies</h4>
+      <p>5-20 people, founder-led, $1-5M revenue. Need internal tooling, creative-variants generators, lead pipelines for clients, white-label dashboards, content engines.</p>
+    </div>
+    <div class="for-card reveal">
+      <div class="check">✓</div>
+      <h4>Tech-forward SMBs and consultancies</h4>
+      <p>Small teams with technical leadership. No procurement cycles. Marketing sites, lead infrastructure, admin portals, programmatic SEO surfaces. The CISNET pattern.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== WHO I'M NOT FOR (filter block) ===== -->
 <section class="section" id="not-for">
   <div class="section-head reveal">
@@ -245,7 +260,7 @@ import Base from '../../layouts/Base.astro';
 <section class="section" id="builds">
   <div class="section-head reveal">
     <div class="label">sample builds</div>
-    <h2>Ten things I've shipped.</h2>
+    <h2>Eleven things I've shipped.</h2>
     <p>Real workflows. Each ships as a 48-hour sprint or gets customized to your stack. If a build isn't here, it lives in Custom.</p>
   </div>
 
@@ -319,6 +334,13 @@ import Base from '../../layouts/Base.astro';
       <h4>MCP Server (Custom)</h4>
       <p>Custom Model Context Protocol server. Connects Claude to your internal tools, data, or APIs as first-class actions. Examples: Notion-MCP, Linear-MCP, your-CRM-MCP.</p>
       <div class="meta"><span>2–4 DAYS</span><span class="ev">CUSTOM</span></div>
+    </div>
+
+    <div class="build-card reveal">
+      <div class="icon-row"><div class="icon">▤</div><span class="num">BUILD 11</span></div>
+      <h4>Creative Variants Generator</h4>
+      <p>One brief → N image and copy variants for an ad set. Brand-tone guardrails baked in. Approve, reject, regenerate. Built for agencies running paid creative at volume.</p>
+      <div class="meta"><span>~$0.05/variant</span><span class="ev">SPRINT-READY</span></div>
     </div>
 
   </div>
@@ -451,6 +473,15 @@ import Base from '../../layouts/Base.astro';
 .grant-cta:hover { background: var(--green); color: var(--bg-primary); }
 @media (max-width: 720px) { .grant-inner { grid-template-columns: 1fr; gap: 10px; } .grant-cta { text-align: center; } }
 
+/* Who this works for positive filter */
+.for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.for-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--green); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+.for-card .check { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--green); font-weight: 700; line-height: 1; }
+.for-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
+.for-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+@media (max-width: 900px) { .for-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .for-grid { grid-template-columns: 1fr; } }
+
 /* Who I'm not for filter block */
 .not-for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .not-for-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--red); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
@@ -489,6 +520,7 @@ import Base from '../../layouts/Base.astro';
 .build-card:nth-of-type(8) { --card-accent: #a855f7; }
 .build-card:nth-of-type(9) { --card-accent: var(--green); }
 .build-card:nth-of-type(10) { --card-accent: var(--blue); }
+.build-card:nth-of-type(11) { --card-accent: var(--red); }
 
 /* What I don't do block */
 .dont-do { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--red); padding: 24px 28px; }
