@@ -1,0 +1,229 @@
+---
+import Base from '../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Async Workflow Audit",
+  "serviceType": "AI / Operations Consulting",
+  "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+  "areaServed": "Worldwide",
+  "description": "Free async workflow audit. Send a Loom or written brief. Get a 1-page written audit in 48 hours: where the leak is, the 3 highest-leverage automations, rough cost / time-to-ship estimates.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+  "url": "https://pravinemani.com/workflow-audit/"
+};
+---
+
+<Base title="Free Async Workflow Audit · 48-Hour Written Response · Pravine Mani" description="Send a Loom or written brief of one workflow. Get a 1-page written audit back in 48 hours. Free. No sales call. The 3 highest-leverage automations, where to start, where to skip, rough cost to ship." jsonLd={jsonLd}>
+
+<section class="page-hero">
+  <div class="breadcrumb"><span class="gr">$</span> ./audit --async --free --48h</div>
+  <h1>Send a workflow.<br><span class="accent">Get a written audit in 48 hours. Free.</span></h1>
+  <p class="lead">No sales call. No deck. A 1-page written response: the 3 highest-leverage automations in your workflow, where to start, what to skip, rough cost and time-to-ship. Founder / agency / ops lead, send a Loom or short brief below. Capped at 5 audits per week.</p>
+</section>
+
+<section class="section">
+
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-step">01.</div>
+      <h3>Send the workflow</h3>
+      <p>5-min Loom walking through one process. Or a written paragraph if recording is friction. Plus your current stack and the part that costs you the most time.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-step">02.</div>
+      <h3>I write the audit</h3>
+      <p>1-page written response within 48 hours. The 3 highest-leverage automations, ranked. Stack-specific recommendations. What to NOT automate. Rough cost and ship-time estimates.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-step">03.</div>
+      <h3>You decide what's next</h3>
+      <p>If one of the three is worth shipping and the fit is right, the natural next step is the paid Audit ($4,500 fixed-scope week) or a Sprint. Or you take the written audit and build it yourself. Both are fine.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="audit-form-wrap reveal">
+    <div class="intake-head">
+      <div class="label">async audit · 5 fields · 5 minutes to send</div>
+      <h2>Send your workflow.</h2>
+      <p>Lands directly in my inbox via FormSubmit. I read every one personally. Reply within 48 hours on weekdays. No follow-up sequence. No list signup. No sales call unless you ask for one.</p>
+    </div>
+
+    <form class="intake-form" action="https://formsubmit.co/pravinemaniva@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Async Workflow Audit Request · pravinemani.com" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_honey" />
+      <input type="hidden" name="_next" value="https://pravinemani.com/workflow-audit/?sent=1" />
+
+      <div class="intake-row">
+        <label for="name">Your name + company</label>
+        <input id="name" type="text" name="name" autocomplete="name" required placeholder="e.g. Jane Doe, Acme Co." />
+      </div>
+
+      <div class="intake-row">
+        <label for="email">Email for the audit reply</label>
+        <input id="email" type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+      </div>
+
+      <div class="intake-row">
+        <label for="loom">Loom URL or short workflow description</label>
+        <textarea id="loom" name="workflow" rows="4" required placeholder="Paste a Loom URL, OR describe one workflow in 3-5 sentences. Examples: lead intake from FB Lead Ads, monthly client reporting, content scheduling, prospect enrichment, etc."></textarea>
+      </div>
+
+      <div class="intake-row">
+        <label for="stack">Current stack on that workflow</label>
+        <textarea id="stack" name="stack" rows="2" required placeholder="e.g. HubSpot + Zapier + Google Sheets. Or: Notion + manual email. Or: Make + Airtable + Slack. List whatever the workflow touches."></textarea>
+      </div>
+
+      <div class="intake-row">
+        <label for="pain">The most painful part of this workflow</label>
+        <textarea id="pain" name="pain" rows="2" placeholder="One sentence. The part that costs you the most time, or where leads / data / money leaks. Optional but helps."></textarea>
+      </div>
+
+      <div class="intake-actions">
+        <button type="submit" class="btn intake-submit">Send for audit →</button>
+        <span class="intake-foot">48-hour reply window. Toronto / ET. No spam, no list, no sales sequence.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head reveal">
+    <div class="title-block">
+      <div class="label">qualifier · who this is for</div>
+      <h2>Best fit for these four shapes.</h2>
+      <p>If you do not match one of these, the written audit will probably not produce the kind of recommendation that's worth shipping. Read before sending.</p>
+    </div>
+  </div>
+
+  <div class="fit-grid">
+    <div class="fit-card good">
+      <div class="lab">GOOD FIT</div>
+      <h4>SaaS founder, 1-15 people</h4>
+      <p>Doing the operations manually that the product should automate. The workflow has obvious leverage but no internal engineer to ship it.</p>
+    </div>
+    <div class="fit-card good">
+      <div class="lab">GOOD FIT</div>
+      <h4>Agency owner, &lt;10 person</h4>
+      <p>One workflow eating client-delivery margin. Reporting, content production, lead enrichment, QA pipelines.</p>
+    </div>
+    <div class="fit-card good">
+      <div class="lab">GOOD FIT</div>
+      <h4>Tech-forward SMB</h4>
+      <p>Already on Vercel / Supabase / a real stack, NOT just no-code platforms. Workflow is a candidate for owned code, not another Zapier.</p>
+    </div>
+    <div class="fit-card good">
+      <div class="lab">GOOD FIT</div>
+      <h4>Ops lead inside a Series A/B</h4>
+      <p>Engineering is busy on the product. You own the ops stack. You need a written second opinion before pitching the build internally.</p>
+    </div>
+  </div>
+
+  <div class="fit-grid" style="margin-top: 14px;">
+    <div class="fit-card bad">
+      <div class="lab">NOT A FIT</div>
+      <h4>Pre-revenue solo founder</h4>
+      <p>The audit will say "ship the product first, automate the operations later." Save your loom and read pravinemani.com/services instead.</p>
+    </div>
+    <div class="fit-card bad">
+      <div class="lab">NOT A FIT</div>
+      <h4>50+ person company with internal engineering</h4>
+      <p>Your team should own this. The written audit will be too compressed to be useful at that org size.</p>
+    </div>
+    <div class="fit-card bad">
+      <div class="lab">NOT A FIT</div>
+      <h4>"Broken Zapier" repair work</h4>
+      <p>I do not fix no-code platforms. I rewrite them in code. If your workflow only makes sense on Zapier, we are not the right match.</p>
+    </div>
+    <div class="fit-card bad">
+      <div class="lab">NOT A FIT</div>
+      <h4>Marketing strategy audit</h4>
+      <p>This is a workflow / ops audit. Not a positioning, copywriting, brand, or paid-ads strategy review. Different work.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="vert-cta reveal" style="text-align: center;">
+    <div class="lab" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; margin-bottom: 12px;">FAST PATH</div>
+    <h2 style="font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px;">Already know you want to scope a build?</h2>
+    <p style="margin-bottom: 18px;">Skip the async audit and <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">book a 30-min scoping call</a>. Same starting point, faster path to a written quote.</p>
+  </div>
+</section>
+
+</Base>
+
+<style is:global>
+.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 900px) { .how-grid { grid-template-columns: 1fr; } }
+.how-card { background: var(--bg-card); border: 1px solid var(--border); padding: 28px 30px; position: relative; }
+.how-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.85; }
+.how-step { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; margin-bottom: 14px; }
+.how-card h3 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(20px, 1.6vw, 26px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.012em; line-height: 1.25; margin-bottom: 12px; }
+.how-card p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
+
+.audit-form-wrap { background: var(--bg-card); border: 1px solid var(--border); padding: 32px 36px; position: relative; max-width: 880px; margin: 0 auto; }
+.audit-form-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.85; }
+@media (max-width: 720px) { .audit-form-wrap { padding: 24px 22px; } }
+
+.intake-head { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.intake-head .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; margin-bottom: 10px; }
+.intake-head h2 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(24px, 2.4vw, 36px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.018em; line-height: 1.2; margin-bottom: 8px; }
+.intake-head p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.55; max-width: 64ch; }
+
+.intake-form { display: flex; flex-direction: column; gap: 18px; }
+.intake-form input[name="_honey"] { display: none !important; }
+.intake-row { display: flex; flex-direction: column; gap: 6px; }
+.intake-row label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
+.intake-row input, .intake-row textarea {
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color var(--dur-micro, 150ms) var(--ease);
+}
+.intake-row input:focus, .intake-row textarea:focus { border-color: var(--green); }
+.intake-row input::placeholder, .intake-row textarea::placeholder { color: var(--text-dim); }
+.intake-row textarea { resize: vertical; line-height: 1.55; }
+
+.intake-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 6px; }
+.intake-submit { display: inline-flex; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 24px; background: var(--green); color: var(--bg-primary); border: none; cursor: pointer; transition: all var(--dur-micro, 150ms) var(--ease); }
+.intake-submit:hover { background: var(--text-primary); }
+.intake-foot { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; color: var(--text-dim); }
+
+.fit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 1100px) { .fit-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .fit-grid { grid-template-columns: 1fr; } }
+.fit-card { background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
+.fit-card .lab { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; }
+.fit-card.good { border-left: 2px solid var(--green); }
+.fit-card.good .lab { color: var(--green); }
+.fit-card.bad { border-left: 2px solid var(--red); opacity: 0.75; }
+.fit-card.bad .lab { color: var(--red); }
+.fit-card h4 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 19px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.25; }
+.fit-card p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; }
+
+.vert-cta { background: var(--bg-card); border: 1px solid var(--border-green); padding: 36px 32px; position: relative; }
+.vert-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center top, rgba(0,255,65,0.06) 0%, transparent 60%); pointer-events: none; }
+.vert-cta > * { position: relative; z-index: 1; }
+</style>
+
+<script>
+  if (window.location.search.includes('sent=1')) {
+    const wrap = document.querySelector('.audit-form-wrap');
+    if (wrap) {
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--green); border-left: 2px solid var(--green); padding: 14px 18px; margin-bottom: 18px; font-family: \'Inter\', sans-serif; font-size: 14px; color: var(--text-primary);';
+      banner.textContent = 'Workflow received. I read every one personally. Written audit reply within 48 hours on weekdays.';
+      wrap.prepend(banner);
+    }
+  }
+</script>

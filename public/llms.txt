@@ -39,6 +39,7 @@ Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas:
 
 ## Contact
 
+- [Async Workflow Audit](https://pravinemani.com/workflow-audit/): Send a Loom or written brief of one workflow. Get a 1-page written audit in 48 hours. Free during the cold-start phase. Lowest-friction entry point. Surfaces the 3 highest-leverage automations, stack-specific recommendations, rough cost + ship-time. Best fit: SaaS founders, agency owners, ops leads inside Series A/B.
 - [Contact](https://pravinemani.com/contact/): Free 30-minute scoping call. Written quote within 24 hours.
 - Email: pravinemaniva@gmail.com
 - LinkedIn: https://www.linkedin.com/in/pravinemani/

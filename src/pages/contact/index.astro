@@ -63,6 +63,13 @@ const jsonLd = {
       <a href="https://github.com/pravinemani5545" class="btn secondary">@pravinemani5545 →</a>
     </div>
 
+    <div class="contact-card featured" style="grid-column: 1 / -1;">
+      <div class="label"><span class="dot"></span>NOT READY FOR A CALL?</div>
+      <h3>Send a workflow. Get a written audit in 48 hours. Free.</h3>
+      <p>The lowest-friction path. Send a Loom or a written brief of one workflow. I write back with the 3 highest-leverage automations, where to start, what to skip, and rough cost estimates. No sales call attached. Capped at 5 audits per week.</p>
+      <a href="/workflow-audit/" class="btn">Send a workflow →</a>
+    </div>
+
   </div>
 
   <section class="intake-section">
@@ -150,8 +157,8 @@ const jsonLd = {
 .contact-card.featured { border-color: var(--border-green); }
 .contact-card .label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 .contact-card .label .dot { width: 6px; height: 6px; background: var(--green); animation: pulse-dot 1.6s infinite; }
-.contact-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 12px; line-height: 1.25; }
-.contact-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px; }
+.contact-card h3 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 22px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 12px; line-height: 1.25; }
+.contact-card p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px; }
 .contact-card .btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding: 12px 20px; background: var(--green); color: var(--bg-primary); transition: all var(--dur-micro, 150ms) var(--ease); }
 .contact-card .btn:hover { background: var(--text-primary); }
 .contact-card .btn.secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
@@ -171,7 +178,7 @@ const jsonLd = {
 .channel .speed { font-size: 9px; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; }
 .scheduling-note { margin-top: 24px; padding: 20px 24px; background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid var(--green); }
 .scheduling-note .lab { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; margin-bottom: 8px; }
-.scheduling-note p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.scheduling-note p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .scheduling-note p strong { color: var(--text-primary); }
 @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } .channel { grid-template-columns: 1fr; gap: 4px; } }
 
@@ -180,8 +187,8 @@ const jsonLd = {
 .intake-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.85; }
 .intake-head { margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
 .intake-head .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; margin-bottom: 8px; }
-.intake-head h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.9vw, 30px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.018em; line-height: 1.2; margin-bottom: 8px; }
-.intake-head p { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.55; max-width: 64ch; }
+.intake-head h2 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(22px, 1.9vw, 30px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.018em; line-height: 1.2; margin-bottom: 8px; }
+.intake-head p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.55; max-width: 64ch; }
 
 .intake-form { display: flex; flex-direction: column; gap: 18px; }
 .intake-form input[name="_honey"] { display: none !important; }
@@ -189,7 +196,7 @@ const jsonLd = {
 .intake-row label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
 .intake-row input, .intake-row textarea, .intake-row select {
   width: 100%;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 15px;
   color: var(--text-primary);
   background: var(--bg-tertiary);
@@ -202,7 +209,7 @@ const jsonLd = {
   border-color: var(--green);
 }
 .intake-row input::placeholder, .intake-row textarea::placeholder { color: var(--text-dim); }
-.intake-row textarea { resize: vertical; font-family: 'IBM Plex Sans', sans-serif; line-height: 1.5; }
+.intake-row textarea { resize: vertical; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
 .intake-row select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--text-dim) 50%), linear-gradient(135deg, var(--text-dim) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 32px; }
 .intake-row-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .intake-row-grid > div { display: flex; flex-direction: column; gap: 6px; }
@@ -211,7 +218,7 @@ const jsonLd = {
 .intake-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 6px; }
 .intake-submit { display: inline-flex; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 22px; background: var(--green); color: var(--bg-primary); border: none; cursor: pointer; transition: all var(--dur-micro, 150ms) var(--ease); }
 .intake-submit:hover { background: var(--text-primary); }
-.intake-foot { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: var(--text-dim); }
+.intake-foot { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 13px; color: var(--text-dim); }
 </style>
 <script>
   // Show a confirmation message if the form just submitted (FormSubmit redirects back with ?sent=1)
@@ -219,7 +226,7 @@ const jsonLd = {
     const section = document.querySelector('.intake-section');
     if (section) {
       const banner = document.createElement('div');
-      banner.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--green); border-left: 2px solid var(--green); padding: 14px 18px; margin-bottom: 18px; font-family: \'IBM Plex Sans\', sans-serif; font-size: 14px; color: var(--text-primary);';
+      banner.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--green); border-left: 2px solid var(--green); padding: 14px 18px; margin-bottom: 18px; font-family: \'Inter\', sans-serif; font-size: 14px; color: var(--text-primary);';
       banner.textContent = 'Brief received. I read every one personally. Reply within 24 hours on weekdays.';
       section.prepend(banner);
     }
