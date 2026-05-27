@@ -21,7 +21,7 @@ const jsonLd = {
     <span class="you">marketing automation</span>
   </div>
   <h1>Marketing automation.<br><span class="accent">In code. Without the SaaS tax.</span></h1>
-  <p class="lead">Lead capture. CRM wiring. Lifecycle email. Subscription payments. Built as code on Vercel, Resend, Supabase, Stripe. No Zapier. No Make. No $300/mo platform fee. Same primitives. Owned forever. Debuggable when something breaks.</p>
+  <p class="lead">Lead capture. CRM wiring. Lifecycle email. Subscription payments. Static + UGC creative generation. Built as code on Vercel, Resend, Supabase, Stripe + Higgsfield / GPT Image 2 / Nano Banana for media. No Zapier. No Make. No $300/mo platform fee. Owned outright. Debuggable when something breaks.</p>
   <div class="cta-row">
     <a href="/services/" class="cta-btn secondary">All engagement shapes</a>
   </div>
@@ -71,6 +71,28 @@ const jsonLd = {
         <li>Webhook handler with idempotency-key store</li>
         <li>Dunning + grace periods, cancellation flows</li>
         <li>Revenue dashboards in the admin portal</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="creative">
+      <div class="vert-head"><span class="vert-id">05</span><h2>Creative generation (static)</h2></div>
+      <p>One brief → N image and copy variants for an ad set. Brand-tone guardrails baked in. GPT Image 2 + Higgsfield + Nano Banana under the hood. Approve, reject, regenerate. Built for agencies running paid creative at volume.</p>
+      <ul>
+        <li>Brief schema: hook, product, audience, tone, output count</li>
+        <li>Per-variant brand-tone guard: tested against a golden set</li>
+        <li>Approval workflow with reject + regenerate loop</li>
+        <li>Cost ceiling per brief (you set the cap, the system stops)</li>
+      </ul>
+    </article>
+
+    <article class="vert-card" id="ugc">
+      <div class="vert-head"><span class="vert-id">06</span><h2>UGC video generation</h2></div>
+      <p>UGC-style ad video at volume. Higgsfield Marketing Studio: avatar + product + hook + setting → 9:16 / 1:1 / 16:9 outputs. The pipeline that replaces a 6-person production crew for the test phase of an ad campaign.</p>
+      <ul>
+        <li>Avatar pool: preset library + custom Soul Character training</li>
+        <li>Product imports via URL or uploaded images</li>
+        <li>Hook + setting selection per variant</li>
+        <li>Output ladder: 4 variants → pick winner → scale to 20</li>
       </ul>
     </article>
 

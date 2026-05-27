@@ -54,7 +54,8 @@ const servicesActive = isActive('/services');
                 <a href="/services/marketing-automation/">Lead pipelines</a>
                 <a href="/services/marketing-automation/#email">Lifecycle email</a>
                 <a href="/services/marketing-automation/#crm">CRM + webhooks</a>
-                <a href="/services/marketing-automation/#stripe">Stripe + subscriptions</a>
+                <a href="/services/marketing-automation/#creative">Creative generation</a>
+                <a href="/services/marketing-automation/#ugc">UGC video</a>
               </div>
               <div class="dropdown-col">
                 <div class="dropdown-col-head"><span class="dot rd"></span>Agentic OS</div>
@@ -98,17 +99,5 @@ const servicesActive = isActive('/services');
       });
     });
   }
-  // Mobile: tap services to expand dropdown inline instead of navigating
-  const trigger = document.querySelector<HTMLAnchorElement>('.nav-trigger');
-  const item = document.querySelector<HTMLElement>('.nav-item.has-dropdown');
-  if (trigger && item) {
-    trigger.addEventListener('click', (e) => {
-      const isMobile = window.matchMedia('(max-width: 980px)').matches;
-      if (isMobile) {
-        e.preventDefault();
-        const open = item.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', String(open));
-      }
-    });
-  }
+  // Mobile: Services is a plain link — no dropdown intercept.
 </script>
