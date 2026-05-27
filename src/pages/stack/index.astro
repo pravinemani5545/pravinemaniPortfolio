@@ -13,51 +13,62 @@ const jsonLd = {
 
 
 <section class="page-hero">
-  <div class="breadcrumb"><span class="gr">$</span> cat ~/.stack <span class="you">→ what i build with daily</span></div>
+  <div class="breadcrumb"><span class="gr">$</span> cat ~/.stack <span class="you">→ the operator stack</span></div>
   <h1>The operator stack.<br><span class="accent">Every tool. Why. What it costs.</span></h1>
-  <p class="lead">Opinionated. Not exhaustive. The tools I actually use, ranked by frequency. Daily-rotation marked with a green dot. Monthly costs are honest. Totals at the bottom of each category include only what I pay personally.</p>
+  <p class="lead">The tools I run on every engagement, ranked by frequency. Costs are honest and personal. The full monthly burn is at the bottom. What I deliberately don't use is at the bottom too, because the absence is the point.</p>
 </section>
 
 <section class="section">
+  <div class="principle-block">
+    <div class="lab">THE RULE</div>
+    <p>Code in the repo, secrets in env vars, logs in Vercel, schedule in cron. Every workflow runs on infrastructure the client already owns. The stack disappears with the engagement — nothing in my account, nothing on a platform that can sunset.</p>
+  </div>
+
   <div class="legend">
-    <span><span class="green">●</span> DAILY DRIVER</span>
-    <span>○ OCCASIONAL</span>
-    <span>RED CARD = DELIBERATELY AVOIDED</span>
+    <span><span class="green">●</span> DAILY · used on every project</span>
+    <span>○ OCCASIONAL · case-by-case</span>
+    <span class="avoid-tag">AVOIDED · code-first replaces this</span>
   </div>
 
   <div class="stack-cat">
     <div class="sc-head">
       <div class="name"><span class="n">01 ·</span> CODE + SHIP</div>
-      <div class="cost">MONTHLY · <span class="v">~$40</span></div>
+      <div class="cost">USAGE-BASED</div>
     </div>
     <div class="tool-rows">
       <div class="tool daily">
         <div class="nm daily">Claude Code</div>
-        <div class="why">Primary dev surface. Sub-agents, MCP, hooks, headless mode. The whole package. Replaced VS Code as my default.</div>
-        <div class="price">$20 / mo</div>
+        <div class="why">The development surface. Sub-agents, MCP, hooks, headless mode. Replaces an IDE, a pair-programmer, and a research assistant.</div>
+        <div class="price">PAID</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool daily">
         <div class="nm daily">Vercel</div>
-        <div class="why">Hosting + serverless + cron + KV. Hobby tier covers most personal projects. Pro for client work.</div>
-        <div class="price">$0–20 / mo</div>
+        <div class="why">Hosting, serverless, cron, edge config, KV. Every client deploy ships through Vercel Pro. Build logs are the deliverable receipt.</div>
+        <div class="price">PAID</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool daily">
         <div class="nm daily">TypeScript</div>
-        <div class="why">Default for anything past a one-file script. Strict mode on. Auto-fix saves on commit.</div>
+        <div class="why">Default for anything past a one-file script. Strict mode. Type-check passes before any commit lands.</div>
         <div class="price">FREE</div>
+        <div class="tag">DAILY</div>
+      </div>
+      <div class="tool daily">
+        <div class="nm daily">GitHub</div>
+        <div class="why">Repo, PR review, Actions for CI, Issues for client-facing scope. Every engagement gets its own private repo handed off at close.</div>
+        <div class="price">FREE / PAID</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool">
         <div class="nm">Cursor</div>
-        <div class="why">Backup for VS Code-native moments. Tab completion is still best-in-class.</div>
-        <div class="price">$20 / mo</div>
+        <div class="why">Secondary editor when a tight inline-completion loop beats Claude Code's chat surface. Same Anthropic models underneath.</div>
+        <div class="price">PAID</div>
         <div class="tag">OCCASIONAL</div>
       </div>
       <div class="tool">
         <div class="nm">v0</div>
-        <div class="why">UI scaffolds. React + Tailwind components in minutes. Port to production after.</div>
+        <div class="why">First-pass UI scaffolds. Generated React + Tailwind, ported to production-grade components after.</div>
         <div class="price">USAGE-BASED</div>
         <div class="tag">OCCASIONAL</div>
       </div>
@@ -67,31 +78,31 @@ const jsonLd = {
   <div class="stack-cat">
     <div class="sc-head">
       <div class="name"><span class="n">02 ·</span> AI + AGENTS</div>
-      <div class="cost">MONTHLY · <span class="v">~$60</span> (API)</div>
+      <div class="cost">USAGE-BASED</div>
     </div>
     <div class="tool-rows">
       <div class="tool daily">
         <div class="nm daily">Anthropic API</div>
-        <div class="why">Claude 4.7 Opus for code + reasoning. Sonnet 4.6 for high-volume. Token-based. Prompt caching cuts ~70%.</div>
-        <div class="price">~$40 / mo</div>
+        <div class="why">Claude 4.7 Opus for code and reasoning, Sonnet 4.6 for high-volume work. Prompt caching cuts ~70% of token cost on stable system prompts.</div>
+        <div class="price">USAGE-BASED</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool daily">
         <div class="nm daily">MCP</div>
-        <div class="why">Model Context Protocol. Plugins for Claude. Filesystem, GitHub, Playwright, Obsidian, custom servers.</div>
+        <div class="why">Model Context Protocol. Filesystem, GitHub, Playwright, Obsidian, plus custom servers shipped per client engagement.</div>
         <div class="price">FREE PROTOCOL</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool">
         <div class="nm">OpenAI / GPT-5</div>
-        <div class="why">Comparison work + specific tasks where GPT pulls ahead. Not the primary.</div>
+        <div class="why">Comparison runs and specific tasks where GPT pulls ahead. Not primary.</div>
         <div class="price">USAGE-BASED</div>
         <div class="tag">OCCASIONAL</div>
       </div>
       <div class="tool">
         <div class="nm">Gemini 3 / NotebookLM</div>
-        <div class="why">Best research synthesis tool right now. 1M-token context. Audio overviews are a 10x feature.</div>
-        <div class="price">FREE / $20</div>
+        <div class="why">Research synthesis. 1M-token context window. Audio overviews are the 10x feature.</div>
+        <div class="price">FREE / PAID</div>
         <div class="tag">OCCASIONAL</div>
       </div>
     </div>
@@ -100,38 +111,38 @@ const jsonLd = {
   <div class="stack-cat">
     <div class="sc-head">
       <div class="name"><span class="n">03 ·</span> DATA + INFRA</div>
-      <div class="cost">MONTHLY · <span class="v">~$30</span></div>
+      <div class="cost">USAGE-BASED</div>
     </div>
     <div class="tool-rows">
       <div class="tool daily">
+        <div class="nm daily">Supabase</div>
+        <div class="why">Postgres + auth + RLS. Default database on every client build. Row-Level Security replaces about 80% of the auth code most apps end up writing by hand.</div>
+        <div class="price">FREE / PAID</div>
+        <div class="tag">DAILY</div>
+      </div>
+      <div class="tool daily">
         <div class="nm daily">Vercel KV</div>
-        <div class="why">Redis-compatible key-value store on Vercel. Default for idempotency keys, session state, cron-job memory.</div>
+        <div class="why">Redis-compatible key-value store on Vercel. Idempotency keys, session state, cron memory, prompt cache.</div>
         <div class="price">USAGE-BASED</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool daily">
         <div class="nm daily">Vercel Cron</div>
-        <div class="why">Scheduled functions. Replaces n8n / Make for me. Code in repo. Versioned. Debuggable.</div>
+        <div class="why">Scheduled serverless functions. Code in the repo, versioned, debuggable in build logs. The replacement for n8n / Make for every scheduled workflow.</div>
         <div class="price">INCLUDED</div>
         <div class="tag">DAILY</div>
       </div>
-      <div class="tool">
-        <div class="nm">Supabase</div>
-        <div class="why">Postgres + auth + RLS for any app that needs a real database. Free tier covers most personal projects.</div>
-        <div class="price">$0–25 / mo</div>
-        <div class="tag">OCCASIONAL</div>
+      <div class="tool daily">
+        <div class="nm daily">Resend</div>
+        <div class="why">Transactional email. Clean SDK, fast DKIM setup, sane deliverability. Default mail provider on every engagement.</div>
+        <div class="price">FREE / PAID</div>
+        <div class="tag">DAILY</div>
       </div>
-      <div class="tool">
-        <div class="nm">Resend</div>
-        <div class="why">Transactional email. Clean SDK. Easy DKIM. Good deliverability. Default mail provider.</div>
-        <div class="price">FREE TIER</div>
-        <div class="tag">OCCASIONAL</div>
-      </div>
-      <div class="tool">
-        <div class="nm">Stripe</div>
-        <div class="why">Payments. Standard.</div>
-        <div class="price">2.9% + 30¢</div>
-        <div class="tag">OCCASIONAL</div>
+      <div class="tool daily">
+        <div class="nm daily">Stripe</div>
+        <div class="why">Checkout + Customer Portal + webhooks. The lookup-and-paste API. Idempotency-key handling on the webhook side is the line most builds forget.</div>
+        <div class="price">USAGE-BASED</div>
+        <div class="tag">DAILY</div>
       </div>
     </div>
   </div>
@@ -139,37 +150,37 @@ const jsonLd = {
   <div class="stack-cat">
     <div class="sc-head">
       <div class="name"><span class="n">04 ·</span> CONTENT + GROWTH</div>
-      <div class="cost">MONTHLY · <span class="v">~$50</span></div>
+      <div class="cost">USAGE-BASED</div>
     </div>
     <div class="tool-rows">
       <div class="tool daily">
         <div class="nm daily">Beehiiv</div>
         <div class="why">Newsletter. 0% on paid subs. Built-in ads marketplace. Boost Network for cross-promo growth.</div>
-        <div class="price">FREE–$49 / mo</div>
+        <div class="price">FREE / PAID</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool daily">
         <div class="nm daily">Plausible</div>
-        <div class="why">Privacy-friendly analytics. No cookie banner. EU-friendly. $9/mo. Replaced GA4.</div>
-        <div class="price">$9 / mo</div>
+        <div class="why">Privacy-friendly analytics. No cookie banner. EU-friendly. Replaced GA4 across every client engagement.</div>
+        <div class="price">PAID</div>
         <div class="tag">DAILY</div>
       </div>
       <div class="tool">
         <div class="nm">Whop</div>
         <div class="why">Community + checkout. 3% platform + Stripe. The marketplace discoverability is the actual win.</div>
-        <div class="price">3% + STRIPE</div>
+        <div class="price">USAGE-BASED</div>
         <div class="tag">OCCASIONAL</div>
       </div>
       <div class="tool">
         <div class="nm">Typefully</div>
         <div class="why">X scheduling. Clean editor. Thread split. Cross-posts to LinkedIn, Threads, Bluesky.</div>
-        <div class="price">$19 / mo</div>
+        <div class="price">PAID</div>
         <div class="tag">OCCASIONAL</div>
       </div>
       <div class="tool">
         <div class="nm">AuthoredUp</div>
         <div class="why">LinkedIn editor + analytics. Best value at launch tier. Skip Taplio until you're scaling LI seriously.</div>
-        <div class="price">$20 / mo</div>
+        <div class="price">PAID</div>
         <div class="tag">OCCASIONAL</div>
       </div>
     </div>
@@ -178,25 +189,25 @@ const jsonLd = {
   <div class="stack-cat avoid">
     <div class="sc-head">
       <div class="name"><span class="n">05 ·</span> DELIBERATELY NOT USING</div>
-      <div class="cost">MONTHLY · <span class="v">$0</span></div>
+      <div class="cost">REPLACED BY CODE-FIRST</div>
     </div>
     <div class="tool-rows">
       <div class="tool">
         <div class="nm">n8n</div>
-        <div class="why">Visual workflow tool. Replaced with Vercel cron + serverless functions. Code-first. $0 platform fee. Versioned in git. Debuggable when something breaks.</div>
-        <div class="price">$0–20 / mo</div>
+        <div class="why">Visual workflow tool. Replaced with Vercel cron + serverless functions on the client's own infrastructure. No platform fee. Versioned in git. Debuggable when something breaks at 3am.</div>
+        <div class="price">FREE / PAID</div>
         <div class="tag">AVOIDED</div>
       </div>
       <div class="tool">
         <div class="nm">Make.com</div>
         <div class="why">Same as n8n. Fine for non-technical users. Wrong fit for an operator who can write a serverless function in 20 minutes.</div>
-        <div class="price">$9–29 / mo</div>
+        <div class="price">PAID</div>
         <div class="tag">AVOIDED</div>
       </div>
       <div class="tool">
         <div class="nm">Zapier</div>
         <div class="why">Even more expensive per-action than the above. The cost-per-workflow at scale doesn't make sense once you can code.</div>
-        <div class="price">$20+ / mo</div>
+        <div class="price">PAID</div>
         <div class="tag">AVOIDED</div>
       </div>
     </div>

@@ -19,8 +19,8 @@ import Base from '../../layouts/Base.astro';
 <section class="section">
   <div class="section-head reveal">
     <div class="label">engagement shapes</div>
-    <h2>Four shapes. One operator.</h2>
-    <p>Each shape is productized: fixed scope, fixed deliverables, written quote before signing. <strong style="color: var(--text-primary);">Scoping Call</strong> is the entry (free, 30 min). <strong style="color: var(--text-primary);">Audit</strong> when you don't know where AI fits yet (from $4,500). <strong style="color: var(--text-primary);">Sprint</strong> when the workflow fits in one sentence (from $4,500). <strong style="color: var(--text-primary);">Custom</strong> for anything multi-workflow (from $12K).</p>
+    <h2>Five shapes. One operator.</h2>
+    <p>Each shape is productized: fixed scope, fixed deliverables, written quote before signing. <strong style="color: var(--text-primary);">Scoping Call</strong> is the entry (free, 30 min). <strong style="color: var(--text-primary);">Audit</strong> when you don't know where AI fits yet. <strong style="color: var(--text-primary);">Sprint</strong> when the workflow fits in one sentence. <strong style="color: var(--text-primary);">Custom</strong> for anything multi-workflow. <strong style="color: var(--text-primary);">Ops Retainer</strong> for ongoing maintenance and tuning of systems already shipped. Every paid shape is quoted on scope — no surprises.</p>
   </div>
 
   <!-- 00 · SCOPING CALL -->
@@ -91,7 +91,7 @@ import Base from '../../layouts/Base.astro';
       </div>
     </div>
     <div class="tier-foot">
-      <span class="meta">FROM $4,500 · REMOTE · LIMITED</span>
+      <span class="meta">QUOTE ON SCOPE · REMOTE · LIMITED</span>
       <a href="/contact/">→ BOOK AUDIT CALL</a>
     </div>
   </div>
@@ -128,7 +128,7 @@ import Base from '../../layouts/Base.astro';
       </div>
     </div>
     <div class="tier-foot">
-      <span class="meta">FROM $4,500 · 50% UPFRONT · LIMITED</span>
+      <span class="meta">QUOTE ON SCOPE · 50% UPFRONT · LIMITED</span>
       <a href="/contact/">→ BOOK SPRINT CALL</a>
     </div>
   </div>
@@ -167,8 +167,45 @@ import Base from '../../layouts/Base.astro';
       </div>
     </div>
     <div class="tier-foot">
-      <span class="meta">FROM $12K · MILESTONE-PAID</span>
+      <span class="meta">QUOTE ON SCOPE · MILESTONE-PAID</span>
       <a href="/contact/">→ START SCOPING</a>
+    </div>
+  </div>
+
+  <!-- 04 · OPS RETAINER -->
+  <div class="tier-card reveal" id="retainer">
+    <div class="tier-head">
+      <div class="left">
+        <div class="row1" style="color: #a855f7;"><span class="pulse" style="background: #a855f7;"></span>04 · OPS RETAINER</div>
+        <h3>Ongoing care for what I've already shipped.</h3>
+      </div>
+      <div class="right">
+        <div class="time" style="color: #a855f7;">MONTHLY · CAPPED HOURS</div>
+        <div class="slots">POST-ENGAGEMENT ONLY</div>
+      </div>
+    </div>
+    <div class="tier-body">
+      <div class="col">
+        <h4>WHAT IT IS</h4>
+        <p>For clients I've already built for. A monthly retainer with defined deliverables — not Slack access for $X. Every hour goes against a specific outcome: monitoring, tuning, evals, on-call.</p>
+        <p>Two tiers depending on system size. Both have a capped monthly hour budget that resets monthly and doesn't roll over. Cancel any month with 30 days' notice.</p>
+        <p><strong>Hard rule:</strong> never sold cold. Only opens after an Audit, Sprint, or Custom engagement has shipped.</p>
+      </div>
+      <div class="col">
+        <h4>WHAT'S IN IT</h4>
+        <ul>
+          <li>Monthly architecture + cost review on the system I built</li>
+          <li>Eval suite kept current as your data + prompts change</li>
+          <li>On-call response for bugs in production systems I shipped</li>
+          <li>Minor enhancements within the capped monthly budget</li>
+          <li>Monthly written report: what changed, what's stable, what to watch</li>
+          <li>Quarterly call to flag what should graduate to a new Sprint</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tier-foot">
+      <span class="meta">QUOTE ON SCOPE · MONTHLY · POST-SHIP ONLY</span>
+      <a href="/contact/">→ ASK ABOUT RETAINER</a>
     </div>
   </div>
 </section>
@@ -342,7 +379,7 @@ import Base from '../../layouts/Base.astro';
     <p>If yours isn't here, ask on the call.</p>
   </div>
   <div class="faq-block">
-    <details class="faq-item"><summary>What do prices actually look like?</summary><p>Brackets are on the cards above. <span class="acc">Audit + Sprint from $4,500. Custom from $12K.</span> The final number depends on scope and your stack. Lands in writing within 24 hrs of the call.</p></details>
+    <details class="faq-item"><summary>What do prices actually look like?</summary><p>Quote on scope. Final number depends on the workflow, the stack, and the timeline. <span class="acc">Lands in writing within 24 hrs of the free 30-min scoping call</span>, so you can compare on real numbers before committing. No surprises after signing — productized scope means the price doesn't move once the spec is agreed.</p></details>
     <details class="faq-item"><summary>What stack do you build on?</summary><p><span class="acc">Claude Code. Vercel (serverless, cron, KV). Anthropic API.</span> I'll work in yours if it matches: TypeScript, Next.js, Supabase, Stripe, Beehiiv, Whop. I <strong>won't</strong> build on n8n, Make, or Zapier. Fragile, expensive at scale, unreadable six months later.</p></details>
     <details class="faq-item"><summary>Who owns the code?</summary><p><span class="acc">You. Outright.</span> Work-for-hire under a written agreement. Full source, the deployment, the right to modify or sell. I retain nothing.</p></details>
     <details class="faq-item"><summary>Why fixed price instead of hourly?</summary><p>Hourly aligns incentives badly. I'd be incentivized to drag. You'd be incentivized to micro-manage. Fixed-price aligns both sides on outcome.</p></details>

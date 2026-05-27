@@ -32,45 +32,45 @@ const jsonLd = {
 
     <article class="vert-card" id="workflows">
       <div class="vert-head"><span class="vert-id">01</span><h2>Workflow automation</h2></div>
-      <p>Daily briefings. Lead-routing. Inbox triage. Competitor watch. Metric digests. Any workflow with a clear input and output. Shipped as code, not strung through SaaS.</p>
+      <p>Repetitive tasks your team does over and over — lead routing, inbox triage, daily briefings, competitor watching, weekly reporting — converted into automations that run on schedule. Written as real code in your repo, not glued together in Zapier.</p>
       <ul>
-        <li>Vercel cron + serverless on your account</li>
-        <li>Anthropic API with prompt caching from day one</li>
-        <li>Typed outputs (Zod or Pydantic); no free-text parsing</li>
-        <li>14 days of post-ship support included</li>
+        <li>Each automation runs on infrastructure you already own (no extra subscriptions to pay for)</li>
+        <li>Outputs are structured and validated, so downstream systems never break on unexpected data</li>
+        <li>You own the code at the end of the engagement — versioned in git, debuggable, modifiable</li>
+        <li>Two weeks of post-launch support included to catch anything the eval suite missed</li>
       </ul>
     </article>
 
     <article class="vert-card" id="mcp">
       <div class="vert-head"><span class="vert-id">02</span><h2>Custom MCP servers</h2></div>
-      <p>Wrap your domain logic as a Model Context Protocol server. Claude (or any MCP-compatible agent) calls your APIs, databases, and internal tools as first-class actions.</p>
+      <p>An MCP server is a way to give Claude or any AI agent direct access to your business data — your CRM, your database, your internal APIs — without copy-pasting context into a chat window. The AI calls your systems the same way a teammate would.</p>
       <ul>
-        <li>Tool registration, Zod-validated inputs, typed errors</li>
-        <li>HMAC verification on every external trigger</li>
-        <li>Repo template + README + Loom handoff</li>
-        <li>Pairs with custom Claude Code skills (CLI installable)</li>
+        <li>Your APIs, database queries, and internal tools exposed as actions the AI can take safely</li>
+        <li>Every external request signed and verified, so nothing untrusted reaches your data</li>
+        <li>A reusable template repository handed off so your team can extend the server without me</li>
+        <li>Optional Claude Code skills bundled in, so anyone on your team can install the workflow via one CLI command</li>
       </ul>
     </article>
 
     <article class="vert-card" id="agents">
       <div class="vert-head"><span class="vert-id">03</span><h2>Agent systems</h2></div>
-      <p>Multi-step agents. Tool use. Structured outputs. Sane fallbacks. Single-agent or fan-out. Live observability via Langfuse or Helicone. Cost ceilings per user.</p>
+      <p>A coordinated set of AI agents that handle multi-step work — research, planning, execution, review — with cost limits, error recovery, and visibility into every decision. The thing most teams demo but never get past the demo.</p>
       <ul>
-        <li>Orchestrator / worker / evaluator patterns where they fit</li>
-        <li>Sub-agent spawning when parallelism is the win</li>
-        <li>Idempotency keys + exponential backoff</li>
-        <li>For deeper multi-agent / concurrency work, see <a href="/services/agentic-os/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Agentic OS</a></li>
+        <li>Specialized agents that hand work off to each other instead of one bloated mega-prompt</li>
+        <li>Hard cost ceilings per task and per user so a runaway loop can't blow your API bill</li>
+        <li>Production observability so you can see what each agent did, why, and what it cost</li>
+        <li>For deeper concurrency work, see <a href="/services/agentic-os/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Agentic OS</a></li>
       </ul>
     </article>
 
     <article class="vert-card" id="evals">
       <div class="vert-head"><span class="vert-id">04</span><h2>Prompt + eval suites</h2></div>
-      <p>A golden dataset of 30-100 inputs with expected outputs. Scored on every prompt change. Runs in CI. PRs that drop eval score block merge. This is the discipline that separates a demo from a product.</p>
+      <p>A test suite for your AI features. Real inputs, expected outputs, scored automatically on every code change. The difference between "the demo worked" and "we shipped this to customers and it stayed working." Most teams skip this. It's why AI features regress in production.</p>
       <ul>
-        <li>Promptfoo (free) or Braintrust setups</li>
-        <li>Regression harness + report on every PR</li>
-        <li>Prompts versioned in git like code</li>
-        <li>Output: you own a real test suite, not just a working demo</li>
+        <li>30-100 real test cases written from your actual product traffic, not made up</li>
+        <li>Every code change runs the suite — if quality drops, the deploy is blocked automatically</li>
+        <li>Prompts treated like code: versioned, reviewable, rolled back if needed</li>
+        <li>You leave with a real test harness you can extend, not a one-off demo</li>
       </ul>
     </article>
 
@@ -86,9 +86,9 @@ const jsonLd = {
     </div>
   </div>
   <div class="vert-engagements">
-    <a href="/services/#audit" class="vert-eng"><span class="lab">SYSTEM AUDIT</span><span class="when">FIXED-SCOPE WEEK · MID 4-FIG</span></a>
-    <a href="/services/#sprint" class="vert-eng"><span class="lab">BUILD SPRINT</span><span class="when">FIXED-SCOPE BUILD · MID 4-FIG</span></a>
-    <a href="/services/#custom" class="vert-eng"><span class="lab">CUSTOM BUILD</span><span class="when">QUOTE-BASED · LOW 5-FIG+</span></a>
+    <a href="/services/#audit" class="vert-eng"><span class="lab">SYSTEM AUDIT</span><span class="when">FIXED-SCOPE WEEK · QUOTE ON SCOPE</span></a>
+    <a href="/services/#sprint" class="vert-eng"><span class="lab">BUILD SPRINT</span><span class="when">FIXED-SCOPE BUILD · QUOTE ON SCOPE</span></a>
+    <a href="/services/#custom" class="vert-eng"><span class="lab">CUSTOM BUILD</span><span class="when">MULTI-WORKFLOW · MILESTONE-PAID</span></a>
   </div>
 </section>
 

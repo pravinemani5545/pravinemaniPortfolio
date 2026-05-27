@@ -32,67 +32,67 @@ const jsonLd = {
 
     <article class="vert-card" id="pipelines">
       <div class="vert-head"><span class="vert-id">01</span><h2>Lead pipelines</h2></div>
-      <p>Facebook Lead Ads or LinkedIn Lead Gen Forms → HMAC-verified webhook → Supabase or your CRM. Observable. Idempotent. Debuggable.</p>
+      <p>Leads from your paid ads (Facebook, LinkedIn) flow into your CRM or database automatically — verified, deduplicated, and ready for sales to act on within seconds. No leads lost to a flaky Zapier step that nobody checks on.</p>
       <ul>
-        <li>FB Lead Ads / LinkedIn Lead Gen webhook → CRM</li>
-        <li>HMAC signature verification on every event</li>
-        <li>Idempotency keys to survive retries safely</li>
-        <li>Admin portal surface so sales sees the leads</li>
+        <li>Every lead from Meta or LinkedIn Lead Gen lands in your CRM within seconds, not hours</li>
+        <li>Cryptographic verification on every webhook so fake leads can't poison your data</li>
+        <li>Built so duplicate notifications never spam sales when the ad platform retries</li>
+        <li>An internal dashboard where your team sees every lead, source, and follow-up status</li>
       </ul>
     </article>
 
     <article class="vert-card" id="email">
       <div class="vert-head"><span class="vert-id">02</span><h2>Lifecycle email</h2></div>
-      <p>Onboarding sequences. Activation nudges. Dunning. Re-engagement. Resend or Postmark for transactional. Beehiiv or Kit for broadcast. Founder-style copy. Reply-bait subjects.</p>
+      <p>The right email at the right moment in the customer journey: onboarding, activation, re-engagement, retention. Plain-text, founder-style copy. Subject lines designed to get replies, not opens. Sends from your domain, your reputation.</p>
       <ul>
-        <li>Day-2 / Day-7 / Day-14 sequences calibrated to product</li>
-        <li>Reply-bait subject patterns (not the "Welcome to..." template)</li>
-        <li>Suppression + bounce handling baked in</li>
-        <li>Open + reply tracking surfaced in the admin portal</li>
+        <li>A real onboarding sequence (typically Day 2, 7, 14) tuned to your product and audience</li>
+        <li>Subject lines designed to earn replies — the "Welcome to..." template never ships</li>
+        <li>Bounce and unsubscribe handling done right, so your sender reputation stays clean</li>
+        <li>Open + reply rates surfaced in an internal dashboard so you can see what's working</li>
       </ul>
     </article>
 
     <article class="vert-card" id="crm">
       <div class="vert-head"><span class="vert-id">03</span><h2>CRM + webhooks</h2></div>
-      <p>HubSpot. Attio. Pipedrive. Pick one. Wire it properly. Or skip CRM entirely and build a Supabase-backed admin portal that does only what you need. The right call depends on team size.</p>
+      <p>The plumbing between your CRM (HubSpot, Attio, Pipedrive, Salesforce) and the rest of your stack. Or — for small teams — replacing the CRM entirely with a custom dashboard that only does what you need, at a fraction of the monthly cost.</p>
       <ul>
-        <li>Two-way sync with your CRM</li>
-        <li>Webhook fan-out (one event → many destinations)</li>
-        <li>Slack notifications on high-signal events</li>
-        <li>Decision matrix: when to skip the CRM entirely</li>
+        <li>Two-way sync so updates in either place stay in sync automatically</li>
+        <li>One important event can trigger many actions (notify Slack, email, log, enrich) without duplicate code</li>
+        <li>Real-time Slack alerts on the events that matter — new high-fit lead, churn risk, large deal</li>
+        <li>If your team is under 10 people, a written recommendation on whether to drop the CRM entirely</li>
       </ul>
     </article>
 
     <article class="vert-card" id="stripe">
       <div class="vert-head"><span class="vert-id">04</span><h2>Stripe + subscriptions</h2></div>
-      <p>Stripe Checkout. Customer Portal. Webhooks. Idempotent event handlers. Dunning emails wired through your lifecycle stack. Annual plans, coupons, metered billing where they fit.</p>
+      <p>Subscription billing wired up properly. Checkout, customer self-service portal, failed-payment recovery, annual upgrades, coupons. Built as code that lives in your repo — not a stack of Zapier zaps that break when Stripe updates a webhook.</p>
       <ul>
-        <li>Stripe Checkout in 60 lines, not a Zapier graph</li>
-        <li>Webhook handler with idempotency-key store</li>
-        <li>Dunning + grace periods, cancellation flows</li>
-        <li>Revenue dashboards in the admin portal</li>
+        <li>Stripe Checkout and the Customer Portal wired so customers can self-serve changes</li>
+        <li>Webhook handler built so payment events can't be missed, double-charged, or replayed</li>
+        <li>Automatic recovery emails when a payment fails (dunning), with grace periods configured</li>
+        <li>A revenue dashboard you can check daily — MRR, churn, failed payments, refunds in one view</li>
       </ul>
     </article>
 
     <article class="vert-card" id="creative">
       <div class="vert-head"><span class="vert-id">05</span><h2>Creative generation (static)</h2></div>
-      <p>One brief → N image and copy variants for an ad set. Brand-tone guardrails baked in. GPT Image 2 + Higgsfield + Nano Banana under the hood. Approve, reject, regenerate. Built for agencies running paid creative at volume.</p>
+      <p>For agencies running paid creative at volume: one brief in, dozens of ad image and copy variants out. Brand voice and visual style locked in so AI doesn't drift. Approve, reject, regenerate. The pipeline that turns one creative round into ten testing variants.</p>
       <ul>
-        <li>Brief schema: hook, product, audience, tone, output count</li>
-        <li>Per-variant brand-tone guard: tested against a golden set</li>
-        <li>Approval workflow with reject + regenerate loop</li>
-        <li>Cost ceiling per brief (you set the cap, the system stops)</li>
+        <li>A standardized brief format (hook, product, audience, tone) that fits your team's intake</li>
+        <li>Brand-voice guardrails so every variant sounds like your client, not generic AI</li>
+        <li>An approval workflow where you reject what doesn't work and regenerate without restarting</li>
+        <li>A spend ceiling per brief you set up front — the system stops automatically at your cap</li>
       </ul>
     </article>
 
     <article class="vert-card" id="ugc">
       <div class="vert-head"><span class="vert-id">06</span><h2>UGC video generation</h2></div>
-      <p>UGC-style ad video at volume. Higgsfield Marketing Studio: avatar + product + hook + setting → 9:16 / 1:1 / 16:9 outputs. The pipeline that replaces a 6-person production crew for the test phase of an ad campaign.</p>
+      <p>UGC-style ad videos generated from a brief: avatar, product, hook, setting. Output in every aspect ratio (9:16, 1:1, 16:9). Replaces a small production crew for the early-testing phase of a campaign so you can find a winning hook before paying for a real shoot.</p>
       <ul>
-        <li>Avatar pool: preset library + custom Soul Character training</li>
-        <li>Product imports via URL or uploaded images</li>
-        <li>Hook + setting selection per variant</li>
-        <li>Output ladder: 4 variants → pick winner → scale to 20</li>
+        <li>A library of preset on-camera avatars, or train custom ones from your client's actual talent</li>
+        <li>Product imported automatically from a URL or uploaded images — no manual modeling</li>
+        <li>Hook and scene controlled per variant so each output tests a different ad angle</li>
+        <li>Workflow built around the ladder: 4 test variants → pick the winner → scale to 20 of the same</li>
       </ul>
     </article>
 
@@ -108,9 +108,9 @@ const jsonLd = {
     </div>
   </div>
   <div class="vert-engagements">
-    <a href="/services/#audit" class="vert-eng"><span class="lab">FUNNEL AUDIT</span><span class="when">FIXED-SCOPE WEEK · MID 4-FIG</span></a>
-    <a href="/services/#sprint" class="vert-eng"><span class="lab">PIPELINE SPRINT</span><span class="when">FIXED-SCOPE BUILD · MID 4-FIG</span></a>
-    <a href="/services/#custom" class="vert-eng"><span class="lab">FULL-STACK BUILD</span><span class="when">QUOTE-BASED · LOW 5-FIG+</span></a>
+    <a href="/services/#audit" class="vert-eng"><span class="lab">FUNNEL AUDIT</span><span class="when">FIXED-SCOPE WEEK · QUOTE ON SCOPE</span></a>
+    <a href="/services/#sprint" class="vert-eng"><span class="lab">PIPELINE SPRINT</span><span class="when">FIXED-SCOPE BUILD · QUOTE ON SCOPE</span></a>
+    <a href="/services/#custom" class="vert-eng"><span class="lab">FULL-STACK BUILD</span><span class="when">MULTI-WORKFLOW · MILESTONE-PAID</span></a>
   </div>
 </section>
 
