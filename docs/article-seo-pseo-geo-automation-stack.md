@@ -1,80 +1,64 @@
 # SEO / pSEO / GEO: One Automation Stack, Three Games
 
-A walkthrough of the three SEO disciplines that matter in 2026, what each one actually does for your business, and how a single automation stack collapses months of manual work into days. With real numbers from a shipped engagement.
+SEO used to be one game. Today it's three. The same code-first stack handles all of them.
 
-## The shift that matters
+## What changed
 
-A few years ago, SEO was one game. You picked a keyword, you wrote a page, you tried to rank it on Google. One workflow, one tool, one metric.
+A few years ago, SEO was the work of ranking a page on Google for a search query. One workflow, one tool, one metric.
 
-In 2026 it's three games running in parallel, and most teams are still trying to play them like they're one.
+In 2026, three different games run in parallel.
 
-**Classic SEO** is still alive. People search Google. Pages still rank. CTR on a top result still matters. What changed is the volume of work it takes to keep up — Google's algorithm watches more signals than it used to, and the manual audit work has grown.
+**Classic SEO** still matters. People search Google. Pages rank. CTR on a top result is still a real number. The difference is volume: Google watches more signals than it used to, and keeping a 200-page site clean across all of them is more work than a quarterly hand-audit can keep up with.
 
-**Programmatic SEO (pSEO)** is the practice of generating large numbers of search-targeted pages from a structured content model. Think "a page per city you serve" or "a page per product category × use case." Done well, it's how a single operator can compete with a competitor that has a content team of 15. Done badly, it's how a site gets deindexed by Google for thin content.
+**Programmatic SEO (pSEO)** is the practice of generating hundreds of pages from a structured data model. A page per city you serve. A page per product category × use case. Done well, a small team can compete with a competitor that has fifteen content writers. Done badly, the entire site gets a manual penalty from Google for thin content.
 
-**Generative Engine Optimization (GEO)** is the new game. AI Overviews surface in roughly 30 percent of informational queries. ChatGPT search, Perplexity, and Claude pull citations from real web pages. The new question isn't "do I rank for this keyword?" — it's "am I the page being quoted inside the AI answer?"
+**Generative Engine Optimization (GEO)** is the new game. AI Overviews surface in roughly thirty percent of informational queries. ChatGPT search, Perplexity, and Claude pull citations from real web pages. The page that ranks #2 in classic search but gets cited in the AI Overview at the top of the page gets more total clicks than the page that ranks #1 but isn't cited. The citation slot is the new front page.
 
-Three games, three sets of mechanics. Most agencies sell them as three separate retainers.
+Three games. Three sets of mechanics. Most teams still play them like one.
 
-They shouldn't be. The work underneath all three has the same shape: a large mechanical layer at the bottom, a small judgment layer at the top. The mechanical layer should run on cron jobs. The judgment layer is what an SEO operator should still be doing.
+The work underneath all three has the same shape: a large mechanical layer at the bottom, a small judgment layer at the top. The mechanical layer should run on cron jobs. The judgment layer is what an SEO operator should keep doing.
 
-Below is what each layer actually looks like, what an automated version delivers, and how a single code-first stack handles all three.
+What follows is what each game actually involves, what an automated version does, and the principle underneath all three.
 
-## Game 1: Classic SEO
+## Classic SEO
 
-### What it is in plain language
+Classic SEO is the work of making each page on your site findable, crawlable, indexable, and rankable by Google for a relevant query. Title tags. Meta descriptions. Schema.org structured data. Core Web Vitals. Redirect chains. Internal linking. Indexation.
 
-Classic SEO is the work of making sure each page on your site can be found, crawled, indexed, and ranked by Google for a relevant search query. The pieces that matter haven't changed much in five years: clean title tags and meta descriptions, valid Schema.org structured data, fast page load speeds, no broken redirects, healthy internal linking.
+These haven't changed much in five years. What changed is that a 200-page site has 200 places each signal can go wrong.
 
-What changed is the volume. Google watches more signals now. A 200-page site has 200 places each of those signals can go wrong. A typical agency does a quarterly audit of all of them by hand.
+A thorough manual audit takes about 40 hours. Crawl every page. Hand-check titles, descriptions, Schema validity, mobile rendering, performance scores, redirects, indexation status. Write the report.
 
-### What the manual version looks like
+The automated version takes about 2 hours and works like this:
 
-A thorough manual SEO audit on a 200-page site takes roughly **40 hours of skilled labor**.
+1. Pull the list of indexed pages from Google Search Console.
+2. For each page, run deterministic checks against the rendered HTML — title length, meta description quality, Schema.org validity, redirect chain depth, indexation status, Core Web Vitals from the PageSpeed Insights API.
+3. Write findings to a database.
+4. Have an AI model review only the small subset of findings that need judgment (typically 5-15 percent of total flags).
+5. Generate the report.
 
-That's a crawl through every page, a check on title-tag length and uniqueness, a check on meta description quality, a Schema.org validity pass, a mobile-rendering check, Core Web Vitals scores for each page, a redirect-chain audit, an indexation-status review, and a final report written up for the client.
+The mechanical work runs deterministically. Token cost on a 200-page site: under thirty cents per run. The two hours left are for reading the report and deciding what to fix.
 
-At a typical agency, that audit is a one-time $4,000-$8,000 engagement, or it's bundled into a $3,000-$8,000 monthly retainer where the team chips away at it across the month.
+What the site owner sees: a nightly report instead of a quarterly one. Every issue dated. Every issue tied to a URL. Every fix tracked over time.
 
-### What the automated version delivers
+## Programmatic SEO
 
-The same audit runs in roughly **two hours** when the mechanical work is moved into code:
+pSEO is the practice of generating pages from a structured data model rather than writing each one by hand. The most common pattern is a content matrix: certifications × cities, services × neighbourhoods, products × use cases.
 
-- A script crawls every indexed page (pulled from your Google Search Console account)
-- For each page, deterministic checks run against the fetched HTML: title-tag length, meta description quality, Schema.org validity, mobile rendering, Core Web Vitals via the PageSpeed Insights API, redirect chains, indexation
-- Issues land in a database
-- An AI model only reviews the small subset of findings that need judgment — typically 5 to 15 percent of total flags
-- A written report is generated automatically
+Each generated page targets a different long-tail search query. Each page has unique content per route. Google indexes each one independently.
 
-The two hours that remain is the part a human should still do: read the report, decide what's worth fixing, and prioritize.
+The line between "useful at scale" and "deindexed for thin content" is the data model. If the data varies meaningfully per combination, the pages do too, and Google treats them as distinct. If the data is essentially the same template with a swapped city name, the pages get deindexed inside a quarter.
 
-What the client sees: a nightly audit report. Every issue dated. Every issue tied to a specific URL. Every fix tracked over time. The "quarterly audit" becomes a live dashboard.
+The CISNET engagement is the concrete example. Toronto IT certification training company, every (certification × city × format) combination as a generated page. Roughly 200 candidate pages.
 
-## Game 2: Programmatic SEO
+The data model:
 
-### What it is in plain language
+- Course curriculum (varies by certification)
+- Local testimonials (varies by city)
+- Instructor bio (varies by city and cohort)
+- FAQs specific to each certification
+- Real upcoming cohort dates with prices
 
-pSEO is the practice of generating hundreds of pages from a structured content model rather than writing each page by hand. The most common pattern is a content matrix: certifications × cities, services × neighbourhoods, products × use cases.
-
-Each generated page targets a different search query. Each one has unique content per route, drawn from real data. Each one is indexed by Google independently.
-
-Done well, pSEO is how a small team can compete with much larger competitors on long-tail search. Done badly, it's how a site gets a manual penalty from Google for "thin content" and loses years of authority overnight.
-
-The difference is almost entirely in the data model.
-
-### The CISNET example
-
-A recent client engagement: CISNET, a Toronto IT certification training company. Goal: generate a page for every certification × city × format combination they teach (CompTIA A+ in Toronto, Cisco CCNA in Mississauga, AWS Solutions Architect in Hamilton — that pattern, 200+ combinations).
-
-The manual version would have been roughly **600+ hours of writing** spread across a content team. At an agency rate that's $30,000-$60,000 in content alone, before any technical work.
-
-The code-first version was a **six-week engineering build**: one structured data model (cities, certifications, formats, instructors, cohort schedules), one MDX template per page type, build-time generation through Astro's static-site routing, Schema.org JSON-LD generated per page type, and an internal-link graph computed automatically from the same data.
-
-### The safeguard most pSEO sites skip
-
-The line between "useful at scale" and "deindexed for thin content" is whether each generated page has enough genuinely unique content per route. The threshold I run is roughly 600 unique words per page, drawn from data that actually varies per combination — the course curriculum (varies by certification), local testimonials (varies by city), instructor bio (varies by city and cohort), FAQs specific to the certification, real upcoming cohort dates.
-
-The code checks this on every page before it gets generated. The pages that don't clear the threshold get `noindex` and stay out of the sitemap:
+The threshold check, the unglamorous code that decides whether each page gets generated:
 
 ```typescript
 function shouldGenerate(page) {
@@ -90,96 +74,71 @@ function shouldGenerate(page) {
 }
 ```
 
-At CISNET, 247 candidate combinations were considered. 53 failed the threshold and got excluded. 194 pages shipped. Six weeks later, all 194 were indexed. Zero ranking loss across the 70+ legacy URL redirects from the migration.
+247 candidate combinations. 53 failed the threshold and got `noindex`. 194 pages shipped.
 
-That's the part most pSEO content tools skip. They generate the 247 pages anyway, and Google penalizes the entire site for thin content. The threshold check is unglamorous code, and it's the difference between a site that compounds in traffic and a site that gets manually penalized.
+Six weeks later, all 194 were indexed. Zero ranking loss across the 70+ legacy URL redirects from the migration.
 
-## Game 3: Generative Engine Optimization (GEO)
+Most pSEO sites skip the threshold. They generate the 247 pages anyway, and Google penalizes the whole site. The threshold check is unglamorous and it's the difference between traffic that compounds and a site that gets manually penalized.
 
-### What it is in plain language
+## Generative Engine Optimization
 
-When someone searches "best AI consultant in Toronto" today, Google might show an AI Overview at the top with a synthesized answer. That answer cites real web pages. The new SEO question is: is your page one of the cited sources?
+When someone searches "best AI consultant in Toronto," Google might show an AI Overview at the top with a synthesized answer. That answer cites real web pages. The new SEO question is: is your page one of those citations?
 
-The same dynamic plays out in ChatGPT search, Perplexity, and Claude. All three pull citations from real web pages when answering a search query. All three are eating click-through from traditional organic results.
+The same dynamic plays out in ChatGPT search, Perplexity, and Claude. All three pull citations from real pages when answering a search query.
 
-A page that ranks #2 in classic Google search and gets cited in the AI Overview at the top of the page gets more total clicks than a page that ranks #1 but isn't cited. The citation slot is the new front page.
+AI Overviews and similar AI-search experiences favor pages that are easy to extract clean, quotable passages from. The practical signals:
 
-### What ranking inside an AI answer actually requires
+- A clear one-sentence answer near the top of each page, under 25 words.
+- HTML definition lists (`<dl>` markup) for term-definition pairs.
+- Schema.org FAQPage and HowTo markup where the content earns it.
+- An `llms.txt` file at the site root (think `robots.txt` for AI crawlers).
+- H3 headings phrased as questions, not topics.
 
-AI Overviews and similar AI-search experiences favor pages that are easy to extract clean, quotable passages from. The practical signals are:
+These overlap with the structured-data and content-quality work classic SEO already required. The shift is in priority: a page optimized for "rank at #1" can be different from a page optimized to "get cited in the AI answer," and in 2026 the second one wins more queries than the first.
 
-- A clear one-sentence answer near the top of each page (under 25 words)
-- HTML definition lists (`<dl>` markup) for term-definition pairs
-- Schema.org FAQPage and HowTo markup where the content earns it
-- An `llms.txt` file at the root of the site (think robots.txt for AI crawlers)
-- H3 headings phrased as questions, not topics
+Tracking is the part that has to change. Classic SEO measures rank position. GEO measures citations across multiple AI tools, across multiple prompts, over time.
 
-These aren't separate from classic SEO. They overlap with the structured-data and content-quality work that already needed to happen. The shift is in priority: a page optimized for "rank at #1" can be different from a page optimized to "get cited in the AI answer," and in 2026 the second one wins on most informational queries.
+Manual tracking is three to four hours per week of running prompts and screenshotting citations. The automated version runs on a six-hour cron: hit each AI tool's API (or scraping intermediary) with the prompt list, extract citations programmatically, write results to a database, plot a time series.
 
-### The tracking problem
+What the site owner sees: a daily dashboard. Which AI tools cite which pages, on which prompts, over time. When a competitor pulls ahead in citations, it shows up that day, not three weeks later.
 
-Classic SEO measures rank position. GEO needs to measure citation: across multiple AI tools, across multiple prompts, over time.
+## The cost difference
 
-Manual tracking is a three-to-four-hour weekly chore. Run 50 prompts across four AI tools. Screenshot the citations. Paste into a sheet. The data is stale by Tuesday.
+A typical "monthly SEO" agency retainer runs $3,000-$8,000 per month. That covers a small team doing the audit work, content production, link-building outreach, and reporting.
 
-The automated version runs on a six-hour cron job. Each tool's API (or a scraping intermediary where the official API isn't available) is hit with the prompt list. Citations are extracted programmatically. Results land in a dashboard with a time series.
+A code-first automation stack that handles the same workflows runs $200-$400 per month in API fees. Anthropic API. Firecrawl. DataForSEO. Vercel and Supabase on near-free tiers. The build is one-time engineering. After that there's no marginal cost per workflow.
 
-What the client sees: a daily dashboard. Which AI tools cite their pages on which prompts. Which competitor citations are gaining. When a new prompt category opens up where they could compete.
+Past month four or five, the stack has paid for the build. Past month twelve, the agency model has billed roughly $36,000-$96,000 against outcomes the stack delivers for under $5,000 a year.
 
-The first time a competitor pulls ahead in citations on a query that matters, the client sees it that day, not three weeks later.
+The agency model wins when the work genuinely requires a person every month. Most of the work doesn't.
 
-## The cost math
-
-The reason this matters to a non-engineering reader is the cost difference.
-
-A traditional "monthly SEO" retainer at a typical agency runs **$3,000-$8,000 per month**, depending on scope. That covers a small team doing the manual audit work, the content production, the link-building outreach, and the reporting.
-
-A code-first automation stack that handles audits, pSEO generation, schema validation, GEO citation tracking, and reporting on the client's own infrastructure runs roughly **$200-$400 per month** in API fees. That's Anthropic API costs, Firecrawl for page crawling, DataForSEO for AI Overview tracking, plus the Vercel + Supabase free or near-free tiers.
-
-The build is one-time engineering, scoped as a fixed-price engagement. Past month four or five of operation, the automation stack has paid for itself. Past month twelve, the agency has billed roughly $36,000-$96,000 against the same outcomes the automation stack delivers for under $5,000 per year.
-
-This isn't a pitch for free or cheap. The one-time build is paid engineering work, and a 200-page site running all three workflows is typically a fixed-scope Custom engagement that takes four to six weeks.
-
-It's a pitch for one-time over recurring, and for owned infrastructure over subscription dependencies.
-
-## What this doesn't solve
-
-A fair article needs the limits section. Code-first SEO automation has honest constraints:
-
-- **Strategic positioning.** A script can scan competitor pages. It can't decide whether your business should compete on a category at all. That's a positioning call, and a human should make it.
-- **Backlink relationships.** Outreach automation produces low-quality emails that hurt sender reputation. Real link building is a relationship game and the work is in the relationships.
-- **Local SEO ground work.** Google Business Profile photos, customer reviews, local events. Not automatable. Should be done by a human who actually shows up.
-- **Brand mention monitoring at scale.** Tracking your brand across Reddit, podcasts, niche forums needs a paid platform or a real scrape budget. The automation stack handles the AI-tool slice cleanly. The wider brand surface is its own problem.
-- **pSEO with a weak data model.** Generating 500 pages from data that doesn't vary meaningfully per page is faster spam. The script makes it worse, not better. The six weeks the CISNET build took were mostly spent on the data model, not the code.
-- **AI-generated content as the content.** The automation stack generates templates with structured slots. The content in each slot still has to be real. "Learn $cert in $city" is filler whether one page ships or 500 do.
-
-The automation stack collapses the mechanical work. It doesn't invent SEO expertise. A team with weak SEO judgment running this stack ships weak SEO at automation speed.
-
-## What an engagement looks like
-
-For a 200-page site that hasn't been touched by automation yet, the typical engagement shape is:
-
-1. **A free 30-minute scoping call.** Walk through the current setup, the metrics that matter, and what's broken. The call ends with a written quote inside 24 hours covering deliverables, milestones, and final price.
-2. **A fixed-scope week for the audit.** Three founder interviews, a structured workflow review, and a ranked opportunity list. Output is a 30-day plan with milestones and an honest read on whether automation is the right next step.
-3. **A four-to-six-week Custom build for the full stack.** The audit script, the pSEO generator, the GEO monitor, the Schema.org validator, deployed to your own Vercel and Supabase accounts. You own all of it at the end.
-4. **An optional Ops Retainer for ongoing tuning.** Monthly engagement, capped hours, only available after the build has shipped. Covers prompt updates, eval suite maintenance, and on-call response if the cron jobs misbehave.
-
-The deliverables are concrete. The pricing is fixed at signing. The code is yours from day one and at the close. If you stop working with me, the stack keeps running.
-
-## The principle underneath all three games
+## The principle
 
 The mechanical layer of SEO scales linearly with site size. Number of pages to audit. Schema types to validate. Citations to track. Redirects to verify. Core Web Vitals across hundreds of URLs.
 
-The judgment layer doesn't.
+The judgment layer doesn't scale that way.
 
-What scripts handle well is the mechanical layer. What scripts handle badly is the judgment work — which keyword to target, whether a topic is worth writing, whether a backlink is worth a relationship, when to skip something everyone else is writing about.
+What scripts handle well: the mechanical layer.
 
-The mechanical work should run on a cron job. The judgment work should never be automated.
+What scripts handle badly: which keyword to target, whether a topic is worth writing about, whether a backlink opportunity is worth a relationship, when to skip a topic everyone else is writing about.
 
-Most agencies confuse the two and bill the client for the mechanical work as if it required a person. Most "AI SEO" tools confuse the two in the other direction, automating the judgment work and producing low-quality content faster.
+*The mechanical layer should run on cron. The judgment layer should never be automated.*
 
-The point of the automation stack isn't to replace the SEO person. It's to let the SEO person stop doing the work a script could do, and start doing the work only a human can.
+Most agencies confuse the two and bill clients for the mechanical work as if it required a person. Most "AI SEO" tools confuse the two in the other direction, automating the judgment work and producing low-quality content faster.
+
+## What this doesn't solve
+
+Code-first SEO automation has honest limits:
+
+- **Strategic positioning.** A script can scan competitor pages. It cannot decide whether your business should compete on a category at all.
+- **Backlink relationships.** Outreach automation produces low-quality emails that hurt sender reputation. Real link building is relationship work.
+- **Local SEO ground work.** Google Business Profile photos, customer reviews, local events. Not automatable.
+- **Brand mention monitoring at scale.** Tracking your brand across Reddit, podcasts, niche forums needs a paid platform or a real scrape budget. The automation stack handles the AI-tool slice cleanly. The wider brand surface is its own problem.
+- **pSEO with a weak data model.** Generating 500 pages from data that doesn't vary meaningfully per page is faster spam. The six weeks the CISNET build took were mostly spent on the data model, not the code.
+- **AI-generated content as the content.** The automation stack generates templates with structured slots. The content in each slot still has to be real. "Learn $cert in $city" is filler whether one page ships or 500 do.
+
+The automation stack collapses the mechanical work. It doesn't invent SEO expertise. A team running it with weak SEO judgment ships weak SEO at automation speed.
 
 ---
 
-_If you have an SEO surface that hasn't been touched by automation yet, the free async audit at [pravinemani.com/workflow-audit/](https://pravinemani.com/workflow-audit/) returns a written one-page assessment within 48 hours. Send the site, the current stack, and the workflow that costs the most time. No sales call attached. If the answer is "you don't need automation yet," that's what you'll get back._
+_Reference engagement: CISNET (Toronto IT certification training). 200+ programmatic SEO pages indexed in six weeks, 70+ legacy URL redirects with zero ranking loss, seven Schema.org types shipped, full lead pipeline through Facebook Lead Ads, Stripe Checkout for enrollments. Three months. Built on Vercel + Supabase + Anthropic API. Source repository handed off at engagement close._
