@@ -2,29 +2,39 @@
 
 This site is built like an essay, not a brochure. Every copy edit lands in the same voice as the rest of the site, or it doesn't ship.
 
-## PRIMARY TONE — direct and professional, with balance
+## PRIMARY TONE — engineering-blog register
 
-**This overrides everything below it where there is conflict.** The site reads as a working professional documenting their practice, not a contrarian operator flexing for an audience. The Koe / Thariq influences below are about *clarity and specificity*, NOT about contrarian one-liners or operator-flex quips.
+**This overrides everything below it where there is conflict.** The canonical example of the voice the operator writes in is the CPR / shared-memory essay (`Shared Memory Layer: Claude Code + Codex`). Match that register on every prose surface.
+
+### What the canonical voice looks like
+
+| Element | Rule |
+|---|---|
+| Sentence rhythm | Heavy short-declarative. Fragments allowed when they earn pacing: *"No external service. No database. No API."* Three fragments stacked beats one comma-padded sentence. |
+| Paragraph length | One to two sentences. Heavy whitespace. Headers carry structural load, not prose transitions. |
+| Address | First-person past for the build narrative. Present-tense imperative for instructions. Drop the customer-service "we." |
+| Concrete artifacts | Real file paths, real commands, real version numbers inline. `~/.claude/commands/compress.md` beats "the compress command." |
+| Show-wrong-then-show-right | When a claim has an edge, demonstrate the failure mode literally, then the correct version literally. |
+| Section-closing principles | One italicized line that crystallizes the argument: *"The format is the interface."* Use sparingly; not every section gets one. |
+| Bullets as content | The bullet list is the explanation, not a summary of prose above. |
+| Modest insight framing | State the insight plainly. *"The insight is that the shared memory layer is just the filesystem."* No contrarian gatekeeping. |
 
 ### Don't write
 
-- Metaphor-quips like *"the build log is the receipt,"* *"the unfair feature,"* *"the lookup-and-paste API,"* *"the abstraction that fails first under real load,"* *"the line most builds forget."* These drift into pitchy / influencer-flex register.
-- Contrarian gatekeeping (*"if you don't ship, this isn't for you,"* *"the absences matter as much as the inclusions"*).
-- Brand slogans dropped mid-paragraph (*"sold by the project,"* *"built like an operator"*). These belong in the hero tagline, not everywhere.
+- Metaphor-quips: *"the build log is the receipt,"* *"the unfair feature,"* *"the abstraction that fails first under real load."* These drift into influencer-flex register.
+- Contrarian gatekeeping: *"if you don't ship, this isn't for you,"* *"the absences matter as much as the inclusions."*
+- Stiff corporate prose to avoid the above: *"the engagement focuses on identifying,"* *"structured around a structured review."* That over-correction is also wrong.
+- Brand slogans dropped mid-paragraph: *"sold by the project,"* *"built like an operator"* outside the hero tagline.
 
-### Do write
+### Calibration test
 
-- Direct sentences that state the reality plainly. "Every client deploy ships through Vercel; the build logs document the production deployment" beats "build log is the receipt."
-- Industry-standard vocabulary first, opinionated framing second.
-- The technical claim, not the rhetorical wrapper around it.
+Read any new prose aloud. Ask:
 
-### The balance — don't over-correct
+1. Could this sentence appear in the canonical CPR essay? If yes, ship it.
+2. Does this sentence sound like a SaaS landing page? Rewrite.
+3. Does this sentence sound like a quarterly board update? Rewrite.
 
-The fix for "too pitchy" is NOT "stiff, qualifier-heavy, corporate-press-release prose." If a rewrite has phrases like *"the engagement focuses on identifying,"* *"structured around,"* *"a focused week of structured workflow review,"* or it adds three subordinate clauses to soften a clear claim, it has gone too far the other direction.
-
-The middle: short declarative sentences, occasional fragments for pacing when they actually help, full sentences when clarity matters, no contrarian quips on either side. "A focused week of three founder interviews and a workflow review" is correct. "A fixed-scope week structured around three founder interviews and a structured workflow review" is over-corrected. Read the rewrite back — if it sounds like a quarterly board update, pull it back.
-
-When in conflict with anything below: **direct and professional, balanced, wins.**
+The narrow target between pitchy and stiff is where the canonical voice lives.
 
 ---
 
