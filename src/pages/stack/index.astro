@@ -19,69 +19,32 @@ const jsonLd = {
   <p class="lead">Less marketing. More <strong style="color: var(--text-primary);">infrastructure notes</strong>. The tools I run on every engagement. The workflows I run on a schedule. The Claude Code skills installed across machines. The MCP servers wired into my editor. The dev process I default to when shipping. Borrow freely.</p>
 </section>
 
-<!-- ===== 1. THE TOOLS ===== -->
+<!-- ===== 1. THE KIT ===== -->
 <section class="section" id="tools">
   <div class="section-head reveal">
-    <div class="label">01 · the tools</div>
-    <h2>What's in the kit, ranked by frequency.</h2>
-    <p>Daily-driver tools carry every client build. Occasional tools come out when the situation calls. What I deliberately don't use is at the bottom — the absences matter as much as the inclusions.</p>
-  </div>
-
-  <div class="legend">
-    <span><span class="green">●</span> DAILY · touches every project</span>
-    <span>○ OCCASIONAL · case-by-case</span>
+    <div class="label">01 · the kit</div>
+    <h2>What's in the kit. Essentials only.</h2>
+    <p>The tools that touch every client build. One opinionated short list, not a catalogue. What I deliberately don't use is at the bottom — the absences matter as much as the inclusions.</p>
   </div>
 
   <div class="stack-cat">
-    <div class="sc-head"><div class="name"><span class="n">01 ·</span> CODE + SHIP</div></div>
+    <div class="sc-head"><div class="name"><span class="n">01 ·</span> DAILY DRIVERS</div></div>
     <div class="tool-rows">
-      <div class="tool daily"><div class="nm daily">Claude Code</div><div class="why">The development surface itself. Sub-agents for parallel work, MCP for typed tool access, hooks for pre-commit and deploy gates, headless mode for batch operations. Replaces what an IDE, a pair-programmer, and a research assistant used to do separately.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">Vercel</div><div class="why">Hosting, serverless functions, cron, edge config, and KV in one place. Every client deploy ships through Vercel — the build log is the deliverable receipt and the production runtime is the same surface as the development one.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">TypeScript</div><div class="why">Default for anything past a one-file script. Strict mode on. Type-check must pass before any commit lands — catches the class of bugs that integration tests catch in JavaScript codebases.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">GitHub</div><div class="why">Repo, PR review, Actions for CI, Issues for client-facing scope. Every engagement gets its own private repo handed off at close — the client owns it outright, modifies freely, no licensing strings.</div><div class="tag">DAILY</div></div>
-      <div class="tool"><div class="nm">Cursor</div><div class="why">Secondary editor when a tight inline-completion loop beats Claude Code's chat surface. Same Anthropic models underneath, different ergonomics.</div><div class="tag">OCCASIONAL</div></div>
-      <div class="tool"><div class="nm">v0</div><div class="why">First-pass UI scaffolds. Generates React + Tailwind components from a prompt. Output gets ported to production-grade components after — useful for shape, not final code.</div><div class="tag">OCCASIONAL</div></div>
-    </div>
-  </div>
-
-  <div class="stack-cat">
-    <div class="sc-head"><div class="name"><span class="n">02 ·</span> AI + AGENTS</div></div>
-    <div class="tool-rows">
-      <div class="tool daily"><div class="nm daily">Anthropic API</div><div class="why">Claude 4.7 Opus for code and reasoning. Sonnet 4.6 for high-volume work where speed matters more than nuance. Prompt caching wired in on every stable system prompt — the discipline that keeps long-context agents predictable.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">MCP</div><div class="why">Model Context Protocol. Filesystem, GitHub, Playwright, Obsidian, Notion wired daily. Custom servers shipped per client engagement — the contract that lets an AI agent call internal APIs and databases the same way a teammate would.</div><div class="tag">DAILY</div></div>
-      <div class="tool"><div class="nm">OpenAI / GPT-5</div><div class="why">Comparison runs and specific tasks where GPT pulls ahead. Image-gen workflows. Not the primary inference layer.</div><div class="tag">OCCASIONAL</div></div>
-      <div class="tool"><div class="nm">Gemini 3 / NotebookLM</div><div class="why">Research synthesis at large context. 1M-token window handles full transcripts, long PDFs, multi-file repos in one pass. Audio overviews are the unfair feature.</div><div class="tag">OCCASIONAL</div></div>
-    </div>
-  </div>
-
-  <div class="stack-cat">
-    <div class="sc-head"><div class="name"><span class="n">03 ·</span> DATA + INFRA</div></div>
-    <div class="tool-rows">
-      <div class="tool daily"><div class="nm daily">Supabase</div><div class="why">Postgres plus auth plus Row-Level Security in one platform. Default database on every client build. RLS replaces about 80% of the authorization code that most apps end up writing by hand, and gets it right more often.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">Vercel KV</div><div class="why">Redis-compatible key-value store on the same infra as the serverless functions. Default place for idempotency keys, session state, cron-job memory, and prompt-cache entries.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">Vercel Cron</div><div class="why">Scheduled serverless functions defined in the repo. Versioned, diffable in PR review, debuggable in build logs. The replacement for visual workflow platforms on every scheduled workflow I ship.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">Resend</div><div class="why">Transactional email with a clean SDK, fast DKIM setup, and deliverability that holds up at small volume. Default mail provider on every engagement — lifecycle, confirmations, internal alerts.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">Stripe</div><div class="why">Checkout, Customer Portal, webhooks. The lookup-and-paste API for payments. Idempotency-key handling on the webhook side is the line most builds forget and the one I write first.</div><div class="tag">DAILY</div></div>
-    </div>
-  </div>
-
-  <div class="stack-cat">
-    <div class="sc-head"><div class="name"><span class="n">04 ·</span> CONTENT + GROWTH</div></div>
-    <div class="tool-rows">
-      <div class="tool daily"><div class="nm daily">Beehiiv</div><div class="why">Newsletter platform. Clean editor, good deliverability, built-in cross-promo via the Boost Network. Default for every client engagement that ships content alongside the build.</div><div class="tag">DAILY</div></div>
-      <div class="tool daily"><div class="nm daily">Plausible</div><div class="why">Privacy-friendly analytics. No cookie banner. EU-friendly. Replaced GA4 across every engagement — small dashboard, fast page load, every event explainable in one screen.</div><div class="tag">DAILY</div></div>
-      <div class="tool"><div class="nm">Whop</div><div class="why">Community plus checkout. Used on AIOpsForge for paid-community signup and access control. The marketplace discoverability layer is the actual win — community creation alone is solvable elsewhere.</div><div class="tag">OCCASIONAL</div></div>
-      <div class="tool"><div class="nm">Typefully</div><div class="why">X scheduling and thread editor. Cross-posts to LinkedIn, Threads, and Bluesky from one draft. Use when batch-scheduling a posting cadence.</div><div class="tag">OCCASIONAL</div></div>
-      <div class="tool"><div class="nm">AuthoredUp</div><div class="why">LinkedIn-native editor and analytics. Hook preview, mobile-fold check, post performance over time. The right shape for someone scaling LinkedIn deliberately.</div><div class="tag">OCCASIONAL</div></div>
+      <div class="tool daily"><div class="nm daily">Claude Code</div><div class="why">The development surface. Sub-agents, MCP, hooks, headless mode. Replaces what an IDE, a pair-programmer, and a research assistant used to do separately.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">Vercel</div><div class="why">Hosting, serverless, cron, KV in one place. Every client deploy ships through Vercel — the build log is the receipt.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">TypeScript</div><div class="why">Default for anything past a one-file script. Strict mode, type-check passes before any commit lands.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">Anthropic API</div><div class="why">Claude 4.7 Opus for code and reasoning. Sonnet 4.6 for high-volume work. Prompt caching wired in on every stable system prompt.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">MCP</div><div class="why">Model Context Protocol. The contract that lets an AI agent call internal APIs and databases the same way a teammate would.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">Supabase</div><div class="why">Postgres + auth + RLS in one platform. Default database on every client build. RLS replaces ~80% of the authorization code most apps write by hand.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">Stripe</div><div class="why">Checkout, Customer Portal, webhooks. The idempotency-key line on the webhook side is the one most builds forget.</div><div class="tag">DAILY</div></div>
+      <div class="tool daily"><div class="nm daily">Resend</div><div class="why">Transactional email with a clean SDK and fast DKIM setup. Default mail provider on every engagement.</div><div class="tag">DAILY</div></div>
     </div>
   </div>
 
   <div class="stack-cat avoid">
-    <div class="sc-head"><div class="name"><span class="n">05 ·</span> DELIBERATELY NOT USING</div></div>
+    <div class="sc-head"><div class="name"><span class="n">02 ·</span> DELIBERATELY NOT USING</div></div>
     <div class="tool-rows">
-      <div class="tool"><div class="nm">n8n</div><div class="why">Visual workflow tool. Every workflow I'd build in n8n ships instead as a Vercel cron job plus serverless function on the client's own infrastructure. Versioned in git, diffable in PR review, debuggable in production logs. The visual graph is the abstraction that fails first under real load.</div><div class="tag">AVOIDED</div></div>
-      <div class="tool"><div class="nm">Make.com</div><div class="why">Same fundamental problem as n8n: workflow logic lives on a third-party platform that the client doesn't own, can't diff, and can't migrate cleanly. Fine as a prototype layer. Wrong fit as a production primitive.</div><div class="tag">AVOIDED</div></div>
-      <div class="tool"><div class="nm">Zapier</div><div class="why">Same architectural problem as the other two, with the added friction of per-action quotas that limit what a real production workflow looks like. Every Zapier zap I've ever migrated to code has been 40-60 lines of TypeScript on the other side — readable, diffable, owned.</div><div class="tag">AVOIDED</div></div>
+      <div class="tool"><div class="nm">n8n / Make / Zapier</div><div class="why">Visual workflow platforms. Every workflow I'd build here ships instead as a Vercel cron job plus serverless function on the client's own infrastructure — versioned in git, diffable in PR review, debuggable in production logs. The visual graph is the abstraction that fails first under real load, and the workflow logic lives on a third-party platform the client doesn't own. Every zap I've migrated has been 40-60 lines of TypeScript on the other side.</div><div class="tag">AVOIDED</div></div>
     </div>
   </div>
 </section>
