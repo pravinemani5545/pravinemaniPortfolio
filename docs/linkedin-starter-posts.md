@@ -53,29 +53,39 @@ Following along because I'll be posting what I ship, what I learned, and the occ
 
 ---
 
-## LI-S3 · Three years of engineering → freelance: what compounded
+## LI-S3 · Finding a job out of school was hard — then the barrier to entry moved
 
-**Format:** Text-only · ~1,200 chars
+**Format:** Text-only · ~1,300 chars
 **Slot:** Week 2, Tuesday
+**Revised 2026-05-27** — original "Three years of engineering → freelance" post replaced with the honest job-search angle. Past employers are not named on this account.
 
 ```
-Three years of professional engineering before going freelance in February 2026:
+Finding a job out of school in 2025 wasn't easy. It was draining.
 
-Ericsson · 5G stack work, Go, gRPC. Production code touched by 100 engineers.
-Imprimo · React Native + Postgres under a 4-month co-op deadline.
-Fixvi · Push-notification infrastructure and the kind of bugs you only see at scale.
+Hundreds of applications. Weeks of silence. Auto-rejection emails 12 minutes after submission. I was ready to walk away from dev entirely.
 
-McMaster Computer Engineering & Management gave me the framing — but the parts that compounded weren't from school.
+Then something shifted.
 
-Going freelance wasn't a pivot. It was the obvious next step once Claude Code collapsed the loop from "idea" to "in production" from weeks to days.
+Claude Code dropped. The loop from "I have an idea" to "this is running in production" collapsed from weeks to days. Building stopped feeling like a chore. It started feeling like the best part of the day again.
 
-If you're a final-year CS / CE student deciding between Big Tech offers and going solo: there's no right answer. Just be honest about which one you'd actually wake up early for.
+The barrier to entry on creative software didn't just lower. It moved.
+
+The hard work isn't typing the code anymore. It's deciding what to build, scoping it tight, and shipping before you talk yourself out of it.
+
+That shift is why I went freelance. Not because the job market opened up — it didn't. Because the work I wanted to do became possible to do alone.
+
+For anyone else stuck in the hundreds-of-applications loop right now: try shipping something this weekend. Not for an interview. Not for a portfolio. Just for you.
+
+The barrier moved. Use it.
 ```
 
 **Hook gates:**
 - 140-char fold: clears
 - 0 hashtags
-- Sentence-fragment style on lines 2-4 keeps mobile scrollability high
+- Vulnerable open, declarative close
+- Invites replies (other recent grads will recognize the feeling)
+
+**Why this post:** Builds trust with the 412-connection network (mostly McMaster alumni / recent grads). Honesty about a shared experience earns more than past-employer name-drops.
 
 ---
 
