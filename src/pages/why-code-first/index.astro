@@ -19,7 +19,7 @@ const jsonLd = {
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/why-code-first.md <span class="you">→ the counter-argument</span></div>
   <h1>Why code-first.<br><span class="accent">The argument against n8n, Make, and Zapier.</span></h1>
-  <p class="lead">Every call ends with the same question: "can you just build it in n8n?" The answer is no. I'll turn down the gig before we even price it. Here's the full counter-argument. Numbers. Mechanics. Pattern.</p>
+  <p class="lead">A common question on scoping calls is whether the workflow can be built in n8n, Make, or Zapier instead of as code. For production work, the answer is no. This page documents the reasoning, with cost figures, architectural trade-offs, and recommendations for when the no-code option is actually the right call.</p>
 </section>
 
 <section class="section manifesto">
@@ -27,7 +27,7 @@ const jsonLd = {
   <div class="manifesto-body">
 
     <h2>The cost math.</h2>
-    <p>Take a workflow that fires 100 times a day. A daily brief. A lead-routing pipeline. An AI inbox triage. Real numbers from my desk this month:</p>
+    <p>Consider a workflow that runs 100 times a day — a daily operations brief, a lead-routing pipeline, an AI-assisted inbox triage. The comparison below uses representative figures from a recent client engagement.</p>
 
     <div class="compare">
       <div class="compare-col">
@@ -54,25 +54,25 @@ const jsonLd = {
       </div>
     </div>
 
-    <p>The price gap is the loud signal. <strong>The lock-in gap is the louder one.</strong></p>
+    <p>The cost difference is the more visible factor. <strong>The architectural dependency is the more significant one</strong>, and it compounds over time.</p>
 
     <h2>The four reasons.</h2>
 
     <h3>01 · Code is owned. Subscriptions are rented.</h3>
-    <p>Stop paying the n8n bill and your business stops working. The workflow doesn't exist outside their UI. The credentials live in their vault. The logic is hostage to their pricing changes. Stop paying me and the workflow keeps running. It's in your git repo. On your Vercel project. Hitting your APIs. The dependency is on services you already pay for.</p>
+    <p>If the n8n subscription lapses, the workflow stops functioning. The logic does not exist outside the platform's interface, the credentials are stored in the platform's vault, and the pricing terms are subject to change without notice. A code-first equivalent runs on infrastructure the client already owns: the source lives in the project repository, the deployment runs on the client's Vercel account, and the workflow continues to operate independent of any consulting relationship.</p>
 
     <h3>02 · Versioned in git. Reviewable. Revertible.</h3>
-    <p>Every change to a code-first workflow is a commit. Every commit has a diff, an author, a timestamp, a CI run, a deploy preview. Roll back a bad change in 60 seconds. In n8n, the change happens inside a visual editor on someone else's server. No diff. No review. No rollback unless you remembered to export the JSON before clicking save.</p>
+    <p>Every change to a code-first workflow produces a commit with a diff, an author, a timestamp, a CI run, and a deploy preview. Reverting a problematic change takes a single command. Equivalent changes in a visual workflow platform happen inside a UI on the vendor's server, with no source-control history, no peer-review surface, and no rollback path unless someone exported the workflow JSON before the change was made.</p>
 
-    <h3>03 · Observable. Debuggable at 3am.</h3>
-    <p>When the workflow breaks at 3am (and it will), code-first gives you Vercel logs. Sentry traces. Plausible events. All in one observability stack you already understand. n8n gives you a UI screen showing "node failed" with no stack trace, no API response body, no way to replay the event locally. I've watched founders lose 4 hours on a single missing API key because the no-code tool wouldn't tell them which call failed.</p>
+    <h3>03 · Observable. Debuggable in production.</h3>
+    <p>When a workflow fails in production, code-first deployments produce structured Vercel logs, Sentry traces, and analytics events through a stack the client's engineering team already understands. Visual workflow platforms typically surface failures as a generic "node failed" message in their UI, without a stack trace, the failing API response body, or a way to replay the event locally. Debugging time for the same class of error is meaningfully different across the two approaches.</p>
 
     <h3>04 · The integration library is a feature, not a moat.</h3>
-    <p>n8n's pitch is the 500+ integrations. Real talk: most engagements use 3 of them. The other 497 are dead weight pushing the price up. For the 3 you need: an Anthropic SDK call is ~12 lines of TypeScript. A Stripe webhook handler is 60 lines. A Supabase query is one line. You're paying $20/mo for visual versions of code that fits in a single file.</p>
+    <p>Visual workflow platforms market large integration catalogues — 500-plus connectors in some cases. In practice, most client engagements rely on three to five of those integrations. The remaining integrations contribute to the platform's pricing without contributing to the workflow's function. For the three to five that are actually needed, the equivalent code is typically short: an Anthropic SDK call is approximately 12 lines, a Stripe webhook handler is around 60 lines, a Supabase query is a single line.</p>
 
-    <h2>What I'd actually recommend.</h2>
-    <p>One workflow and you're not technical? <strong>Use Zapier or n8n.</strong> It's correct for that use case. The math doesn't kick in until you have 3+ workflows, want to ship features fast, and operating cost starts mattering.</p>
-    <p>3+ workflows or you want to own the asset? <strong>Hire someone to build the code-first version.</strong> Could be me. Could be a freelance dev with the same opinions. The math compounds fast once you're past the first workflow. Every additional workflow costs roughly the same: zero platform delta, ~$0.20/day in API tokens.</p>
+    <h2>When the no-code option is appropriate.</h2>
+    <p>For a non-technical team running a single workflow, a visual platform like Zapier or n8n is often the correct choice. The cost and lock-in concerns above do not apply meaningfully at that scale, and the platform's strength is making one-off automations accessible without engineering effort.</p>
+    <p>The architectural argument for code-first applies once a team operates three or more workflows, needs to ship new automations on a regular cadence, or considers ongoing operating cost a meaningful factor. At that point, hiring a developer to build the code-first version produces compounding returns: each additional workflow adds minimal infrastructure cost, and the codebase becomes a maintainable asset rather than a recurring subscription.</p>
 
     <h2>The stack I default to.</h2>
     <ul class="stack-list">
@@ -90,7 +90,7 @@ const jsonLd = {
   </div>
 
   <div class="manifesto-cta reveal" style="text-align: center;">
-    <p style="margin: 0;">Stitching workflows together in SaaS right now? <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Send what you're paying for →</a></p>
+    <p style="margin: 0;">If you're currently running automations through a no-code platform and considering a migration to owned code, the free async audit at <a href="/workflow-audit/" style="color: var(--green); border-bottom: 1px dashed var(--green);">/workflow-audit/</a> returns a written assessment within 48 hours.</p>
   </div>
 
 </section>

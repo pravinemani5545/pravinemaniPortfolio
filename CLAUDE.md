@@ -2,22 +2,29 @@
 
 This site is built like an essay, not a brochure. Every copy edit lands in the same voice as the rest of the site, or it doesn't ship.
 
-## PRIMARY TONE — direct and professional
+## PRIMARY TONE — direct and professional, with balance
 
 **This overrides everything below it where there is conflict.** The site reads as a working professional documenting their practice, not a contrarian operator flexing for an audience. The Koe / Thariq influences below are about *clarity and specificity*, NOT about contrarian one-liners or operator-flex quips.
 
-**Do not write:**
-- Metaphor-quips like *"the build log is the receipt,"* *"the unfair feature,"* *"the lookup-and-paste API,"* *"the abstraction that fails first under real load,"* *"the line most builds forget."* Each of those drifts the voice into pitchy / influencer-flex register.
-- Sentence fragments used for stylistic punch when a full sentence would be clearer. Punctuation as pacing is a Koe technique — use it sparingly, not as a default.
-- Contrarian gatekeeping (*"if you don't ship, this isn't for you,"* *"the absences matter as much as the inclusions"*).
-- Brand-voice slogans dropped mid-paragraph (*"sold by the project,"* *"built like an operator"*) — these belong in the hero tagline, not everywhere.
+### Don't write
 
-**Do write:**
-- Full sentences that state the operational reality plainly. "Every client deploy ships through Vercel; the build logs serve as the production deployment record" beats "build log is the receipt."
-- Industry-standard vocabulary first; opinionated framing second.
+- Metaphor-quips like *"the build log is the receipt,"* *"the unfair feature,"* *"the lookup-and-paste API,"* *"the abstraction that fails first under real load,"* *"the line most builds forget."* These drift into pitchy / influencer-flex register.
+- Contrarian gatekeeping (*"if you don't ship, this isn't for you,"* *"the absences matter as much as the inclusions"*).
+- Brand slogans dropped mid-paragraph (*"sold by the project,"* *"built like an operator"*). These belong in the hero tagline, not everywhere.
+
+### Do write
+
+- Direct sentences that state the reality plainly. "Every client deploy ships through Vercel; the build logs document the production deployment" beats "build log is the receipt."
+- Industry-standard vocabulary first, opinionated framing second.
 - The technical claim, not the rhetorical wrapper around it.
 
-When in conflict with anything below: **direct and professional wins.**
+### The balance — don't over-correct
+
+The fix for "too pitchy" is NOT "stiff, qualifier-heavy, corporate-press-release prose." If a rewrite has phrases like *"the engagement focuses on identifying,"* *"structured around,"* *"a focused week of structured workflow review,"* or it adds three subordinate clauses to soften a clear claim, it has gone too far the other direction.
+
+The middle: short declarative sentences, occasional fragments for pacing when they actually help, full sentences when clarity matters, no contrarian quips on either side. "A focused week of three founder interviews and a workflow review" is correct. "A fixed-scope week structured around three founder interviews and a structured workflow review" is over-corrected. Read the rewrite back — if it sounds like a quarterly board update, pull it back.
+
+When in conflict with anything below: **direct and professional, balanced, wins.**
 
 ---
 
