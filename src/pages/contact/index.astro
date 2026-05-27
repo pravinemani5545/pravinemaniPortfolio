@@ -53,7 +53,10 @@ const jsonLd = {
       <div class="label" style="color: #a855f7;">CASUAL</div>
       <h3>DM on X or LinkedIn</h3>
       <p>Good for "quick question" or "are you the right person for this." Slower than email, usually 1-2 days. Use for fit-check, not formal scoping.</p>
-      <a href="https://x.com/pravinemani" class="btn secondary">@pravinemani on X →</a>
+      <div class="btn-row">
+        <a href="https://x.com/pravinemani" class="btn secondary">@pravinemani on X →</a>
+        <a href="https://www.linkedin.com/in/pravinemani/" target="_blank" rel="noopener" class="btn secondary">in/pravinemani →</a>
+      </div>
     </div>
 
     <div class="contact-card">
@@ -163,6 +166,7 @@ const jsonLd = {
 .contact-card .btn:hover { background: var(--text-primary); }
 .contact-card .btn.secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
 .contact-card .btn.secondary:hover { border-color: var(--green); color: var(--green); }
+.contact-card .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .contact-card:nth-of-type(1) { --card-accent: var(--green); }
 .contact-card:nth-of-type(2) { --card-accent: var(--red); }
 .contact-card:nth-of-type(3) { --card-accent: #a855f7; }
