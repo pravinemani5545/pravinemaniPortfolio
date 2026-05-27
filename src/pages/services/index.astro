@@ -368,7 +368,7 @@ import Base from '../../layouts/Base.astro';
 @media (min-width: 2000px) { .cta-band-inner { max-width: 1760px; } } @media (min-width: 3000px) { .cta-band-inner { max-width: 2200px; } } @media (min-width: 4400px) { .cta-band-inner { max-width: 2800px; } }
 .cta-band .left { display: flex; flex-direction: column; gap: 4px; }
 .cta-band .lab { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; }
-.cta-band .h { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 18px; font-weight: 600; color: var(--text-primary); }
+.cta-band .h { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; color: var(--text-primary); }
 .cta-band .h .acc { color: var(--green); }
 
 /* Featured tier (audit/sprint/advisory/custom) */
@@ -379,13 +379,13 @@ import Base from '../../layouts/Base.astro';
 .tier-head { display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 24px 30px; border-bottom: 1px solid var(--border); background: var(--bg-tertiary); align-items: center; }
 .tier-head .left .row1 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
 .tier-head .left .row1 .pulse { width: 6px; height: 6px; background: var(--green); animation: pulse-dot 1.6s infinite; }
-.tier-head .left h3 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(22px, 1.9vw, 32px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15; }
+.tier-head .left h3 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 1.9vw, 32px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15; }
 .tier-head .right { text-align: right; }
 .tier-head .right .time { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--green); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
 .tier-head .right .slots { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-dim); letter-spacing: 0.12em; text-transform: uppercase; }
 .tier-body { padding: 26px 30px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
 .tier-body .col h4 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-.tier-body .col p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(14.5px, 1.05vw, 17.5px); color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; }
+.tier-body .col p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(14.5px, 1.05vw, 17.5px); color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; }
 .tier-body .col p strong { color: var(--text-primary); }
 .tier-body .col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .tier-body .col ul li { padding-left: 18px; position: relative; font-size: clamp(13.5px, 1vw, 16.5px); color: var(--text-secondary); line-height: 1.55; }
@@ -407,8 +407,8 @@ import Base from '../../layouts/Base.astro';
 .grant-inner { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 18px 24px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--green); }
 .grant-flag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; padding: 5px 10px; border: 1px solid var(--green); white-space: nowrap; }
 .grant-body { display: flex; flex-direction: column; gap: 4px; }
-.grant-h { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 16px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; }
-.grant-sub { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.grant-h { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; }
+.grant-sub { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 .grant-sub strong { color: var(--text-primary); }
 .grant-cta { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--green); text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--green); white-space: nowrap; transition: all var(--dur-micro, 150ms) var(--ease); }
 .grant-cta:hover { background: var(--green); color: var(--bg-primary); }
@@ -418,8 +418,8 @@ import Base from '../../layouts/Base.astro';
 .for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .for-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--green); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
 .for-card .check { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--green); font-weight: 700; line-height: 1; }
-.for-card h4 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
-.for-card p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.for-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
+.for-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 @media (max-width: 900px) { .for-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .for-grid { grid-template-columns: 1fr; } }
 
@@ -427,11 +427,11 @@ import Base from '../../layouts/Base.astro';
 .not-for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .not-for-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--red); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
 .not-for-card .x { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--red); font-weight: 700; line-height: 1; }
-.not-for-card h4 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
-.not-for-card p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.not-for-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }
+.not-for-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 .not-for-card p a { color: var(--green); border-bottom: 1px dashed var(--green); }
 .not-for-foot { margin-top: 24px; padding: 18px 24px; background: var(--bg-tertiary); border: 1px solid var(--border-green); text-align: center; }
-.not-for-foot p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); }
+.not-for-foot p { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); }
 .not-for-foot p a { color: var(--green); border-bottom: 1px dashed var(--green); font-weight: 600; }
 @media (max-width: 900px) { .not-for-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .not-for-grid { grid-template-columns: 1fr; } }
@@ -447,8 +447,8 @@ import Base from '../../layouts/Base.astro';
 .build-card .icon-row { display: flex; align-items: center; justify-content: space-between; }
 .build-card .icon { width: 36px; height: 36px; background: var(--bg-tertiary); border: 1px solid var(--border-strong, #3a3a3a); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: var(--card-accent, var(--green)); }
 .build-card .icon-row .num { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
-.build-card h4 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(15px, 1.15vw, 19px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.3; }
-.build-card p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(13px, 0.95vw, 16px); color: var(--text-secondary); line-height: 1.55; flex: 1; }
+.build-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(15px, 1.15vw, 19px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.3; }
+.build-card p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(13px, 0.95vw, 16px); color: var(--text-secondary); line-height: 1.55; flex: 1; }
 .build-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; padding-top: 10px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; }
 .build-card .meta .ev { color: var(--green); }
 .build-card:nth-of-type(1) { --card-accent: var(--green); }
@@ -466,7 +466,7 @@ import Base from '../../layouts/Base.astro';
 /* What I don't do block */
 .dont-do { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--red); padding: 24px 28px; }
 .dont-do .lab { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: var(--red); text-transform: uppercase; margin-bottom: 12px; }
-.dont-do h3 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 20px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 14px; }
+.dont-do h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 14px; }
 .dont-do ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
 .dont-do ul li { padding-left: 20px; position: relative; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 .dont-do ul li::before { content: '×'; position: absolute; left: 0; color: var(--red); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
@@ -475,20 +475,20 @@ import Base from '../../layouts/Base.astro';
 .faq-block { display: flex; flex-direction: column; }
 .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
 .faq-item:last-child { border-bottom: none; }
-.faq-item summary { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: 17px; font-weight: 500; color: var(--text-primary); cursor: pointer; padding-right: 32px; position: relative; list-style: none; }
+.faq-item summary { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 500; color: var(--text-primary); cursor: pointer; padding-right: 32px; position: relative; list-style: none; }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after { content: '+'; position: absolute; right: 8px; top: 0; font-family: 'JetBrains Mono', monospace; color: var(--green); font-size: 20px; transition: transform 200ms; }
 .faq-item[open] summary::after { content: '−'; }
-.faq-item p { margin-top: 10px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.65; max-width: 720px; }
+.faq-item p { margin-top: 10px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.65; max-width: 720px; }
 .faq-item p .acc { color: var(--green); }
 
 /* Final CTA */
 .final-cta-box { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%); border: 1px solid var(--border-green); padding: 48px 40px; text-align: center; position: relative; overflow: hidden; }
 .final-cta-box::before { content: ''; position: absolute; inset: -60px -10vw 0; background: radial-gradient(ellipse at center top, rgba(0,255,65,0.08) 0%, transparent 60%); pointer-events: none; }
 .final-cta-box > * { position: relative; z-index: 1; }
-.final-cta-box h2 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(28px, 3.6vw, 36px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.15; }
+.final-cta-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.6vw, 36px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.15; }
 .final-cta-box h2 .acc { color: var(--green); }
-.final-cta-box p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 26px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.final-cta-box p { font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 26px; max-width: 600px; margin-left: auto; margin-right: auto; }
 .final-cta-box .cta-row { justify-content: center; }
 
 @media (max-width: 980px) {

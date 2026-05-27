@@ -99,10 +99,10 @@ const jsonLd = {
 <style is:global>
 .manifesto { padding-top: clamp(40px, 4vw, 64px); }
 .manifesto-body { max-width: 760px; margin: 0 auto; }
-.manifesto-body h2 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(28px, 2.6vw, 40px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.022em; margin-top: 48px; margin-bottom: 16px; line-height: 1.15; }
+.manifesto-body h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 2.6vw, 40px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.022em; margin-top: 48px; margin-bottom: 16px; line-height: 1.15; }
 .manifesto-body h2:first-child { margin-top: 0; }
-.manifesto-body h3 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(20px, 1.6vw, 26px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.012em; margin-top: 28px; margin-bottom: 10px; line-height: 1.2; }
-.manifesto-body p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(16px, 1.15vw, 19px); color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; }
+.manifesto-body h3 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 1.6vw, 26px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.012em; margin-top: 28px; margin-bottom: 10px; line-height: 1.2; }
+.manifesto-body p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(16px, 1.15vw, 19px); color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; }
 .manifesto-body p strong { color: var(--text-primary); }
 .manifesto-body p a { color: var(--green); border-bottom: 1px dashed var(--green); }
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 32px; }
@@ -111,23 +111,23 @@ const jsonLd = {
 .compare-col.compare-bad::before { background: var(--red); }
 .compare-col .ctop { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
 .compare-col .ctop .lab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
-.compare-col .ctop .num { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(26px, 2.2vw, 34px); font-weight: 700; color: var(--green); letter-spacing: -0.02em; }
+.compare-col .ctop .num { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 2.2vw, 34px); font-weight: 700; color: var(--green); letter-spacing: -0.02em; }
 .compare-col.compare-bad .ctop .num { color: var(--red); }
 .compare-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-.compare-col ul li { padding-left: 18px; position: relative; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+.compare-col ul li { padding-left: 18px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
 .compare-col ul li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
 .compare-col.compare-bad ul li::before { content: '−'; color: var(--red); }
 @media (max-width: 720px) { .compare { grid-template-columns: 1fr; } }
 
 .stack-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; margin: 14px 0 18px; }
-.stack-list li { padding-left: 20px; position: relative; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
+.stack-list li { padding-left: 20px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
 .stack-list li::before { content: '+'; position: absolute; left: 0; color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
 .stack-list li strong { color: var(--text-primary); }
 
 .manifesto-cta { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%); border: 1px solid var(--border-green); padding: 44px 36px; text-align: center; position: relative; overflow: hidden; margin-top: 48px; max-width: 980px; margin-left: auto; margin-right: auto; }
 .manifesto-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center top, rgba(0,255,65,0.06) 0%, transparent 60%); pointer-events: none; }
 .manifesto-cta > * { position: relative; z-index: 1; }
-.manifesto-cta h2 { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; }
+.manifesto-cta h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; }
 .manifesto-cta h2 .accent { color: var(--green); }
-.manifesto-cta p { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; max-width: 580px; margin-left: auto; margin-right: auto; }
+.manifesto-cta p { font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; max-width: 580px; margin-left: auto; margin-right: auto; }
 </style>
