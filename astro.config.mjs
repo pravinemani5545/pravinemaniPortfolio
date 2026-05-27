@@ -9,6 +9,10 @@ export default defineConfig({
   site: 'https://pravinemani.com',
   trailingSlash: 'always',
   integrations: [sitemap()],
+  redirects: {
+    '/ai': '/stack/',
+    '/ai/': '/stack/',
+  },
   vite: {
     plugins: [tailwindcss()]
   }
