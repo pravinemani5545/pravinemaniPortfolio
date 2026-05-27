@@ -205,6 +205,15 @@ These earned their keep. Don't rewrite them. Don't repeat them either.
 - No emojis in source.
 - Vercel auto-deploys on push to `main`.
 
+## Where docs live — IMPORTANT
+
+This repo is **public**. Anything pushed lives forever in git history.
+
+- **In this repo** (public): only this `CLAUDE.md`. Engineering and voice rules. No strategy, no pricing, no DM templates, no prospect lists, no ICP scoring.
+- **In Obsidian** (private, not git-tracked): all strategy and outreach docs. Path: `~/obsidian/pravinemaniOS/Areas/Work/Projects/pravinemani-consulting/{strategy,audits,content}/`. Frontmatter required (see existing files for the convention).
+
+Bug history: strategy docs (`launch-offers.md`, `next-steps-*.md`, `icp-audit-*.md`, `future-plans.md`, `repositioning-strategy.md`, `first-clients-*.md`) lived in `docs/` for two weeks and got pushed publicly. They were pulled out 2026-05-27. Don't re-create them here. If a future session asks me to write a strategy doc, the answer is: **write it in Obsidian, not in this repo.**
+
 ## Auto-narrowed knobs
 
 - **GitHub feed** (`src/pages/index.astro` frontmatter) — refreshes on every Vercel deploy via build-time fetch. Falls back to hardcoded list if rate-limited or fetch fails. Authenticates with `GITHUB_TOKEN` env var if set.
