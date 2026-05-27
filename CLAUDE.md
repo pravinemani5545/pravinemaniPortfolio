@@ -2,6 +2,25 @@
 
 This site is built like an essay, not a brochure. Every copy edit lands in the same voice as the rest of the site, or it doesn't ship.
 
+## PRIMARY TONE — direct and professional
+
+**This overrides everything below it where there is conflict.** The site reads as a working professional documenting their practice, not a contrarian operator flexing for an audience. The Koe / Thariq influences below are about *clarity and specificity*, NOT about contrarian one-liners or operator-flex quips.
+
+**Do not write:**
+- Metaphor-quips like *"the build log is the receipt,"* *"the unfair feature,"* *"the lookup-and-paste API,"* *"the abstraction that fails first under real load,"* *"the line most builds forget."* Each of those drifts the voice into pitchy / influencer-flex register.
+- Sentence fragments used for stylistic punch when a full sentence would be clearer. Punctuation as pacing is a Koe technique — use it sparingly, not as a default.
+- Contrarian gatekeeping (*"if you don't ship, this isn't for you,"* *"the absences matter as much as the inclusions"*).
+- Brand-voice slogans dropped mid-paragraph (*"sold by the project,"* *"built like an operator"*) — these belong in the hero tagline, not everywhere.
+
+**Do write:**
+- Full sentences that state the operational reality plainly. "Every client deploy ships through Vercel; the build logs serve as the production deployment record" beats "build log is the receipt."
+- Industry-standard vocabulary first; opinionated framing second.
+- The technical claim, not the rhetorical wrapper around it.
+
+When in conflict with anything below: **direct and professional wins.**
+
+---
+
 ## The reader
 
 A technical operator who already builds. Not someone being sold to. They came here to see if I do real work, what I build with, and how. They don't need to be persuaded. They need to be informed enough to decide for themselves.
