@@ -359,8 +359,20 @@ try {
       <div class="link">LINK</div>
     </div>
 
+    <div class="work-row row-group client">
+      <span class="glab"><span class="dot"></span>CLIENT WORK</span>
+    </div>
+
+    <div class="work-row">
+      <div class="date">2025-Q4</div>
+      <div class="status client">CLIENT</div>
+      <div class="nm">CISNET marketing site</div>
+      <div class="desc">Next.js 16 rebuild + 200+ pSEO pages + custom admin portal for a Toronto IT training company. Three months. Solo.</div>
+      <div class="link"><a href="/work/case-studies/cisnet/">→ VIEW CASE STUDY</a></div>
+    </div>
+
     <div class="work-row row-group">
-      <span class="glab"><span class="dot"></span>CURRENTLY BUILDING · 3 ACTIVE</span>
+      <span class="glab"><span class="dot"></span>CURRENTLY BUILDING · 2 ACTIVE</span>
     </div>
 
     <div class="work-row">
@@ -391,14 +403,6 @@ try {
       <div class="nm">personalClaudeSkills</div>
       <div class="desc">Open-source Claude Code skill library. /growth-sprint, /design-system, /artifact. Curl-installable.</div>
       <div class="link"><a href="https://github.com/pravinemani5545/personalClaudeSkills">→ GITHUB</a></div>
-    </div>
-
-    <div class="work-row">
-      <div class="date">2025-Q4</div>
-      <div class="status client">CLIENT</div>
-      <div class="nm">CISNET marketing site</div>
-      <div class="desc">Next.js 16 rebuild + 200+ pSEO pages + custom admin portal for a Toronto IT training company. Three months. Solo.</div>
-      <div class="link"><span class="dim">→ CLIENT</span></div>
     </div>
 
     <div class="work-row">
@@ -718,7 +722,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== WORK TABLE ===== */
 .work-table { border: 1px solid var(--border); background: var(--bg-card); }
-.work-row { display: grid; grid-template-columns: 90px 90px 1.3fr 2fr 110px; gap: 18px; align-items: center; padding: 16px 24px; border-bottom: 1px solid var(--border); transition: background 150ms; font-family: 'JetBrains Mono', monospace; }
+.work-row { display: grid; grid-template-columns: 90px 90px 1.3fr 2fr 150px; gap: 18px; align-items: center; padding: 16px 24px; border-bottom: 1px solid var(--border); transition: background 150ms; font-family: 'JetBrains Mono', monospace; }
 .work-row:last-child { border-bottom: none; }
 .work-row:hover { background: var(--bg-card-hover, var(--bg-secondary)); }
 .work-row.row-head { background: var(--bg-tertiary); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
@@ -727,6 +731,8 @@ a { color: inherit; text-decoration: none; }
 .work-row.row-group .glab .dot { width: 6px; height: 6px; background: var(--green); animation: pulse-dot 1.6s infinite; }
 .work-row.row-group.shipped .glab { color: var(--text-secondary); }
 .work-row.row-group.shipped .glab .dot { background: var(--text-secondary); animation: none; }
+.work-row.row-group.client .glab { color: var(--blue); }
+.work-row.row-group.client .glab .dot { background: var(--blue); animation: none; }
 .work-row .date { font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; }
 .work-row .status { font-size: 9px; padding: 3px 8px; border: 1px solid currentColor; letter-spacing: 0.14em; text-transform: uppercase; width: max-content; }
 .work-row .status.shipping { color: var(--green); }
