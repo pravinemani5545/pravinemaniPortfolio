@@ -28,3 +28,4 @@ pnpm-debug.log*
 
 # claude code session logs (local only)
 CC-Session-Logs/
+.vercel
