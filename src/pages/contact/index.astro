@@ -82,12 +82,11 @@ const jsonLd = {
       <p>The same info I'd ask on the call. In writing. I read every one. Reply within 24 hours on weekdays. Lands directly in my inbox via FormSubmit.</p>
     </div>
 
-    <form class="intake-form" action="https://formsubmit.co/pravinemaniva@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New scoping inquiry, pravinemani.com" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="true" />
+    <form class="intake-form" action="/api/contact" method="POST">
+      <input type="hidden" name="_subject" value="New scoping inquiry · pravinemani.com" />
+      <input type="hidden" name="_form" value="contact" />
       <input type="hidden" name="_honey" />
-      <input type="hidden" name="_next" value="https://pravinemani.com/contact/?sent=1" />
+      <input type="hidden" name="_next" value="/contact/?sent=1" />
 
       <div class="intake-row">
         <label for="name">Your name + company</label>
