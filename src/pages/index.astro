@@ -15,104 +15,6 @@ const jsonLd = {
   ]
 };
 
-// ===== Live GitHub commit feed (build-time fetch) =====
-// Refreshes on every Vercel deploy. Falls back to a hardcoded list if the
-// GitHub API rate-limits or fails. Authenticates if GITHUB_TOKEN env var is set.
-interface GHCommit { sha: string; repo: string; type: string; message: string; }
-const fallbackCommits: GHCommit[] = [
-  { sha: '5f13041', repo: 'portfolio',     type: 'feat',  message: 'right-size desktop headings' },
-  { sha: '70f714d', repo: 'portfolio',     type: 'feat',  message: 'de-anonymize CISNET testimonial' },
-  { sha: 'f384c87', repo: 'portfolio',     type: 'feat',  message: 'FormSubmit intake + anchor IDs' },
-  { sha: '4800cda', repo: 'portfolio',     type: 'feat',  message: 'sprint sub-pages + manifesto' },
-  { sha: 'bb08299', repo: 'portfolio',     type: 'feat',  message: 'numbers + pain bands' },
-];
-const fallbackCadence = '~32 / 30d';
-const fallbackTimestamp = '06:42 toronto';
-
-let commits: GHCommit[] = fallbackCommits;
-let cadence: string = fallbackCadence;
-let commitCount30d: number = 62;
-let lastTimestamp: string = fallbackTimestamp;
-let lastDate: string = '2026-05-18';
-
-try {
-  const headers: Record<string, string> = {
-    'Accept': 'application/vnd.github+json',
-    'User-Agent': 'pravinemani.com-build',
-  };
-  const token = import.meta.env.GITHUB_TOKEN;
-  if (token) headers.Authorization = `Bearer ${token}`;
-
-  // Step 1, discover repos with activity in the last 30 days via the events API
-  // (events PushEvent payloads omit the commits array on this account; that's
-  // why we fan out to /repos/<repo>/commits per repo below.)
-  const eventsRes = await fetch('https://api.github.com/users/pravinemani5545/events/public?per_page=100', { headers });
-  const activeRepos = new Set<string>();
-  if (eventsRes.ok) {
-    const events = await eventsRes.json() as any[];
-    for (const e of events) {
-      if (e.type === 'PushEvent' && e.repo?.name) {
-        activeRepos.add(e.repo.name);
-        if (activeRepos.size >= 6) break;
-      }
-    }
-  }
-  // Always include the portfolio repo even if events miss it
-  activeRepos.add('pravinemani5545/pravinemaniPortfolio');
-
-  // Step 2, fetch latest commits per repo (parallel)
-  const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
-  const allCommits: (GHCommit & { dateMs: number })[] = [];
-
-  await Promise.all([...activeRepos].slice(0, 6).map(async (repo) => {
-    try {
-      const r = await fetch(
-        `https://api.github.com/repos/${repo}/commits?per_page=30&since=${since}&author=pravinemani5545`,
-        { headers }
-      );
-      if (!r.ok) return;
-      const data = await r.json() as any[];
-      if (!Array.isArray(data)) return;
-      const repoShort = repo.split('/').pop()!.slice(0, 16);
-      for (const c of data) {
-        const fullMsg = ((c.commit?.message) || '').split('\n')[0];
-        const colonIdx = fullMsg.indexOf(':');
-        const hasType = colonIdx > 0 && colonIdx < 12;
-        allCommits.push({
-          sha: (c.sha || '').slice(0, 7),
-          repo: repoShort,
-          type: hasType ? fullMsg.slice(0, colonIdx) : 'commit',
-          message: (() => {
-            const raw = hasType ? fullMsg.slice(colonIdx + 1).trim() : fullMsg;
-            return raw.length > 42 ? raw.slice(0, 40).trimEnd() + '…' : raw;
-          })(),
-          dateMs: new Date(c.commit?.author?.date || c.commit?.committer?.date || 0).getTime(),
-        });
-      }
-    } catch (_e) { /* ignore single-repo failure */ }
-  }));
-
-  if (allCommits.length >= 3) {
-    // sort newest first
-    allCommits.sort((a, b) => b.dateMs - a.dateMs);
-
-    commits = allCommits.slice(0, 5).map(({ sha, repo, type, message }) => ({ sha, repo, type, message }));
-    commitCount30d = allCommits.length;
-    cadence = `~${commitCount30d} / 30d`;
-
-    const latestMs = allCommits[0].dateMs;
-    if (latestMs) {
-      const d = new Date(latestMs);
-      const hhmm = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'America/Toronto' });
-      lastTimestamp = `${hhmm} toronto`;
-      lastDate = d.toLocaleDateString('en-CA', { timeZone: 'America/Toronto' });
-    }
-  }
-} catch (_err) {
-  // silently keep the fallback
-}
-
-// `lastDate` already in YYYY-MM-DD via en-CA locale (or fallback ISO format)
 ---
 
 <Base title="Pravine Mani · Marketing Automation, AI & SEO Built in Code · Toronto" description="Toronto engineer building marketing automation and lead-response systems in code: every inbound lead answered in seconds, routed, and owned outright. AI workflow and SEO builds shipped on Vercel." jsonLd={jsonLd}>
@@ -145,18 +47,13 @@ try {
     <div class="hero-term reveal" data-delay="2">
       <div class="chrome">
         <div class="dots"><span></span><span></span><span></span></div>
-        <span>~/pravine/this-week</span>
+        <span>~/pravine/recent-work</span>
       </div>
       <div class="body">
-        <div class="ln"><span class="cmt">// latest push · {lastDate}</span></div>
-        <div class="ln"><span class="gr">$</span> git log --oneline -5</div>
-        {commits.map(c => (
-          <div class="ln">
-            <span class="yl">{c.sha}</span>{' '}
-            {c.type !== 'commit' && <><span class="dim">{c.type}:</span>{' '}</>}
-            {c.message}
-          </div>
-        ))}
+        <div class="ln"><span class="gr">$</span> cat recent-work</div>
+        <div class="ln"><span class="yl">cisnet</span> <span class="dim">seo:</span> 3× organic in 16 months</div>
+        <div class="ln"><span class="yl">orbit</span> <span class="dim">build:</span> dual-channel AI voice agent, live</div>
+        <div class="ln"><span class="yl">cisnet</span> <span class="dim">migrate:</span> 70+ URLs preserved through cutover</div>
         <div class="ln"><span class="gr">$</span> ls ~/services</div>
         <div class="ln"><span class="pu">▸</span> MKT AUTO · <span class="gr">accepting</span></div>
         <div class="ln"><span class="bl">▸</span> SEO + GEO · <span class="gr">accepting</span></div>
@@ -164,8 +61,8 @@ try {
         <div class="ln"><span class="gr">$</span><span class="cursor"></span></div>
       </div>
       <div class="feet">
-        <div class="m"><div class="k">PROJECTS</div><div class="v"><span class="gr">4</span></div></div>
         <div class="m"><div class="k">CODE</div><div class="v">OWNED OUTRIGHT</div></div>
+        <div class="m"><div class="k">REPLIES</div><div class="v">~24 HRS</div></div>
       </div>
     </div>
   </div>
@@ -175,9 +72,8 @@ try {
 <!-- ===== NUMBERS BAND ===== -->
 <section class="numbers-band">
   <div class="numbers-inner">
-    <div class="n-cell"><span class="k">PROJECTS SHIPPED</span><span class="v"><span class="gr">4</span></span></div>
     <div class="n-cell"><span class="k">CISNET ORGANIC</span><span class="v"><span class="gr">3×</span> / 16MO</span></div>
-    <div class="n-cell"><span class="k">PAGES INDEXED</span><span class="v"><span class="gr">27→145</span></span></div>
+    <div class="n-cell"><span class="k">CISNET INDEXED</span><span class="v"><span class="gr">27→145</span></span></div>
     <div class="n-cell"><span class="k">SHIPPING SINCE</span><span class="v"><span class="gr">2022</span></span></div>
     <div class="n-cell"><span class="k">BASED IN</span><span class="v">TORONTO, ON</span></div>
   </div>
@@ -250,7 +146,7 @@ try {
     <div class="service-card featured reveal" data-delay="1">
       <div class="head">
         <span class="id"><span class="num">01 ·</span> SYSTEM AUDIT</span>
-        <span class="price">FIXED-SCOPE WEEK · MOST POPULAR</span>
+        <span class="price">FIXED-SCOPE WEEK</span>
       </div>
       <div class="body">
         <h3>System audit.</h3>
@@ -284,7 +180,7 @@ try {
         </ul>
       </div>
       <div class="foot">
-        <span class="meta">QUOTE ON SCOPE · AVAILABLE</span>
+        <span class="meta">FIXED PRICE · FROM $2,500</span>
         <a href="/services/" class="cta">→ BOOK SPRINT</a>
       </div>
     </div>
@@ -313,7 +209,7 @@ try {
   </div>
 
   <div class="services-cta reveal">
-    <a href="/services/">Eleven specific builds, plus custom →</a>
+    <a href="/services/">See all services and pricing →</a>
   </div>
 </section>
 
@@ -351,7 +247,6 @@ try {
       <h2>What I've built, and what's shipping.</h2>
       <p>Grouped by status. Full portfolio at <a href="/work/">/work</a>.</p>
     </div>
-    <div class="meta">UPDATED {lastDate}</div>
   </div>
 
   <div class="work-table reveal">
@@ -862,7 +757,7 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 3000px) { .numbers-band { max-width: 2200px; } }
 .numbers-inner {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
