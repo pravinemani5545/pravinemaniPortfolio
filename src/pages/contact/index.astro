@@ -27,7 +27,7 @@ const jsonLd = {
 
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> echo "let's talk" <span class="you">→ 30-min call · email · dm</span></div>
-  <h1>Get in touch.<br><span class="accent">Pick the route that fits.</span></h1>
+  <h1>Free 30-min scoping call.<br><span class="accent">Written quote in 24 hours.</span></h1>
   <p class="lead">Every route below gets a real answer within 24 hours on weekdays. The 30-min call is the fastest path to a quote. Email suits a written inquiry. A DM works for a quick question before booking.</p>
 </section>
 
@@ -128,20 +128,10 @@ const jsonLd = {
 
       <div class="intake-actions">
         <button type="submit" class="btn intake-submit">Send brief →</button>
-        <span class="intake-foot">Replies within 24 hours on weekdays.</span>
+        <span class="intake-foot">Toronto / ET.</span>
       </div>
     </form>
   </section>
-
-  <div class="direct-channels">
-    <h4>All channels at a glance</h4>
-    <div class="channel"><span class="k">EMAIL</span><span class="v"><a href="mailto:pravinemaniva@gmail.com">pravinemaniva@gmail.com</a></span><span class="speed">~24 HRS</span></div>
-    <div class="channel"><span class="k">BOOK CALL</span><span class="v"><a href="https://cal.com/pravine-manivannan-lpmqgs/30min" target="_blank" rel="noopener">cal.com → 30min</a></span><span class="speed">~48 HRS</span></div>
-    <div class="channel"><span class="k">X / TWITTER</span><span class="v"><a href="https://x.com/pravinemani">@pravinemani</a></span><span class="speed">~1–2 DAYS</span></div>
-    <div class="channel"><span class="k">LINKEDIN</span><span class="v"><a href="https://linkedin.com/in/pravinemani">/in/pravinemani</a></span><span class="speed">~1–2 DAYS</span></div>
-    <div class="channel"><span class="k">GITHUB</span><span class="v"><a href="https://github.com/pravinemani5545">@pravinemani5545</a></span><span class="speed">~SAME DAY</span></div>
-    <div class="channel"><span class="k">TIMEZONE</span><span class="v">Toronto · ET (UTC-5 / UTC-4)</span><span class="speed">9AM–9PM</span></div>
-  </div>
 
   <div class="scheduling-note">
     <div class="lab">CURRENT AVAILABILITY</div>
@@ -170,20 +160,11 @@ const jsonLd = {
 .contact-card:nth-of-type(2) { --card-accent: var(--red); }
 .contact-card:nth-of-type(3) { --card-accent: #a855f7; }
 .contact-card:nth-of-type(4) { --card-accent: var(--blue); }
-.direct-channels { background: var(--bg-card); border: 1px solid var(--border); padding: 24px 28px; margin-top: 24px; }
-.direct-channels h4 { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-.channel { display: grid; grid-template-columns: 100px 1fr auto; gap: 18px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; }
-.channel:last-child { border-bottom: none; }
-.channel .k { font-size: 10px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
-.channel .v { font-size: 13px; color: var(--text-primary); }
-.channel .v a { color: var(--green); }
-.channel .v a:hover { color: var(--text-primary); }
-.channel .speed { font-size: 9px; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; }
 .scheduling-note { margin-top: 24px; padding: 20px 24px; background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid var(--green); }
 .scheduling-note .lab { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; margin-bottom: 8px; }
 .scheduling-note p { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .scheduling-note p strong { color: var(--text-primary); }
-@media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } .channel { grid-template-columns: 1fr; gap: 4px; } }
+@media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* ===== Structured intake form ===== */
 .intake-section { margin: 36px 0 24px; padding: 28px 30px; background: var(--bg-card); border: 1px solid var(--border); position: relative; }
