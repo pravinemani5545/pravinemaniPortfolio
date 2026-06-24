@@ -18,11 +18,59 @@ const jsonLd = {
     <span class="you">case studies</span>
   </div>
   <h1>Case studies.<br><span class="accent">The work, fully unredacted.</span></h1>
-  <p class="lead">Public client case studies. What was scoped. What shipped. What got measured. Three more in the publishing queue. This index grows as approvals land.</p>
+  <p class="lead">Public client case studies. What was scoped. What shipped. What got measured. More in the publishing queue. This index grows as approvals land.</p>
 </section>
 
 <section class="section">
   <div class="cs-grid">
+
+    <a href="/work/case-studies/orbit/" class="cs-card cs-live orbit">
+      <div class="cs-head">
+        <div class="cs-logo">OR<span class="acc">BIT</span></div>
+        <div class="cs-meta">
+          <span class="status">CLIENT · LIVE</span>
+          <span class="when">2026 · 3 SYSTEMS</span>
+        </div>
+      </div>
+      <div class="cs-body">
+        <h3>Patient-acquisition system: site, dashboard, AI voice agent</h3>
+        <p>Toronto dental lead-generation and rewards operation. Three systems shipped end-to-end. An Astro 6 marketing site with a 6-article SEO and GEO content engine. A Next.js 16 lead-ops dashboard over a 7-stage funnel. A dual-channel AI agent, "Anna," that qualifies on voice (Claude) and SMS (Gemini) in parallel over one shared record, with the orchestration code-owned on Supabase Edge Functions. Flow: Facebook Lead Ad to instant SMS to AI call to live clinic hand-off to reward.</p>
+        <div class="cs-stack">
+          <span class="chip">Astro 6</span><span class="chip">Next.js 16</span><span class="chip">Supabase</span><span class="chip">Edge Functions</span><span class="chip">Vapi</span><span class="chip">Claude Haiku</span><span class="chip">Twilio</span>
+        </div>
+        <div class="cs-numbers">
+          <div class="m"><span class="k">SYSTEMS SHIPPED</span><span class="v"><span class="bl">3</span></span></div>
+          <div class="m"><span class="k">SEO ARTICLES</span><span class="v">6</span></div>
+          <div class="m"><span class="k">FUNNEL STAGES</span><span class="v"><span class="bl">9</span></span></div>
+          <div class="m"><span class="k">ZAPIER FOOTPRINT</span><span class="v">1 ZAP</span></div>
+        </div>
+        <span class="cs-cta">Read the case study →</span>
+      </div>
+    </a>
+
+    <a href="/work/case-studies/smile-club/" class="cs-card cs-live smile">
+      <div class="cs-head">
+        <div class="cs-logo">SMILE<span class="acc"> CLUB</span></div>
+        <div class="cs-meta">
+          <span class="status">CLIENT · LIVE</span>
+          <span class="when">2026 · FULL REBUILD</span>
+        </div>
+      </div>
+      <div class="cs-body">
+        <h3>Brand-forward marketing site rebuild</h3>
+        <p>Toronto dental clinic. Full Astro 6 marketing-site rebuild on a new forest-green brand system with prevention-driven positioning. Full migration of real copy and photography off the live site. Appointment-card hero, patient-reviews section, insurance-providers marquee, branded OG card, favicon set, plus an accessibility and performance pass.</p>
+        <div class="cs-stack">
+          <span class="chip">Astro 6</span><span class="chip">TypeScript</span><span class="chip">Tailwind</span><span class="chip">Vercel</span>
+        </div>
+        <div class="cs-numbers">
+          <div class="m"><span class="k">BUILD</span><span class="v"><span class="bl">FULL</span></span></div>
+          <div class="m"><span class="k">BRAND</span><span class="v">NEW</span></div>
+          <div class="m"><span class="k">STATUS</span><span class="v"><span class="bl">LIVE</span></span></div>
+          <div class="m"><span class="k">STACK</span><span class="v">ASTRO 6</span></div>
+        </div>
+        <span class="cs-cta">Read the case study →</span>
+      </div>
+    </a>
 
     <a href="/work/case-studies/cisnet/" class="cs-card cs-live">
       <div class="cs-head">
@@ -95,6 +143,20 @@ const jsonLd = {
 .cs-card { background: var(--bg-card); border: 1px solid var(--border); padding: 0; position: relative; overflow: hidden; transition: all var(--dur-base, 200ms) var(--ease); display: block; }
 .cs-card.cs-live::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #dc2626; opacity: 0.85; }
 .cs-card.cs-live:hover { border-color: #dc2626; transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4); }
+.cs-card.cs-live.orbit::before { background: #447EF7; }
+.cs-card.cs-live.orbit:hover { border-color: #447EF7; }
+.cs-card.cs-live.orbit .cs-logo .acc { color: #447EF7; }
+.cs-card.cs-live.orbit .cs-meta .status { color: #447EF7; border-color: #447EF7; }
+.cs-card.cs-live.orbit .cs-numbers .m .v .bl { color: #447EF7; }
+.cs-card.cs-live.orbit .cs-cta { color: #447EF7; }
+.cs-card.cs-live.orbit:hover .cs-cta { color: var(--text-primary); }
+.cs-card.cs-live.smile::before { background: #128149; }
+.cs-card.cs-live.smile:hover { border-color: #128149; }
+.cs-card.cs-live.smile .cs-logo .acc { color: #128149; }
+.cs-card.cs-live.smile .cs-meta .status { color: #128149; border-color: #128149; }
+.cs-card.cs-live.smile .cs-numbers .m .v .bl { color: #128149; }
+.cs-card.cs-live.smile .cs-cta { color: #128149; }
+.cs-card.cs-live.smile:hover .cs-cta { color: var(--text-primary); }
 .cs-card.cs-coming { opacity: 0.7; cursor: default; }
 .cs-card.cs-coming::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--text-dim); opacity: 0.4; }
 .cs-head { display: grid; grid-template-columns: 200px 1fr; gap: 0; align-items: stretch; }

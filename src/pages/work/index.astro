@@ -7,6 +7,8 @@ const jsonLd = {
   "description": "Active builds. Shipped work. AI workflows. SEO + GEO. Marketing automation. Agentic OS. Real artifacts. Public GitHub history.",
   "url": "https://pravinemani.com/work/",
   "hasPart": [
+    { "@type": "CreativeWork", "name": "Orbit Dental AI · Patient-acquisition system: site, dashboard, AI voice agent", "url": "https://pravinemani.com/work/case-studies/orbit/" },
+    { "@type": "CreativeWork", "name": "Smile Club · Brand-forward marketing site rebuild", "url": "https://pravinemani.com/work/case-studies/smile-club/" },
     { "@type": "CreativeWork", "name": "CISNET · Marketing site + SEO + admin portal", "url": "https://pravinemani.com/work/case-studies/cisnet/" },
     { "@type": "CreativeWork", "name": "AIOpsForge", "url": "https://aiopsforge.dev" },
     { "@type": "CreativeWork", "name": "personalClaudeSkills", "url": "https://github.com/pravinemani5545/personalClaudeSkills" }
@@ -30,9 +32,65 @@ const jsonLd = {
   <div class="group-header reveal">
     <div class="left">
       <div class="lab client"><span class="dot"></span>CLIENT WORK</div>
-      <h2>CISNET.</h2>
+      <h2>Orbit. Smile Club. CISNET.</h2>
     </div>
-    <div class="right">1 PROJECT · <span class="v" style="color: #dc2626;">CASE STUDY LIVE</span></div>
+    <div class="right">3 PROJECTS · <span class="v" style="color: #dc2626;">CASE STUDIES LIVE</span></div>
+  </div>
+
+  <!-- Orbit Dental AI -->
+  <div class="client-card orbit reveal">
+    <div class="cc-top">
+      <div class="cc-logo">
+        <div class="mark">OR<span class="acc">BIT</span></div>
+        <div class="meta">Toronto · 2026</div>
+      </div>
+      <div class="cc-body">
+        <div class="row1"><span class="status">CLIENT</span><span>3 SYSTEMS · SHIPPED · LIVE</span></div>
+        <h3>Patient-acquisition system: site, dashboard, AI voice agent</h3>
+        <p>Toronto dental lead-generation and rewards operation. <strong>Three systems shipped end-to-end.</strong> An Astro 6 marketing site with a 6-article SEO and GEO content engine. A Next.js 16 lead-ops dashboard over a 7-stage funnel. An outbound AI voice agent, "Anna," with the orchestration code-owned on Supabase Edge Functions instead of a no-code wrapper. Flow: Facebook Lead Ad to instant SMS to scheduled AI call to clinic hand-off to reward.</p>
+        <div class="cc-stack">
+          <span class="chip">Astro 6</span><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Supabase</span><span class="chip">Edge Functions</span><span class="chip">Vapi</span><span class="chip">Claude Haiku</span><span class="chip">Twilio</span><span class="chip">Vercel</span>
+        </div>
+        <div class="cc-actions">
+          <a href="/work/case-studies/orbit/" class="cc-btn">Read case study →</a>
+          <a href="/contact/" class="cc-btn ghost">Book a similar project</a>
+        </div>
+      </div>
+    </div>
+    <div class="cc-numbers">
+      <div class="m"><div class="k">SYSTEMS SHIPPED</div><div class="v"><span class="bl">3</span></div></div>
+      <div class="m"><div class="k">SEO ARTICLES</div><div class="v">6</div></div>
+      <div class="m"><div class="k">FUNNEL STAGES</div><div class="v"><span class="bl">9</span></div></div>
+      <div class="m"><div class="k">ZAPIER FOOTPRINT</div><div class="v">1 ZAP</div></div>
+    </div>
+  </div>
+
+  <!-- Smile Club -->
+  <div class="client-card smile reveal">
+    <div class="cc-top">
+      <div class="cc-logo">
+        <div class="mark">SMILE<span class="acc"> CLUB</span></div>
+        <div class="meta">Toronto · 2026</div>
+      </div>
+      <div class="cc-body">
+        <div class="row1"><span class="status">CLIENT</span><span>SHIPPED · LIVE</span></div>
+        <h3>Brand-forward marketing site rebuild</h3>
+        <p>Toronto dental clinic. <strong>Full Astro 6 marketing-site rebuild</strong> on a new forest-green brand system with prevention-driven positioning. Full migration of real copy and photography off the clinic's live site. Appointment-card hero treatment, patient-reviews section, insurance-providers marquee, branded Open Graph card, favicon set, plus an accessibility and performance pass.</p>
+        <div class="cc-stack">
+          <span class="chip">Astro 6</span><span class="chip">TypeScript</span><span class="chip">Tailwind</span><span class="chip">Vercel</span>
+        </div>
+        <div class="cc-actions">
+          <a href="/work/case-studies/smile-club/" class="cc-btn">Read case study →</a>
+          <a href="/contact/" class="cc-btn ghost">Book a similar project</a>
+        </div>
+      </div>
+    </div>
+    <div class="cc-numbers">
+      <div class="m"><div class="k">BUILD</div><div class="v"><span class="bl">FULL REBUILD</span></div></div>
+      <div class="m"><div class="k">BRAND</div><div class="v">NEW SYSTEM</div></div>
+      <div class="m"><div class="k">STATUS</div><div class="v"><span class="bl">LIVE</span></div></div>
+      <div class="m"><div class="k">STACK</div><div class="v">ASTRO 6</div></div>
+    </div>
   </div>
 
   <div class="client-card reveal">
@@ -124,7 +182,7 @@ const jsonLd = {
     </div>
   </div>
 
-  <!-- betterSpeaking card hidden 2026-05-27 — closed alpha, not ready to surface publicly yet.
+  <!-- betterSpeaking card hidden 2026-05-27: closed alpha, not ready to surface publicly yet.
        Restore the <div class="work-card acc-blue reveal">...</div> block from git history when ready. -->
 
   <!-- agentic-os -->
@@ -350,6 +408,28 @@ const jsonLd = {
 .cc-numbers .m .v { font-family: 'Space Grotesk', sans-serif; font-size: clamp(15px, 1.2vw, 19px); font-weight: 600; color: var(--text-primary); }
 .cc-numbers .m .v .bl { color: #dc2626; }
 @media (max-width: 720px) { .cc-numbers { grid-template-columns: repeat(2, 1fr); } }
+
+/* Orbit · blue brand accent */
+.client-card.orbit::before { background: #447EF7; }
+.client-card.orbit:hover { border-color: #447EF7; }
+.client-card.orbit .cc-logo .mark .acc { color: #447EF7; }
+.client-card.orbit .cc-body .row1 .status { border-color: #447EF7; color: #447EF7; }
+.client-card.orbit .cc-btn { background: #447EF7; }
+.client-card.orbit .cc-btn:hover { background: #2f5fcf; }
+.client-card.orbit .cc-btn.ghost { background: transparent; color: var(--text-primary); }
+.client-card.orbit .cc-btn.ghost:hover { border-color: #447EF7; color: #447EF7; }
+.client-card.orbit .cc-numbers .m .v .bl { color: #447EF7; }
+
+/* Smile Club · forest-green brand accent */
+.client-card.smile::before { background: #128149; }
+.client-card.smile:hover { border-color: #128149; }
+.client-card.smile .cc-logo .mark .acc { color: #128149; }
+.client-card.smile .cc-body .row1 .status { border-color: #128149; color: #128149; }
+.client-card.smile .cc-btn { background: #128149; }
+.client-card.smile .cc-btn:hover { background: #0d6139; }
+.client-card.smile .cc-btn.ghost { background: transparent; color: var(--text-primary); }
+.client-card.smile .cc-btn.ghost:hover { border-color: #128149; color: #128149; }
+.client-card.smile .cc-numbers .m .v .bl { color: #128149; }
 
 /* Work card */
 .work-card { background: var(--bg-card); border: 1px solid var(--border); margin-bottom: 24px; position: relative; overflow: hidden; transition: all 400ms cubic-bezier(0.2, 0, 0, 1); }

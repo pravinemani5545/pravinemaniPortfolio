@@ -1,0 +1,257 @@
+---
+import Base from '../../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Orbit Dental AI · Patient-acquisition system: site, lead-ops dashboard, AI voice agent",
+      "description": "End-to-end patient-acquisition build for a Toronto dental lead-generation and rewards operation. Three systems shipped: an Astro 6 marketing site with a 6-article content engine, a Next.js 16 lead-ops dashboard over a 7-stage funnel, and a code-owned AI voice agent on Supabase Edge Functions.",
+      "datePublished": "2026-05-01",
+      "dateModified": "2026-06-24",
+      "image": "https://pravinemani.com/og-default.png",
+      "author": {
+        "@type": "Person",
+        "name": "Pravine Manivannan",
+        "url": "https://pravinemani.com/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Pravine Manivannan",
+        "url": "https://pravinemani.com/"
+      },
+      "mainEntityOfPage": "https://pravinemani.com/work/case-studies/orbit/",
+      "about": ["AI Voice Agent", "Marketing Automation", "Supabase Edge Functions", "Programmatic SEO"]
+    },
+    {
+      "@type": "Service",
+      "name": "Patient-acquisition system: marketing site, lead-ops dashboard, AI voice agent",
+      "serviceType": "Custom Build",
+      "provider": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" },
+      "areaServed": "Toronto, Canada"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pravinemani.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://pravinemani.com/work/" },
+        { "@type": "ListItem", "position": 3, "name": "Case Studies", "item": "https://pravinemani.com/work/case-studies/" },
+        { "@type": "ListItem", "position": 4, "name": "Orbit Dental AI", "item": "https://pravinemani.com/work/case-studies/orbit/" }
+      ]
+    }
+  ]
+};
+---
+
+<Base title="Orbit Dental AI · Case Study · Pravine Mani" description="End-to-end patient-acquisition system for a Toronto dental operation. Three systems: Astro 6 site with a 6-article content engine, Next.js 16 lead-ops dashboard, and a code-owned AI voice agent on Supabase Edge Functions." footerVariant="case-study" jsonLd={jsonLd}>
+
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/work/" style="color: var(--text-dim);">work</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <a href="/work/" style="color: var(--text-dim);">case studies</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">orbit</span>
+  </div>
+  <h1>Orbit Dental AI: patient acquisition.<br><span class="accent" style="color: #447EF7; -webkit-text-fill-color: #447EF7;">Site, dashboard, AI voice agent.</span></h1>
+  <p class="lead">End-to-end patient-acquisition system for a Toronto dental lead-generation and rewards operation. Three systems shipped: a marketing site with a 6-article content engine, a lead-ops dashboard over a 7-stage funnel, and an outbound AI voice agent. The automation lives in code, not a no-code wrapper.</p>
+
+  <div class="cs-hero-meta">
+    <div class="cell"><div class="k">CLIENT</div><div class="v">Dental Lead-Gen · Toronto</div></div>
+    <div class="cell"><div class="k">SCOPE</div><div class="v"><span class="bl">Site + Dashboard + Voice Agent</span></div></div>
+    <div class="cell"><div class="k">DELIVERED</div><div class="v">2026 · LIVE</div></div>
+    <div class="cell"><div class="k">ROLE</div><div class="v">Solo · End-to-end</div></div>
+  </div>
+</section>
+
+<section class="section">
+
+  <!-- Problem -->
+  <div class="cs-section reveal">
+    <div class="lab-col"><span class="num">01 / 06</span><span>THE PROBLEM</span></div>
+    <div class="body-col">
+      <h2>Leads arrive fast. Follow-up was manual.</h2>
+      <p>Facebook Lead Ads bring patients in at volume. The gap was everything after the form submit. <strong>Speed-to-lead decided the whole funnel.</strong> A lead that sits for an hour is cold. Routing the right lead to the right clinic by location, qualifying intent, booking, then fulfilling a reward: all of it ran on human hands and a tangle of no-code triggers.</p>
+      <p>The brief was to own the whole path in code. From the ad to the SMS to the AI call to the clinic hand-off to the reward. Three surfaces had to ship: the marketing site that converts the click, the dashboard the operator watches, and the voice agent that does the qualifying call.</p>
+      <ul>
+        <li><strong>Speed-to-lead:</strong> manual follow-up let warm leads go cold</li>
+        <li><strong>No single funnel view:</strong> lead state scattered across tools</li>
+        <li><strong>Routing by hand:</strong> clinic assignment was a manual lookup</li>
+        <li><strong>No-code sprawl:</strong> the automation lived across stacked Zapier steps</li>
+        <li><strong>Compliance:</strong> outbound calling and SMS needed CASL and CRTC wiring</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- System 1: Marketing site -->
+  <div class="cs-section reveal">
+    <div class="lab-col"><span class="num">02 / 06</span><span>SYSTEM 1 · MARKETING SITE</span></div>
+    <div class="body-col">
+      <h2>Astro 6 site plus a content engine.</h2>
+      <p>Rebuilt the brand on a blue <code>#447EF7</code> scale and migrated every line of real copy off the live site. The offer framing centers an Apple Watch SE 3 rewards hook with a live offer-deadline countdown. A seamless insurance and clinic marquee, a branded Open Graph link-preview card, a blue favicon set, and a full accessibility pass round out the static build on Vercel.</p>
+      <p>On top of the site sits a <strong>content engine</strong>: 6 SEO and GEO blog articles built on Astro content collections. Topics: dental check-ups, costs and the Canadian Dental Care Plan, choosing a dentist, visit frequency, dental anxiety, and teeth whitening. Each ships Article JSON-LD, hand-built on-brand SVG explainer diagrams, and AI-generated editorial hero imagery.</p>
+      <ul>
+        <li><strong>Brand system:</strong> blue <code>#447EF7</code> scale, full real-copy migration</li>
+        <li><strong>Offer framing:</strong> Apple Watch SE 3 rewards hook, live deadline countdown</li>
+        <li><strong>Polish:</strong> insurance and clinic marquee, OG card, favicon set, accessibility pass</li>
+        <li><strong>Content engine:</strong> 6 articles on Astro content collections with Article JSON-LD</li>
+        <li><strong>Assets:</strong> hand-built on-brand SVG diagrams, AI-generated editorial heroes</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- System 2: Lead-ops dashboard -->
+  <div class="cs-section reveal">
+    <div class="lab-col"><span class="num">03 / 06</span><span>SYSTEM 2 · LEAD-OPS DASHBOARD</span></div>
+    <div class="body-col">
+      <h2>A monitoring portal over the funnel.</h2>
+      <p>A Next.js 16 and React 19 dashboard on Supabase. It reads the lead funnel as a <strong>7-stage state machine</strong>, with per-lead call history, recording and transcript links, reward-fulfillment tracking, and Facebook ad attribution. A full-width sortable and filterable table, CSV export, hourly auto-refresh, and a manual reload give the operator one place to watch every lead move.</p>
+      <p>Data access is service-role and server-side, behind a signed-cookie login. The operator (admin) sees everything. Each <strong>clinic gets its own login</strong> scoped to only its own leads. It sees the patient's name, phone, email, and state, and can move that state forward. Rewards, the SMS thread, and the event log stay admin-only. Server-side enforcement, not just hidden UI: a clinic can only set the states it owns, and the API rejects the rest. An admin-only lifecycle view diagrams how the voice and SMS channels run into the clinic and out to reward.</p>
+      <ul>
+        <li><strong>State machine:</strong> lead funnel rendered end-to-end with a pipeline diagram</li>
+        <li><strong>Role-based access:</strong> admin sees all; per-clinic logins see only their leads (name, phone, email, state), no rewards, no texting, no audit log</li>
+        <li><strong>Server-enforced scope:</strong> clinic edits are narrowed to clinic-owned states and validated in the API, not just the UI</li>
+        <li><strong>Per-lead detail:</strong> call history, recording and transcript links, two-way SMS thread</li>
+        <li><strong>Attribution:</strong> Facebook ad attribution and reward-fulfillment tracking</li>
+        <li><strong>Operator tooling:</strong> sortable, filterable, mobile-responsive table, CSV export, auto + manual refresh</li>
+        <li><strong>Security:</strong> service-role server-side, fail-closed HMAC-signed sessions, constant-time verification, RLS locked down</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- System 3: AI voice agent -->
+  <div class="cs-section reveal">
+    <div class="lab-col"><span class="num">04 / 06</span><span>SYSTEM 3 · AI VOICE AGENT</span></div>
+    <div class="body-col">
+      <h2>Anna: a dual-channel qualifier, owned in code.</h2>
+      <p>"Anna" qualifies leads on two channels at once. The <strong>voice agent</strong> is Vapi for the call layer, Claude Haiku for reasoning, Deepgram Nova-3 for transcription, ElevenLabs for the voice. The <strong>SMS qualifier</strong> mirrors the same script over text, driven by Gemini (<code>gemini-2.5-flash-lite</code>) with forced JSON output. Both read and write one shared lead record, so neither re-asks what the other already captured and the two channels never drift out of sync.</p>
+      <p>The orchestration is <strong>code-owned on Supabase Edge Functions</strong>: intake, a pg_cron dialer, a call-result webhook, an inbound-SMS handler, and a clinic-notify mailer. Clinic routing is a Postgres function keyed on FSA; state transitions are atomic RPCs over an append-only event log. A missed call falls into a retry drip (one hour, then the next business day, then two days) and opens the SMS path in parallel. After the last try the lead is marked <strong>exhausted</strong>, and a later text still hands it straight to the clinic.</p>
+      <p>On a qualified lead Anna <strong>warm-transfers the live call to the clinic</strong>. If the front desk does not pick up, the clinic gets an automatic email (Resend) with the patient's details and the lead gets a "they'll call you back" text. A completed visit auto-texts the patient a Google review request for both the clinic and Orbit. Twilio carries the SMS; Giftogram is wired for reward fulfillment. Guardrails keep Anna strictly on-script. CASL and CRTC compliance is wired in: consent capture, a Mon-Fri 12-4pm ET calling window, and STOP handling.</p>
+      <ul>
+        <li><strong>Dual channel:</strong> voice (Vapi + Claude Haiku + Deepgram + ElevenLabs) and a Gemini SMS qualifier over one shared lead record</li>
+        <li><strong>Orchestration:</strong> Edge Functions for intake, pg_cron dialer, result webhook, inbound SMS, clinic mailer</li>
+        <li><strong>Retry drip:</strong> a missed call retries +1hr, next business day, +2 days, then marks the lead exhausted, with SMS qualifying alongside</li>
+        <li><strong>Live transfer:</strong> warm hand-off to the clinic; on no-answer, an auto email (Resend) plus a lead callback SMS</li>
+        <li><strong>Review loop:</strong> a completed visit auto-texts a Google review request for the clinic and Orbit, sent once and only on a confirmed delivery</li>
+        <li><strong>Routing + state:</strong> FSA Postgres routing, atomic transition RPCs, append-only event log</li>
+        <li><strong>Compliance + guardrails:</strong> consent, Mon-Fri 12-4 ET window, STOP handling, strictly on-script</li>
+      </ul>
+      <p style="margin-top: 8px;">The flow, end to end: Facebook Lead Ad to instant SMS to AI call (with SMS qualifying in parallel) to live clinic hand-off to reward and reviews.</p>
+    </div>
+  </div>
+
+  <!-- Stack -->
+  <div class="cs-section reveal">
+    <div class="lab-col"><span class="num">05 / 06</span><span>THE STACK</span></div>
+    <div class="body-col">
+      <h2>Code-first across three surfaces.</h2>
+      <p>One opinion held across all three systems: own the orchestration in code so it stays debuggable, testable, and free of no-code lock-in. The static site, the dashboard, and the voice agent all deploy on Vercel and Supabase.</p>
+      <div class="stack-flat">
+        <span class="chip daily">Astro 6</span>
+        <span class="chip daily">Next.js 16</span>
+        <span class="chip daily">React 19</span>
+        <span class="chip daily">TypeScript</span>
+        <span class="chip">Supabase</span>
+        <span class="chip">Edge Functions</span>
+        <span class="chip">pg_cron</span>
+        <span class="chip">Vapi</span>
+        <span class="chip">Claude Haiku</span>
+        <span class="chip">Gemini</span>
+        <span class="chip">Deepgram</span>
+        <span class="chip">ElevenLabs</span>
+        <span class="chip">Twilio</span>
+        <span class="chip">Giftogram</span>
+        <span class="chip">Resend</span>
+        <span class="chip">Tailwind</span>
+        <span class="chip">Vercel</span>
+        <span class="chip">FB Lead Ads API</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outcome -->
+  <div class="cs-section reveal">
+    <div class="lab-col"><span class="num">06 / 06</span><span>THE OUTCOME</span></div>
+    <div class="body-col">
+      <h2>What shipped.</h2>
+      <p>Scope facts from the engagement. Technical surface only. Business KPIs are the client's to disclose. The site, dashboard, and voice agent are all live.</p>
+      <div class="impact-grid">
+        <div class="impact-card"><div class="k">SYSTEMS SHIPPED</div><div class="v">3</div><div class="desc">Marketing site, lead-ops dashboard, AI voice agent. One operator, end-to-end.</div></div>
+        <div class="impact-card"><div class="k">SEO ARTICLES</div><div class="v">6</div><div class="desc">SEO and GEO articles on Astro content collections, each with Article JSON-LD.</div></div>
+        <div class="impact-card"><div class="k">FUNNEL STAGES</div><div class="v">7</div><div class="desc">Lead state machine rendered end-to-end in the dashboard.</div></div>
+        <div class="impact-card"><div class="k">ZAPIER FOOTPRINT</div><div class="v">1 ZAP</div><div class="desc">Orchestration moved to Edge Functions. One trigger left, the rest is code.</div></div>
+        <div class="impact-card"><div class="k">VOICE STACK</div><div class="v">4</div><div class="desc">Vapi, Claude Haiku, Deepgram Nova-3, ElevenLabs. Outbound qualifying caller.</div></div>
+        <div class="impact-card"><div class="k">DEPLOY</div><div class="v">LIVE</div><div class="desc">Site, dashboard, and Anna all live. The dialer runs Mon–Fri 12–4pm ET.</div></div>
+      </div>
+      <p style="margin-top: 20px;">Beyond the numbers: every lead is observable from the ad click to the reward. Clinic routing is deterministic. The compliance window and STOP handling are enforced in code, not in a checklist.</p>
+
+      <div class="confidential">
+        <strong>Note:</strong> Conversion, lead-volume, and revenue numbers live with the client. Not disclosed here. Happy to discuss what's shareable on a call.
+      </div>
+
+      <p style="margin-top: 24px;"><a href="https://orbit-two-self.vercel.app" style="color: var(--green); border-bottom: 1px dashed var(--green);">View the live site →</a> <span style="color: var(--text-dim);">·</span> <a href="https://orbit-two-self.vercel.app/blog" style="color: var(--green); border-bottom: 1px dashed var(--green);">Read the blog →</a></p>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="final-cta reveal" style="text-align: center;">
+    <p style="margin: 0;">Similar surface area? A funnel to instrument, a voice agent to build, no-code sprawl to move into code. <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Discuss the project →</a></p>
+  </div>
+
+</section>
+
+
+
+
+</Base>
+<style is:global>
+.reveal { opacity: 0; transform: translateY(16px); transition: all 600ms cubic-bezier(0.2, 0, 0, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.cs-hero-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 32px; }
+.cs-hero-meta .cell { background: var(--bg-card); padding: 16px 20px; }
+.cs-hero-meta .cell .k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 5px; }
+.cs-hero-meta .cell .v { font-family: 'Space Grotesk', sans-serif; font-size: clamp(15px, 1.15vw, 19px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; }
+.cs-hero-meta .cell .v .bl { color: #447EF7; }
+.cs-hero-meta .cell .v .gr { color: var(--green); }
+@media (max-width: 720px) { .cs-hero-meta { grid-template-columns: repeat(2, 1fr); } }
+
+.cs-section { display: grid; grid-template-columns: 240px 1fr; gap: 48px; padding: 56px 0; border-bottom: 1px solid var(--border); }
+.cs-section:last-of-type { border-bottom: none; }
+.cs-section .lab-col { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #447EF7; text-transform: uppercase; display: flex; flex-direction: column; gap: 6px; }
+.cs-section .lab-col .num { color: var(--text-dim); font-size: 10px; }
+.cs-section .body-col { display: flex; flex-direction: column; gap: 16px; max-width: 70ch; }
+.cs-section .body-col h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 2.4vw, 36px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15; }
+.cs-section .body-col p { font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(15px, 1.1vw, 18px); color: var(--text-secondary); line-height: 1.7; }
+.cs-section .body-col p strong { color: var(--text-primary); }
+.cs-section .body-col p code { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; color: var(--green); background: var(--bg-tertiary); padding: 1px 6px; border: 1px solid var(--border); }
+.cs-section .body-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.cs-section .body-col ul li { padding-left: 20px; position: relative; font-family: 'IBM Plex Sans', sans-serif; font-size: clamp(14.5px, 1.05vw, 17px); color: var(--text-secondary); line-height: 1.6; }
+.cs-section .body-col ul li::before { content: '+'; position: absolute; left: 0; color: #447EF7; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.cs-section .body-col ul li strong { color: var(--text-primary); }
+@media (max-width: 900px) { .cs-section { grid-template-columns: 1fr; gap: 16px; padding: 40px 0; } .cs-section .lab-col { flex-direction: row; align-items: center; gap: 12px; } }
+
+.impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
+.impact-card { background: var(--bg-card); border: 1px solid var(--border); padding: 22px 24px; position: relative; }
+.impact-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #447EF7; opacity: 0.85; }
+.impact-card .k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #447EF7; text-transform: uppercase; margin-bottom: 10px; }
+.impact-card .v { font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 2.4vw, 38px); font-weight: 700; color: var(--text-primary); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 6px; }
+.impact-card .desc { font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: var(--text-secondary); line-height: 1.5; }
+@media (max-width: 900px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .impact-grid { grid-template-columns: 1fr; } }
+
+.stack-flat { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.stack-flat .chip { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; background: var(--bg-tertiary); border: 1px solid var(--border); color: var(--text-secondary); }
+.stack-flat .chip.daily { border-color: #447EF7; color: #447EF7; }
+
+.final-cta { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-tertiary) 100%); border: 1px solid #447EF7; padding: 48px 40px; margin-top: 48px; text-align: center; position: relative; overflow: hidden; }
+.final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(68, 126, 247, 0.08) 0%, transparent 60%); pointer-events: none; }
+.final-cta > * { position: relative; z-index: 1; }
+.final-cta h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 2.6vw, 36px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.15; }
+.final-cta h2 .acc { color: #447EF7; }
+.final-cta p { font-family: 'IBM Plex Sans', sans-serif; font-size: 17px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; max-width: 580px; margin-left: auto; margin-right: auto; }
+
+.confidential { padding: 16px 20px; background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid var(--text-dim); margin-top: 28px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: var(--text-dim); line-height: 1.55; }
+.confidential strong { color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; display: inline-block; margin-right: 6px; }
+</style>
