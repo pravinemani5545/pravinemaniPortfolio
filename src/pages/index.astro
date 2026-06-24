@@ -6,7 +6,7 @@ const jsonLd = {
   "name": "Pravine Mani",
   "url": "https://pravinemani.com/",
   "jobTitle": "AI, SEO & Marketing Automation Consultant",
-  "description": "Toronto consultancy across AI workflows, programmatic SEO + GEO, and marketing automation. Built like an operator. Sold by the project.",
+  "description": "Toronto engineer building AI marketing automation: lead-response systems, programmatic SEO + GEO, and AI workflows, owned in code.",
   "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressCountry": "Canada" },
   "sameAs": [
     "https://github.com/pravinemani5545",
@@ -126,12 +126,12 @@ try {
       <div class="prompt-line">
         <span class="gr">$</span>
         <span>whoami</span>
-        <span class="you">→ pravine · toronto · marketing automation · lead-response systems · ai · seo</span>
+        <span class="you">→ pravine · toronto · ai marketing automation · lead-response · seo + geo</span>
       </div>
 
-      <h1>I build lead-response systems in code.<br><span class="accent">So no inbound lead goes cold.</span></h1>
+      <h1>I build AI marketing automation.<br><span class="accent">So no inbound lead goes cold.</span></h1>
 
-      <p class="lead">I'm a Toronto engineer. I build marketing automation and lead-response systems for businesses that run on inbound: every lead answered in seconds, routed, and logged, owned outright on your stack. I also ship AI workflow and SEO builds, all in code on Vercel. <a href="/why-code-first/">Why code-first →</a></p>
+      <p class="lead">I'm a Toronto engineer. I build AI marketing automation: lead-response systems where every inbound lead is answered in seconds, qualified, routed, and logged, with the AI and the orchestration owned outright in code on your stack. SEO and GEO builds round it out. <a href="/why-code-first/">Why code-first →</a></p>
 
       <div class="cta-row">
         <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
@@ -221,7 +221,7 @@ try {
     <div class="title-block">
       <div class="label">what i do</div>
       <h2>How I work with clients.</h2>
-      <p>Every engagement is productized: fixed scope and a written quote before signing. Five shapes cover it, from the free Scoping Call to the Audit, the Sprint, the Custom build, and the Ops Retainer. <a href="/services/">Full breakdown →</a></p>
+      <p>Every engagement is fixed-scope with a written quote before signing. Five shapes cover it: the free Scoping Call, the Audit, the Sprint, the Custom build, and the Ops Retainer. <a href="/services/">Full breakdown →</a></p>
     </div>
   </div>
 
@@ -275,7 +275,7 @@ try {
       </div>
       <div class="body">
         <h3>Build sprint.</h3>
-        <p>A productized build engagement focused on a single workflow with a clearly defined input and output. The scope is locked at signing and the workflow is deployed and documented by the end of the sprint window. If the requirement cannot be stated in one sentence, a Custom build is the appropriate shape instead.</p>
+        <p>One workflow with a clearly defined input and output. Scope locks at signing. The workflow is deployed and documented by the end of the sprint window. If the requirement can't be stated in one sentence, a Custom build is the right shape instead.</p>
         <ul>
           <li>A single workflow with a defined input and output</li>
           <li>Deployment on the client's Vercel account (or mine, transferred at close)</li>
@@ -325,12 +325,18 @@ try {
     </div>
     <div class="quote-grid">
       <div class="quote-card reveal" data-delay="1">
-        <blockquote>The audit alone paid for itself in week two. We deferred two SaaS subscriptions because Pravine's report showed we'd been Zapier-stitching a problem that wanted 40 lines of code.</blockquote>
-        <div class="src"><div class="av">PA</div><span class="who">Pira A · PERFORMANCE MARKETING LEAD · ADBOOST</span></div>
+        <blockquote>Pravine replaced the Zapier chain we used to pull ad metrics into client reports with code we own. Two reporting tools cancelled, and the reports stopped breaking.</blockquote>
+        <div class="src">
+          <div class="av">PA</div>
+          <div class="meta"><span class="nm">Pira A</span><span class="role">Performance Marketing Lead · AdBoost</span></div>
+        </div>
       </div>
       <div class="quote-card reveal" data-delay="2">
-        <blockquote>Pravine turned our organic traffic around. We're ranking for searches that sent us nothing before, and he was genuinely easy to work with.</blockquote>
-        <div class="src"><div class="av">MP</div><span class="who">Mani P · OPS LEAD · CISNET</span></div>
+        <blockquote>Pravine built our whole patient-acquisition system: the site, the lead dashboard, and an AI agent that calls and qualifies every new lead. Leads get answered in seconds now.</blockquote>
+        <div class="src">
+          <div class="av">KB</div>
+          <div class="meta"><span class="nm">Kartik B</span><span class="role">Founder · Orbit</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -702,9 +708,11 @@ a { color: inherit; text-decoration: none; }
 .quote-card blockquote { font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; color: var(--text-primary); line-height: 1.55; margin-bottom: 12px; font-style: italic; }
 .quote-card blockquote::before { content: '"'; color: var(--green); font-size: 24px; margin-right: 2px; vertical-align: -4px; font-family: 'Space Grotesk', sans-serif; }
 .quote-card blockquote::after { content: '"'; color: var(--green); font-size: 24px; margin-left: 2px; vertical-align: -4px; font-family: 'Space Grotesk', sans-serif; }
-.quote-card .src { display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; padding-top: 10px; border-top: 1px solid var(--border); }
-.quote-card .src .av { width: 22px; height: 22px; background: var(--bg-tertiary); border: 1px solid var(--border-strong, #3a3a3a); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--green); font-weight: 600; }
-.quote-card .src .who { color: var(--text-secondary); }
+.quote-card .src { display: flex; align-items: center; gap: 11px; padding-top: 12px; border-top: 1px solid var(--border); }
+.quote-card .src .av { width: 30px; height: 30px; flex-shrink: 0; background: var(--bg-tertiary); border: 1px solid var(--border-strong, #3a3a3a); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--green); font-weight: 600; letter-spacing: 0.04em; }
+.quote-card .src .meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.quote-card .src .nm { font-family: 'Space Grotesk', sans-serif; font-size: 13.5px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.005em; }
+.quote-card .src .role { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; line-height: 1.45; }
 @media (max-width: 900px) { .quote-inner { grid-template-columns: 1fr; gap: 28px; } .quote-grid { grid-template-columns: 1fr; } }
 
 /* ===== PROCESS ===== */

@@ -16,7 +16,7 @@ const jsonLd = {
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/.ai-stack <span class="you">→ the operator ai stack</span></div>
   <h1>The AI stack.<br><span class="accent">Tools. Workflows. MCPs. Process.</span></h1>
-  <p class="lead">The tools, workflows, and patterns I bring to every client engagement: the daily toolset, the workflows running in production, the custom Claude Code skills I install across machines, the connectors wired into my editor, and the process I apply on every build. Borrow whatever's useful.</p>
+  <p class="lead">The tools, workflows, and patterns I bring to every client engagement: the daily toolset, the workflows running in production, the custom Claude Code skills I install across machines, the connectors wired into my editor, and the process behind every build. Borrow whatever's useful.</p>
 </section>
 
 <!-- ===== 1. THE KIT ===== -->
@@ -24,7 +24,7 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">01 · the kit</div>
     <h2>The daily-driver toolset.</h2>
-    <p>Tools I reach for on every engagement, each one proven across production deployments. The "not using" section below covers what gets left out and why.</p>
+    <p>Tools I reach for on every engagement, each one run across production deployments. The "not using" section below covers what gets left out and why.</p>
   </div>
 
   <div class="stack-cat">
@@ -107,16 +107,15 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">03 · claude code skills</div>
     <h2>Slash commands I install on every machine.</h2>
-    <p>Custom skills live at <code>~/.claude/skills/</code>. Each is a markdown spec plus optional helper scripts that Claude runs when I type <code>/&lt;name&gt;</code>. The first three are mine; the rest came from <a href="https://github.com/elia-alberti" target="_blank">EliaAlberti's stack</a>. Source: <a href="https://github.com/pravinemani5545/skills-and-mcp" target="_blank">github.com/pravinemani5545/skills-and-mcp</a>.</p>
+    <p>Custom skills live at <code>~/.claude/skills/</code>. Each is a markdown spec plus optional helper scripts that Claude runs when I type <code>/&lt;name&gt;</code>. These are mine, installable via curl. Source: <a href="https://github.com/pravinemani5545/skills-and-mcp" target="_blank">github.com/pravinemani5545/skills-and-mcp</a>.</p>
   </div>
 
   <div class="skill-list">
     <div class="skill-row reveal"><div class="cmd">/growth-sprint</div><div class="src">MINE</div><div class="desc"><strong>30-day outbound and content sprint planner.</strong> Takes a goal and drafts a per-week schedule: channel mix, message cadence, and content blocks, as calendar-ready markdown.</div></div>
     <div class="skill-row reveal"><div class="cmd">/design-system</div><div class="src">MINE</div><div class="desc"><strong>Applies the Terminal design system to any project.</strong> A guided interview (accent, vibe, theme, motion, exclusions), then writes the tokens and per-page styles. This site came out of it.</div></div>
     <div class="skill-row reveal"><div class="cmd">/artifact</div><div class="src">MINE</div><div class="desc"><strong>Turns a conversation into a saveable artifact.</strong> Strips the back-and-forth, structures the output, and asks where to save it. I use it for spec drafting and post-mortems.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/preserve</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Updates CLAUDE.md with what the session learned.</strong> Captures decisions, new file structure, and blockers, appends to the project's CLAUDE.md, and archives entries older than 7 days.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/compress</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Summarizes a long conversation into a resumable note.</strong> Output lands in <code>~/.claude/compress/</code> with a date stamp. Paired with <code>/resume</code> to pick a thread back up later.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/resume</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Loads a compressed conversation back into context.</strong> Reads the latest <code>/compress</code> output and hands Claude the summary plus the next step, with no re-explaining the background.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/youtube-study</div><div class="src">MINE</div><div class="desc"><strong>Turns any YouTube video into study notes.</strong> Pulls captions, metadata, and chapters, dedupes the transcript, and falls back to Whisper or Gemini when captions are missing.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/mimic-design</div><div class="src">MINE</div><div class="desc"><strong>Reverse-engineers a reference site's design.</strong> Works from screenshots and extracted CSS tokens, then offers a menu to steal, adapt, or skip each piece.</div></div>
   </div>
 </section>
 
@@ -125,21 +124,24 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">04 · mcp servers</div>
     <h2>What's plugged into Claude.</h2>
-    <p>MCP lets Claude talk directly to apps. Below is what runs in my Claude Code config. About half are official Anthropic servers; the rest are community or self-hosted. I patch the Obsidian one locally, since upstream is abandoned.</p>
+    <p>MCP lets Claude talk directly to apps. Below is what runs in my Claude Code config: official servers, community ones, and my own Gmail server. I patch the Obsidian one locally, since upstream is abandoned.</p>
   </div>
 
   <div class="mcp-grid">
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">context7</span><span class="badge">DOCS</span></div><p>Current library docs without web search. Most-used by far; every framework question goes through it first.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">github</span><span class="badge">CORE</span></div><p>Read repos, search code, list and comment on PRs, file issues. Covers most of what I used the <code>gh</code> CLI for.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">obsidian</span><span class="badge">SELF-HOST</span></div><p>Read and write notes in my vault. Patched locally (PR #44); upstream abandoned.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">gmail-organizer</span><span class="badge">MINE</span></div><p>My own server. Multi-account Gmail: account-aware search, labels, archive, and filters across inboxes.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">obsidian</span><span class="badge">SELF-HOST</span></div><p>Read and write notes in my vault. Patched locally (PR #44); upstream abandoned.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">supabase</span><span class="badge">DATA</span></div><p>Read and write to my Supabase projects without the dashboard round-trip.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">playwright</span><span class="badge">TESTING</span></div><p>Drive a browser from Claude: visual checks, scroll-state debugging, scraping a live page.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">vercel</span><span class="badge">DEPLOY</span></div><p>Inspect deployments, read build and runtime logs, check projects without leaving the editor.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">sentry</span><span class="badge">ERRORS</span></div><p>Pull issues and stack traces into context, triage runtime errors, and trace them to a fix.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">stripe</span><span class="badge">PAYMENTS</span></div><p>Query payments, customers, and subscriptions while wiring up checkout and billing.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">resend</span><span class="badge">EMAIL</span></div><p>Send and inspect transactional email, manage domains and templates from Claude.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">notion</span><span class="badge">DOCS</span></div><p>Create pages, search workspaces, comment on docs. Used heavily during client onboarding.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">gmail</span><span class="badge">COMMS</span></div><p>Search threads, draft replies, manage labels. Mostly for triaging during heads-down sessions.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google calendar</span><span class="badge">SCHED</span></div><p>List, create, and update events. Lets Claude propose meeting times around my availability.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google drive</span><span class="badge">STORE</span></div><p>Read Drive docs into context, create new docs, share. Less used than the others.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">figma</span><span class="badge">DESIGN</span></div><p>Read design files into Claude for layout reference when porting a Figma spec to code.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">canva</span><span class="badge">DESIGN</span></div><p>Asset drafts for newsletter headers and social posts. Rarely ships as-is, but a fast first draft.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">things</span><span class="badge">TASKS</span></div><p>Create and update tasks and projects in Things, so Claude can file follow-ups as I work.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google-ads</span><span class="badge">ADS</span></div><p>Query campaigns and performance data for client ad accounts without the Ads UI.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">shadcn</span><span class="badge">UI</span></div><p>Pull component source and registry items into a build when assembling a UI fast.</p></div>
   </div>
 </section>
 

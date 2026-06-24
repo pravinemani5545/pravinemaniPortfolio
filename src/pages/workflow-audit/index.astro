@@ -17,8 +17,8 @@ const jsonLd = {
 
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> ./audit --async --free --48h</div>
-  <h1>Send a workflow.<br><span class="accent">Get a written audit in 48 hours. Free.</span></h1>
-  <p class="lead">For founders, agency owners, and ops leads. Send a Loom or a short brief. Within 48 hours you get a one-page written response: the three highest-impact automations, where to start, what to skip, and rough cost and timeline. No sales call.</p>
+  <h1>Send a workflow.<br><span class="accent">Get a written audit in 48 hours.</span></h1>
+  <p class="lead">For founders, agency owners, and ops leads. Send a Loom or a short brief of one workflow. You get a one-page written response inside 48 hours: the three highest-impact automations ranked, where to start, what to skip, and rough cost and timeline. No charge, no sales call.</p>
 </section>
 
 <section class="section">
@@ -27,21 +27,21 @@ const jsonLd = {
     <div class="how-card">
       <div class="how-step">01.</div>
       <h3>Send the workflow</h3>
-      <p>A five-minute Loom walking through one workflow, or a short written brief. Include your current stack and the part that costs the most time.</p>
+      <p>A five-minute Loom walking through one workflow, or a short written brief. Include your current stack and the step that costs the most time.</p>
     </div>
     <div class="how-card">
       <div class="how-step">02.</div>
       <h3>I write the audit</h3>
-      <p>A one-page response inside 48 hours: the three highest-impact automations ranked, recommendations for your stack, what not to automate, and rough cost and ship-time.</p>
+      <p>I read every submission and write the response myself. One page: the three automations ranked, what to build first, what to leave alone, and the cost and ship-time for each.</p>
     </div>
     <div class="how-card">
       <div class="how-step">03.</div>
       <h3>You decide what's next</h3>
-      <p>If one of the three is worth shipping, the next step is the paid Audit or a Sprint. Or you take the written audit and build it yourself. Both are fine.</p>
+      <p>If one of the three is worth shipping, the next step is a paid Audit or a Sprint. Or you take the written audit and build it yourself. Both work.</p>
     </div>
   </div>
 
-  <p class="reveal" style="margin-top: 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim);">Prefer to start with numbers? <a href="/tools/speed-to-lead/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Try the free Speed-to-Lead calculator →</a></p>
+  <p class="reveal" style="margin-top: 28px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim);">To size the problem in numbers first, use the <a href="/tools/speed-to-lead/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Speed-to-Lead calculator →</a></p>
 
 </section>
 
@@ -50,7 +50,7 @@ const jsonLd = {
     <div class="intake-head">
       <div class="label">async audit · 5 fields · ~5 minutes to send</div>
       <h2>Send your workflow.</h2>
-      <p>This form goes straight to my inbox. I read every submission and reply within 48 hours on weekdays. No follow-up sequence, no mailing list, no automated sales outreach.</p>
+      <p>This form goes straight to my inbox. Your email is used for the audit reply and nothing else: no follow-up sequence, no mailing list, no sales outreach.</p>
     </div>
 
     <form class="intake-form" action="/api/contact/" method="POST">
@@ -128,7 +128,7 @@ const jsonLd = {
     <div class="fit-card bad">
       <div class="lab">NOT A FIT</div>
       <h4>Pre-revenue solo founder</h4>
-      <p>Pre-revenue, the audit almost always points back to shipping the product before automating operations. See /services/ for the timing.</p>
+      <p>Before revenue, the audit points back to shipping the product before automating operations. See /services/ for the timing.</p>
     </div>
     <div class="fit-card bad">
       <div class="lab">NOT A FIT</div>
@@ -151,8 +151,8 @@ const jsonLd = {
 <section class="section">
   <div class="vert-cta reveal" style="text-align: center;">
     <div class="lab" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--green); text-transform: uppercase; margin-bottom: 12px;">ALTERNATIVE</div>
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px;">Already know you want to scope a build?</h2>
-    <p style="margin-bottom: 18px;">If the engagement shape is clear, a <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">30-minute scoping call</a> is the faster path to a quote.</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px;">When the build is already clear</h2>
+    <p style="margin-bottom: 18px;">A <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">30-minute scoping call</a> is the faster path to a quote.</p>
   </div>
 </section>
 
@@ -223,7 +223,7 @@ const jsonLd = {
     if (wrap) {
       const banner = document.createElement('div');
       banner.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--green); border-left: 2px solid var(--green); padding: 14px 18px; margin-bottom: 18px; font-family: \'Inter\', sans-serif; font-size: 14px; color: var(--text-primary);';
-      banner.textContent = 'Workflow received. I read every one personally. Written audit reply within 48 hours on weekdays.';
+      banner.textContent = 'Workflow received. Your written audit lands within 48 hours on weekdays.';
       wrap.prepend(banner);
     }
   }
