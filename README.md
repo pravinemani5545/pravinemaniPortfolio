@@ -1,6 +1,6 @@
-# pravine.dev, portfolio
+# pravinemani.com
 
-Solo operator portfolio for Pravine Mani, services, work, AI workflows, writing, stack, contact.
+Portfolio and consultancy site for Pravine Mani: services, work, AI workflows, writing, stack, contact. Live at [pravinemani.com](https://pravinemani.com).
 
 Built with **Astro 6** + **Tailwind v4**. Static output. Auto-deployed to Vercel on push to `main`.
 
