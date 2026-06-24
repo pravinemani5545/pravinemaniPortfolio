@@ -3,8 +3,8 @@ import Base from '../../layouts/Base.astro';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Why code-first · the counter-argument to n8n, Make, and Zapier in 2026",
-  "description": "Why I refuse no-code automation rebuilds. What code-first gives you instead. $0/mo platform fees. Version control. Full observability. No vendor lock-in.",
+  "headline": "Why code-first · the case against n8n, Make, and Zapier in 2026",
+  "description": "Why I build automations as owned code instead of no-code rebuilds. What code-first gives you: $0/mo platform fees, version control, full observability, no vendor lock-in.",
   "datePublished": "2026-05-24",
   "dateModified": "2026-05-24",
   "image": "https://pravinemani.com/og-default.png",
@@ -14,12 +14,12 @@ const jsonLd = {
 };
 ---
 
-<Base title="Why Code-First · The Counter-Argument to n8n, Make & Zapier · Pravine Mani" description="Why I refuse no-code automation rebuilds. The math: $0/mo platform vs $300/mo glue. Plus version control. Observability. No vendor lock-in." jsonLd={jsonLd}>
+<Base title="Why Code-First · The Case Against n8n, Make & Zapier · Pravine Mani" description="Why I build automations as owned code, not no-code rebuilds. The math: $0/mo platform vs $300/mo glue, plus version control, observability, and no vendor lock-in." jsonLd={jsonLd}>
 
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/why-code-first.md <span class="you">→ the counter-argument</span></div>
-  <h1>Why code-first.<br><span class="accent">The argument against n8n, Make, and Zapier.</span></h1>
-  <p class="lead">Every scoping call eventually asks: "can we just build it in n8n?" For production work the answer is no. The reasoning below is the same reasoning I send the prospect: cost figures, architectural trade-offs, and the specific case where the no-code option is actually the right call.</p>
+  <h1>Why code-first.<br><span class="accent">The case against n8n, Make, and Zapier.</span></h1>
+  <p class="lead">Most scoping calls reach the same question: can we just build it in n8n? For production work, my answer is usually no, and the reasoning is worth laying out in full. What follows is the same argument I send a prospect: the cost figures, the architectural trade-offs, and the case where the no-code option is the right one.</p>
 </section>
 
 <section class="section manifesto">
@@ -27,7 +27,7 @@ const jsonLd = {
   <div class="manifesto-body">
 
     <h2>The problem.</h2>
-    <p>Pick any workflow that fires 100 times a day. A morning ops brief. A lead-routing pipeline. An AI-assisted inbox triage. The math below uses real figures from a recent client engagement.</p>
+    <p>Take a workflow that fires 100 times a day, like a morning ops brief, a lead-routing pipeline, or AI-assisted inbox triage. The figures below come from a recent client engagement, comparing the same workload on each approach.</p>
 
     <div class="compare">
       <div class="compare-col">
@@ -54,45 +54,45 @@ const jsonLd = {
       </div>
     </div>
 
-    <p>The 10× cost gap is the loud signal. The architectural lock-in under it is what compounds.</p>
+    <p>The 10x cost gap is the obvious signal. The architectural lock-in underneath it is what compounds over time, and that's the part worth examining.</p>
 
-    <p><em>The insight is that workflow logic should live in your repo, not in someone else's UI.</em></p>
+    <p><em>Workflow logic should live in your repo, not in someone else's UI.</em></p>
 
     <h2>Why this matters.</h2>
 
     <h3>01 · Code is owned. Subscriptions are rented.</h3>
-    <p>Stop paying n8n and the workflow stops. The logic doesn't exist outside their UI. The credentials live in their vault. The pricing terms change without notice.</p>
-    <p>Stop paying me and the workflow keeps running. It's in the client's repo, on the client's Vercel account, hitting the client's APIs. The dependency is on services the client already pays for.</p>
+    <p>When you stop paying n8n, the workflow stops with it. The logic never existed outside their UI, the credentials live in their vault, and the pricing terms can change without notice.</p>
+    <p>When you stop paying me, the workflow keeps running. It sits in the client's repo, on the client's Vercel account, hitting the client's APIs. The only dependency is on services the client already pays for.</p>
 
     <h3>02 · Versioned in git. Reviewable. Revertible.</h3>
-    <p>Every code-first change is a commit. Diff, author, timestamp, CI run, deploy preview. Reverting a bad change is one command.</p>
-    <p>Equivalent changes in n8n happen inside a UI on the vendor's server. No diff. No review. No rollback unless someone exported the JSON before clicking save.</p>
+    <p>Every code-first change is a commit, with a diff, an author, a timestamp, a CI run, and a deploy preview. Reverting a bad change is a single command.</p>
+    <p>The equivalent change in n8n happens inside a UI on the vendor's server. There's no diff, no review, and no rollback unless someone exported the JSON before clicking save.</p>
 
     <h3>03 · Observable. Debuggable in production.</h3>
-    <p>When a code-first workflow fails, the operator has structured Vercel logs, Sentry traces, and a request body to replay. Standard engineering observability.</p>
-    <p>When an n8n workflow fails, the UI shows "node failed." No stack trace. No response body. No local repro. Debugging time on the same class of error is materially different across the two approaches.</p>
+    <p>When a code-first workflow fails, you have structured Vercel logs, Sentry traces, and a request body you can replay. That's standard engineering observability.</p>
+    <p>When an n8n workflow fails, the UI reports "node failed." There's no stack trace, no response body, and no local reproduction. On the same class of error, the debugging time between the two approaches is not close.</p>
 
     <h3>04 · The integration library is a feature, not a moat.</h3>
-    <p>n8n's pitch is the 500+ integrations. In practice, most client engagements use 3 to 5 of them. The other 495+ are dead weight in the pricing model.</p>
-    <p>For the integrations that actually matter, the equivalent code is short:</p>
+    <p>n8n leads with its 500+ integrations. In practice, a given engagement uses 3 to 5 of them. The other 495 are weight you carry in the pricing model and never use.</p>
+    <p>For the integrations that do matter, the equivalent code is short:</p>
     <ul class="stack-list">
       <li>An Anthropic SDK call: <strong>~12 lines of TypeScript.</strong></li>
       <li>A Stripe webhook handler with idempotency: <strong>~60 lines.</strong></li>
       <li>A Supabase query: <strong>one line.</strong></li>
     </ul>
-    <p>Paying $20/mo for a visual editor that wraps code that fits in a single file is the part that doesn't compound.</p>
+    <p>Paying $20/mo for a visual editor wrapped around code that fits in a single file is the cost that never pays itself back.</p>
 
     <h2>What this doesn't solve.</h2>
-    <p>Code-first isn't free. A few honest trade-offs:</p>
+    <p>Code-first carries real trade-offs, and it's worth being clear about them.</p>
     <ul class="stack-list">
-      <li><strong>Initial build time.</strong> A 4-step Zapier zap takes 20 minutes to wire. The code version takes 1-3 hours. Past the first workflow this inverts. The first one is slower.</li>
-      <li><strong>Non-technical team edits.</strong> If a non-engineer needs to modify the workflow every week, n8n's visual editor is a real advantage. Code-first means engineering touches every change.</li>
-      <li><strong>Operating something you don't understand.</strong> If the client can't read the code at all, the lock-in argument flips: they're now dependent on a developer instead of a platform. Code-first only wins if at least one person on the team can read what's in the repo.</li>
+      <li><strong>Initial build time.</strong> A 4-step Zapier zap takes 20 minutes to wire. The code version takes 1 to 3 hours. That gap inverts after the first workflow, but the first one is slower.</li>
+      <li><strong>Non-technical team edits.</strong> When a non-engineer needs to change the workflow every week, n8n's visual editor is a genuine advantage. Code-first means an engineer touches every change.</li>
+      <li><strong>Operating something you can't read.</strong> If no one on the client's side can read the code, the lock-in argument inverts: they now depend on a developer instead of a platform. Code-first only wins when at least one person on the team can read what's in the repo.</li>
     </ul>
 
     <h2>When no-code is the right call.</h2>
-    <p>One workflow, non-technical team, no plan for a second one: <strong>use Zapier or n8n.</strong> The cost and lock-in concerns above don't apply meaningfully at that scale, and the platform's strength is making one-off automations possible without an engineer.</p>
-    <p>Three or more workflows, shipping new automations on a cadence, or operating cost matters: <strong>hire someone to build the code-first version.</strong> Could be me. Could be a freelance dev with the same opinions. Each new workflow after the first costs roughly nothing in marginal infrastructure.</p>
+    <p>For one workflow, a non-technical team, and no plan for a second, <strong>use Zapier or n8n.</strong> The cost and lock-in concerns above don't carry much weight at that scale, and the platform's strength is making a one-off automation possible without an engineer.</p>
+    <p>For three or more workflows, a steady cadence of new automations, or any case where operating cost matters, <strong>have someone build the code-first version.</strong> That could be me, or a freelance developer who holds the same view. Each workflow after the first adds close to nothing in marginal infrastructure.</p>
 
     <h2>The stack I default to.</h2>
     <ul class="stack-list">
@@ -105,14 +105,14 @@ const jsonLd = {
       <li><strong>Auth:</strong> Supabase Auth (or Clerk if you want a managed surface)</li>
       <li><strong>Version control:</strong> GitHub + Vercel preview deploys</li>
     </ul>
-    <p>Total platform cost for a 3-workflow business: <strong>$73 / year + API tokens.</strong> Compare against your current SaaS bill.</p>
+    <p>Total platform cost for a 3-workflow business runs <strong>$73 / year plus API tokens.</strong> Set that against your current SaaS bill.</p>
 
-    <p><em>The platform that runs your business should be the one you already own.</em></p>
+    <p><em>The platform that runs your business should be one you already own.</em></p>
 
   </div>
 
   <div class="manifesto-cta reveal" style="text-align: center;">
-    <p style="margin: 0;">If you're currently running automations through a no-code platform and considering a migration to owned code, the free async audit at <a href="/workflow-audit/" style="color: var(--green); border-bottom: 1px dashed var(--green);">/workflow-audit/</a> returns a written assessment within 48 hours.</p>
+    <p style="margin: 0;">If you're running automations on a no-code platform and weighing a move to owned code, the free async audit at <a href="/workflow-audit/" style="color: var(--green); border-bottom: 1px dashed var(--green);">/workflow-audit/</a> returns a written assessment within 48 hours.</p>
   </div>
 
 </section>

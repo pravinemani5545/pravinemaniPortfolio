@@ -16,7 +16,7 @@ const jsonLd = {
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cat ~/.ai-stack <span class="you">→ the operator ai stack</span></div>
   <h1>The AI stack.<br><span class="accent">Tools. Workflows. MCPs. Process.</span></h1>
-  <p class="lead">The tools, workflows, and patterns used on every client engagement. Daily-driver toolset. Scheduled workflows in production. Custom Claude Code skills installed across machines. MCP servers wired into my editor. Dev process applied on every build. Borrow freely.</p>
+  <p class="lead">The tools, workflows, and patterns I bring to every client engagement: the daily-driver toolset, the workflows running in production, the custom Claude Code skills I install across machines, the MCP servers wired into my editor, and the dev process I apply on every build. Borrow whatever's useful.</p>
 </section>
 
 <!-- ===== 1. THE KIT ===== -->
@@ -24,7 +24,7 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">01 · the kit</div>
     <h2>The daily-driver toolset.</h2>
-    <p>Tools used on every client engagement. Each one has earned its place across multiple production deployments. The "not using" section at the bottom is the architectural argument for what gets left out.</p>
+    <p>Tools I reach for on every client engagement. Each one has earned its place across multiple production deployments. The "not using" section at the bottom carries the architectural argument for what gets left out.</p>
   </div>
 
   <div class="stack-cat">
@@ -44,7 +44,7 @@ const jsonLd = {
   <div class="stack-cat avoid">
     <div class="sc-head"><div class="name"><span class="n">02 ·</span> DELIBERATELY NOT USING</div></div>
     <div class="tool-rows">
-      <div class="tool"><div class="nm">n8n / Make / Zapier</div><div class="why">Visual workflow platforms. Not used as the primary execution layer on production builds. The equivalent workflows ship as Vercel cron jobs and serverless functions on the client's own infrastructure. Versioned in git. Reviewable in pull requests. Debuggable in production logs. Workflow logic on a third-party visual platform is a dependency the client cannot fully own. Every workflow previously migrated from these tools has fit inside 40 to 60 lines of TypeScript.</div><div class="tag">AVOIDED</div></div>
+      <div class="tool"><div class="nm">n8n / Make / Zapier</div><div class="why">Visual workflow platforms, not used as the primary execution layer on production builds. The equivalent workflows ship as Vercel cron jobs and serverless functions on the client's own infrastructure: versioned in git, reviewable in pull requests, debuggable in production logs. Workflow logic on a third-party visual platform is a dependency the client can never fully own. Every workflow I've migrated off these tools has fit inside 40 to 60 lines of TypeScript.</div><div class="tag">AVOIDED</div></div>
     </div>
   </div>
 </section>
@@ -54,49 +54,49 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">02 · workflows</div>
     <h2>What I run on a schedule.</h2>
-    <p>Code-first automation. Every workflow below lives in a git repo and runs on <strong style="color: var(--text-primary);">Vercel cron plus serverless functions</strong>. Versioned. Debuggable in production logs. Owned by whoever's repo it lives in.</p>
+    <p>Every workflow below lives in a git repo and runs on <strong style="color: var(--text-primary);">Vercel cron plus serverless functions</strong>: versioned, debuggable in production logs, and owned by whoever holds the repo.</p>
   </div>
 
   <div class="ai-grid">
     <div class="ai-card reveal" data-acc="green">
       <div class="ai-card-head"><span class="num">01</span><span class="freq">DAILY · 06:00 ET</span></div>
       <h3>Morning operations brief</h3>
-      <p>Claude reads my Plausible analytics, GitHub commits, Whop new-member events, and Beehiiv subscriber delta from the past 24 hours. Outputs a 5-line summary into a Slack DM. Cron + Anthropic API + Resend.</p>
+      <p>Claude reads my Plausible analytics, GitHub commits, Whop new-member events, and Beehiiv subscriber delta from the past 24 hours, then writes a 5-line summary to a Slack DM. Cron, Anthropic API, and Resend.</p>
       <div class="ai-card-stack"><span class="chip">Vercel Cron</span><span class="chip">Anthropic API</span><span class="chip">Plausible API</span><span class="chip">Slack Webhook</span></div>
     </div>
 
     <div class="ai-card reveal" data-acc="red">
       <div class="ai-card-head"><span class="num">02</span><span class="freq">DAILY · 09:00 ET</span></div>
       <h3>Competitor watch</h3>
-      <p>Scrapes competitor sites for new content via Firecrawl. Summarizes diffs vs yesterday. Surfaces anything that crosses a relevance threshold. Stored in Vercel KV so I can read back across days.</p>
+      <p>Scrapes competitor sites for new content via Firecrawl, summarizes the diff against yesterday, and surfaces anything that crosses a relevance threshold. Results land in Vercel KV so I can read back across days.</p>
       <div class="ai-card-stack"><span class="chip">Vercel Cron</span><span class="chip">Firecrawl</span><span class="chip">Claude 4.7</span><span class="chip">Vercel KV</span></div>
     </div>
 
     <div class="ai-card reveal" data-acc="purple">
       <div class="ai-card-head"><span class="num">03</span><span class="freq">WEEKLY · MON 08:00</span></div>
       <h3>Newsletter draft generator</h3>
-      <p>Pulls the week's shipped commits across my repos. My notable Obsidian notes (tagged <code>#newsletter</code>). Saved highlights. Drafts the Beehiiv issue in Markdown. I edit, then publish. Claude doesn't ship copy on its own.</p>
+      <p>Pulls the week's shipped commits across my repos, the Obsidian notes I've tagged <code>#newsletter</code>, and any saved highlights, then drafts the Beehiiv issue in Markdown. I edit and publish. Claude never ships copy on its own.</p>
       <div class="ai-card-stack"><span class="chip">Vercel Cron</span><span class="chip">GitHub API</span><span class="chip">Obsidian MCP</span><span class="chip">Beehiiv API</span></div>
     </div>
 
     <div class="ai-card reveal" data-acc="blue">
       <div class="ai-card-head"><span class="num">04</span><span class="freq">EVENT · LEAD CAPTURE</span></div>
       <h3>Lead enrichment + routing</h3>
-      <p>Webhook fires when a contact form submits. Claude enriches name + company via web search. Classifies fit against my ICP. Scores urgency from the message text. Drops the row into Supabase and pings Slack with a recommended action.</p>
+      <p>A webhook fires when a contact form submits. Claude enriches the name and company via web search, classifies fit against my ICP, and scores urgency from the message text. It writes the row to Supabase and pings Slack with a recommended action.</p>
       <div class="ai-card-stack"><span class="chip">Vercel Function</span><span class="chip">Claude 4.7</span><span class="chip">Supabase</span><span class="chip">Slack</span></div>
     </div>
 
     <div class="ai-card reveal" data-acc="green">
       <div class="ai-card-head"><span class="num">05</span><span class="freq">EVENT · CLIENT ENGAGEMENT</span></div>
       <h3>Client onboarding sequence</h3>
-      <p>Stripe payment triggers a sequence. Signed-contract PDF generation. Notion workspace clone with kickoff template. Scheduling-link email. Day-1 onboarding Loom delivery. One state machine in Vercel.</p>
+      <p>A Stripe payment triggers the sequence: signed-contract PDF generation, a Notion workspace cloned from the kickoff template, a scheduling-link email, and a day-1 onboarding Loom. One state machine in Vercel.</p>
       <div class="ai-card-stack"><span class="chip">Vercel Function</span><span class="chip">Stripe Webhook</span><span class="chip">Notion API</span><span class="chip">Resend</span></div>
     </div>
 
     <div class="ai-card reveal" data-acc="red">
       <div class="ai-card-head"><span class="num">06</span><span class="freq">CONTINUOUS · HEADLESS</span></div>
       <h3>Claude Code headless agent</h3>
-      <p>Long-running Claude Code session. Watches a queue of issues in a private repo. Picks one off at a time. Drafts a PR. Runs tests. Asks for review only when blocked. Pattern: <code>claude code --headless</code> wrapped in a process supervisor.</p>
+      <p>A long-running Claude Code session watches a queue of issues in a private repo, picks one off at a time, drafts a PR, runs the tests, and asks for review only when it's blocked. The pattern is <code>claude code --headless</code> wrapped in a process supervisor.</p>
       <div class="ai-card-stack"><span class="chip">Claude Code Headless</span><span class="chip">GitHub API</span><span class="chip">Sub-agents</span></div>
     </div>
   </div>
@@ -107,16 +107,16 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">03 · claude code skills</div>
     <h2>Slash commands I install on every machine.</h2>
-    <p>Custom skills live at <code>~/.claude/skills/</code>. Each one is a markdown spec + optional helper scripts that Claude invokes when I type <code>/&lt;name&gt;</code>. The first three are mine. The rest came from <a href="https://github.com/elia-alberti" target="_blank">EliaAlberti's stack</a>. Source: <a href="https://github.com/pravinemani5545/skills-and-mcp" target="_blank">github.com/pravinemani5545/skills-and-mcp</a>.</p>
+    <p>Custom skills live at <code>~/.claude/skills/</code>. Each one is a markdown spec plus optional helper scripts that Claude invokes when I type <code>/&lt;name&gt;</code>. The first three are mine; the rest came from <a href="https://github.com/elia-alberti" target="_blank">EliaAlberti's stack</a>. Source: <a href="https://github.com/pravinemani5545/skills-and-mcp" target="_blank">github.com/pravinemani5545/skills-and-mcp</a>.</p>
   </div>
 
   <div class="skill-list">
-    <div class="skill-row reveal"><div class="cmd">/growth-sprint</div><div class="src">MINE</div><div class="desc"><strong>30-day outbound + content sprint planner.</strong> Takes your goal (MRR, leads, list growth). Drafts a per-week schedule. Specific channel mix. Message cadence. Content blocks. Outputs calendar-ready markdown.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/design-system</div><div class="src">MINE</div><div class="desc"><strong>Apply Terminal DS to any project.</strong> Guided interview (accent, vibe, theme, motion, exclusions). Then writes the tokens and per-page style integrations. The same skill produced this site.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/artifact</div><div class="src">MINE</div><div class="desc"><strong>Convert any conversation into a saveable artifact.</strong> Strips back-and-forth. Structures the output. Asks where to save (Obsidian vault, GitHub gist, file in repo). Used for spec drafting and post-mortems.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/preserve</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Update CLAUDE.md with current-session learnings.</strong> Catches phase changes. Decisions. New file structure. Blockers. Appends to the project's CLAUDE.md with size-policed sections. Auto-archives entries older than 7 days.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/compress</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Summarize a long conversation into a resumable note.</strong> Output lands in <code>~/.claude/compress/</code> with a date stamp. Paired with <code>/resume</code> to pick up later without spinning up full context.</div></div>
-    <div class="skill-row reveal"><div class="cmd">/resume</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Load a compressed conversation back into context.</strong> Reads the latest <code>/compress</code> output. Hands Claude the resume + the user's stated next step. No re-explaining 30 messages of background.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/growth-sprint</div><div class="src">MINE</div><div class="desc"><strong>30-day outbound and content sprint planner.</strong> Takes a goal (MRR, leads, list growth) and drafts a per-week schedule: channel mix, message cadence, and content blocks, output as calendar-ready markdown.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/design-system</div><div class="src">MINE</div><div class="desc"><strong>Applies Terminal DS to any project.</strong> A guided interview (accent, vibe, theme, motion, exclusions), then writes the tokens and per-page style integrations. This site came out of the same skill.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/artifact</div><div class="src">MINE</div><div class="desc"><strong>Turns a conversation into a saveable artifact.</strong> Strips the back-and-forth, structures the output, and asks where to save it (Obsidian vault, GitHub gist, file in repo). I use it for spec drafting and post-mortems.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/preserve</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Updates CLAUDE.md with current-session learnings.</strong> Captures phase changes, decisions, new file structure, and blockers, then appends to the project's CLAUDE.md in size-policed sections and auto-archives entries older than 7 days.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/compress</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Summarizes a long conversation into a resumable note.</strong> Output lands in <code>~/.claude/compress/</code> with a date stamp. Paired with <code>/resume</code> to pick a thread back up later without rebuilding full context.</div></div>
+    <div class="skill-row reveal"><div class="cmd">/resume</div><div class="src">ELIAALBERTI</div><div class="desc"><strong>Loads a compressed conversation back into context.</strong> Reads the latest <code>/compress</code> output and hands Claude the summary plus the stated next step, with no re-explaining 30 messages of background.</div></div>
   </div>
 </section>
 
@@ -125,12 +125,12 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">04 · mcp servers</div>
     <h2>What's plugged into Claude.</h2>
-    <p>MCP (Model Context Protocol) lets Claude talk directly to apps. Below is what runs in my Claude Code config. Half are official Anthropic servers. The rest are community or self-hosted. The Obsidian one is patched locally, upstream's been abandoned.</p>
+    <p>MCP (Model Context Protocol) lets Claude talk directly to apps. Below is what runs in my Claude Code config. About half are official Anthropic servers; the rest are community or self-hosted. The Obsidian one I patch locally, since upstream has been abandoned.</p>
   </div>
 
   <div class="mcp-grid">
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">context7</span><span class="badge">DOCS</span></div><p>Up-to-date library docs without web search. Most-used by far; every framework question goes through it first.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">github</span><span class="badge">CORE</span></div><p>Read repos, search code, list/comment PRs, file issues. Replaces 80% of the <code>gh</code> CLI for me.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">github</span><span class="badge">CORE</span></div><p>Read repos, search code, list and comment on PRs, file issues. It covers most of what I used the <code>gh</code> CLI for.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">obsidian</span><span class="badge">SELF-HOST</span></div><p>Read/write notes in my vault. Patched locally (PR #44 applied); upstream abandoned.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--green);"></span><span class="name">supabase</span><span class="badge">DATA</span></div><p>Query + write to my Supabase projects. Saves the round-trip through their dashboard for ad-hoc tasks.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">playwright</span><span class="badge">TESTING</span></div><p>Drive a browser from Claude. Visual diff checks, scroll-state debugging, scraping with real DOM.</p></div>
@@ -139,7 +139,7 @@ const jsonLd = {
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google calendar</span><span class="badge">SCHED</span></div><p>List/create/update events. Lets Claude propose meeting times around my actual availability.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: var(--blue);"></span><span class="name">google drive</span><span class="badge">STORE</span></div><p>Read docs from Drive into context, create new docs, share. Less use than the others but indispensable when needed.</p></div>
     <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">figma</span><span class="badge">DESIGN</span></div><p>Read design files into Claude for layout reference. Useful when porting a Figma spec to code.</p></div>
-    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">canva</span><span class="badge">DESIGN</span></div><p>Asset generation for newsletter headers + social posts. The result is rarely shipped as-is, but it's a fast first draft.</p></div>
+    <div class="mcp-card reveal"><div class="mcp-head"><span class="dot" style="background: #a855f7;"></span><span class="name">canva</span><span class="badge">DESIGN</span></div><p>Asset generation for newsletter headers and social posts. The result rarely ships as-is, but it's a fast first draft.</p></div>
   </div>
 </section>
 
@@ -148,23 +148,23 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="label">05 · dev process</div>
     <h2>How AI fits into the actual work.</h2>
-    <p>Less about prompts. More about workflow. The patterns below are the actual moves I make day-to-day. None of them require buying anything.</p>
+    <p>Less about prompts than about workflow. The patterns below are the moves I make day to day, and none of them require buying anything.</p>
   </div>
 
   <div class="process-grid-ai">
-    <div class="proc-card reveal"><div class="proc-num">01</div><h3>Plan Mode first, code after.</h3><p>For anything touching 3+ files or with unclear scope, I open Plan Mode before touching code. Claude proposes the approach. I push back. We converge. Exit plan mode and ship. Cuts ~70% of "build the wrong thing" rework.</p><div class="proc-tag">PLAN MODE</div></div>
-    <div class="proc-card reveal"><div class="proc-num">02</div><h3>Sub-agents for parallel research.</h3><p>When I need to explore 5+ files or check 3+ different code paths, I spawn Explore sub-agents in parallel. Main context stays clean. Sub-agents return distilled findings. Faster. Cheaper.</p><div class="proc-tag">SUB-AGENTS</div></div>
-    <div class="proc-card reveal"><div class="proc-num">03</div><h3>Multi-window orchestration.</h3><p>Tabbed Claude Code sessions, one per project. Switch context without losing thread. Combined with <code>/compress</code> + <code>/resume</code>, I pick up a week-old task in 60 seconds.</p><div class="proc-tag">MULTI-WINDOW</div></div>
-    <div class="proc-card reveal"><div class="proc-num">04</div><h3>Headless mode for autonomous tasks.</h3><p>Claude Code <code>--headless</code> runs in CI or on a server. No terminal needed. I use it for nightly repo grooming (dependency PRs, lint fixes, doc updates). Data pipeline rebuilds. The long-running issue-triage agent above.</p><div class="proc-tag">HEADLESS</div></div>
-    <div class="proc-card reveal"><div class="proc-num">05</div><h3>Hooks for guardrails.</h3><p>Pre-commit hooks call Claude to review the diff before commit. Pre-push hooks gate against direct pushes to <code>main</code>. Stop-hook on long-running sessions to summarize state. All in <code>~/.claude/settings.json</code>.</p><div class="proc-tag">HOOKS</div></div>
-    <div class="proc-card reveal"><div class="proc-num">06</div><h3>Memory + CLAUDE.md per project.</h3><p>Every project has a CLAUDE.md. Conventions. Known bugs. Gotchas. Claude reads it on session start. <code>/preserve</code> keeps it fresh. Cuts context-rebuild time to near-zero across sessions.</p><div class="proc-tag">MEMORY</div></div>
+    <div class="proc-card reveal"><div class="proc-num">01</div><h3>Plan Mode first, code after.</h3><p>For anything touching 3+ files or with unclear scope, I open Plan Mode before writing code. Claude proposes the approach, I push back, and we converge before exiting plan mode to ship. It cuts roughly 70% of the "built the wrong thing" rework.</p><div class="proc-tag">PLAN MODE</div></div>
+    <div class="proc-card reveal"><div class="proc-num">02</div><h3>Sub-agents for parallel research.</h3><p>When a task means exploring 5+ files or checking 3+ code paths, I spawn Explore sub-agents in parallel. The main context stays clean, and each sub-agent returns distilled findings. It's faster and cheaper than doing it inline.</p><div class="proc-tag">SUB-AGENTS</div></div>
+    <div class="proc-card reveal"><div class="proc-num">03</div><h3>Multi-window orchestration.</h3><p>Tabbed Claude Code sessions, one per project, so I can switch context without losing the thread. Combined with <code>/compress</code> and <code>/resume</code>, I pick a week-old task back up in about 60 seconds.</p><div class="proc-tag">MULTI-WINDOW</div></div>
+    <div class="proc-card reveal"><div class="proc-num">04</div><h3>Headless mode for autonomous tasks.</h3><p>Claude Code <code>--headless</code> runs in CI or on a server, with no terminal attached. I use it for nightly repo grooming (dependency PRs, lint fixes, doc updates), data pipeline rebuilds, and the long-running issue-triage agent above.</p><div class="proc-tag">HEADLESS</div></div>
+    <div class="proc-card reveal"><div class="proc-num">05</div><h3>Hooks for guardrails.</h3><p>Pre-commit hooks call Claude to review the diff before a commit lands. Pre-push hooks gate against direct pushes to <code>main</code>. A stop-hook summarizes state at the end of a long session. All of it lives in <code>~/.claude/settings.json</code>.</p><div class="proc-tag">HOOKS</div></div>
+    <div class="proc-card reveal"><div class="proc-num">06</div><h3>Memory + CLAUDE.md per project.</h3><p>Every project has a CLAUDE.md covering conventions, known bugs, and gotchas. Claude reads it on session start, and <code>/preserve</code> keeps it current. Context-rebuild time across sessions drops to near zero.</p><div class="proc-tag">MEMORY</div></div>
   </div>
 </section>
 
 <!-- ===== PRINCIPLE FOOTER ===== -->
 <section class="section">
   <div class="stack-footer">
-    <p>This stack shifts when something better lands. The principle doesn't: tools that ship as code in the client's repo on infrastructure the client already owns, not subscriptions that live outside the system. <a href="/why-code-first/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Why code-first →</a></p>
+    <p>This stack shifts when something better lands; the principle behind it doesn't. The work ships as code in the client's repo, on infrastructure the client already owns, rather than as subscriptions living outside the system. <a href="/why-code-first/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Why code-first →</a></p>
   </div>
 </section>
 

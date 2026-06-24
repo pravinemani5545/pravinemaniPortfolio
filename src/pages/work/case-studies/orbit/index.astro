@@ -55,7 +55,7 @@ const jsonLd = {
     <span class="you">orbit</span>
   </div>
   <h1>Orbit Dental AI: patient acquisition.<br><span class="accent" style="color: #447EF7; -webkit-text-fill-color: #447EF7;">Site, dashboard, AI voice agent.</span></h1>
-  <p class="lead">End-to-end patient-acquisition system for a Toronto dental lead-generation and rewards operation. Three systems shipped: a marketing site with a 6-article content engine, a lead-ops dashboard over a 6-stage funnel, and an outbound AI voice agent. The automation lives in code, not a no-code wrapper.</p>
+  <p class="lead">A complete patient-acquisition system for a Toronto dental lead-generation and rewards operation. Three systems shipped: a marketing site with a 6-article content engine, a lead-ops dashboard over a 6-stage funnel, and an outbound AI voice agent. The automation lives in code, not a no-code wrapper.</p>
 
   <div class="cs-hero-meta">
     <div class="cell"><div class="k">CLIENT</div><div class="v">Dental Lead-Gen · Toronto</div></div>
@@ -72,8 +72,8 @@ const jsonLd = {
     <div class="lab-col"><span class="num">01 / 06</span><span>THE PROBLEM</span></div>
     <div class="body-col">
       <h2>Leads arrive fast. Follow-up was manual.</h2>
-      <p>Facebook Lead Ads bring patients in at volume. The gap was everything after the form submit. <strong>Speed-to-lead decided the whole funnel.</strong> A lead that sits for an hour is cold. Routing the right lead to the right clinic by location, qualifying intent, booking, then fulfilling a reward: all of it ran on human hands and a tangle of no-code triggers.</p>
-      <p>The brief was to own the whole path in code. From the ad to the SMS to the AI call to the clinic hand-off to the reward. Three surfaces had to ship: the marketing site that converts the click, the dashboard the operator watches, and the voice agent that does the qualifying call.</p>
+      <p>Facebook Lead Ads bring patients in at volume. The gap was everything after the form submit, and <strong>speed-to-lead decided the whole funnel.</strong> A lead that sits for an hour is cold. Routing the right lead to the right clinic by location, qualifying intent, booking, then fulfilling a reward all ran on human hands and a tangle of no-code triggers.</p>
+      <p>The brief was to own the whole path in code, from the ad to the SMS to the AI call to the clinic hand-off to the reward. Three surfaces had to ship: the marketing site that converts the click, the dashboard the operator watches, and the voice agent that runs the qualifying call.</p>
       <ul>
         <li><strong>Speed-to-lead:</strong> manual follow-up let warm leads go cold</li>
         <li><strong>No single funnel view:</strong> lead state scattered across tools</li>
@@ -89,8 +89,8 @@ const jsonLd = {
     <div class="lab-col"><span class="num">02 / 06</span><span>SYSTEM 1 · MARKETING SITE</span></div>
     <div class="body-col">
       <h2>Astro 6 site plus a content engine.</h2>
-      <p>Rebuilt the brand on a blue <code>#447EF7</code> scale and migrated every line of real copy off the live site. The offer framing centers an Apple Watch SE 3 rewards hook with a live offer-deadline countdown. A seamless insurance and clinic marquee, a branded Open Graph link-preview card, a blue favicon set, and a full accessibility pass round out the static build on Vercel.</p>
-      <p>On top of the site sits a <strong>content engine</strong>: 6 SEO and GEO blog articles built on Astro content collections. Topics: dental check-ups, costs and the Canadian Dental Care Plan, choosing a dentist, visit frequency, dental anxiety, and teeth whitening. Each ships Article JSON-LD, hand-built on-brand SVG explainer diagrams, and AI-generated editorial hero imagery.</p>
+      <p>I rebuilt the brand on a blue <code>#447EF7</code> scale and migrated every line of real copy off the live site. The offer framing centers an Apple Watch SE 3 rewards hook with a live offer-deadline countdown. An insurance and clinic marquee, a branded Open Graph link-preview card, a blue favicon set, and a full accessibility pass round out the static build on Vercel.</p>
+      <p>On top of the site sits a <strong>content engine</strong>: 6 SEO and GEO blog articles built on Astro content collections. The topics cover dental check-ups, costs and the Canadian Dental Care Plan, choosing a dentist, visit frequency, dental anxiety, and teeth whitening. Each ships with Article JSON-LD, hand-built on-brand SVG explainer diagrams, and AI-generated editorial hero imagery.</p>
       <ul>
         <li><strong>Brand system:</strong> blue <code>#447EF7</code> scale, full real-copy migration</li>
         <li><strong>Offer framing:</strong> Apple Watch SE 3 rewards hook, live deadline countdown</li>
@@ -106,8 +106,8 @@ const jsonLd = {
     <div class="lab-col"><span class="num">03 / 06</span><span>SYSTEM 2 · LEAD-OPS DASHBOARD</span></div>
     <div class="body-col">
       <h2>A monitoring portal over the funnel.</h2>
-      <p>A Next.js 16 and React 19 dashboard on Supabase. It renders the lead funnel as a <strong>6-stage state machine</strong>: per-lead call history, recording and transcript links, reward-fulfillment tracking, and Facebook ad attribution. A full-width sortable, filterable table, CSV export, hourly auto-refresh, and manual reload give the operator one place to watch every lead move.</p>
-      <p>Data access is service-role and server-side, behind a signed-cookie login. The operator (admin) sees everything. Each <strong>clinic gets its own login</strong> scoped to its own leads: patient name, phone, email, and state, with the ability to move that state forward. Rewards, the SMS thread, and the event log stay admin-only. Server-side enforcement, not just hidden UI: a clinic can only set the states it owns, and the API rejects the rest. An admin-only lifecycle view diagrams how the voice and SMS channels run into the clinic and out to reward.</p>
+      <p>A Next.js 16 and React 19 dashboard on Supabase. It renders the lead funnel as a <strong>6-stage state machine</strong> with per-lead call history, recording and transcript links, reward-fulfillment tracking, and Facebook ad attribution. A full-width sortable, filterable table, CSV export, hourly auto-refresh, and manual reload give the operator one place to watch every lead move.</p>
+      <p>Data access is service-role and server-side, behind a signed-cookie login. The operator (admin) sees everything. Each <strong>clinic gets its own login</strong> scoped to its own leads: patient name, phone, email, and state, with the ability to move that state forward. Rewards, the SMS thread, and the event log stay admin-only. Enforcement is server-side, not just hidden UI: a clinic can only set the states it owns, and the API rejects the rest. An admin-only lifecycle view diagrams how the voice and SMS channels run into the clinic and out to reward.</p>
       <ul>
         <li><strong>State machine:</strong> lead funnel rendered end-to-end with a pipeline diagram</li>
         <li><strong>Role-based access:</strong> admin sees all; per-clinic logins see only their leads (name, phone, email, state), no rewards, no texting, no audit log</li>
@@ -136,7 +136,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">04 / 06</span><span>SYSTEM 3 · AI VOICE AGENT</span></div>
     <div class="body-col">
       <h2>Anna: a dual-channel qualifier, owned in code.</h2>
-      <p>"Anna" qualifies leads on two channels at once. The <strong>voice agent</strong> is Vapi for the call layer, Claude Haiku for reasoning, Deepgram Nova-3 for transcription, ElevenLabs for the voice. The <strong>SMS qualifier</strong> runs the same script over text, driven by Gemini (<code>gemini-2.5-flash-lite</code>) with forced JSON output, 24/7. It pushes, it doesn't just mirror: a proactive drip keeps qualifying anyone who engaged by text, so both channels move the lead forward until hand-off. Both read and write one shared lead record, so neither re-asks what the other already captured, and the two channels never drift out of sync.</p>
+      <p>"Anna" qualifies leads on two channels at once. The <strong>voice agent</strong> uses Vapi for the call layer, Claude Haiku for reasoning, Deepgram Nova-3 for transcription, and ElevenLabs for the voice. The <strong>SMS qualifier</strong> runs the same script over text, driven by Gemini (<code>gemini-2.5-flash-lite</code>) with forced JSON output, 24/7. It pushes rather than mirrors: a proactive drip keeps qualifying anyone who engaged by text, so both channels move the lead forward until hand-off. Both read and write one shared lead record, so neither re-asks what the other already captured, and the two channels never drift out of sync.</p>
       <p>The orchestration is <strong>code-owned on Supabase Edge Functions</strong>: intake, a pg_cron dialer, a pg_cron SMS follow-up drip, a call-result webhook, an inbound-SMS handler, and a clinic-notify mailer. Clinic routing is a Postgres function keyed on FSA; state transitions are atomic RPCs over an append-only event log. A missed call falls into a retry drip (one hour, then the next business day, then two days) and opens the SMS path in parallel. After the final retry, outbound calling stops. An inbound text still routes the lead straight to the clinic.</p>
       <p>On a qualified lead Anna <strong>warm-transfers the live call to the clinic</strong>. If the front desk does not pick up, the clinic gets an automatic email (Resend) with the patient's details and the lead gets a "they'll call you back" text. A completed visit auto-texts the patient a Google review request for both the clinic and Orbit. Twilio carries the SMS; Giftogram is wired for reward fulfillment. Guardrails keep Anna strictly on-script. CASL and CRTC compliance is wired in: consent capture, a Mon-Fri 12-4pm ET calling window, and STOP handling.</p>
       <ul>
@@ -164,7 +164,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">05 / 06</span><span>THE STACK</span></div>
     <div class="body-col">
       <h2>Code-first across three surfaces.</h2>
-      <p>One opinion held across all three systems: own the orchestration in code so it stays debuggable, testable, and free of no-code lock-in. The static site, the dashboard, and the voice agent all deploy on Vercel and Supabase.</p>
+      <p>One opinion held across all three systems: keep the orchestration in code so it stays debuggable, testable, and free of no-code lock-in. The static site, the dashboard, and the voice agent all deploy on Vercel and Supabase.</p>
       <div class="stack-flat">
         <span class="chip daily">Astro 6</span>
         <span class="chip daily">Next.js 16</span>
@@ -193,7 +193,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">06 / 06</span><span>THE OUTCOME</span></div>
     <div class="body-col">
       <h2>What shipped.</h2>
-      <p>Scope facts from the engagement. Technical surface only. Business KPIs are the client's to disclose. The site, dashboard, and voice agent are all live.</p>
+      <p>Scope facts from the engagement, technical surface only. Business KPIs are the client's to disclose. The site, dashboard, and voice agent are all live.</p>
       <div class="impact-grid">
         <div class="impact-card"><div class="k">SYSTEMS SHIPPED</div><div class="v">3</div><div class="desc">Marketing site, lead-ops dashboard, AI voice agent. One operator, end-to-end.</div></div>
         <div class="impact-card"><div class="k">SEO ARTICLES</div><div class="v">6</div><div class="desc">SEO and GEO articles on Astro content collections, each with Article JSON-LD.</div></div>
@@ -214,7 +214,7 @@ const jsonLd = {
 
   <!-- Final CTA -->
   <div class="final-cta reveal" style="text-align: center;">
-    <p style="margin: 0;">Similar surface area? A funnel to instrument, a voice agent to build, no-code sprawl to move into code. <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Discuss the project →</a></p>
+    <p style="margin: 0;">Similar surface area: a funnel to instrument, a voice agent to build, no-code sprawl to move into code. <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Discuss the project →</a></p>
   </div>
 
 </section>
