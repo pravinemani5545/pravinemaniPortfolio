@@ -21,7 +21,7 @@ const jsonLd = {
     <span class="you">agentic os</span>
   </div>
   <h1>Agentic OS.<br><span class="accent">Multi-agent systems that don't drift.</span></h1>
-  <p class="lead">For when a single agent isn't enough and three is already too many. Multi-agent orchestration, sub-agent design, inter-agent state and concurrent-execution evals. A real answer to <em>"what breaks past five concurrent agents?"</em>, built from a year of bench work.</p>
+  <p class="lead">For when a single agent isn't enough and three is already too many. Multi-agent coordination, sub-agent design, shared state and tests that run agents at the same time. A real answer to <em>"what breaks past five concurrent agents?"</em></p>
   <div class="cta-row">
     <span class="cta-btn cta-btn-secondary" style="cursor: default; opacity: 0.7;">Not bookable yet</span>
     <a href="/services/" class="cta-btn secondary">← Back to all services</a>
@@ -31,53 +31,53 @@ const jsonLd = {
 <section class="section">
   <div class="vert-cta reveal" style="border-color: #ffd84a; margin-bottom: 24px;">
     <p style="font-size: 14px; color: #ffd84a; margin-bottom: 8px; letter-spacing: 0.14em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">▍ IN DEVELOPMENT · COMING SOON</p>
-    <p style="font-size: 17px; color: var(--text-primary); margin-bottom: 12px;">Agentic OS isn't bookable yet. I'm turning internal R&amp;D into client engagements through Q3 2026.</p>
-    <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 0;">Below is what the service will cover when it opens. If you're already running multi-agent systems and breaking interesting things, I want to hear what you're building. <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Drop me a note →</a></p>
+    <p style="font-size: 17px; color: var(--text-primary); margin-bottom: 12px;">Agentic OS isn't bookable yet. It opens to clients through Q3 2026.</p>
+    <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 0;">Below is what it will cover. If you're already running multi-agent systems, I want to hear what you're building. <a href="/contact/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Drop me a note →</a></p>
   </div>
 
   <div class="vert-grid">
 
     <article class="vert-card" id="builds">
       <div class="vert-head"><span class="vert-id">01</span><h2>Multi-agent builds</h2></div>
-      <p>An agent system that handles multi-step work from start to finish: planning, execution, review and hand-off. Specialized agents instead of one giant prompt, built on Claude and MCP and deployed on the infrastructure you already pay for.</p>
+      <p>An agent system that handles multi-step work end to end: planning, execution, review and hand-off. Specialized agents instead of one giant prompt, built on Claude and deployed on infrastructure you already pay for.</p>
       <ul>
-        <li>Agents with defined roles (planner, worker, reviewer) that hand work to each other safely</li>
-        <li>Shared memory between agents so context isn't re-paid on every call</li>
+        <li>Agents with defined roles (planner, worker, reviewer) that hand work to each other</li>
+        <li>Shared memory between agents, so context isn't re-paid on every call</li>
         <li>Hard spend ceilings per task and per user, so cost can't run away</li>
-        <li>Production observability: you can see what each agent did, why, and what it cost</li>
+        <li>A log of what each agent did, why, and what it cost</li>
       </ul>
     </article>
 
     <article class="vert-card" id="orchestration">
       <div class="vert-head"><span class="vert-id">02</span><h2>Orchestration audit</h2></div>
-      <p>You shipped an agent system. It mostly works, but it loops on occasion and spends 10x what it should. This audit finds the orchestration bug before your next customer demo or board update.</p>
+      <p>You shipped an agent system. It mostly works, but it loops sometimes and spends 10x what it should. This audit finds the bug before your next customer demo.</p>
       <ul>
-        <li>A full walkthrough of which agent calls what, when, and what could go wrong</li>
-        <li>A failure-mode catalogue pulled from your real production logs, not theory</li>
-        <li>Specific recommendations for cost ceilings, retry logic and fallback paths</li>
+        <li>A walkthrough of which agent calls what, when, and what could go wrong</li>
+        <li>A list of failure modes pulled from your real logs, not theory</li>
+        <li>Specific recommendations for cost ceilings, retry logic and fallbacks</li>
         <li>A written 30-day plan to fix the top issues, ranked by impact</li>
       </ul>
     </article>
 
     <article class="vert-card" id="subagents">
       <div class="vert-head"><span class="vert-id">03</span><h2>Sub-agent design</h2></div>
-      <p>When to spawn a sub-agent, when to inline the work, and when to defer to a queue. This is the architectural question most teams get wrong. Token cost, latency, isolation and reliability trade-offs made explicit instead of decided by vibe.</p>
+      <p>When to spawn a sub-agent, when to do the work inline, and when to defer to a queue. Cost, speed, isolation and reliability trade-offs made explicit instead of guessed.</p>
       <ul>
         <li>Per-workflow recommendations on where sub-agents help and where they slow you down</li>
-        <li>Patterns for keeping each agent's context isolated so they don't step on each other</li>
-        <li>A decision tree for synchronous versus asynchronous fan-out, with the cost math</li>
-        <li>The "do not fan out" rules, for when serial is faster and cheaper</li>
+        <li>Patterns for keeping each agent's context separate so they don't step on each other</li>
+        <li>A decision tree for parallel versus sequential work, with the cost math</li>
+        <li>The "do not split this up" rules, for when serial is faster and cheaper</li>
       </ul>
     </article>
 
     <article class="vert-card" id="evals">
       <div class="vert-head"><span class="vert-id">04</span><h2>Concurrent-agent evals</h2></div>
-      <p>Most teams write single-agent test suites. Multi-agent suites expose the race conditions, ordering bugs and cost regressions that single-agent tests can't see. This is the harness for answering "does this system still work with 5 of these running at once?"</p>
+      <p>Most teams test one agent at a time. Running them together exposes the timing bugs, ordering bugs and cost spikes that single-agent tests can't see. This answers "does this still work with 5 running at once?"</p>
       <ul>
-        <li>A concurrent-execution test harness that runs your agents in parallel under realistic load</li>
-        <li>Automatic detection of race conditions and ordering violations</li>
-        <li>Cost-regression alerts when an agent change pushes per-task spend up</li>
-        <li>Integration into your CI so the suite runs on every PR, not on demand</li>
+        <li>A test harness that runs your agents in parallel under realistic load</li>
+        <li>Automatic detection of timing and ordering bugs</li>
+        <li>Alerts when an agent change pushes per-task spend up</li>
+        <li>Wired into your CI so the suite runs on every change, not on demand</li>
       </ul>
     </article>
 
@@ -88,7 +88,7 @@ const jsonLd = {
   <div class="vert-cta reveal" style="border-color: #ffd84a;">
     <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #ffd84a; text-transform: uppercase; margin-bottom: 14px;">▍ EARLY-COLLABORATOR LIST · Q3 2026 LAUNCH</p>
     <h2 style="color: var(--text-primary);">Running multi-agent systems at scale?<br><span style="color: #ffd84a;">Talk to me before this opens.</span></h2>
-    <p>Send what you're building: token bills, orchestration diagrams, eval failures. The messier the better. The first five engagements are design partnerships, not consulting.</p>
+    <p>Send what you're building: token bills, architecture diagrams, test failures. The first five engagements are design partnerships, not consulting.</p>
     <div class="cta-row" style="justify-content: center;">
       <a href="/contact/" class="cta-btn">Send what you're building →</a>
       <a href="/services/ai/" class="cta-btn secondary">Standard AI workflows</a>

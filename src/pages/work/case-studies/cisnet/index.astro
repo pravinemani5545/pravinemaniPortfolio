@@ -55,13 +55,13 @@ const jsonLd = {
     <span class="you">cisnet</span>
   </div>
   <h1>CISNET: IT certification training.<br><span class="accent" style="color: #dc2626; -webkit-text-fill-color: #dc2626;">Marketing site + SEO rebuild.</span></h1>
-  <p class="lead">Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Full programmatic SEO, a lead pipeline, and an admin portal, in three months, solo. Ranking authority preserved through a 70+ URL redirect map.</p>
+  <p class="lead">Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Pages generated from data, a lead pipeline, and an admin portal, in three months, solo. Search rankings preserved through a 70+ URL redirect map.</p>
 
   <div class="cs-hero-meta">
     <div class="cell"><div class="k">CLIENT</div><div class="v">IT Training · Toronto</div></div>
     <div class="cell"><div class="k">SCOPE</div><div class="v"><span class="bl">Site + SEO + Pipeline + Admin Portal</span></div></div>
-    <div class="cell"><div class="k">DELIVERED</div><div class="v">2025-Q4 · 3 MO</div></div>
-    <div class="cell"><div class="k">ROLE</div><div class="v">Solo · End-to-end</div></div>
+    <div class="cell"><div class="k">SHIPPED</div><div class="v">2025-Q4 · 3 MO</div></div>
+    <div class="cell"><div class="k">ROLE</div><div class="v">Solo · Full build</div></div>
   </div>
 </section>
 
@@ -72,13 +72,13 @@ const jsonLd = {
     <div class="lab-col"><span class="num">01 / 05</span><span>THE PROBLEM</span></div>
     <div class="body-col">
       <h2>Legacy PHP that couldn't grow.</h2>
-      <p>CISNET's existing site was a hand-coded PHP build from 2014. It was maintainable because one person knew where everything lived, and brittle because <strong>nobody else could ship into it without an outage</strong>. Marketing wanted new certification pages, paid campaigns into specific cohorts, and leads captured into a CRM. In practice, every new page was a Friday deploy with the lights flickering.</p>
-      <p>The deeper issue was SEO momentum. The legacy site ranked for ~70 cert-related queries, and any redesign that didn't preserve those URLs risked tanking organic traffic for a quarter or more. The business drew ~40% of its intake from that organic flow.</p>
+      <p>CISNET's site was a hand-coded PHP build from 2014. One person knew where everything lived. <strong>Nobody else could ship into it without an outage.</strong> Marketing wanted new certification pages, ads into specific groups, and leads captured into a CRM. Every new page meant a risky deploy.</p>
+      <p>The bigger risk was search rankings. The old site ranked for ~70 cert-related searches, and any redesign that didn't keep those URLs risked tanking organic traffic for months. ~40% of new business came from that traffic.</p>
       <ul>
-        <li><strong>Brittle stack:</strong> PHP 5.6, no test suite, manual FTP deploys</li>
-        <li><strong>No lead infrastructure:</strong> contact-form-to-email only, no CRM, no admin view</li>
-        <li><strong>SEO at risk:</strong> 70+ ranked legacy URLs that couldn't break</li>
-        <li><strong>Marketing blocked:</strong> couldn't ship landing pages without engineering</li>
+        <li><strong>Brittle stack:</strong> PHP 5.6, no tests, manual FTP deploys</li>
+        <li><strong>No lead handling:</strong> contact form to email, no CRM, no admin view</li>
+        <li><strong>Rankings at risk:</strong> 70+ ranked URLs that couldn't break</li>
+        <li><strong>Marketing blocked:</strong> no landing pages without engineering</li>
       </ul>
     </div>
   </div>
@@ -87,16 +87,16 @@ const jsonLd = {
   <div class="cs-section reveal">
     <div class="lab-col"><span class="num">02 / 05</span><span>THE APPROACH</span></div>
     <div class="body-col">
-      <h2>Next.js 16 + programmatic SEO + lead infrastructure.</h2>
-      <p>Three parallel workstreams over 12 weeks. <strong>Stream 1 (weeks 1-4)</strong> stood up the Next.js 16, Supabase, and Vercel foundation, ported the marketing pages 1:1, and ran the redirect map in dev. <strong>Stream 2 (weeks 4-8)</strong> handled programmatic SEO: 200+ cert × city pages generated from a structured content model, plus sitemap.xml and 7 distinct schema types. <strong>Stream 3 (weeks 8-12)</strong> built the lead pipeline: a Facebook Lead Ads webhook with HMAC verification, Supabase storage, the admin portal, Resend transactional email, and Stripe Checkout for paid courses.</p>
-      <p>The hardest early call was <strong>how aggressive to be on the redirect strategy.</strong> I mapped every legacy URL individually rather than rely on Next.js catch-all rewrites. It was slower to build, and Google indexed the new URLs with full link equity inside 6 weeks instead of 6 months.</p>
+      <h2>Next.js 16, pages at scale, and a lead pipeline.</h2>
+      <p>Three tracks over 12 weeks. <strong>Track 1 (weeks 1-4):</strong> stood up Next.js 16, Supabase, and Vercel, copied the marketing pages over exactly, and tested the redirects. <strong>Track 2 (weeks 4-8):</strong> 200+ pages, one per certification and city, generated from a single content source, plus a sitemap and structured data that tells Google what each page is. <strong>Track 3 (weeks 8-12):</strong> the lead pipeline. Facebook lead ads flow in through a verified connection, land in Supabase, show up in the admin portal, and trigger email through Resend. Stripe handles payment for paid courses.</p>
+      <p>The hardest early call was <strong>the redirect strategy.</strong> I mapped every old URL by hand instead of using a single catch-all rule. It was slower to build, and Google indexed the new URLs with full ranking value inside 6 weeks instead of 6 months.</p>
       <ul>
-        <li><strong>Foundation:</strong> Next.js 16 (app router), TypeScript strict, Supabase, Vercel</li>
-        <li><strong>SEO surface:</strong> 200+ pSEO pages generated from a cert × city matrix</li>
-        <li><strong>Redirects:</strong> 70+ legacy URLs mapped individually (not catch-all)</li>
-        <li><strong>Schema:</strong> 7 types: Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite</li>
-        <li><strong>Lead pipeline:</strong> FB Lead Ads → HMAC-verified webhook → Supabase → admin portal → Resend</li>
-        <li><strong>Payments:</strong> Stripe Checkout + course-enrollment webhook</li>
+        <li><strong>Foundation:</strong> Next.js 16, TypeScript, Supabase, Vercel</li>
+        <li><strong>Pages at scale:</strong> 200+, one per certification and city</li>
+        <li><strong>Redirects:</strong> 70+ old URLs mapped one by one, not catch-all</li>
+        <li><strong>Structured data:</strong> 7 types so Google reads each page right: Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite</li>
+        <li><strong>Lead pipeline:</strong> Facebook lead ads to verified connection to Supabase to admin portal to Resend</li>
+        <li><strong>Payments:</strong> Stripe Checkout for course enrollment</li>
       </ul>
     </div>
   </div>
@@ -106,7 +106,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">03 / 05</span><span>THE STACK</span></div>
     <div class="body-col">
       <h2>Boring, fast, debuggable.</h2>
-      <p>The default opinionated stack: Next.js, Supabase, Vercel. A CMS for the marketing pages was an option, but the editorial volume didn't warrant the operational tax. Page content lives in MDX in the repo, and engineers ship copy through PRs.</p>
+      <p>The default stack: Next.js, Supabase, Vercel. A CMS was an option, but the page volume didn't justify the overhead. Page content lives in the repo as MDX, and copy ships through pull requests.</p>
       <div class="stack-flat">
         <span class="chip daily">Next.js 16</span>
         <span class="chip daily">TypeScript</span>
@@ -128,14 +128,14 @@ const jsonLd = {
   <div class="cs-section reveal">
     <div class="lab-col"><span class="num">04 / 05</span><span>THE TIMELINE</span></div>
     <div class="body-col">
-      <h2>12 weeks. 3 streams. No scope creep.</h2>
-      <p>Scope locked in week 0. Anything that came up afterward went onto a "v2 list," and none of it shipped during the engagement.</p>
+      <h2>12 weeks. 3 tracks. No scope creep.</h2>
+      <p>Scope locked in week 0. Anything new went onto a v2 list, and none of it shipped during the engagement.</p>
       <div class="timeline-rail">
-        <div class="step"><span class="when">WK 0</span><span class="what"><strong>Kickoff + scope lock.</strong> Written spec signed. Redirect map drafted from server logs.</span></div>
-        <div class="step"><span class="when">WK 1–4</span><span class="what"><strong>Foundation stream.</strong> Next.js 16 scaffold, marketing pages 1:1 port, Supabase schema, Vercel deploys, redirect map in dev.</span></div>
-        <div class="step"><span class="when">WK 4–8</span><span class="what"><strong>SEO stream.</strong> Cert × city content model, 200+ pSEO page generation, 7 schema types, sitemap.xml + robots.txt, internal-link graph.</span></div>
-        <div class="step"><span class="when">WK 8–12</span><span class="what"><strong>Pipeline stream.</strong> FB Lead Ads webhook + HMAC verification, admin portal, Resend transactional email, Stripe checkout, payment webhooks.</span></div>
-        <div class="step"><span class="when">WK 12</span><span class="what"><strong>Cutover + monitoring.</strong> Production deploy, DNS swap, redirect map active, Plausible + Search Console + Sentry wired up. 14-day support window.</span></div>
+        <div class="step"><span class="when">WK 0</span><span class="what"><strong>Kickoff and scope lock.</strong> Written spec signed. Redirect map drafted from server logs.</span></div>
+        <div class="step"><span class="when">WK 1–4</span><span class="what"><strong>Foundation.</strong> Next.js 16 setup, marketing pages copied over exactly, Supabase, Vercel deploys, redirects tested.</span></div>
+        <div class="step"><span class="when">WK 4–8</span><span class="what"><strong>SEO.</strong> 200+ pages, one per certification and city, 7 structured-data types, sitemap and robots.txt, internal links.</span></div>
+        <div class="step"><span class="when">WK 8–12</span><span class="what"><strong>Pipeline.</strong> Verified Facebook lead-ads connection, admin portal, Resend email, Stripe checkout and payment handling.</span></div>
+        <div class="step"><span class="when">WK 12</span><span class="what"><strong>Cutover and monitoring.</strong> Production deploy, DNS swap, redirects live, Plausible, Search Console and Sentry wired up. 14-day support window.</span></div>
       </div>
     </div>
   </div>
@@ -145,16 +145,16 @@ const jsonLd = {
     <div class="lab-col"><span class="num">05 / 05</span><span>THE IMPACT</span></div>
     <div class="body-col">
       <h2>What it enabled.</h2>
-      <p>Headline numbers from the engagement, technical surface only. Business KPIs are CISNET's to disclose.</p>
+      <p>Numbers from the engagement, technical surface only. Business KPIs are CISNET's to share.</p>
       <div class="impact-grid">
-        <div class="impact-card"><div class="k">PSEO PAGES</div><div class="v">200+</div><div class="desc">Cert × city programmatic pages. Indexed within 6 weeks of cutover.</div></div>
-        <div class="impact-card"><div class="k">LEGACY URLS PRESERVED</div><div class="v">70+</div><div class="desc">Individually-mapped redirects. Ranking authority preserved on every URL.</div></div>
-        <div class="impact-card"><div class="k">SCHEMA TYPES</div><div class="v">7</div><div class="desc">Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite.</div></div>
-        <div class="impact-card"><div class="k">LIGHTHOUSE PERF</div><div class="v">98+</div><div class="desc">Production performance score across every marketing route.</div></div>
-        <div class="impact-card"><div class="k">ADMIN PORTAL</div><div class="v">FULL</div><div class="desc">Custom portal for leads, enrollments, content, payments. Built from scratch on Next.js + Supabase.</div></div>
-        <div class="impact-card"><div class="k">DELIVERED IN</div><div class="v">3 MO</div><div class="desc">Fixed-price. Fixed-scope. Zero scope creep across 3 streams.</div></div>
+        <div class="impact-card"><div class="k">PAGES AT SCALE</div><div class="v">200+</div><div class="desc">One per certification and city. Indexed within 6 weeks of cutover.</div></div>
+        <div class="impact-card"><div class="k">LEGACY URLS KEPT</div><div class="v">70+</div><div class="desc">Mapped one by one. Rankings preserved on every URL.</div></div>
+        <div class="impact-card"><div class="k">STRUCTURED DATA</div><div class="v">7</div><div class="desc">Types that tell Google what each page is: Course, LocalBusiness, FAQPage, Organization, BreadcrumbList, ContactPoint, WebSite.</div></div>
+        <div class="impact-card"><div class="k">LIGHTHOUSE PERF</div><div class="v">98+</div><div class="desc">Performance score across every marketing page.</div></div>
+        <div class="impact-card"><div class="k">ADMIN PORTAL</div><div class="v">FULL</div><div class="desc">Leads, enrollments, content, payments. Built from scratch on Next.js and Supabase.</div></div>
+        <div class="impact-card"><div class="k">SHIPPED IN</div><div class="v">3 MO</div><div class="desc">Fixed price. Fixed scope. Zero scope creep across 3 tracks.</div></div>
       </div>
-      <p style="margin-top: 20px;">Beyond the numbers: marketing ships new certification pages through MDX without engineering. Lead routing is observable end to end. Ad campaigns now target specific cohort × city combinations that previously had no landing page.</p>
+      <p style="margin-top: 20px;">Beyond the numbers: marketing ships new certification pages through MDX without engineering. Leads are traceable from ad click to enrollment. Ads now target specific group and city combinations that had no landing page before.</p>
 
       <h2 style="margin-top: 44px;">The admin portal I built.</h2>
       <p>The contact-form-to-email setup became a full operations console: lead pipeline, students, enrollments, email campaigns, content, and analytics, built from scratch on Next.js 16 + Supabase. No off-the-shelf CRM, no third-party analytics tax. The team runs the business from here.</p>
