@@ -72,7 +72,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">01 / 06</span><span>THE PROBLEM</span></div>
     <div class="body-col">
       <h2>Leads arrive fast. Follow-up was manual.</h2>
-      <p>Facebook Lead Ads bring patients in at volume. The gap was everything after the form, and <strong>how fast you reach a lead decides the whole funnel.</strong> A lead that sits for an hour is cold. Sending each lead to the right clinic by location, qualifying it, booking, then sending a reward all ran on people and a tangle of no-code triggers.</p>
+      <p>Facebook Lead Ads bring patients in at volume. The gap was everything after the form: a lead that sits for an hour goes cold. Sending each lead to the right clinic by location, qualifying it, booking, then sending a reward all ran on people and a tangle of no-code triggers.</p>
       <p>The brief was to own the whole path in code, from the ad to the text to the AI call to the clinic hand-off to the reward. Three things had to ship: the site that converts the click, the dashboard the operator watches, and the voice agent that runs the qualifying call.</p>
       <ul>
         <li><strong>Slow follow-up:</strong> manual replies let warm leads go cold</li>
@@ -160,20 +160,20 @@ const jsonLd = {
         <div class="call-body">
           <div class="turn anna"><span class="ts">00:02</span><div class="bubble"><span class="who">Anna</span>Hi Jordan, it's Anna, a virtual assistant calling from Orbit about the promotion you signed up for. Is now an okay time?</div></div>
           <div class="turn caller"><div class="bubble"><span class="who">Caller</span>Yeah, sure.</div><span class="ts">00:06</span></div>
-          <div class="turn anna"><span class="ts">00:09</span><div class="bubble"><span class="who">Anna</span>Great — first, do you have dental insurance?</div></div>
+          <div class="turn anna"><span class="ts">00:09</span><div class="bubble"><span class="who">Anna</span>Great. First, do you have dental insurance?</div></div>
           <div class="turn caller"><div class="bubble"><span class="who">Caller</span>Yeah, with Sun Life.</div><span class="ts">00:13</span></div>
-          <div class="turn anna"><span class="ts">00:16</span><div class="bubble"><span class="who">Anna</span>Perfect, Sun Life. We've got a few rewards — an Apple Watch, AirPods, or a gift card. Which sounds best to you?</div></div>
+          <div class="turn anna"><span class="ts">00:16</span><div class="bubble"><span class="who">Anna</span>Perfect, Sun Life. We've got a few rewards: an Apple Watch, AirPods, or a gift card. Which sounds best to you?</div></div>
           <div class="turn caller"><div class="bubble"><span class="who">Caller</span>The Apple Watch.</div><span class="ts">00:22</span></div>
           <div class="turn anna"><span class="ts">00:25</span><div class="bubble"><span class="who">Anna</span>Great choice. What city are you in, so I can find your closest clinic?</div></div>
           <div class="turn caller"><div class="bubble"><span class="who">Caller</span>Downtown Toronto.</div><span class="ts">00:29</span></div>
-          <div class="turn anna"><span class="ts">00:33</span><div class="bubble"><span class="who">Anna</span>Perfect — I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
+          <div class="turn anna"><span class="ts">00:33</span><div class="bubble"><span class="who">Anna</span>Perfect. I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
         </div>
         <div class="call-foot">
           <span class="tag ok">QUALIFIED</span>
           <span class="foot-meta">Sun Life · Apple Watch · Toronto</span>
           <span class="tag xfer">→ live-transferred to clinic</span>
         </div>
-        <figcaption>A representative qualifying call — Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer to the front desk. Scripted for the case study; no real patient or recording.</figcaption>
+        <figcaption>A representative qualifying call. Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer to the front desk. Scripted for the case study; no real patient or recording.</figcaption>
       </figure>
 
       <div class="cs-shots">
@@ -228,7 +228,7 @@ const jsonLd = {
         <div class="impact-card"><div class="k">VOICE STACK</div><div class="v">4</div><div class="desc">Vapi, Claude Haiku, Deepgram Nova-3, ElevenLabs. The qualifying caller.</div></div>
         <div class="impact-card"><div class="k">DEPLOY</div><div class="v">LIVE</div><div class="desc">Site, dashboard, and Anna all live. The dialer runs 9am–8pm ET, seven days.</div></div>
       </div>
-      <p style="margin-top: 20px;">Beyond the numbers: every lead can be followed from the ad click to the reward. Clinic routing is automatic. The calling window and STOP handling run in code, not on a checklist.</p>
+      <p style="margin-top: 20px;">Every lead can be followed from the ad click to the reward. Clinic routing is automatic. The calling window and STOP handling run in code, not on a checklist.</p>
 
       <div class="confidential">
         <strong>Note:</strong> Conversion, lead-volume, and revenue numbers are the client's to disclose and aren't shown here.
@@ -304,7 +304,7 @@ const jsonLd = {
 .confidential { padding: 16px 20px; background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid var(--text-dim); margin-top: 28px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: var(--text-dim); line-height: 1.55; }
 .confidential strong { color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; display: inline-block; margin-right: 6px; }
 
-/* Voice agent preview — representative call console */
+/* Voice agent preview: representative call console */
 .call-preview { margin: 28px 0 0; border: 1px solid var(--border); background: var(--bg-card); }
 .call-head { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--bg-tertiary); }
 .call-head .call-id { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }

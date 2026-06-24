@@ -20,7 +20,7 @@ const jsonLd = {
     <span style="color: var(--text-muted, #444);">/</span>
     <span class="you">marketing automation</span>
   </div>
-  <h1>Marketing automation,<br><span class="accent">in code, without the SaaS tax.</span></h1>
+  <h1>Marketing automation,<br><span class="accent">in code, with no platform fee.</span></h1>
   <p class="lead">Lead capture, CRM wiring, lifecycle email, subscription billing and creative generation, built as code on Vercel, Resend, Supabase and Stripe. No no-code platforms, no $300/mo platform fee. You own the system, and it's debuggable when something breaks.</p>
   <div class="cta-row">
     <a href="/services/" class="cta-btn secondary">All engagement shapes</a>
@@ -32,7 +32,7 @@ const jsonLd = {
 
     <article class="vert-card" id="pipelines">
       <div class="vert-head"><span class="vert-id">01</span><h2>Lead pipelines</h2></div>
-      <p>For CISNET I built a Facebook Lead Ads pipeline through a verified connection into Supabase, an admin portal and Resend email. Leads from your Facebook and LinkedIn ads land in your CRM within seconds, verified, deduplicated and ready for sales. Nothing gets lost to a flaky Zapier step no one checks.</p>
+      <p>For CISNET I built a Facebook Lead Ads pipeline through a verified connection into Supabase, an admin portal and Resend email. Leads from your Facebook and LinkedIn ads land in your CRM within seconds, verified, deduplicated and ready for sales. No lead is dropped by an unmonitored Zapier step.</p>
       <ul>
         <li>Every lead from Meta or LinkedIn Lead Gen reaches your CRM in seconds</li>
         <li>Each lead verified, so fake submissions can't poison your data</li>
@@ -68,7 +68,7 @@ const jsonLd = {
       <p>Subscription billing in full: checkout, a self-service portal, failed-payment recovery, annual upgrades and coupons. It lives as code in your repo, not Zapier zaps that break when Stripe changes a webhook.</p>
       <ul>
         <li>Stripe Checkout and Customer Portal, so customers self-serve their changes</li>
-        <li>A payment handler that can't miss, double-charge or replay an event</li>
+        <li>An idempotent payment handler: each Stripe event processes once, so retries can't double-charge</li>
         <li>Automatic recovery emails when a payment fails, with grace periods</li>
         <li>A revenue dashboard: MRR, churn, failed payments and refunds in one view</li>
       </ul>
