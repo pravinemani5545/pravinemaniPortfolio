@@ -138,7 +138,7 @@ const jsonLd = {
       <h2>Anna: qualifies by phone and text, all in code.</h2>
       <p>"Anna" qualifies leads on two channels at once. The <strong>voice agent</strong> uses Vapi for the call, Claude Haiku for the reasoning, Deepgram Nova-3 to turn speech into text, and ElevenLabs for the voice. The <strong>text qualifier</strong> runs the same script over SMS, driven by Gemini (<code>gemini-2.5-flash-lite</code>), 24/7. It keeps the conversation going on its own: anyone who replies by text gets followed up until hand-off. Both read and write one shared lead record, so neither re-asks what the other already learned, and the two never fall out of sync.</p>
       <p>The behind-the-scenes pieces all <strong>run in code on Supabase</strong>: intake, a scheduled dialer, a scheduled text follow-up, a handler for call results, a handler for incoming texts, and a clinic-notify mailer. The right clinic is picked from the lead's postal code, and every status change is written to a running log that can't be edited after the fact. A missed call retries an hour later, then the next business day, then two days out, with text qualifying running alongside. After the last retry, calling stops. An incoming text still sends the lead straight to the clinic.</p>
-      <p>On a qualified lead, Anna <strong>transfers the live call to the clinic</strong>. If the front desk doesn't pick up, the clinic gets an automatic email (Resend) with the patient's details and the lead gets a "they'll call you back" text. After a completed visit, the patient gets an automatic text asking for a Google review of both the clinic and Orbit. Twilio carries the texts; Giftogram handles the rewards. Anna stays strictly on-script. The Canadian calling rules are built in: consent capture, a Mon-Fri 12-4pm ET calling window, and STOP handling.</p>
+      <p>On a qualified lead, Anna <strong>transfers the live call to the clinic</strong>. If the front desk doesn't pick up, the clinic gets an automatic email (Resend) with the patient's details and the lead gets a "they'll call you back" text. After a completed visit, the patient gets an automatic text asking for a Google review of both the clinic and Orbit. Twilio carries the texts; Giftogram handles the rewards. Anna stays strictly on-script. The Canadian calling rules are built in: consent capture, a 9am-8pm ET calling window (seven days), live transfer only when the clinic front desk is staffed (Mon-Fri 12-4pm ET), and STOP handling.</p>
       <ul>
         <li><strong>Two channels:</strong> phone (Vapi, Claude Haiku, Deepgram, ElevenLabs) and a 24/7 Gemini text qualifier, both working one shared record until hand-off</li>
         <li><strong>Behind the scenes:</strong> code on Supabase for intake, dialer, call results, incoming texts, and the clinic mailer</li>
@@ -146,9 +146,35 @@ const jsonLd = {
         <li><strong>Live transfer:</strong> hand-off to the clinic; on no-answer, an auto email (Resend) plus a callback text to the lead</li>
         <li><strong>Reviews:</strong> a completed visit triggers one Google review request for the clinic and Orbit, sent once and only on confirmed delivery</li>
         <li><strong>Routing and status:</strong> clinic picked from postal code, status changes written to a log that can't be edited after the fact</li>
-        <li><strong>Compliance:</strong> consent, Mon-Fri 12-4 ET window, STOP handling, strictly on-script</li>
+        <li><strong>Compliance:</strong> consent, a 9am-8pm ET calling window (seven days), STOP handling, strictly on-script</li>
       </ul>
       <p style="margin-top: 8px;">The flow, start to finish: Facebook lead ad to instant text to AI call (text qualifying in parallel) to live clinic hand-off to reward and reviews.</p>
+
+      <!-- Voice agent preview: a representative qualifying call -->
+      <figure class="call-preview" aria-label="Representative Anna qualification call">
+        <div class="call-head">
+          <span class="call-id"><span class="dot"></span> ANNA · ORBIT DENTAL AI</span>
+          <span class="call-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="call-timer">00:34</span>
+        </div>
+        <div class="call-body">
+          <div class="turn anna"><span class="ts">00:02</span><div class="bubble"><span class="who">Anna</span>Hi Jordan, it's Anna, a virtual assistant calling from Orbit about the promotion you signed up for. Is now an okay time?</div></div>
+          <div class="turn caller"><div class="bubble"><span class="who">Caller</span>Yeah, sure.</div><span class="ts">00:06</span></div>
+          <div class="turn anna"><span class="ts">00:09</span><div class="bubble"><span class="who">Anna</span>Great — first, do you have dental insurance?</div></div>
+          <div class="turn caller"><div class="bubble"><span class="who">Caller</span>Yeah, with Sun Life.</div><span class="ts">00:13</span></div>
+          <div class="turn anna"><span class="ts">00:16</span><div class="bubble"><span class="who">Anna</span>Perfect, Sun Life. We've got a few rewards — an Apple Watch, AirPods, or a gift card. Which sounds best to you?</div></div>
+          <div class="turn caller"><div class="bubble"><span class="who">Caller</span>The Apple Watch.</div><span class="ts">00:22</span></div>
+          <div class="turn anna"><span class="ts">00:25</span><div class="bubble"><span class="who">Anna</span>Great choice. What city are you in, so I can find your closest clinic?</div></div>
+          <div class="turn caller"><div class="bubble"><span class="who">Caller</span>Downtown Toronto.</div><span class="ts">00:29</span></div>
+          <div class="turn anna"><span class="ts">00:33</span><div class="bubble"><span class="who">Anna</span>Perfect — I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
+        </div>
+        <div class="call-foot">
+          <span class="tag ok">QUALIFIED</span>
+          <span class="foot-meta">Sun Life · Apple Watch · Toronto</span>
+          <span class="tag xfer">→ live-transferred to clinic</span>
+        </div>
+        <figcaption>A representative qualifying call — Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer to the front desk. Scripted for the case study; no real patient or recording.</figcaption>
+      </figure>
 
       <div class="cs-shots">
         <figure class="cs-shot">
@@ -200,7 +226,7 @@ const jsonLd = {
         <div class="impact-card"><div class="k">FUNNEL STAGES</div><div class="v">6</div><div class="desc">All 6 lead stages tracked in the dashboard.</div></div>
         <div class="impact-card"><div class="k">ZAPIER FOOTPRINT</div><div class="v">1 ZAP</div><div class="desc">Automation moved into code. One trigger left, the rest is code.</div></div>
         <div class="impact-card"><div class="k">VOICE STACK</div><div class="v">4</div><div class="desc">Vapi, Claude Haiku, Deepgram Nova-3, ElevenLabs. The qualifying caller.</div></div>
-        <div class="impact-card"><div class="k">DEPLOY</div><div class="v">LIVE</div><div class="desc">Site, dashboard, and Anna all live. The dialer runs Mon–Fri 12–4pm ET.</div></div>
+        <div class="impact-card"><div class="k">DEPLOY</div><div class="v">LIVE</div><div class="desc">Site, dashboard, and Anna all live. The dialer runs 9am–8pm ET, seven days.</div></div>
       </div>
       <p style="margin-top: 20px;">Beyond the numbers: every lead can be followed from the ad click to the reward. Clinic routing is automatic. The calling window and STOP handling run in code, not on a checklist.</p>
 
@@ -277,4 +303,35 @@ const jsonLd = {
 
 .confidential { padding: 16px 20px; background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 2px solid var(--text-dim); margin-top: 28px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: var(--text-dim); line-height: 1.55; }
 .confidential strong { color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; display: inline-block; margin-right: 6px; }
+
+/* Voice agent preview — representative call console */
+.call-preview { margin: 28px 0 0; border: 1px solid var(--border); background: var(--bg-card); }
+.call-head { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--bg-tertiary); }
+.call-head .call-id { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
+.call-head .dot { width: 7px; height: 7px; border-radius: 50%; background: #ff5d52; box-shadow: 0 0 0 0 rgba(255,93,82,0.6); animation: callpulse 1.8s ease-out infinite; }
+@keyframes callpulse { 0% { box-shadow: 0 0 0 0 rgba(255,93,82,0.55); } 70% { box-shadow: 0 0 0 6px rgba(255,93,82,0); } 100% { box-shadow: 0 0 0 0 rgba(255,93,82,0); } }
+.call-head .call-wave { display: inline-flex; align-items: center; gap: 3px; margin-left: auto; height: 18px; }
+.call-head .call-wave i { width: 3px; background: #447EF7; opacity: 0.85; border-radius: 2px; animation: callwave 1.1s ease-in-out infinite; }
+.call-head .call-wave i:nth-child(1){height:6px;animation-delay:0s} .call-head .call-wave i:nth-child(2){height:13px;animation-delay:.1s} .call-head .call-wave i:nth-child(3){height:9px;animation-delay:.2s} .call-head .call-wave i:nth-child(4){height:16px;animation-delay:.3s} .call-head .call-wave i:nth-child(5){height:7px;animation-delay:.4s} .call-head .call-wave i:nth-child(6){height:14px;animation-delay:.5s} .call-head .call-wave i:nth-child(7){height:10px;animation-delay:.6s} .call-head .call-wave i:nth-child(8){height:15px;animation-delay:.7s} .call-head .call-wave i:nth-child(9){height:6px;animation-delay:.8s} .call-head .call-wave i:nth-child(10){height:11px;animation-delay:.9s}
+@keyframes callwave { 0%,100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
+@media (prefers-reduced-motion: reduce) { .call-head .dot, .call-head .call-wave i { animation: none; } }
+.call-head .call-timer { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.call-body { padding: 18px 16px; display: flex; flex-direction: column; gap: 12px; }
+.call-body .turn { display: flex; align-items: flex-end; gap: 10px; max-width: 86%; }
+.call-body .turn.anna { align-self: flex-start; }
+.call-body .turn.caller { align-self: flex-end; flex-direction: row; justify-content: flex-end; margin-left: auto; }
+.call-body .ts { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); padding-bottom: 4px; flex-shrink: 0; }
+.call-body .bubble { font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; line-height: 1.5; padding: 10px 14px; border: 1px solid var(--border); position: relative; }
+.call-body .turn.anna .bubble { background: rgba(68,126,247,0.07); border-color: rgba(68,126,247,0.32); color: var(--text-primary); border-radius: 2px 12px 12px 12px; }
+.call-body .turn.caller .bubble { background: var(--bg-tertiary); color: var(--text-secondary); border-radius: 12px 2px 12px 12px; }
+.call-body .who { display: block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+.call-body .turn.anna .who { color: #447EF7; }
+.call-body .turn.caller .who { color: var(--text-dim); }
+.call-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 16px; border-top: 1px solid var(--border); background: var(--bg-tertiary); }
+.call-foot .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; border: 1px solid var(--border); }
+.call-foot .tag.ok { color: var(--green); border-color: var(--green); }
+.call-foot .tag.xfer { color: #447EF7; border-color: rgba(68,126,247,0.5); margin-left: auto; }
+.call-foot .foot-meta { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: var(--text-secondary); }
+.call-preview figcaption { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--text-dim); line-height: 1.5; margin-top: 10px; padding: 0 2px 2px; }
+@media (max-width: 560px) { .call-body .turn { max-width: 100%; } .call-foot .tag.xfer { margin-left: 0; } }
 </style>

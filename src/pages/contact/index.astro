@@ -205,14 +205,34 @@ const jsonLd = {
 .intake-foot { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: var(--text-dim); }
 </style>
 <script>
-  // Show a confirmation message if the form just submitted (FormSubmit redirects back with ?sent=1)
-  if (window.location.search.includes('sent=1')) {
-    const section = document.querySelector('.intake-section');
-    if (section) {
-      const banner = document.createElement('div');
-      banner.style.cssText = 'background: var(--bg-tertiary); border: 1px solid var(--green); border-left: 2px solid var(--green); padding: 14px 18px; margin-bottom: 18px; font-family: \'Inter\', sans-serif; font-size: 14px; color: var(--text-primary);';
-      banner.textContent = 'Brief received. Reply within 24 hours on weekdays.';
-      section.prepend(banner);
+  // After the form posts, the API redirects back here with ?sent=1 (success)
+  // or ?error=1 (send failed). Show a banner at the TOP of the page so it's
+  // visible on the post-redirect scroll position, then clean the URL.
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const sent = params.has('sent');
+    const error = params.has('error');
+    if (!sent && !error) return;
+
+    const hero = document.querySelector('.page-hero');
+    if (!hero) return;
+
+    const banner = document.createElement('div');
+    banner.setAttribute('role', 'status');
+    const accent = sent ? 'var(--green)' : '#dc2626';
+    banner.style.cssText = `background: var(--bg-tertiary); border: 1px solid ${accent}; border-left: 3px solid ${accent}; padding: 16px 20px; margin: 0 0 22px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.5; color: var(--text-primary);`;
+    banner.innerHTML = sent
+      ? '<strong style="color: var(--green);">Brief received.</strong> I\'ll reply within 24 hours on weekdays.'
+      : '<strong style="color: #dc2626;">That did not go through.</strong> Please email me directly at <a href="mailto:pravinemaniva@gmail.com" style="color: var(--green);">pravinemaniva@gmail.com</a>.';
+
+    hero.parentNode.insertBefore(banner, hero);
+    banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (sent) {
+      const form = document.querySelector('.intake-form');
+      if (form) form.reset();
     }
-  }
+    // Strip the query param so a refresh does not re-show the banner.
+    history.replaceState(null, '', window.location.pathname);
+  })();
 </script>
