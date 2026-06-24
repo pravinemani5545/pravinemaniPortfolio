@@ -1,0 +1,238 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "One Brief to Full Campaign · Sample patient-acquisition system",
+      "description": "A worked sample: one fictional Toronto dental clinic taken from a single brief to a complete patient-acquisition system. Offer, funnel map, landing page, ad set, SMS sequence, AI voice agent, dashboard, and weekly report.",
+      "url": "https://pravinemani.com/proof-library/full-campaign/",
+      "author": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pravinemani.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Proof Library", "item": "https://pravinemani.com/proof-library/" },
+        { "@type": "ListItem", "position": 3, "name": "Full Campaign", "item": "https://pravinemani.com/proof-library/full-campaign/" }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="One Brief to Full Campaign · Proof Library · Pravine Mani"
+  description="A worked sample: one Toronto dental clinic, from a single brief to a complete patient-acquisition system. Offer, funnel, landing page, ad set, SMS, AI voice agent, dashboard, and weekly report."
+  jsonLd={jsonLd}
+>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/proof-library/" style="color: var(--text-dim);">proof library</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">full campaign</span>
+  </div>
+  <h1>One brief. The entire system.<br><span class="accent">Ad to SMS to voice agent to booking.</span></h1>
+  <p class="lead">A single fictional clinic, taken from one brief to a complete patient-acquisition system. Every layer a real engagement produces: the offer, the funnel, the landing page, the ad set, the follow-up, the AI voice agent, the dashboard, and the weekly report. The names and numbers are illustrative. The architecture is what I ship.</p>
+  <div class="cta-row">
+    <a href="/proof-library/" class="cta-btn secondary">Back to Proof Library</a>
+  </div>
+</section>
+
+<section class="section">
+
+  <p class="proof-note reveal" style="margin-bottom: 28px;"><strong>Sample, not a client.</strong> "Bloor West Dental" is invented for this walkthrough. The system below is the one I build for real clinics. See it shipped at <a href="/work/case-studies/orbit/" style="color: var(--green); border-bottom: 1px dashed var(--green);">Orbit</a> and <a href="/work/case-studies/cisnet/" style="color: var(--green); border-bottom: 1px dashed var(--green);">CISNET</a>.</p>
+
+  <!-- 01 The business -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>01 · The business</h3><span class="ps-tag">Context</span></div>
+    <div class="ps-body">
+      <div class="proof-kv">
+        <div class="pk-k">Business</div><div class="pk-v"><strong>Bloor West Dental</strong>, a two-chair clinic in Toronto</div>
+        <div class="pk-k">Market</div><div class="pk-v">New patients within ~8km, mix of insured and Canadian Dental Care Plan</div>
+        <div class="pk-k">Goal</div><div class="pk-v"><strong>40 new-patient consults per month</strong> from paid social</div>
+        <div class="pk-k">Constraint</div><div class="pk-v">Front desk is busy. Leads sit for hours before anyone calls back</div>
+        <div class="pk-k">Compliance</div><div class="pk-v">Calling and texting follow Canada's CASL and CRTC rules</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 The offer -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>02 · The offer</h3><span class="ps-tag">Positioning</span></div>
+    <div class="ps-body">
+      <p>One offer carries the campaign: <strong>a $99 new-patient exam, X-rays, and cleaning, booked this week.</strong> Specific price, specific scope, specific urgency. It answers the first three questions a cold prospect has before they read anything else.</p>
+      <div class="proof-kv">
+        <div class="pk-k">Hook</div><div class="pk-v">Same-week appointments, no waitlist</div>
+        <div class="pk-k">Risk reversal</div><div class="pk-v">Transparent price, insurance and CDCP accepted</div>
+        <div class="pk-k">Proof</div><div class="pk-v">Real patient reviews surfaced on the landing page</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 The funnel map -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>03 · The funnel map</h3><span class="ps-tag">Architecture</span></div>
+    <div class="ps-body">
+      <p>The whole path, from the ad click to the booked chair. Each step is code I own, not a no-code wrapper.</p>
+      <div class="proof-flow">
+        <div class="pf-step"><span class="pf-n">01</span><span class="pf-t"><strong>Meta ad</strong> to a lead form or the landing page</span></div>
+        <div class="pf-step"><span class="pf-n">02</span><span class="pf-t"><strong>Instant SMS</strong> fires within 10 seconds of the form submit</span></div>
+        <div class="pf-step"><span class="pf-n">03</span><span class="pf-t"><strong>AI voice agent</strong> calls, qualifies, and collects postal code, insurance, and availability</span></div>
+        <div class="pf-step"><span class="pf-n">04</span><span class="pf-t"><strong>Live transfer or callback</strong> to the front desk on a qualified lead</span></div>
+        <div class="pf-step"><span class="pf-n">05</span><span class="pf-t"><strong>Dashboard</strong> updates the lead's stage; a handoff task is created</span></div>
+        <div class="pf-step"><span class="pf-n">06</span><span class="pf-t"><strong>Email nurture</strong> works the leads that did not book yet</span></div>
+        <div class="pf-step"><span class="pf-n">07</span><span class="pf-t"><strong>Post-visit review request</strong> after a completed appointment</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 The landing page -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>04 · The landing page</h3><span class="ps-tag">Build</span></div>
+    <div class="ps-body">
+      <p>A static page that loads fast and leads with the offer. The booking form sits in the hero, above the fold, on mobile first.</p>
+      <ul class="proof-list">
+        <li><strong>Hero:</strong> the $99 offer, the same-week promise, and the form in one view</li>
+        <li><strong>Social proof:</strong> patient reviews and a star rating near the form</li>
+        <li><strong>Insurance row:</strong> a logo marquee answering "do you take my plan?"</li>
+        <li><strong>Offer detail:</strong> what the $99 includes, stated plainly</li>
+        <li><strong>FAQ:</strong> the five questions the front desk hears every day, with schema markup</li>
+        <li><strong>Final CTA:</strong> the same booking form, repeated once at the foot</li>
+      </ul>
+      <div class="proof-kv">
+        <div class="pk-k">Stack</div><div class="pk-v">Astro, Tailwind, Vercel. Static, no CMS, sub-second load</div>
+        <div class="pk-k">Tracking</div><div class="pk-v">Form submit fires the Meta pixel and writes the lead to the database</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 The ad creative set -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>05 · The ad creative set</h3><span class="ps-tag">Sample copy</span></div>
+    <div class="ps-body">
+      <p>Three angles on the same offer, each a distinct reason to click. Run together, the winner shows itself in the data inside a week.</p>
+
+      <div class="ps-sub">Angle A · Price + urgency</div>
+      <div class="proof-block"><span class="pb-label">Primary text</span>New to the neighbourhood or overdue for a check-up? <span class="c-you">$99 new-patient exam, X-rays, and cleaning</span>, booked this week at Bloor West Dental. Insurance and CDCP accepted.
+<span class="c-dim">Headline:</span> $99 New-Patient Exam · This Week
+<span class="c-dim">CTA:</span> Book Now</div>
+
+      <div class="ps-sub">Angle B · Convenience</div>
+      <div class="proof-block"><span class="pb-label">Primary text</span>No waitlist. No phone tag. Pick a time that works and we confirm by text in minutes. <span class="c-you">$99 exam, X-rays, and cleaning</span> for new patients in Bloor West.
+<span class="c-dim">Headline:</span> Same-Week Dental, Booked by Text
+<span class="c-dim">CTA:</span> Book Now</div>
+
+      <div class="ps-sub">Angle C · Trust</div>
+      <div class="proof-block"><span class="pb-label">Primary text</span>Hundreds of Bloor West neighbours trust us with their smiles. New patients get a <span class="c-you">$99 exam, X-rays, and cleaning</span>, with a dentist who explains every step.
+<span class="c-dim">Headline:</span> Gentle, Honest Dental Care
+<span class="c-dim">CTA:</span> Book Now</div>
+
+      <p class="proof-note"><strong>Formats per angle:</strong> square (1:1) and story (9:16), so one angle covers feed and reels. Creative images are produced per brand; this page shows the copy and structure.</p>
+    </div>
+  </div>
+
+  <!-- 06 The SMS sequence -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>06 · The SMS sequence</h3><span class="ps-tag">Follow-up</span></div>
+    <div class="ps-body">
+      <p>The first text beats the competition by being instant. How fast you reach a lead decides the funnel, so the system answers in seconds, not hours.</p>
+      <div class="proof-block"><span class="pb-label">Within 10 seconds</span>Hi Sarah, it's Bloor West Dental. Thanks for your interest in the $99 new-patient exam. Want me to call now to find a time this week? Reply YES or pick a slot: [link]</div>
+      <div class="proof-block"><span class="pb-label">+1 hour, if no reply</span>Still happy to get you booked, Sarah. We have Tuesday evening and Friday morning open this week. Which works better? Reply STOP to opt out.</div>
+      <div class="proof-block"><span class="pb-label">After a booked visit</span>Thanks for visiting Bloor West Dental, Sarah. If we earned it, a quick Google review helps a lot: [link]</div>
+      <p class="proof-note"><strong>Compliance built in:</strong> consent captured at the form, STOP handling on every message, and a sending window that respects CRTC rules.</p>
+    </div>
+  </div>
+
+  <!-- 07 The voice agent -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>07 · The AI voice agent</h3><span class="ps-tag">Qualify by phone</span></div>
+    <div class="ps-body">
+      <p>The agent calls the lead, qualifies on script, and hands a clean record to the front desk. It never confirms a treatment or a price it was not given.</p>
+      <div class="proof-block"><span class="pb-label">Call transcript · excerpt</span><span class="c-grn">Agent:</span> Hi, is this Sarah? This is Anna calling from Bloor West Dental about the new-patient exam. Is now an okay time?
+<span class="c-you">Sarah:</span> Sure, yeah.
+<span class="c-grn">Agent:</span> Great. To get you the right time, are you looking for a cleaning and exam, or is something bothering you right now?
+<span class="c-you">Sarah:</span> Just a cleaning and check-up, it's been a while.
+<span class="c-grn">Agent:</span> Perfect. What's the first part of your postal code, so I book you at the closest chair?
+<span class="c-you">Sarah:</span> M6S.
+<span class="c-grn">Agent:</span> And do you have dental insurance we should note?
+<span class="c-you">Sarah:</span> Sun Life.
+<span class="c-grn">Agent:</span> Got it. We have Tuesday evening or Friday morning this week. Which works?
+<span class="c-you">Sarah:</span> Tuesday evening.
+<span class="c-grn">Agent:</span> Booked. You'll get a text to confirm. See you Tuesday, Sarah.</div>
+      <div class="proof-block"><span class="pb-label">Structured data written to the pipeline</span>&#123;
+  <span class="c-dim">"name"</span>: "Sarah",
+  <span class="c-dim">"postal_code"</span>: "M6S",
+  <span class="c-dim">"insurance"</span>: "Sun Life",
+  <span class="c-dim">"intent"</span>: "cleaning and exam",
+  <span class="c-dim">"urgency"</span>: "this week",
+  <span class="c-dim">"availability"</span>: ["Tuesday evening", "Friday morning"],
+  <span class="c-dim">"stage"</span>: "qualified",
+  <span class="c-dim">"handoff"</span>: "front_desk"
+&#125;</div>
+      <div class="proof-kv">
+        <div class="pk-k">Voice stack</div><div class="pk-v">Vapi for the call, Claude for reasoning, Deepgram for speech-to-text, ElevenLabs for the voice</div>
+        <div class="pk-k">Edge cases</div><div class="pk-v">No answer retries on a schedule, then stops. An emergency routes straight to a human. Off-script questions defer to the clinic</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 The dashboard -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>08 · The dashboard</h3><span class="ps-tag">Operator view</span></div>
+    <div class="ps-body">
+      <p>One screen the front desk watches. Every lead, its stage, and the next action, with the call recording and transcript one click away.</p>
+      <ul class="proof-list">
+        <li><strong>Funnel:</strong> leads counted across stages from new to booked</li>
+        <li><strong>Lead table:</strong> name, source ad, stage, call status, next action</li>
+        <li><strong>Per lead:</strong> call recording, transcript, extracted fields, SMS thread</li>
+        <li><strong>Actions:</strong> move a stage, add a note, trigger a callback</li>
+        <li><strong>Audit log:</strong> every status change recorded and uneditable</li>
+        <li><strong>Access:</strong> the clinic sees its leads; rewards and texting stay admin-only</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 09 The weekly report -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>09 · The weekly report</h3><span class="ps-tag">Reporting</span></div>
+    <div class="ps-body">
+      <p>A plain-English summary, sent every Monday, built from the ad spend, the pipeline, and the bookings. No dashboard login required to read it.</p>
+      <div class="proof-block"><span class="pb-label">Monday brief · sample</span><span class="c-grn">Bloor West Dental · week of Mar 3</span>
+Leads in: 38   ·   Qualified: 24   ·   Booked: 11
+Ad spend: $640   ·   Cost per booked consult: $58
+Best angle: "Same-week, booked by text" (B)
+Watch: 4 leads stalled at "qualified, no time picked", callback queued
+Next: shift budget toward Angle B; test a Friday-only time block</div>
+    </div>
+  </div>
+
+  <!-- 10 The handoff -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>10 · The handoff</h3><span class="ps-tag">You own it</span></div>
+    <div class="ps-body">
+      <p>At the end, the clinic owns the system. No platform fee, no lock-in, nothing that breaks if I disappear.</p>
+      <ul class="proof-list">
+        <li><strong>Source code:</strong> the full repo, in your GitHub</li>
+        <li><strong>Infra:</strong> deployed on your Vercel and Supabase, on your keys</li>
+        <li><strong>Walkthrough:</strong> a Loom for the front desk and one for the owner</li>
+        <li><strong>Runbook:</strong> how to change copy, add a clinic, or pause the agent</li>
+        <li><strong>Support:</strong> a defined window after launch, then optional retainer</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="vert-cta reveal" style="margin-top: clamp(36px, 4vw, 56px);">
+    <h2>Want this for your business?</h2>
+    <p>This is one fixed-scope build, not ten separate hires. Send the workflow and I'll map it to a sprint and a price.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/contact/" class="cta-btn">Discuss a build →</a>
+      <a href="/proof-library/lead-pipelines/" class="cta-btn secondary">See the pipeline maps</a>
+    </div>
+  </div>
+
+</section>
+
+</Base>

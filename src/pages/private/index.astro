@@ -1,0 +1,130 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Server-rendered. Runs as a Vercel serverless function so the protected
+// content is never sent to the browser until the password is correct.
+export const prerender = false;
+
+const PASSWORD = import.meta.env.PRIVATE_PAGE_PASSWORD ?? 'password';
+
+// Logout
+if (Astro.url.searchParams.get('logout')) {
+  Astro.cookies.delete('pv_gate', { path: '/' });
+  return Astro.redirect('/private/', 303);
+}
+
+let error = false;
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  const attempt = String(form.get('password') ?? '');
+  if (attempt === PASSWORD) {
+    Astro.cookies.set('pv_gate', PASSWORD, {
+      httpOnly: true,
+      secure: import.meta.env.PROD,
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 60 * 60 * 24 * 30,
+    });
+    return Astro.redirect('/private/', 303);
+  }
+  error = true;
+}
+
+const authed = Astro.cookies.get('pv_gate')?.value === PASSWORD;
+---
+
+<Base title="Private · Pravine Mani" description="Private." noindex={true}>
+
+{!authed && (
+  <section class="page-hero gate-wrap">
+    <div class="gate">
+      <div class="gate-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h1>Private</h1>
+      <p>Internal notes. Enter the password to continue.</p>
+      <form method="POST" class="gate-form">
+        <input type="password" name="password" autocomplete="current-password" placeholder="password" autofocus required />
+        <button type="submit">Unlock</button>
+      </form>
+      {error && <p class="gate-error">Wrong password.</p>}
+    </div>
+  </section>
+)}
+
+{authed && (
+  <section class="page-hero">
+    <div class="breadcrumb"><span class="gr">$</span> cat ./private/roadmap.md</div>
+    <h1>Private roadmap.<br><span class="accent">What's shipped, what's next.</span></h1>
+    <p class="lead">Internal notes, not linked publicly. This page sits in a public git repo, so treat it as semi-public: build roadmap and recommendations only. Anything sensitive lives in Obsidian.</p>
+    <div class="cta-row">
+      <a href="/private/?logout=1" class="cta-btn secondary">Lock again</a>
+    </div>
+  </section>
+)}
+
+{authed && (
+  <section class="section roadmap">
+
+    <h2>Shipped</h2>
+    <ul class="proof-list">
+      <li>Voice and tone pass across all 22 pages, measured technical authority.</li>
+      <li>Sprint pricing set to fixed price. Badges and support windows standardized to 14 days.</li>
+      <li>Proof Library launched: hub, Full Campaign, and Lead Pipelines live.</li>
+    </ul>
+
+    <h2>Build next, in order</h2>
+    <h3>Text-only, can ship anytime</h3>
+    <ul class="proof-list">
+      <li><strong>Prompt + Evals.</strong> Eval suites with failure modes, test cases, and scoring. Highest technical-trust, no assets needed.</li>
+      <li><strong>MCP Servers.</strong> Tool lists, example commands, responses, and the auth model.</li>
+      <li><strong>Email Sequences.</strong> Full sample sequences with subject lines and branching logic.</li>
+      <li><strong>Workflow Automation.</strong> Input, output, schedule, and the human approval step.</li>
+      <li><strong>SEO + GEO.</strong> Page templates, schema JSON-LD, and a sample redirect map.</li>
+    </ul>
+    <h3>Needs real assets from you</h3>
+    <ul class="proof-list">
+      <li><strong>Voice Agents.</strong> Record 2 to 3 call audio demos from Vapi. Highest value once audio exists.</li>
+      <li><strong>Ad Creatives.</strong> Export creative images per industry (dental, med spa, gym, real estate).</li>
+      <li><strong>Dashboards.</strong> Screenshots. Reuse the CISNET and Orbit shots already in /public/case-studies/.</li>
+      <li><strong>Landing Pages.</strong> Before and after screenshots of rebuilds.</li>
+      <li><strong>UGC Video.</strong> Final clips or storyboards.</li>
+    </ul>
+
+    <h2>Recommendations</h2>
+    <ul class="proof-list">
+      <li>Cross-link: add a "See samples" link from each service and sprint page to the matching proof page.</li>
+      <li>Feature the Full Campaign on the homepage, one strong proof link near the hero.</li>
+      <li>Add per-page OG images for the proof pages. They use the default OG right now.</li>
+      <li>Add a simple industry or use-case filter on the hub once 6 or more pages are live.</li>
+      <li>About page factual check: it references "Claude 4.7" and dates Claude Code adoption to 2024 while the site says independent since Feb 2026. Verify and align.</li>
+      <li>If this page ever holds sensitive notes, upgrade it: load content from a Vercel env var so it stays out of git, or move it to Obsidian.</li>
+    </ul>
+
+    <div class="proof-note" style="margin-top: 24px;"><strong>Keep out of this page:</strong> pricing strategy, ICP scoring, prospect lists, DM templates, outreach plans. Those live in Obsidian under Areas/Work/Projects/pravinemani-consulting/. This repo is public.</div>
+
+  </section>
+)}
+
+</Base>
+
+<style is:global>
+  .gate-wrap { display: flex; align-items: center; justify-content: center; min-height: 70vh; }
+  .gate { max-width: 360px; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .gate-icon { color: var(--green); }
+  .gate h1 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; }
+  .gate p { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-secondary); }
+  .gate-form { display: flex; gap: 8px; width: 100%; margin-top: 6px; }
+  .gate-form input { flex: 1; height: 44px; padding: 0 14px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 14px; }
+  .gate-form input:focus { outline: none; border-color: var(--green); }
+  .gate-form button { height: 44px; padding: 0 18px; background: var(--green); color: var(--bg-primary); border: none; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background var(--dur-micro, 150ms) var(--ease); }
+  .gate-form button:hover { background: var(--text-primary); }
+  .gate-error { color: var(--red); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; }
+
+  .roadmap h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.2vw, 30px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.018em; margin: 36px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .roadmap h2:first-child { margin-top: 0; }
+  .roadmap h3 { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin: 22px 0 10px; }
+</style>

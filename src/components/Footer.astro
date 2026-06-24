@@ -7,11 +7,18 @@ const { variant = 'default' } = Astro.props;
     <div class="right">
       <a href="/services/">SERVICES</a>
       <a href="/work/">WORK</a>
+      <a href="/proof-library/">PROOF</a>
       <a href="/tools/speed-to-lead/">CALCULATOR</a>
       <a href="/stack/">AI STACK</a>
       <a href="/about/">ABOUT</a>
       <a href="/contact/">CONTACT</a>
       <a href="https://aiopsforge.dev">AIOPSFORGE</a>
+      <a href="/private/" class="footer-lock" aria-label="Private notes" title="Private">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="0" ry="0"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </a>
     </div>
     <span>{variant === 'case-study' ? 'CASE STUDY · 2026-05' : 'BUILDING IN PUBLIC · REPLIES IN 24 HRS'}</span>
   </div>

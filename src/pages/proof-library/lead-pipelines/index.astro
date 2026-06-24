@@ -1,0 +1,155 @@
+---
+import Base from '../../../layouts/Base.astro';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Lead Pipeline Walkthroughs · Sample workflow maps",
+      "description": "Sample lead-pipeline maps from lead source to human handoff: triggers, automation steps, dashboard output, failure handling, cost per run, and stack. Built in code, not no-code wrappers.",
+      "url": "https://pravinemani.com/proof-library/lead-pipelines/",
+      "author": { "@type": "Person", "name": "Pravine Manivannan", "url": "https://pravinemani.com/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pravinemani.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Proof Library", "item": "https://pravinemani.com/proof-library/" },
+        { "@type": "ListItem", "position": 3, "name": "Lead Pipelines", "item": "https://pravinemani.com/proof-library/lead-pipelines/" }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="Lead Pipeline Walkthroughs · Proof Library · Pravine Mani"
+  description="Sample lead-pipeline maps from lead source to human handoff: triggers, steps, dashboard output, failure handling, cost per run, and stack. Built in code, not no-code wrappers."
+  jsonLd={jsonLd}
+>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/proof-library/" style="color: var(--text-dim);">proof library</a>
+    <span style="color: var(--text-muted, #444);">/</span>
+    <span class="you">lead pipelines</span>
+  </div>
+  <h1>Lead pipelines, mapped.<br><span class="accent">Source to handoff, with the failure states.</span></h1>
+  <p class="lead">Sample pipelines from the lead source to the moment a human takes over. Each one shows the trigger, the steps, what the dashboard records, how it behaves when a step fails, and roughly what a run costs. The point is that this is an operational system, not just an AI call. Built in code, so it stays debuggable and yours.</p>
+  <div class="cta-row">
+    <a href="/proof-library/" class="cta-btn secondary">Back to Proof Library</a>
+  </div>
+</section>
+
+<section class="section">
+
+  <p class="proof-note reveal" style="margin-bottom: 28px;"><strong>Read each map top to bottom.</strong> The numbered steps are automatic. The handoff row is where a person steps in. Cost-per-run figures are directional, based on typical token and telephony usage.</p>
+
+  <!-- Pipeline 1 -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>01 · Meta lead ad to booked call</h3><span class="ps-tag">Lead-gen</span></div>
+    <div class="ps-body">
+      <div class="proof-kv">
+        <div class="pk-k">Source</div><div class="pk-v">Facebook / Instagram Lead Ads</div>
+        <div class="pk-k">Trigger</div><div class="pk-v">Lead form submitted, webhook fires</div>
+      </div>
+      <div class="proof-flow">
+        <div class="pf-step"><span class="pf-n">01</span><span class="pf-t">Webhook verified (HMAC), lead written to the database with an idempotency key</span></div>
+        <div class="pf-step"><span class="pf-n">02</span><span class="pf-t"><strong>SMS within 10 seconds</strong>, asking to confirm a time</span></div>
+        <div class="pf-step"><span class="pf-n">03</span><span class="pf-t">AI voice agent calls, qualifies, collects location and availability</span></div>
+        <div class="pf-step"><span class="pf-n">04</span><span class="pf-t">Stage updated, recording and transcript attached to the lead</span></div>
+      </div>
+      <div class="proof-kv">
+        <div class="pk-k">Human handoff</div><div class="pk-v"><strong>On a qualified lead:</strong> live transfer to the front desk, or a callback task if no one picks up</div>
+        <div class="pk-k">Dashboard</div><div class="pk-v">Funnel count, lead row, call status, source ad, next action</div>
+        <div class="pk-k">Failure handling</div><div class="pk-v">Missed call retries on a schedule then stops; an inbound text still routes to a human</div>
+        <div class="pk-k">Cost per run</div><div class="pk-v">~$0.20 to $0.60 per lead, mostly call minutes</div>
+        <div class="pk-k">Stack</div><div class="pk-v">Supabase, Vapi, Claude, Twilio, Resend, Vercel</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline 2 -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>02 · Website form to CRM to booked call</h3><span class="ps-tag">Inbound</span></div>
+    <div class="ps-body">
+      <div class="proof-kv">
+        <div class="pk-k">Source</div><div class="pk-v">Contact or demo form on the site</div>
+        <div class="pk-k">Trigger</div><div class="pk-v">Form submit</div>
+      </div>
+      <div class="proof-flow">
+        <div class="pf-step"><span class="pf-n">01</span><span class="pf-t">Lead enriched: name and company looked up, fit and urgency scored</span></div>
+        <div class="pf-step"><span class="pf-n">02</span><span class="pf-t">Written to the CRM with a stage and an owner</span></div>
+        <div class="pf-step"><span class="pf-n">03</span><span class="pf-t">High-fit leads ping the right person on Slack with a recommended action</span></div>
+        <div class="pf-step"><span class="pf-n">04</span><span class="pf-t">Follow-up email or SMS sequence starts automatically</span></div>
+      </div>
+      <div class="proof-kv">
+        <div class="pk-k">Human handoff</div><div class="pk-v"><strong>On a high-fit lead:</strong> Slack alert with the enriched summary and a one-click reply draft</div>
+        <div class="pk-k">Dashboard</div><div class="pk-v">Lead list with fit score, source, stage, last touch</div>
+        <div class="pk-k">Failure handling</div><div class="pk-v">Enrichment timeout falls back to the raw form; nothing is dropped</div>
+        <div class="pk-k">Cost per run</div><div class="pk-v">~$0.02 to $0.10 per lead</div>
+        <div class="pk-k">Stack</div><div class="pk-v">Supabase, Claude, web search, Slack, Resend</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline 3 -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>03 · Lead magnet to email to checkout</h3><span class="ps-tag">Self-serve</span></div>
+    <div class="ps-body">
+      <div class="proof-kv">
+        <div class="pk-k">Source</div><div class="pk-v">Lead magnet (PDF, calculator, or guide)</div>
+        <div class="pk-k">Trigger</div><div class="pk-v">Download or email capture</div>
+      </div>
+      <div class="proof-flow">
+        <div class="pf-step"><span class="pf-n">01</span><span class="pf-t">Asset delivered instantly, subscriber tagged by source</span></div>
+        <div class="pf-step"><span class="pf-n">02</span><span class="pf-t">A short nurture sequence: problem, proof, soft offer</span></div>
+        <div class="pf-step"><span class="pf-n">03</span><span class="pf-t">Checkout via Stripe; webhook confirms payment</span></div>
+        <div class="pf-step"><span class="pf-n">04</span><span class="pf-t">Buyer moves to onboarding; the nurture sequence stops</span></div>
+      </div>
+      <div class="proof-kv">
+        <div class="pk-k">Human handoff</div><div class="pk-v"><strong>Optional:</strong> high-value carts route to a personal email instead of automation</div>
+        <div class="pk-k">Dashboard</div><div class="pk-v">Subscribers by source, sequence position, conversion to paid</div>
+        <div class="pk-k">Failure handling</div><div class="pk-v">Failed payment retries and notifies; delivery is idempotent, no double sends</div>
+        <div class="pk-k">Cost per run</div><div class="pk-v">~$0.01 per subscriber plus payment fees</div>
+        <div class="pk-k">Stack</div><div class="pk-v">Supabase, Stripe, Resend, Vercel</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline 4 -->
+  <div class="proof-sample reveal">
+    <div class="ps-head"><h3>04 · Missed call to AI callback to staff alert</h3><span class="ps-tag">Recovery</span></div>
+    <div class="ps-body">
+      <div class="proof-kv">
+        <div class="pk-k">Source</div><div class="pk-v">Inbound phone call that no one answered</div>
+        <div class="pk-k">Trigger</div><div class="pk-v">Missed-call event from the phone provider</div>
+      </div>
+      <div class="proof-flow">
+        <div class="pf-step"><span class="pf-n">01</span><span class="pf-t">AI agent calls back quickly: "you just called, how can we help?"</span></div>
+        <div class="pf-step"><span class="pf-n">02</span><span class="pf-t">Captures the reason, intent, and a good callback time</span></div>
+        <div class="pf-step"><span class="pf-n">03</span><span class="pf-t">Writes a CRM note and creates a task</span></div>
+        <div class="pf-step"><span class="pf-n">04</span><span class="pf-t">Texts the caller a confirmation that the team will follow up</span></div>
+      </div>
+      <div class="proof-kv">
+        <div class="pk-k">Human handoff</div><div class="pk-v"><strong>Always:</strong> a staff alert with the captured reason and the best callback time</div>
+        <div class="pk-k">Dashboard</div><div class="pk-v">Missed-call queue with reason, status, and assigned owner</div>
+        <div class="pk-k">Failure handling</div><div class="pk-v">No answer on callback leaves a voicemail and a text, then flags for manual follow-up</div>
+        <div class="pk-k">Cost per run</div><div class="pk-v">~$0.15 to $0.40 per recovered call</div>
+        <div class="pk-k">Stack</div><div class="pk-v">Twilio, Vapi, Claude, Supabase, Slack</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vert-cta reveal" style="margin-top: clamp(36px, 4vw, 56px);">
+    <h2>Have a pipeline that leaks?</h2>
+    <p>The Lead Pipeline Sprint ships one of these in 7 days, fixed price. You own the code.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="/services/sprints/lead-pipeline/" class="cta-btn">See the sprint →</a>
+      <a href="/proof-library/full-campaign/" class="cta-btn secondary">See a full campaign</a>
+    </div>
+  </div>
+
+</section>
+
+</Base>

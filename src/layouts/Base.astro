@@ -9,6 +9,7 @@ interface Props {
   footerVariant?: 'default' | 'case-study';
   jsonLd?: object;
   ogImage?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
   footerVariant = 'default',
   jsonLd,
   ogImage = '/og-default.png',
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://pravinemani.com').toString();
@@ -29,6 +31,7 @@ const ogImageURL = new URL(ogImage, Astro.site ?? 'https://pravinemani.com').toS
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
   <link rel="canonical" href={canonicalURL} />
 
   <!-- Open Graph -->

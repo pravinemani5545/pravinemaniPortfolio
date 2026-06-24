@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# local MCP tool config (not site code; keep out of public repo)
+.mcp.json
+
 # macOS-specific files
 .DS_Store
 
