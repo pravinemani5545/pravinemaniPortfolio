@@ -168,14 +168,14 @@ const jsonLd = {
         <div class="call-progress" aria-hidden="true"><span></span></div>
         <div class="call-body">
           <div class="turn anna" data-start="0"><span class="ts">0:00</span><div class="bubble"><span class="who">Anna</span>Hi Jordan, it's Anna, a virtual assistant calling from Orbit about the promotion you signed up for. Is now an okay time?</div></div>
-          <div class="turn caller" data-start="7.08"><div class="bubble"><span class="who">Caller</span>Yeah, sure.</div><span class="ts">0:07</span></div>
-          <div class="turn anna" data-start="8.36"><span class="ts">0:08</span><div class="bubble"><span class="who">Anna</span>Great — first, do you have dental insurance?</div></div>
-          <div class="turn caller" data-start="10.9"><div class="bubble"><span class="who">Caller</span>Yeah, with Sun Life.</div><span class="ts">0:11</span></div>
-          <div class="turn anna" data-start="12.82"><span class="ts">0:13</span><div class="bubble"><span class="who">Anna</span>Perfect, Sun Life. We've got a few rewards: an Apple Watch, AirPods, or a gift card. Which sounds best to you?</div></div>
-          <div class="turn caller" data-start="20.05"><div class="bubble"><span class="who">Caller</span>The Apple Watch.</div><span class="ts">0:20</span></div>
-          <div class="turn anna" data-start="21.65"><span class="ts">0:22</span><div class="bubble"><span class="who">Anna</span>Great choice. What city are you in, so I can find your closest clinic?</div></div>
-          <div class="turn caller" data-start="25.62"><div class="bubble"><span class="who">Caller</span>Downtown Toronto.</div><span class="ts">0:26</span></div>
-          <div class="turn anna" data-start="27.46"><span class="ts">0:27</span><div class="bubble"><span class="who">Anna</span>Perfect — I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
+          <div class="turn caller" data-start="7.5"><div class="bubble"><span class="who">Caller</span>Yeah, sure.</div><span class="ts">0:07</span></div>
+          <div class="turn anna" data-start="8.78"><span class="ts">0:08</span><div class="bubble"><span class="who">Anna</span>Great — first, do you have dental insurance?</div></div>
+          <div class="turn caller" data-start="11.55"><div class="bubble"><span class="who">Caller</span>Yeah, with Sun Life.</div><span class="ts">0:11</span></div>
+          <div class="turn anna" data-start="13.61"><span class="ts">0:13</span><div class="bubble"><span class="who">Anna</span>Perfect, Sun Life. We've got a few rewards: an Apple Watch, AirPods, or a gift card. Which sounds best to you?</div></div>
+          <div class="turn caller" data-start="20.56"><div class="bubble"><span class="who">Caller</span>The Apple Watch.</div><span class="ts">0:20</span></div>
+          <div class="turn anna" data-start="22.12"><span class="ts">0:22</span><div class="bubble"><span class="who">Anna</span>Great choice. What city are you in, so I can find your closest clinic?</div></div>
+          <div class="turn caller" data-start="26.18"><div class="bubble"><span class="who">Caller</span>Downtown Toronto.</div><span class="ts">0:26</span></div>
+          <div class="turn anna" data-start="27.88"><span class="ts">0:27</span><div class="bubble"><span class="who">Anna</span>Perfect — I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
         </div>
         <audio class="call-audio" preload="none" src="/case-studies/orbit/anna-call.mp3"></audio>
         <div class="call-foot">
@@ -183,8 +183,71 @@ const jsonLd = {
           <span class="foot-meta">Sun Life · Apple Watch · Toronto</span>
           <span class="tag xfer">→ live-transferred to clinic</span>
         </div>
-        <figcaption>Press play to hear it. Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer. Voices are ElevenLabs (Anna's is the same one the live agent uses); the call is scripted for the case study, synthetic, no real patient.</figcaption>
+        <figcaption>Plays as you scroll to it (tap play if your browser holds the audio). Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer. Voices are ElevenLabs — Anna's is the exact voice the live agent uses; the call is scripted for the case study, synthetic, no real patient.</figcaption>
       </figure>
+
+      <script>
+        (function () {
+          const root = document.querySelector('[data-call]');
+          if (!root) return;
+          const audio = root.querySelector('.call-audio');
+          const btn = root.querySelector('.call-play');
+          const turns = [...root.querySelectorAll('.turn')].map((el) => ({ el, start: parseFloat(el.dataset.start) || 0 }));
+          const cur = root.querySelector('.call-timer .cur');
+          const tot = root.querySelector('.call-timer .tot');
+          const bar = root.querySelector('.call-progress > span');
+          const fmt = (s) => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+          let activeEl = null;
+          const setActive = (t) => {
+            let idx = -1;
+            for (let i = 0; i < turns.length; i++) { if (t >= turns[i].start - 0.05) idx = i; }
+            const el = idx >= 0 ? turns[idx].el : null;
+            if (el !== activeEl) { if (activeEl) activeEl.classList.remove('active'); if (el) el.classList.add('active'); activeEl = el; }
+          };
+          audio.addEventListener('loadedmetadata', () => { if (isFinite(audio.duration)) tot.textContent = fmt(audio.duration); });
+          audio.addEventListener('play', () => root.classList.add('is-playing'));
+          audio.addEventListener('pause', () => root.classList.remove('is-playing'));
+          audio.addEventListener('timeupdate', () => {
+            cur.textContent = fmt(audio.currentTime);
+            if (bar && audio.duration) bar.style.width = (100 * audio.currentTime / audio.duration) + '%';
+            setActive(audio.currentTime);
+          });
+          const reset = () => {
+            if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
+            cur.textContent = '0:00';
+            if (bar) bar.style.width = '0%';
+          };
+          audio.addEventListener('ended', () => { root.classList.remove('is-playing'); reset(); });
+          btn.addEventListener('click', () => { if (audio.paused) audio.play().catch(() => {}); else audio.pause(); });
+          turns.forEach((t) => t.el.addEventListener('click', () => { audio.currentTime = t.start; audio.play().catch(() => {}); }));
+
+          // Play when the call scrolls into view; stop + rewind when it scrolls out.
+          // (Browsers block audio autoplay until the visitor has interacted with the
+          // page, so the first play may need a tap of the button; after that, scrolling
+          // back in auto-plays. The .catch keeps a blocked attempt silent.)
+          // Hysteresis with two thresholds so it works even when the preview is taller
+          // than the viewport (where the ratio never reaches a high value): start once
+          // ~30% is on screen, stop only once it's essentially gone.
+          let inView = false;
+          if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+              entries.forEach((e) => {
+                const r = e.intersectionRatio;
+                if (!inView && e.isIntersecting && r >= 0.3) {
+                  inView = true;
+                  audio.play().catch(() => {});
+                } else if (inView && (!e.isIntersecting || r <= 0.05)) {
+                  inView = false;
+                  audio.pause();
+                  audio.currentTime = 0;
+                  reset();
+                }
+              });
+            }, { threshold: [0, 0.05, 0.3, 0.6, 1] });
+            io.observe(root);
+          }
+        })();
+      </script>
 
       <div class="cs-shots">
         <figure class="cs-shot">
