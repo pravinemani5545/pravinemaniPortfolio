@@ -15,7 +15,6 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [sitemap()],
   redirects: {
-    '/ai': '/stack/',
     '/ai/': '/stack/',
   },
   vite: {
