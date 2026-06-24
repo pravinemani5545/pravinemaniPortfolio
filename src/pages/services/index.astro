@@ -8,7 +8,7 @@ import Base from '../../layouts/Base.astro';
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> cd ~/services <span class="you">→ what i build</span></div>
   <h1>What I build, and how engagements work.</h1>
-  <p class="lead">I build <a href="/services/marketing-automation/">AI marketing automation</a>, with <a href="/services/seo/">SEO + GEO</a> and <a href="/services/ai/">AI workflows</a> alongside it. Five engagement shapes carry the work: a free scoping call, the Audit, the Sprint, the Custom build, and the Ops Retainer. Every paid shape is quoted on scope, in writing, within 24 hours of the call. Taking new engagements.</p>
+  <p class="lead">I build <a href="/services/marketing-automation/">AI marketing automation</a>, with <a href="/services/seo/">SEO + GEO</a> and <a href="/services/ai/">AI workflows</a> alongside it. Five engagement shapes carry the work: a free scoping call, the Pilot Build, the Sprint, the Custom build, and the Ops Retainer. Every paid shape is quoted on scope, in writing, within 24 hours of the call. Taking new engagements.</p>
   <div class="cta-row">
     <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
     <a href="#builds" class="cta-btn secondary">See sample builds</a>
@@ -20,7 +20,7 @@ import Base from '../../layouts/Base.astro';
   <div class="section-head reveal">
     <div class="label">engagement shapes</div>
     <h2>How the engagement shapes work.</h2>
-    <p>Each shape is productized: fixed scope, fixed deliverables, written quote before signing. <strong style="color: var(--text-primary);">Scoping Call</strong> is the entry (free, 30 min). <strong style="color: var(--text-primary);">Audit</strong> when you don't know where AI fits yet. <strong style="color: var(--text-primary);">Sprint</strong> when the workflow fits in one sentence. <strong style="color: var(--text-primary);">Custom</strong> for anything multi-workflow. <strong style="color: var(--text-primary);">Ops Retainer</strong> for maintenance and tuning of systems already shipped. Every paid shape is quoted on scope before signing.</p>
+    <p>Each shape is productized: fixed scope, fixed deliverables, written quote before signing. <strong style="color: var(--text-primary);">Scoping Call</strong> is the entry (free, 30 min). <strong style="color: var(--text-primary);">Pilot Build</strong> when you want one working piece before committing to a full build. <strong style="color: var(--text-primary);">Sprint</strong> when the workflow fits in one sentence. <strong style="color: var(--text-primary);">Custom</strong> for anything multi-workflow. <strong style="color: var(--text-primary);">Ops Retainer</strong> for maintenance and tuning of systems already shipped. Every paid shape is quoted on scope before signing.</p>
   </div>
 
   <!-- 00 · SCOPING CALL -->
@@ -58,41 +58,40 @@ import Base from '../../layouts/Base.astro';
     </div>
   </div>
 
-  <!-- 01 · AUDIT -->
-  <div class="tier-card featured reveal" id="audit">
+  <!-- 01 · PILOT BUILD -->
+  <div class="tier-card featured reveal" id="pilot">
     <div class="tier-head">
       <div class="left">
-        <div class="row1"><span class="pulse"></span>01 · AI SYSTEM AUDIT</div>
-        <h3>Where AI returns the most hours.</h3>
+        <div class="row1"><span class="pulse"></span>01 · PILOT BUILD</div>
+        <h3>One working piece, before the full build.</h3>
       </div>
       <div class="right">
-        <div class="time">FIXED-SCOPE WEEK</div>
-        <div class="slots">QUOTE ON SCOPE</div>
+        <div class="time">FIXED PRICE · ~3 DAYS</div>
+        <div class="slots">$750 · CREDITED TO SPRINT</div>
       </div>
     </div>
     <div class="tier-body">
       <div class="col">
         <h4>WHAT IT IS</h4>
-        <p>A focused week of three founder interviews and a workflow review. The goal is to find the three to five places where AI, SEO, or automation returns measurable time, and turn them into a ranked 30-day plan.</p>
-        <p>The deliverable is a written report with a prioritized opportunity list, vendor recommendations, monthly cost projections, and milestone-level implementation steps.</p>
-        <p>Right fit when AI placement is unclear, or previous tools haven't stuck.</p>
+        <p>A short, fixed-price build that ships one working automation, live in your repo, in about three days. You pick the single highest-friction workflow and I build that one piece end to end.</p>
+        <p>You see real code running on your own infrastructure before committing to a full Sprint. The $750 is credited toward a Sprint if you decide to keep going, so the proof costs nothing if you proceed.</p>
+        <p>Right fit when you want evidence before a larger build, or previous tools haven't stuck.</p>
       </div>
       <div class="col">
         <h4>DELIVERABLES</h4>
         <ul>
-          <li>Three founder interviews of 60 minutes each</li>
-          <li>Current-state workflow map across the operation</li>
-          <li>Ranked opportunity list scored on effort and impact</li>
-          <li>Vendor and cost projections per opportunity</li>
-          <li>A 30-day execution plan with explicit milestones</li>
-          <li>60-minute handoff call plus recorded Loom walkthrough</li>
-          <li>Option to convert directly into a Build Sprint</li>
+          <li>One working automation, deployed to your own accounts</li>
+          <li>Code in your repository, versioned in git</li>
+          <li>A short Loom walkthrough of how it runs</li>
+          <li>A written note on what a full Sprint would add</li>
+          <li>Starts within a few days of signing</li>
+          <li>$750 flat, credited toward a Sprint if you proceed</li>
         </ul>
       </div>
     </div>
     <div class="tier-foot">
-      <span class="meta">QUOTE ON SCOPE · REMOTE · 24-HR QUOTE</span>
-      <a href="/contact/">→ BOOK AUDIT CALL</a>
+      <span class="meta">$750 · REMOTE · CREDITED TO SPRINT</span>
+      <a href="/contact/">→ START A PILOT</a>
     </div>
   </div>
 
@@ -190,7 +189,7 @@ import Base from '../../layouts/Base.astro';
         <h4>WHAT IT IS</h4>
         <p>A monthly engagement for clients whose systems I've already shipped. The retainer is structured around specific deliverables, not general access. Every hour goes against monitoring, prompt and eval maintenance, on-call response, or minor enhancements.</p>
         <p>Two tiers depending on system size. Both have a capped monthly hour budget that resets monthly and doesn't roll over. Cancellable any month with 30 days' notice.</p>
-        <p><strong>Engagement rule:</strong> never sold cold. Only available after an Audit, Sprint, or Custom build has shipped.</p>
+        <p><strong>Engagement rule:</strong> never sold cold. Only available after a Pilot Build, Sprint, or Custom build has shipped.</p>
       </div>
       <div class="col">
         <h4>WHAT'S IN IT</h4>
@@ -342,13 +341,13 @@ import Base from '../../layouts/Base.astro';
     <p>If yours isn't here, ask on the call.</p>
   </div>
   <div class="faq-block">
-    <details class="faq-item"><summary>How does pricing work?</summary><p>Every paid engagement is quoted on scope after the free 30-minute scoping call. <span class="acc">The written quote lands inside 24 hours</span>: deliverables, milestones, timeline, total price. Once you accept it and sign, the price is locked; productized scope keeps it from moving. Audit and Sprint are paid 50% on signing and 50% at delivery. Custom builds are milestone-paid against a staged schedule. Ops Retainer is monthly, cancellable with 30 days' notice. No hourly billing, no surprise invoices.</p></details>
+    <details class="faq-item"><summary>How does pricing work?</summary><p>Every paid engagement is quoted on scope after the free 30-minute scoping call. <span class="acc">The written quote lands inside 24 hours</span>: deliverables, milestones, timeline, total price. Once you accept it and sign, the price is locked; productized scope keeps it from moving. The Pilot Build is a flat $750, credited toward a Sprint if you proceed. Sprints are paid 50% on signing and 50% at delivery. Custom builds are milestone-paid against a staged schedule. Ops Retainer is monthly, cancellable with 30 days' notice. No hourly billing, no surprise invoices.</p></details>
     <details class="faq-item"><summary>What stack do you build on?</summary><p>My default stack is <span class="acc">Claude Code for development, Vercel for hosting + serverless + cron, Anthropic API for the AI layer, and Supabase for Postgres + auth + RLS.</span> Around that: TypeScript, Next.js, Tailwind v4, Resend for transactional email, Stripe for payments, Plausible for analytics. I'll work in your stack if it's modern. Next.js, Astro, Django, Rails, Laravel, FastAPI, Postgres are all in scope. I <strong>won't</strong> build on n8n, Make, or Zapier as the primary execution layer: they're fragile under load, expensive past 5K events/mo, and the visual graph becomes unreadable to anyone who joins the team after I leave.</p></details>
     <details class="faq-item"><summary>Who owns the code at the end?</summary><p><span class="acc">You. Outright.</span> Every engagement is work-for-hire under a written agreement. At the close you receive the full source code, the deployment access, every environment variable, every account credential, and the right to modify, extend, or sell the work without restriction. I retain no IP, no licensing rights, no royalty claims. If you stop working with me tomorrow, the system keeps running on infrastructure that's already in your name.</p></details>
     <details class="faq-item"><summary>Why fixed price instead of hourly?</summary><p>Hourly billing aligns nobody's incentives correctly. The consultant earns more by taking longer. The client earns peace of mind only by watching the clock. Both sides end up optimizing for the wrong thing. Fixed-price flips it: I'm incentivized to ship efficiently because overrun eats my margin, and you're incentivized to give clear feedback because every approved milestone gets you closer to the deliverable. The outcome, a working production system, is what we both want, and fixed-price is the only structure that lets us both focus on it.</p></details>
     <details class="faq-item"><summary>What if I'm in a different timezone?</summary><p>I'm based in Toronto on Eastern Time. Most communication is async by default: a shared Slack channel or email thread plus a recorded Loom walkthrough at each milestone. That keeps timezone gaps from blocking progress. Live calls happen at kickoff, milestone demos, and the closing retro. I'll book those in your timezone if it falls between 9am and 9pm Toronto time. If we're more than 8 hours apart, the engagement runs entirely in writing plus Loom updates, which most clients prefer anyway.</p></details>
-    <details class="faq-item"><summary>What if the scope changes mid-project?</summary><p>Sprints are productized fixed-scope builds, the scope is locked at the spec stage and the engagement ends at the agreed deliverable. If you realize you need more, it becomes a separate Sprint quoted at the close of the first. Audits and Custom builds are more flexible: anything outside the written spec gets a new written quote with a new timeline and price, surfaced as a change-order before any work happens. I won't silently absorb extra scope to keep the relationship pleasant, that ends in burnout for me and a quietly delayed deliverable for you.</p></details>
-    <details class="faq-item"><summary>Can you start next week?</summary><p>Sprints start within 5-7 days of signing, because the shape is productized and scoping is fast. Custom builds depend on current capacity: 2-3 weeks out so I can write a real spec first. Audits book 2-3 weeks out because they require three founder interviews and structured deep-dive time. The fastest path to a real answer on timing is the free 30-minute scoping call. I'll quote both price and earliest start date in the written quote inside 24 hours.</p></details>
+    <details class="faq-item"><summary>What if the scope changes mid-project?</summary><p>Sprints are productized fixed-scope builds, the scope is locked at the spec stage and the engagement ends at the agreed deliverable. If you realize you need more, it becomes a separate Sprint quoted at the close of the first. Custom builds are more flexible: anything outside the written spec gets a new written quote with a new timeline and price, surfaced as a change-order before any work happens. I won't silently absorb extra scope to keep the relationship pleasant, that ends in burnout for me and a quietly delayed deliverable for you.</p></details>
+    <details class="faq-item"><summary>Can you start next week?</summary><p>Sprints start within 5-7 days of signing, because the shape is productized and scoping is fast. Custom builds depend on current capacity: 2-3 weeks out so I can write a real spec first. A Pilot Build starts within a few days of signing, since it's a single scoped piece. The fastest path to a real answer on timing is the free 30-minute scoping call. I'll quote both price and earliest start date in the written quote inside 24 hours.</p></details>
     <details class="faq-item"><summary>What if I'm not sure I need an AI engagement at all?</summary><p>Book the call anyway. The free 30 minutes is structured around figuring out what's actually broken, not selling you on a specific shape. If AI isn't the right fix, if the real problem is positioning, sales process, hiring, or your existing tool is already fine, I'll say so on the call and recommend who or what is a better next step. If it isn't the right fix, I'll say so and point you to who or what is. That's the call working as intended.</p></details>
   </div>
 </section>
@@ -371,7 +370,7 @@ import Base from '../../layouts/Base.astro';
 .cta-band .h { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; color: var(--text-primary); }
 .cta-band .h .acc { color: var(--green); }
 
-/* Featured tier (audit/sprint/advisory/custom) */
+/* Featured tier (pilot/sprint/advisory/custom) */
 .tier-card { background: var(--bg-card); border: 1px solid var(--border); margin-bottom: 22px; position: relative; transition: all 400ms cubic-bezier(0.2, 0, 0, 1); }
 .tier-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--card-accent, var(--green)); opacity: 0.85; }
 .tier-card:hover { border-color: var(--border-green); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4); }

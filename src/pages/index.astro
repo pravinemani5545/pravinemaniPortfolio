@@ -85,7 +85,7 @@ const jsonLd = {
     <div class="title-block">
       <div class="label">what i do</div>
       <h2>How I work with clients.</h2>
-      <p>Every engagement is fixed-scope with a written quote before signing. Five shapes cover it: the free Scoping Call, the Audit, the Sprint, the Custom build, and the Ops Retainer. <a href="/services/">Full breakdown →</a></p>
+      <p>Every engagement is fixed-scope with a written quote before signing. Five shapes cover it: the free Scoping Call, the Pilot Build, the Sprint, the Custom build, and the Ops Retainer. <a href="/services/">Full breakdown →</a></p>
     </div>
   </div>
 
@@ -113,22 +113,22 @@ const jsonLd = {
 
     <div class="service-card featured reveal" data-delay="1">
       <div class="head">
-        <span class="id"><span class="num">01 ·</span> SYSTEM AUDIT</span>
-        <span class="price">FIXED-SCOPE WEEK</span>
+        <span class="id"><span class="num">01 ·</span> PILOT BUILD</span>
+        <span class="price">FIXED PRICE</span>
       </div>
       <div class="body">
-        <h3>System audit.</h3>
-        <p>A fixed-scope week structured around founder interviews and a workflow review, focused on the 3-5 highest-impact automation opportunities for the business. The deliverable is a ranked opportunity list and a 30-day implementation plan.</p>
+        <h3>Pilot build.</h3>
+        <p>A short, fixed-price build that ships one working automation, live in your repo, in about three days. Pick your highest-friction workflow and I build that one piece end to end, so you see real code running before committing to a full Sprint.</p>
         <ul>
-          <li>Three founder interviews, 60 minutes each</li>
-          <li>Current-state workflow map across the operation</li>
-          <li>Ranked opportunity list scored on effort and impact</li>
-          <li>A 30-day implementation plan with cost projections per opportunity</li>
+          <li>One working automation, deployed and owned by you</li>
+          <li>Code in your repository, versioned in git</li>
+          <li>Loom walkthrough plus a note on what a Sprint adds</li>
+          <li>$750, credited toward a Sprint if you proceed</li>
         </ul>
       </div>
       <div class="foot">
-        <span class="meta">QUOTE ON SCOPE · AVAILABLE</span>
-        <a href="/services/" class="cta">→ VIEW AUDIT</a>
+        <span class="meta">$750 · CREDITED TO SPRINT</span>
+        <a href="/services/" class="cta">→ DETAILS</a>
       </div>
     </div>
 
@@ -238,6 +238,22 @@ const jsonLd = {
       <div class="link"><a href="/work/case-studies/cisnet/">→ VIEW CASE STUDY</a></div>
     </div>
 
+    <div class="work-row">
+      <div class="date">2026</div>
+      <div class="status client">CLIENT</div>
+      <div class="nm">Orbit Dental AI</div>
+      <div class="desc">Patient-acquisition system: site, lead dashboard, and an AI voice agent that calls and qualifies every new lead. Built on Supabase.</div>
+      <div class="link"><a href="/work/case-studies/orbit/">→ VIEW CASE STUDY</a></div>
+    </div>
+
+    <div class="work-row">
+      <div class="date">2026</div>
+      <div class="status client">CLIENT</div>
+      <div class="nm">Smile Club</div>
+      <div class="desc">Full marketing-site rebuild for a dental clinic. Prevention-led, built to convert.</div>
+      <div class="link"><a href="/work/case-studies/smile-club/">→ VIEW CASE STUDY</a></div>
+    </div>
+
     <div class="work-row row-group">
       <span class="glab"><span class="dot"></span>CURRENTLY BUILDING</span>
     </div>
@@ -302,7 +318,7 @@ const jsonLd = {
         <span class="q">How does pricing work?</span>
         <span class="num">01 / 10</span>
       </summary>
-      <div class="a">Quoted on scope after the free 30-min call. Written quote within 24 hours; price locks once signed. Audit and Sprint are 50/50, Custom is milestone-paid, Ops Retainer is monthly.</div>
+      <div class="a">Quoted on scope after the free 30-min call. Written quote within 24 hours; price locks once signed. The Pilot Build is a flat $750, credited toward a Sprint if you proceed. Sprint is 50/50, Custom is milestone-paid, Ops Retainer is monthly.</div>
     </details>
     <details class="faq-item">
       <summary>
@@ -560,9 +576,8 @@ a { color: inherit; text-decoration: none; }
 .quote-card { background: var(--bg-card); border: 1px solid var(--border); padding: 20px 22px; position: relative; transition: all 200ms; }
 .quote-card:hover { border-color: var(--border-green); transform: translateY(-2px); }
 .quote-card .stars { font-family: 'JetBrains Mono', monospace; color: var(--green); font-size: 11px; letter-spacing: 0.1em; margin-bottom: 10px; }
-.quote-card blockquote { font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; color: var(--text-primary); line-height: 1.55; margin-bottom: 12px; font-style: italic; }
-.quote-card blockquote::before { content: '"'; color: var(--green); font-size: 24px; margin-right: 2px; vertical-align: -4px; font-family: 'Space Grotesk', sans-serif; }
-.quote-card blockquote::after { content: '"'; color: var(--green); font-size: 24px; margin-left: 2px; vertical-align: -4px; font-family: 'Space Grotesk', sans-serif; }
+.quote-card blockquote { font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: var(--text-primary); line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+.quote-card blockquote::before { content: '"'; display: block; color: var(--green); font-size: 34px; line-height: 0.5; margin-bottom: 12px; font-family: 'Space Grotesk', sans-serif; font-style: normal; }
 .quote-card .src { display: flex; align-items: center; gap: 11px; padding-top: 12px; border-top: 1px solid var(--border); }
 .quote-card .src .av { width: 30px; height: 30px; flex-shrink: 0; background: var(--bg-tertiary); border: 1px solid var(--border-strong, #3a3a3a); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--green); font-weight: 600; letter-spacing: 0.04em; }
 .quote-card .src .meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
