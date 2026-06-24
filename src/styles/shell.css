@@ -331,7 +331,7 @@ body.nav-locked { overflow: hidden; }
   }
   .site-nav.is-open .nav-links { display: flex; }
 
-  /* Mobile: Services is a plain link to /services/. Dropdown is hidden — the
+  /* Mobile: Services is a plain link to /services/. Dropdown is hidden, the
      sub-links live on the /services/ page itself (vertical cards + per-vertical
      pages). Hamburger shows top-level nav only. */
   .nav-item.has-dropdown {

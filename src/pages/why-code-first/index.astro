@@ -54,7 +54,7 @@ const jsonLd = {
       </div>
     </div>
 
-    <p>The 10× cost gap is the loud signal. The architectural dependency under it is the one that compounds.</p>
+    <p>The 10× cost gap is the loud signal. The architectural lock-in under it is what compounds.</p>
 
     <p><em>The insight is that workflow logic should live in your repo, not in someone else's UI.</em></p>
 
@@ -85,7 +85,7 @@ const jsonLd = {
     <h2>What this doesn't solve.</h2>
     <p>Code-first isn't free. A few honest trade-offs:</p>
     <ul class="stack-list">
-      <li><strong>Initial build time.</strong> A 4-step Zapier zap takes 20 minutes to wire. The code version takes 1-3 hours. Past the first workflow this inverts, but the first one is slower.</li>
+      <li><strong>Initial build time.</strong> A 4-step Zapier zap takes 20 minutes to wire. The code version takes 1-3 hours. Past the first workflow this inverts. The first one is slower.</li>
       <li><strong>Non-technical team edits.</strong> If a non-engineer needs to modify the workflow every week, n8n's visual editor is a real advantage. Code-first means engineering touches every change.</li>
       <li><strong>Operating something you don't understand.</strong> If the client can't read the code at all, the lock-in argument flips: they're now dependent on a developer instead of a platform. Code-first only wins if at least one person on the team can read what's in the repo.</li>
     </ul>

@@ -1,57 +1,51 @@
 # pravinemani.com — voice & engineering rules
 
-This site is built like an essay, not a brochure. Every copy edit lands in the same voice as the rest of the site, or it doesn't ship.
+This site reads like the work of a senior independent consultant: precise, measured, and backed by evidence. Every copy edit lands in this voice, or it doesn't ship.
 
-## PRIMARY TONE — engineering-blog register
+## PRIMARY TONE — measured technical authority
 
-**This overrides everything below it where there is conflict.** The canonical example of the voice the operator writes in is the CPR / shared-memory essay (`Shared Memory Layer: Claude Code + Codex`). Match that register on every prose surface.
+**This overrides everything below it where there is conflict.** The register is a senior independent technical consultant writing for technical buyers. Calm, confident, outcome-first. It earns trust by being specific and accurate, not by being loud. The reference points are the best independent operators in AI, automation, and SEO consulting: polished and authoritative, never corporate-stiff and never hype.
 
-### What the canonical voice looks like
+### What the voice sounds like
 
 | Element | Rule |
 |---|---|
-| Sentence rhythm | Heavy short-declarative. Fragments allowed when they earn pacing: *"No external service. No database. No API."* Three fragments stacked beats one comma-padded sentence. |
-| Paragraph length | One to two sentences. Heavy whitespace. Headers carry structural load, not prose transitions. |
-| Address | First-person past for the build narrative. Present-tense imperative for instructions. Drop the customer-service "we." |
-| Concrete artifacts | Real file paths, real commands, real version numbers inline. `~/.claude/commands/compress.md` beats "the compress command." |
-| Show-wrong-then-show-right | When a claim has an edge, demonstrate the failure mode literally, then the correct version literally. |
-| Section-closing principles | One italicized line that crystallizes the argument: *"The format is the interface."* Use sparingly; not every section gets one. |
-| Bullets as content | The bullet list is the explanation, not a summary of prose above. |
-| Modest insight framing | State the insight plainly. *"The insight is that the shared memory layer is just the filesystem."* No contrarian gatekeeping. |
+| Register | Measured and authoritative. Senior consultant, not hype-man and not corporate brochure. Let the work and the numbers carry the weight. |
+| Sentence rhythm | Clear declarative sentences with an even, readable cadence. Fragments are allowed but rare, for genuine emphasis, not as a default style. |
+| Lead with the outcome | Open with the result, the proof, or the specific. The claim first, the mechanism second. |
+| Address | First person for the work ("I built", "I shipped"). Plain second person for the reader. Never the customer-service "we". |
+| Concrete artifacts | Real numbers, tools, file paths, versions. `Next.js 16`, `3× organic in 16 months`, `70+ redirects` beat any adjective. |
+| Evidence over assertion | Prefer a number or an artifact to a descriptor. If a claim can be proven, prove it inline. Never overclaim. |
+| Restraint | Say it once, clearly. No slogans stacked for effect, no repetition for emphasis. Confidence reads as calm, not as volume. |
 
 ### Don't write
 
-- Metaphor-quips: *"the build log is the receipt,"* *"the unfair feature,"* *"the abstraction that fails first under real load."* These drift into influencer-flex register.
-- Contrarian gatekeeping: *"if you don't ship, this isn't for you,"* *"the absences matter as much as the inclusions."*
-- Stiff corporate prose to avoid the above: *"the engagement focuses on identifying,"* *"structured around a structured review."* That over-correction is also wrong.
-- Brand slogans dropped mid-paragraph: *"sold by the project,"* *"built like an operator"* outside the hero tagline.
+- Corporate filler: *leverage, synergy, empower, drive value, unlock, end-to-end solutions, cutting-edge.* Empty words read as junior, not senior.
+- Hype and bravado: *"zero pitch," "this changes everything," "the unfair advantage."* Influencer-flex undercuts authority.
+- SaaS-landing-page voice: *"Imagine a world where," "Tired of...?," "What you'll get."*
+- Vanity metrics dressed as proof: commit counts, session counts, "lines of code." Use client and business outcomes instead.
+- Hedging that signals uncertainty: *typically, generally, approximately, perhaps, somewhat.* State things plainly.
 
 ### Calibration test
 
 Read any new prose aloud. Ask:
 
-1. Could this sentence appear in the canonical CPR essay? If yes, ship it.
-2. Does this sentence sound like a SaaS landing page? Rewrite.
-3. Does this sentence sound like a quarterly board update? Rewrite.
+1. Would this sentence appear on the site of a respected senior consultant in this space? If yes, ship it.
+2. Does it sound like a SaaS landing page or an influencer thread? Rewrite.
+3. Does it sound like corporate jargon or a board update? Rewrite.
+4. Is there a number, tool, or artifact I could add to make it more specific and credible? Add it.
 
-The narrow target between pitchy and stiff is where the canonical voice lives.
+The target sits between hype and corporate-stiff: polished, specific, and quietly confident.
 
 ---
 
 ## The reader
 
-A technical operator who already builds. Not someone being sold to. They came here to see if I do real work, what I build with, and how. They don't need to be persuaded. They need to be informed enough to decide for themselves.
+A technical buyer deciding whether to trust me with real money: a founder, agency owner, or ops lead who can read code or hire people who can. Skeptical and time-poor. They are deciding, in about 90 seconds, whether I do credible work and whether I'm a safe, professional choice. Inform that decision with evidence. Respect their time.
 
-The site exists to document the practice. Not to sell it. If the work is good, the work sells. If the prose has to do the selling, the work isn't good enough.
+## Voice — senior independent consultant
 
-## Voice — Dan Koe meets Thariq Shihipar
-
-The target is **declarative, concrete, conviction-loaded**. Two reference influences:
-
-- **Dan Koe** — short sentences. Strong openers. Punctuation as pacing. Direct address ("you"). One-line claims that land. Avoids fluff, avoids preamble. Reads more like a manifesto than a sales page.
-- **Thariq Shihipar** (CPR essay style) — engineering-narrative. Concrete artifact first, abstraction second. Specific numbers, specific tools, specific timings. Builds up from problem → mechanism → implication. No throat-clearing.
-
-The combined register is **direct, technical, conviction-loaded**. It reads like an operator who actually ships, talking to operators who ship.
+The target is **measured, concrete, and credibility-forward**. It reads like a senior operator who has shipped real systems, writing plainly to a buyer who has too. Authority comes from specifics: named tools, real numbers, shipped outcomes. Confident without being loud, professional without being corporate. Lead with proof and let it do the persuading.
 
 ## The five rules
 
@@ -67,14 +61,14 @@ NO   "If you find yourself in a position where you need automation..."
 YES  "If a workflow is eating your week, automate it."
 ```
 
-### 2. Short declaratives. Period over comma.
+### 2. Clear sentences over clutter.
 
 ```
-NO   "Fixed scope, locked on day one, deployed by completion, no surprises."
-YES  "Fixed scope. Locked day one. Deployed by week's end. No surprises."
+NO   "Fixed scope, locked on day one, deployed by completion, with no surprises along the way."
+YES  "Fixed scope, locked on day one and deployed by the agreed date. No surprises."
 ```
 
-If two clauses can be two sentences, make them two sentences.
+Break a cluttered sentence into clean ones. Don't chop everything into fragments for effect; an even, readable cadence reads more senior than staccato.
 
 ### 3. Concrete > abstract. Numbers, tools, artifacts.
 
@@ -85,15 +79,13 @@ YES  "$0/mo platform fee. ~$0.20/day in API tokens. Zero vendor lock-in."
 
 If a sentence could describe any consultancy, rewrite until it can only describe this one.
 
-### 4. Conviction, not hedging.
+### 4. Plain and precise, not hedged.
 
-Strike from drafts: *typically, generally, approximately, perhaps, may, might, somewhat, fairly, quite, rather, in most cases, often, sometimes, kind of, a bit, basically.*
-
-Exceptions are rare. When the sentence needs uncertainty, state it directly ("I'm not sure yet" beats "perhaps").
+Strike hedges that signal uncertainty: *typically, generally, approximately, perhaps, may, might, somewhat, fairly, quite, rather, in most cases, often, sometimes, kind of, a bit, basically.* State facts directly. When something is genuinely uncertain, say so plainly ("not measured yet" beats "perhaps").
 
 ```
 NO   "Typically, audits book approximately 2-3 weeks out."
-YES  "Audits book 2-3 weeks out. Ask when you book."
+YES  "Audits book 2-3 weeks out."
 ```
 
 ### 5. No corporate verbs.
@@ -135,75 +127,44 @@ Default: **use them.** This is direct register, not legal-formal.
 - `I'll`, `you're`, `don't`, `won't`, `can't`, `isn't`, `we're`, `that's`, `here's`, `you'll`, `it's`
 - Avoid only when the sentence reads stronger uncontracted (rare).
 
-## Anti-pitch rules
+## Selling, professionally
 
-This is the hardest rule and the one I keep failing. The site keeps drifting into "landing page voice." Fix it.
+A professional consultant sells. The rule is restraint: lead with proof, ask once, and let the work persuade.
 
-### One CTA per page, at most
+### One clear CTA per page
 
-The contact button on a section closer is a tell. If a page ends `Headline question? Pitch close. Book a 30-min call →`, it reads like a sales page. The reader doesn't need to be asked four times.
+Give each page one primary call to action, placed where it belongs (a single closing CTA, plus the hero on the homepage). Don't stack the same ask three times down a page; repetition reads as anxious, not confident.
 
-- **Homepage:** hero CTA + one closing CTA. That's it.
-- **Contact page:** all the CTAs you want (the page is the CTA).
-- **Every other page:** at most one quiet, one-line link to /contact/ at the bottom. Often zero. Let the page end on substance.
+- **Homepage:** hero CTA + one closing CTA.
+- **Contact page:** the page is the CTA; multiple routes are fine.
+- **Other pages:** one clear CTA, typically at the end. Lead with the substance, close with the ask.
 
-### Banned closings
-
-These formulas appeared 8+ times across the site at once. They scream "sales page." Never write any of them again:
-
-- `Have a workflow eating your week? Let's scope it.`
-- `30 minutes. Zero pitch.`
-- `You describe the problem. I tell you whether AI is the fix.`
-- `Real quote in writing within 24 hours.`
-- `Ends with a written quote.`
-- `Operator-to-operator.` (it's fine on /contact/ once. Cut everywhere else.)
-- "Quick fit-check."
-
-If a page needs a quiet pointer to /contact/ at the bottom, write one line. Examples that pass:
+Examples of a clean closing line:
 
 - "Available for new engagements. [Discuss a project →](/contact/)"
-- "More on what I build: [/services/](/services/) or [/contact/](/contact/)."
-- "If a similar problem fits, [the contact page is here](/contact/)."
+- "If this maps to a problem you have, [start here](/contact/)."
 
-### Banned framing
+### Lead with outcomes, not hooks
 
-- "What you get" / "What you receive" / "You'll get" / "You walk away with"
-  Just describe what's in the engagement. The reader infers the value.
-- "We help you / I help you" (when followed by a benefit-promise)
-- "Imagine a world where..."
-- "Tired of...?"
-- "Paying $X to...?" as a hook
-- "Need similar work for your business?"
+Open sections with the result or the specific, then invite the next step. Avoid manipulative hooks and hype:
 
-### Banned sales positioning
+- "Imagine a world where..." / "Tired of...?" / "Paying $X to...?"
+- "What you get" / "What you receive" / "You'll get". Describe what's in the engagement; the value is self-evident.
+- "We help you / I help you" followed by a vague benefit-promise.
+- Bravado slogans: "zero pitch," "operator-to-operator" as a hook, "quick fit-check."
 
-- "The 30-minute call is free" repeated more than once per page
-- "No retainer creep" / "No scope creep" repeated. Say it once on /services/ and let it stand.
-- Repeating the response time ("within 24 hours") on every section. Say it once on /contact/.
+### Say it once
 
-### When in doubt, describe — don't sell
+State price, scope, and response time clearly and once. Repeating "the call is free," "no scope creep," or "within 24 hours" on every section undercuts authority. One confident statement stands on its own.
 
-```
-NO   "Have a workflow eating your week?
-      Let's scope it.
-      30-min call. Zero pitch. You describe the problem.
-      I tell you whether AI is the fix and which engagement matches.
-      Real quote in writing within 24 hours.
-      [Book the call →]"
+## Signature phrases — use sparingly
 
-YES  (just end the section on the actual content.
-      One quiet link to /contact/ at the bottom of the page, if at all.)
-```
+Positioning shorthand. They can appear, but lead with proof, not with a slogan, and never stack them.
 
-## Signature phrases — keep these
-
-These earned their keep. Don't rewrite them. Don't repeat them either.
-
-- "Built like an operator. Sold by the project." (hero tagline only)
-- "$0 platform fee."
-- "Code-first."
 - "Fixed scope. Fixed price."
-- "I ship. You review." (process step heading on homepage only)
+- "Code-first." / "You own the code."
+- "$0 platform fee."
+- "Built like an operator. Sold by the project." (hero tagline only, optional; a measured outcome line often does the job better.)
 
 ## What to remove on every pass
 
@@ -221,15 +182,15 @@ These earned their keep. Don't rewrite them. Don't repeat them either.
 - "Let's scope it" (appeared 9 times — every section closer)
 - "Operator-to-operator" (kept being used as a hook word)
 
-## Page-by-page tone tightness
+## Page-by-page tone
 
-- **Homepage** — punchiest. Every sentence earns its place.
-- **Services + verticals + sprints** — direct, value-loaded. Each bullet starts with a noun or verb, never with an article.
-- **About** — narrative permission for slightly longer sentences. Still direct.
-- **Why-code-first** — manifesto register. Strongest opinions, shortest sentences.
-- **CISNET case study** — engineering-narrative. Concrete numbers everywhere.
-- **Writing** — Dan Koe register. Short bait, strong claim.
-- **AI manifest, Stack** — operator-direct. Tool, why, cost. No explanations.
+- **Homepage** — tightest. Lead with proof. Every sentence earns its place.
+- **Services + verticals + sprints** — direct and specific. Each bullet starts with a noun or verb, never an article. Concrete deliverables over adjectives.
+- **About** — measured narrative. Slightly longer sentences allowed. Credibility through specifics.
+- **Why-code-first** — a reasoned argument. Strong, evidenced opinions stated calmly.
+- **Case studies** — engineering-narrative. Numbers and artifacts everywhere: problem, approach, stack, timeline, outcome.
+- **Writing** — clear, substantive build notes. A strong claim backed immediately.
+- **Stack** — operator-direct. Tool, why, cost. No filler.
 
 ## Engineering rules
 

@@ -138,7 +138,7 @@ try {
         <a href="/workflow-audit/" class="cta-btn cta-btn-secondary">Send a workflow (free 48h audit)</a>
       </div>
       <div class="cta-row" style="margin-top: 10px;">
-        <span class="micro"><a href="/services/" style="color: var(--text-dim); border-bottom: 1px dashed var(--border);">See services →</a>  ·  Written quote within 24 hrs of the call</span>
+        <span class="micro"><a href="/services/" style="color: var(--text-dim); border-bottom: 1px dashed var(--border);">See services →</a></span>
       </div>
     </div>
 
@@ -146,10 +146,9 @@ try {
       <div class="chrome">
         <div class="dots"><span></span><span></span><span></span></div>
         <span>~/pravine/this-week</span>
-        <span class="stat"><span class="pulse"></span>LIVE</span>
       </div>
       <div class="body">
-        <div class="ln"><span class="cmt">// {lastDate} · {lastTimestamp}</span></div>
+        <div class="ln"><span class="cmt">// latest push · {lastDate}</span></div>
         <div class="ln"><span class="gr">$</span> git log --oneline -5</div>
         {commits.map(c => (
           <div class="ln">
@@ -158,7 +157,6 @@ try {
             {c.message}
           </div>
         ))}
-        <div class="ln"><span class="cmt">// shipping cadence: <span class="gr">{cadence}</span></span></div>
         <div class="ln"><span class="gr">$</span> ls ~/services</div>
         <div class="ln"><span class="gr">▸</span> AI · <span class="gr">accepting</span></div>
         <div class="ln"><span class="bl">▸</span> SEO + GEO · <span class="gr">accepting</span></div>
@@ -167,8 +165,8 @@ try {
         <div class="ln"><span class="gr">$</span><span class="cursor"></span></div>
       </div>
       <div class="feet">
-        <div class="m"><div class="k">COMMITS / 30D</div><div class="v"><span class="gr">{commitCount30d}</span></div></div>
-        <div class="m"><div class="k">SHIPS / WEEK</div><div class="v">~3</div></div>
+        <div class="m"><div class="k">CLIENTS</div><div class="v"><span class="gr">3</span></div></div>
+        <div class="m"><div class="k">CODE</div><div class="v">OWNED OUTRIGHT</div></div>
       </div>
     </div>
   </div>
@@ -178,10 +176,10 @@ try {
 <!-- ===== NUMBERS BAND ===== -->
 <section class="numbers-band">
   <div class="numbers-inner">
+    <div class="n-cell"><span class="k">CLIENT PROJECTS</span><span class="v"><span class="gr">3</span></span></div>
+    <div class="n-cell"><span class="k">CISNET ORGANIC</span><span class="v"><span class="gr">3×</span> / 16MO</span></div>
+    <div class="n-cell"><span class="k">PAGES INDEXED</span><span class="v"><span class="gr">27→145</span></span></div>
     <div class="n-cell"><span class="k">SHIPPING SINCE</span><span class="v"><span class="gr">2022</span></span></div>
-    <div class="n-cell"><span class="k">COMMITS / 30D</span><span class="v"><span class="gr">{commitCount30d}</span></span></div>
-    <div class="n-cell"><span class="k">OPEN-SOURCE SKILLS</span><span class="v"><span class="gr">3</span></span></div>
-    <div class="n-cell"><span class="k">LATEST COMMIT</span><span class="v"><span class="gr">{lastDate}</span></span></div>
     <div class="n-cell"><span class="k">BASED IN</span><span class="v">TORONTO, ON</span></div>
   </div>
 </section>
@@ -190,21 +188,25 @@ try {
 <div class="ticker-wrap">
   <div class="ticker">
     <div class="ticker-track">
-      <span class="ticker-item"><span class="bl">CLIENT</span> · CISNET pSEO indexing <span class="gr">200+ pages</span></span>
+      <span class="ticker-item"><span class="bl">CLIENT</span> · CISNET <span class="gr">3× organic</span> in 16 months</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="pu">OPEN SOURCE</span> · personalClaudeSkills on GitHub</span>
+      <span class="ticker-item"><span class="bl">CLIENT</span> · Orbit dual-channel AI voice agent</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="gr">{commitCount30d} COMMITS</span> across public repos · 30 days</span>
+      <span class="ticker-item"><span class="bl">CLIENT</span> · Smile Club prevention-first rebuild</span>
+      <span class="sep">·</span>
+      <span class="ticker-item"><span class="pu">OPEN SOURCE</span> · skills-and-mcp on GitHub</span>
       <span class="sep">·</span>
       <span class="ticker-item"><span class="rd">CONSULTING</span> · taking new engagements</span>
       <span class="sep">·</span>
       <span class="ticker-item"><span class="bl">CISNET</span> · 70+ legacy URLs preserved through cutover</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="bl">CLIENT</span> · CISNET pSEO indexing <span class="gr">200+ pages</span></span>
+      <span class="ticker-item"><span class="bl">CLIENT</span> · CISNET <span class="gr">3× organic</span> in 16 months</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="pu">OPEN SOURCE</span> · personalClaudeSkills on GitHub</span>
+      <span class="ticker-item"><span class="bl">CLIENT</span> · Orbit dual-channel AI voice agent</span>
       <span class="sep">·</span>
-      <span class="ticker-item"><span class="gr">{commitCount30d} COMMITS</span> across public repos · 30 days</span>
+      <span class="ticker-item"><span class="bl">CLIENT</span> · Smile Club prevention-first rebuild</span>
+      <span class="sep">·</span>
+      <span class="ticker-item"><span class="pu">OPEN SOURCE</span> · skills-and-mcp on GitHub</span>
       <span class="sep">·</span>
       <span class="ticker-item"><span class="rd">CONSULTING</span> · taking new engagements</span>
       <span class="sep">·</span>
@@ -236,7 +238,7 @@ try {
         <p>The starting point for every paid engagement. We walk through one workflow together, sharpen the scope, and determine which of the paid shapes is the right fit. The call is free.</p>
         <ul>
           <li>One workflow discussed in detail</li>
-          <li>A direct read on whether AI is the appropriate solution</li>
+          <li>A direct read on whether AI is the right fix</li>
           <li>A written quote within 24 hours when there is a fit</li>
         </ul>
       </div>
@@ -253,9 +255,9 @@ try {
       </div>
       <div class="body">
         <h3>System audit.</h3>
-        <p>A fixed-scope week structured around founder interviews and a workflow review, focused on identifying the three to five highest-leverage automation opportunities for the business. The deliverable is a ranked opportunity list and a 30-day implementation plan.</p>
+        <p>A fixed-scope week structured around founder interviews and a workflow review, focused on the 3-5 highest-impact automation opportunities for the business. The deliverable is a ranked opportunity list and a 30-day implementation plan.</p>
         <ul>
-          <li>Three founder interviews of approximately 60 minutes each</li>
+          <li>Three founder interviews, 60 minutes each</li>
           <li>Current-state workflow map across the operation</li>
           <li>Ranked opportunity list scored on effort and impact</li>
           <li>A 30-day implementation plan with cost projections per opportunity</li>
@@ -320,17 +322,14 @@ try {
 <section class="quote-band">
   <div class="quote-inner">
     <div class="reveal">
-      <div class="lab"><span class="dot"></span>WHAT FOUNDERS SAY</div>
-      <p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-dim); line-height: 1.55; margin-top: 12px;">Attribution on request.</p>
+      <div class="lab"><span class="dot"></span>WHAT CLIENTS SAY</div>
     </div>
     <div class="quote-grid">
       <div class="quote-card reveal" data-delay="1">
-        <div class="stars">★★★★★</div>
         <blockquote>The audit alone paid for itself in week two. We deferred two SaaS subscriptions because Pravine's report showed we'd been Zapier-stitching a problem that wanted 40 lines of code.</blockquote>
         <div class="src"><div class="av">PA</div><span class="who">Pira A · PERFORMANCE MARKETING LEAD · BOOST COLLECTIVE</span></div>
       </div>
       <div class="quote-card reveal" data-delay="2">
-        <div class="stars">★★★★★</div>
         <blockquote>Async-first actually works the way he runs it. Daily Looms, written summaries, no meeting tax. The migration ran 3 months without a single live call drift.</blockquote>
         <div class="src"><div class="av">MP</div><span class="who">Mani P · OPS LEAD · CISNET</span></div>
       </div>
@@ -347,7 +346,7 @@ try {
       <h2>What I'm building. What's shipped.</h2>
       <p>Grouped by status. Full portfolio at <a href="/work/">/work</a>.</p>
     </div>
-    <div class="meta">UPDATED {lastDate} · <span class="gr">{commitCount30d} COMMITS / 30D</span></div>
+    <div class="meta">UPDATED {lastDate}</div>
   </div>
 
   <div class="work-table reveal">
@@ -383,7 +382,7 @@ try {
       <div class="link"><a href="https://aiopsforge.dev">→ WAITLIST</a></div>
     </div>
 
-    <!-- betterSpeaking row hidden 2026-05-27 — pre-launch, not ready to surface yet -->
+    <!-- betterSpeaking row hidden 2026-05-27, pre-launch, not ready to surface yet -->
 
     <div class="work-row">
       <div class="date">2026-04</div>
@@ -400,9 +399,9 @@ try {
     <div class="work-row">
       <div class="date">2026-05</div>
       <div class="status live">LIVE</div>
-      <div class="nm">personalClaudeSkills</div>
-      <div class="desc">Open-source Claude Code skill library. /growth-sprint, /design-system, /artifact. Curl-installable.</div>
-      <div class="link"><a href="https://github.com/pravinemani5545/personalClaudeSkills">→ GITHUB</a></div>
+      <div class="nm">skills-and-mcp</div>
+      <div class="desc">Open-source Claude Code skills + a multi-account Gmail organizer MCP server. Curl-installable.</div>
+      <div class="link"><a href="https://github.com/pravinemani5545/skills-and-mcp">→ GITHUB</a></div>
     </div>
 
     <div class="work-row">
@@ -479,7 +478,7 @@ try {
         <a href="/contact/" class="cta-btn">Book a 30-min call →</a>
         <a href="/workflow-audit/" class="cta-btn cta-btn-secondary">Send a workflow instead →</a>
       </div>
-      <p style="margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim); letter-spacing: 0.04em;">Not ready for a call? The async audit is a 1-page written response in 48 hours. Free during the first-10-prospects phase.</p>
+      <p style="margin-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim); letter-spacing: 0.04em;">Not ready for a call? Send one workflow and get a 1-page written audit back in 48 hours. Free.</p>
     </div>
 
     <div class="contact-card reveal" data-delay="1">
