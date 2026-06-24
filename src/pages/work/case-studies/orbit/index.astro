@@ -6,7 +6,7 @@ const jsonLd = {
     {
       "@type": "Article",
       "headline": "Orbit Dental AI · Patient-acquisition system: site, lead-ops dashboard, AI voice agent",
-      "description": "End-to-end patient-acquisition build for a Toronto dental lead-generation and rewards operation. Three systems shipped: an Astro 6 marketing site with a 6-article content engine, a Next.js 16 lead-ops dashboard over a 7-stage funnel, and a code-owned AI voice agent on Supabase Edge Functions.",
+      "description": "End-to-end patient-acquisition build for a Toronto dental lead-generation and rewards operation. Three systems shipped: an Astro 6 marketing site with a 6-article content engine, a Next.js 16 lead-ops dashboard over a 6-stage funnel, and a code-owned AI voice agent on Supabase Edge Functions.",
       "datePublished": "2026-05-01",
       "dateModified": "2026-06-24",
       "image": "https://pravinemani.com/og-default.png",
@@ -55,7 +55,7 @@ const jsonLd = {
     <span class="you">orbit</span>
   </div>
   <h1>Orbit Dental AI: patient acquisition.<br><span class="accent" style="color: #447EF7; -webkit-text-fill-color: #447EF7;">Site, dashboard, AI voice agent.</span></h1>
-  <p class="lead">End-to-end patient-acquisition system for a Toronto dental lead-generation and rewards operation. Three systems shipped: a marketing site with a 6-article content engine, a lead-ops dashboard over a 7-stage funnel, and an outbound AI voice agent. The automation lives in code, not a no-code wrapper.</p>
+  <p class="lead">End-to-end patient-acquisition system for a Toronto dental lead-generation and rewards operation. Three systems shipped: a marketing site with a 6-article content engine, a lead-ops dashboard over a 6-stage funnel, and an outbound AI voice agent. The automation lives in code, not a no-code wrapper.</p>
 
   <div class="cs-hero-meta">
     <div class="cell"><div class="k">CLIENT</div><div class="v">Dental Lead-Gen · Toronto</div></div>
@@ -106,7 +106,7 @@ const jsonLd = {
     <div class="lab-col"><span class="num">03 / 06</span><span>SYSTEM 2 · LEAD-OPS DASHBOARD</span></div>
     <div class="body-col">
       <h2>A monitoring portal over the funnel.</h2>
-      <p>A Next.js 16 and React 19 dashboard on Supabase. It renders the lead funnel as a <strong>7-stage state machine</strong>: per-lead call history, recording and transcript links, reward-fulfillment tracking, and Facebook ad attribution. A full-width sortable, filterable table, CSV export, hourly auto-refresh, and manual reload give the operator one place to watch every lead move.</p>
+      <p>A Next.js 16 and React 19 dashboard on Supabase. It renders the lead funnel as a <strong>6-stage state machine</strong>: per-lead call history, recording and transcript links, reward-fulfillment tracking, and Facebook ad attribution. A full-width sortable, filterable table, CSV export, hourly auto-refresh, and manual reload give the operator one place to watch every lead move.</p>
       <p>Data access is service-role and server-side, behind a signed-cookie login. The operator (admin) sees everything. Each <strong>clinic gets its own login</strong> scoped to its own leads: patient name, phone, email, and state, with the ability to move that state forward. Rewards, the SMS thread, and the event log stay admin-only. Server-side enforcement, not just hidden UI: a clinic can only set the states it owns, and the API rejects the rest. An admin-only lifecycle view diagrams how the voice and SMS channels run into the clinic and out to reward.</p>
       <ul>
         <li><strong>State machine:</strong> lead funnel rendered end-to-end with a pipeline diagram</li>
@@ -149,6 +149,13 @@ const jsonLd = {
         <li><strong>Compliance + guardrails:</strong> consent, Mon-Fri 12-4 ET window, STOP handling, strictly on-script</li>
       </ul>
       <p style="margin-top: 8px;">The flow, end to end: Facebook Lead Ad to instant SMS to AI call (with SMS qualifying in parallel) to live clinic hand-off to reward and reviews.</p>
+
+      <div class="cs-shots">
+        <figure class="cs-shot">
+          <img src="/case-studies/orbit/system-architecture.png" alt="System architecture: one Facebook lead into two parallel qualification channels, voice and SMS, over a single shared record, then hand-off, clinic, and reward." width="977" height="1144" loading="lazy" decoding="async" />
+          <figcaption>The architecture, admin-only. One lead, two qualification channels in parallel over a single shared record, then hand-off to the clinic and out to reward.</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
@@ -190,7 +197,7 @@ const jsonLd = {
       <div class="impact-grid">
         <div class="impact-card"><div class="k">SYSTEMS SHIPPED</div><div class="v">3</div><div class="desc">Marketing site, lead-ops dashboard, AI voice agent. One operator, end-to-end.</div></div>
         <div class="impact-card"><div class="k">SEO ARTICLES</div><div class="v">6</div><div class="desc">SEO and GEO articles on Astro content collections, each with Article JSON-LD.</div></div>
-        <div class="impact-card"><div class="k">FUNNEL STAGES</div><div class="v">7</div><div class="desc">Lead state machine rendered end-to-end in the dashboard.</div></div>
+        <div class="impact-card"><div class="k">FUNNEL STAGES</div><div class="v">6</div><div class="desc">Lead state machine rendered end-to-end in the dashboard.</div></div>
         <div class="impact-card"><div class="k">ZAPIER FOOTPRINT</div><div class="v">1 ZAP</div><div class="desc">Orchestration moved to Edge Functions. One trigger left, the rest is code.</div></div>
         <div class="impact-card"><div class="k">VOICE STACK</div><div class="v">4</div><div class="desc">Vapi, Claude Haiku, Deepgram Nova-3, ElevenLabs. Outbound qualifying caller.</div></div>
         <div class="impact-card"><div class="k">DEPLOY</div><div class="v">LIVE</div><div class="desc">Site, dashboard, and Anna all live. The dialer runs Mon–Fri 12–4pm ET.</div></div>
