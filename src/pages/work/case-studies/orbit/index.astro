@@ -221,31 +221,43 @@ const jsonLd = {
           btn.addEventListener('click', () => { if (audio.paused) audio.play().catch(() => {}); else audio.pause(); });
           turns.forEach((t) => t.el.addEventListener('click', () => { audio.currentTime = t.start; audio.play().catch(() => {}); }));
 
-          // Play when the call scrolls into view; stop + rewind when it scrolls out.
-          // (Browsers block audio autoplay until the visitor has interacted with the
-          // page, so the first play may need a tap of the button; after that, scrolling
+          // Play while the call is the thing on screen; stop + rewind once it's mostly
+          // scrolled past (either direction). We measure how much of the preview overlaps
+          // the viewport RELATIVE TO THE SMALLER of element/viewport — so a card taller
+          // than the screen still reads as "mostly gone" when you scroll past it, instead
+          // of a lingering sliver keeping the audio alive. Hysteresis: start at >=55%,
+          // stop at <=25%. (Browsers block audio autoplay until the visitor interacts with
+          // the page, so the first play may need a tap of the button; after that, scrolling
           // back in auto-plays. The .catch keeps a blocked attempt silent.)
-          // Hysteresis with two thresholds so it works even when the preview is taller
-          // than the viewport (where the ratio never reaches a high value): start once
-          // ~30% is on screen, stop only once it's essentially gone.
           let inView = false;
-          if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((entries) => {
-              entries.forEach((e) => {
-                const r = e.intersectionRatio;
-                if (!inView && e.isIntersecting && r >= 0.3) {
-                  inView = true;
-                  audio.play().catch(() => {});
-                } else if (inView && (!e.isIntersecting || r <= 0.05)) {
-                  inView = false;
-                  audio.pause();
-                  audio.currentTime = 0;
-                  reset();
-                }
-              });
-            }, { threshold: [0, 0.05, 0.3, 0.6, 1] });
-            io.observe(root);
-          }
+          const visibleFraction = () => {
+            const rect = root.getBoundingClientRect();
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+            const overlap = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0));
+            const denom = Math.min(rect.height, vh) || 1;
+            return overlap / denom;
+          };
+          let ticking = false;
+          const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+              ticking = false;
+              const f = visibleFraction();
+              if (!inView && f >= 0.55) {
+                inView = true;
+                audio.play().catch(() => {});
+              } else if (inView && f <= 0.25) {
+                inView = false;
+                audio.pause();
+                audio.currentTime = 0;
+                reset();
+              }
+            });
+          };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          window.addEventListener('resize', onScroll, { passive: true });
+          onScroll();
         })();
       </script>
 
