@@ -13,7 +13,7 @@ export default defineConfig({
   site: 'https://pravinemani.com',
   trailingSlash: 'always',
   adapter: vercel(),
-  integrations: [sitemap({ filter: (page) => !['/private', '/writing', '/services/agentic-os'].some((p) => page.includes(p)) })],
+  integrations: [sitemap({ filter: (page) => !['/private', '/services/agentic-os'].some((p) => page.includes(p)) })],
   redirects: {
     '/ai/': '/stack/',
   },
