@@ -8,7 +8,7 @@ const jsonLd = {
       "headline": "CISNET · Marketing site + SEO + admin portal rebuild",
       "description": "3-month solo engagement migrating a Toronto IT certification training company off legacy PHP onto Next.js 16 with 200+ programmatic SEO pages, 70+ individually-mapped redirects, and a custom admin portal.",
       "datePublished": "2025-12-01",
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-07-09",
       "image": "https://pravinemani.com/og-default.png",
       "author": {
         "@type": "Person",
@@ -173,14 +173,26 @@ const jsonLd = {
         </figure>
       </div>
 
-      <h2 style="margin-top: 44px;">Early SEO traction.</h2>
-      <p>I took over the SEO operation in late April 2026: rebuilt the content architecture and structured data, fixed the technical foundation (canonicals, redirects, Core Web Vitals), and shipped a free tools and study-resource layer (subnet calculator, practice quizzes, cheat sheets). It's early, and the reach and visibility signals that move first are all up. Measured in Google Search Console across 28-day windows ending April 30 against June 18, 2026:</p>
+      <h2 style="margin-top: 44px;">Measured SEO results.</h2>
+      <p>I took over the SEO operation in late April 2026: rebuilt the content architecture and structured data, fixed the technical foundation (canonicals, redirects, Core Web Vitals), shipped a free tools and study-resource layer (subnet calculator, practice quizzes, cheat sheets), then ran a weekly loop of GSC audits, title rewrites, and interlinking. Every number below comes from Google Search Console, pulled through the service-account API integration I built into the admin portal.</p>
       <div class="impact-grid">
-        <div class="impact-card"><div class="k">Search impressions</div><div class="v">3×</div><div class="desc">7,600 to 22,500 per 28 days. Monthly impressions up 108% from April to May.</div></div>
-        <div class="impact-card"><div class="k">Ranking pages</div><div class="v">5.4×</div><div class="desc">27 to 145 distinct pages earning search impressions.</div></div>
-        <div class="impact-card"><div class="k">Query footprint</div><div class="v">855 → 1,000+</div><div class="desc">Distinct queries the site surfaces for (GSC reporting cap reached).</div></div>
+        <div class="impact-card"><div class="k">Monthly impressions</div><div class="v">5.3×</div><div class="desc">4,808 in February 2026 to 25,639 in June 2026. June was also the site's best month ever for clicks.</div></div>
+        <div class="impact-card"><div class="k">Ranking pages</div><div class="v">27 → 145</div><div class="desc">Distinct pages earning search impressions, up 5.4× as the new architecture indexed.</div></div>
+        <div class="impact-card"><div class="k">One 4-week window</div><div class="v">+52%</div><div class="desc">Impressions 16,227 to 24,679 (clicks +28%) after the June title and interlinking pass. Jun 5 to Jul 2 against the prior 28 days.</div></div>
       </div>
-      <p style="margin-top: 14px; font-size: 14px; color: var(--text-dim);">Source: Google Search Console, sc-domain property, queried live via a service-account API integration I built into the admin portal. Clicks up ~19% over the same window and compounding as the larger footprint matures; off-page authority is the next focus.</p>
+
+      <h3 class="cs-sub">Where individual pages moved.</h3>
+      <div class="move-table">
+        <div class="move-row move-head"><span>PAGE / QUERY</span><span>BEFORE</span><span>AFTER</span><span>WINDOW</span></div>
+        <div class="move-row"><span>CCNA certification page</span><span>pos 44.5 · 45 impr</span><span class="gr">pos 19.5 · 1,355 impr</span><span>1 month</span></div>
+        <div class="move-row"><span>Subnetting study guide</span><span>pos 26.1 · 258 impr</span><span class="gr">pos 12.9 · 1,437 impr</span><span>1 month</span></div>
+        <div class="move-row"><span>"comptia a+ certification"</span><span>pos 30</span><span class="gr">pos 12</span><span>1 month</span></div>
+        <div class="move-row"><span>"cloud computing classes near me"</span><span>·</span><span class="gr">position 1 · 1,136 impr</span><span>current</span></div>
+        <div class="move-row"><span>"ccna training near me"</span><span>·</span><span class="gr">8.7% CTR</span><span>current</span></div>
+      </div>
+
+      <p style="margin-top: 20px;">The technical recovery mattered as much as the content. The homepage existed as 4 competing URL variants splitting 86% of the site's clicks four ways; consolidating them onto one canonical took the flagship pages out of their own way. Mobile LCP came down from 7.4s to 3.4s. And the site is AI-search ready: 23 AI crawlers allowlisted, llms.txt, Speakable and Dataset schema throughout.</p>
+      <p style="margin-top: 10px; font-size: 14px; color: var(--text-dim);">Honest ceiling: absolute click volumes are still modest for this niche, and the July re-audit put the remaining constraint off-page. On-page and GEO are clean; link authority is the next lever, and that work is scoped, not started. Case studies here report what happened, not a projection.</p>
 
       <div class="cs-proof">
         <figure>
@@ -189,7 +201,7 @@ const jsonLd = {
         </figure>
         <figure>
           <img src="/case-studies/cisnet/gsc-pages-indexed.webp" alt="Google Search Console page indexing for cisnet.ca: 145 pages indexed, the indexed count rising over time" width="1400" height="973" loading="lazy" decoding="async" />
-          <figcaption><span class="t">Indexed footprint</span> 27 → 145 indexed pages as the new architecture matured.</figcaption>
+          <figcaption><span class="t">Indexed footprint</span> 64 → 145 indexed pages in under three weeks as the new architecture matured.</figcaption>
         </figure>
         <figure>
           <img src="/case-studies/cisnet/gsc-top-queries.webp" alt="Google Search Console top queries for cisnet.ca, ranking for commercial CCNA terms beyond the brand name" width="1400" height="973" loading="lazy" decoding="async" />
@@ -246,6 +258,14 @@ const jsonLd = {
 .cs-section .body-col ul li::before { content: '+'; position: absolute; left: 0; color: #dc2626; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
 .cs-section .body-col ul li strong { color: var(--text-primary); }
 @media (max-width: 900px) { .cs-section { grid-template-columns: 1fr; gap: 16px; padding: 40px 0; } .cs-section .lab-col { flex-direction: row; align-items: center; gap: 12px; } }
+
+.cs-sub { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #dc2626; margin-top: 28px; }
+.move-table { border: 1px solid var(--border); background: var(--bg-card); margin-top: 10px; overflow-x: auto; }
+.move-row { display: grid; grid-template-columns: 1.6fr 1fr 1.2fr 0.7fr; gap: 14px; padding: 12px 18px; border-bottom: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text-secondary); align-items: baseline; min-width: 560px; }
+.move-row:last-child { border-bottom: none; }
+.move-row.move-head { background: var(--bg-tertiary); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
+.move-row .gr { color: var(--green); }
+@media (max-width: 700px) { .move-row { font-size: 11.5px; gap: 10px; padding: 10px 14px; } }
 
 .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
 .impact-card { background: var(--bg-card); border: 1px solid var(--border); padding: 22px 24px; position: relative; }

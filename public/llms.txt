@@ -1,45 +1,47 @@
 # Pravine Mani
 
-> Toronto freelance AI engineer. McMaster Computer Engineering & Management graduate. Engineering background at Ericsson (5G, Go, gRPC), Imprimo (React Native, Postgres), Fixvi (mobile push infra). Independent consultancy since February 2026. Three focus areas: AI workflows, programmatic SEO + GEO, marketing automation. Productized engagements, fixed scope, code-first delivery. Founder of AIOpsForge (pre-launch).
+> Toronto engineer building lead-response systems, marketing automation, and SEO + GEO in code. Every inbound lead answered in seconds, qualified, routed, and logged, with the code owned outright by the client. Most current work is patient and lead acquisition for clinics, training companies, and local service businesses. Independent consultancy since February 2026. Fixed scope, fixed price, milestone-refund guarantee.
 
 ## Overview
 
-Pravine Mani runs a one-person consultancy in Toronto, Canada. Four focus areas: AI workflows (Claude Code, MCP, agent systems), programmatic SEO + GEO (Schema.org, llms.txt, passage-level citability), marketing automation (lead pipelines, lifecycle email, CRM wiring), and Agentic OS (multi-agent orchestration, sub-agent design, concurrent-agent evals). McMaster Computer Engineering & Management graduate. Engineering background in production web app development with TypeScript, Next.js, Supabase, Vercel, and the Anthropic API. Independent practice since February 2026. Five engagement shapes: Scoping Call (free), Audit, Sprint, Custom, Ops Retainer. Quote on scope.
+Pravine Mani runs a one-person consultancy in Toronto, Canada. Three focus areas: marketing automation (lead pipelines, lifecycle email, CRM wiring), AI workflows (Claude Code, MCP servers, agent systems, voice agents), and programmatic SEO + GEO (Schema.org, llms.txt, AI-search citability). McMaster Computer Engineering & Management graduate. Engineering background at Ericsson (5G, Go, gRPC), Imprimo, and Fixvi. Reference systems in production: an AI voice agent handling 700+ dental leads across 7 Toronto clinics, and a training-company SEO rebuild that grew search impressions 5.3x in four months.
 
 ## Focus Areas
 
-- [AI workflows](https://pravinemani.com/services/ai/): Custom workflows. MCP servers. Agent systems. Prompt + eval suites. Code-first on Claude Code + Vercel.
+- [Marketing automation](https://pravinemani.com/services/marketing-automation/): Lead pipelines. Lifecycle email. CRM + webhook wiring. Stripe subscriptions. Vercel + Resend + Supabase, no platform fee.
+- [AI workflows](https://pravinemani.com/services/ai/): Custom workflows. MCP servers. Agent and voice-agent systems. Prompt + eval suites. Code-first on Claude Code + Vercel.
 - [SEO + GEO](https://pravinemani.com/services/seo/): Programmatic SEO at scale. Schema.org structured data. AI-search visibility (llms.txt + passage citability). Local SEO.
-- [Marketing automation](https://pravinemani.com/services/marketing-automation/): Lead pipelines. Lifecycle email. CRM + webhook wiring. Stripe subscriptions. Vercel + Resend + Supabase.
-- [Agentic OS](https://pravinemani.com/services/agentic-os/): Multi-agent orchestration. Sub-agent design. Concurrent-agent evals. R&D stage. Open for first-mover engagements.
 
 ## Engagement Shapes
 
-- [Scoping Call](https://pravinemani.com/services/#scoping-call): 30-minute scoping call. Free. By appointment. The starting point for every engagement. Walk through one workflow. Decide whether Audit, Sprint, or Custom fits.
-- [System Audit](https://pravinemani.com/services/#audit): Fixed-scope week. Maps the business. Identifies high-impact opportunities across any focus area. From $4,500.
-- [Build Sprint](https://pravinemani.com/services/#sprint): Productized fixed-scope build of a single workflow. From $4,500.
-- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow builds. Content engines, MCP servers, full marketing sites with SEO + admin portals. From $12K. Milestone-paid.
+- [Scoping Call](https://pravinemani.com/services/#scoping-call): Free 30-minute call. Written quote within 24 hours when there is a fit.
+- [Pilot Build](https://pravinemani.com/services/#pilot): One working piece of your workflow on your real data, in about 2 days. $750 flat, credited toward a Sprint.
+- [Build Sprint](https://pravinemani.com/services/#sprint): Complete production build of one workflow, fixed scope and price. From $2,500. Named fixed-price sprints: GEO / AI-search $2,500 (3 days), MCP server $3,500 (5 days), programmatic SEO $4,500 (7 days), lead pipeline $4,500 (7 days).
+- [Custom Build](https://pravinemani.com/services/#custom): Multi-workflow systems. Quoted on scope, milestone-paid, 30 days of post-launch fixes.
+- [Ops Retainer](https://pravinemani.com/services/#retainer): Post-ship only. Keep-it-running $1,500/mo or growth ops $3,000/mo.
+- Guarantee: every contract carries a milestone-refund clause. Miss an agreed milestone and that milestone is refunded.
 
 ## Case Studies
 
-- [CISNET: Marketing site + SEO + admin portal rebuild](https://pravinemani.com/work/case-studies/cisnet/): Migrated a Toronto IT certification training company off legacy PHP onto Next.js 16. Delivered 200+ programmatic SEO pages. 70+ individually-mapped redirects. 7 Schema.org JSON-LD types. Full lead pipeline (Facebook Lead Ads → HMAC webhook → Supabase → admin portal → Resend). Stripe Checkout. Custom admin portal for leads, enrollments, content, payments. Three months. Solo. Zero scope creep.
+- [Orbit Dental AI: patient acquisition](https://pravinemani.com/work/case-studies/orbit/): Marketing site, lead dashboard, and "Anna," a dual-channel AI voice + SMS agent (Vapi, Claude, Deepgram, ElevenLabs) that answers, qualifies, and books every new lead in seconds. In production since June 2026: 700+ leads in the pipeline across 7 clinics, 1,100+ SMS in a single week, 30-50 leads/day intake, CASL/CRTC/PHIPA compliance enforced in code.
+- [CISNET: IT certification training, site + SEO rebuild](https://pravinemani.com/work/case-studies/cisnet/): Migrated a Toronto IT training company off legacy PHP onto Next.js 16 with 200+ programmatic SEO pages, 70+ individually mapped redirects, and a custom admin portal. Measured in Google Search Console: monthly impressions 5.3x in four months (4,808 to 25,639), ranking pages 27 to 145, flagship CCNA page position 44.5 to 19.5 in one month with impressions up 30x, position 1 for "cloud computing classes near me."
+
+## Proof
+
+- [Proof Library](https://pravinemani.com/proof-library/): Real artifacts from the systems: a full campaign build (ad to SMS to voice agent to booking) and mapped lead pipelines with failure states and per-run costs.
+- [Speed-to-lead calculator](https://pravinemani.com/tools/speed-to-lead/): Free calculator estimating the monthly revenue cost of slow lead response.
 
 ## Stack
 
-- [Stack page](https://pravinemani.com/stack/): Daily-driver tools. Code: Claude Code, Vercel, TypeScript, Next.js 16, Tailwind. AI: Anthropic API, MCP, Claude 4.7. Data: Supabase, Vercel KV, Stripe, Resend. Content / growth: Beehiiv, Plausible, Whop.
-
-## Writing
-
-- [Writing](https://pravinemani.com/writing/): Essays on AI ops, MCP, agent design, code-first vs no-code, indie operator economics. Currently drafting: "CPR: A Shared Memory Layer for Claude Code and Codex."
+- [Stack page](https://pravinemani.com/stack/): Claude Code, Vercel, TypeScript, Next.js, Astro, Tailwind, Anthropic API, MCP, Supabase, Stripe, Resend, Plausible. Code-first: no n8n, Make, or Zapier as the execution layer.
 
 ## Open Source
 
-- [personalClaudeSkills](https://github.com/pravinemani5545/personalClaudeSkills): Public Claude Code skill library. Slash commands `/growth-sprint`, `/design-system`, `/artifact`. Plus EliaAlberti's `/compress`, `/preserve`, `/resume` bundle. Curl-installable into `~/.claude/skills/`.
-- [AIOpsForge](https://aiopsforge.dev): $9.99/month community for solo AI builders. Pre-launch, waitlist open. Site, Whop integration, 14-area workspace built. Launching with founding members soon.
+- [skills-and-mcp](https://github.com/pravinemani5545/skills-and-mcp): Claude Code agent skills plus MCP servers, including a multi-account Gmail organizer. Curl-installable.
 
 ## Contact
 
-- [Async Workflow Audit](https://pravinemani.com/workflow-audit/): Send a Loom or written brief of one workflow. Get a 1-page written audit in 48 hours. Free during the cold-start phase. Lowest-friction entry point. Surfaces the 3 highest-leverage automations, stack-specific recommendations, rough cost + ship-time. Best fit: SaaS founders, agency owners, ops leads inside Series A/B.
+- [Async Workflow Audit](https://pravinemani.com/workflow-audit/): Send one workflow, get a written audit back in 48 hours. Free.
 - [Contact](https://pravinemani.com/contact/): Free 30-minute scoping call. Written quote within 24 hours.
 - Email: pravinemaniva@gmail.com
 - LinkedIn: https://www.linkedin.com/in/pravinemani/

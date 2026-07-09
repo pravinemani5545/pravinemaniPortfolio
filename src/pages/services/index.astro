@@ -181,7 +181,7 @@ import Base from '../../layouts/Base.astro';
         <h3>Ongoing care for what I've already shipped.</h3>
       </div>
       <div class="right">
-        <div class="time" style="color: #a855f7;">MONTHLY · CAPPED HOURS</div>
+        <div class="time" style="color: #a855f7;">FROM $1,500/MO · CAPPED HOURS</div>
         <div class="slots">POST-ENGAGEMENT ONLY</div>
       </div>
     </div>
@@ -189,7 +189,7 @@ import Base from '../../layouts/Base.astro';
       <div class="col">
         <h4>WHAT IT IS</h4>
         <p>A monthly engagement for clients whose systems I've already shipped. The retainer is structured around specific deliverables, not general access. Every hour goes against monitoring, prompt and eval maintenance, on-call response, or minor enhancements.</p>
-        <p>Two tiers depending on system size. Both have a capped monthly hour budget that resets monthly and doesn't roll over. Cancellable any month with 30 days' notice.</p>
+        <p>Two tiers. <strong>Keep-it-running, $1,500/mo:</strong> monitoring, on-call fixes, eval maintenance, monthly report. <strong>Growth ops, $3,000/mo:</strong> everything in the first tier plus one scoped enhancement shipped each month and a quarterly optimization pass against your numbers. Both carry a capped hour budget that resets monthly and doesn't roll over. Cancellable any month with 30 days' notice.</p>
         <p><strong>Engagement rule:</strong> never sold cold. Only available after a Pilot Build, Sprint, or Custom build has shipped.</p>
       </div>
       <div class="col">
@@ -205,8 +205,16 @@ import Base from '../../layouts/Base.astro';
       </div>
     </div>
     <div class="tier-foot">
-      <span class="meta">QUOTE ON SCOPE · MONTHLY · POST-SHIP ONLY</span>
+      <span class="meta">FROM $1,500/MO · POST-SHIP ONLY</span>
       <a href="/contact/">→ ASK ABOUT RETAINER</a>
+    </div>
+  </div>
+
+  <div class="guarantee-strip reveal">
+    <div class="g-flag">THE GUARANTEE</div>
+    <div class="g-body">
+      <div class="g-h">Milestones are refundable. Scope is locked.</div>
+      <div class="g-sub">Every contract carries the same clause: miss an agreed milestone, and that milestone is refunded. The quote arrives in writing within 24 hours of the call, the price locks at signing, and every Sprint includes a 14-day post-launch fix window. You carry the upside; I carry the schedule risk.</div>
     </div>
   </div>
 </section>
@@ -216,10 +224,15 @@ import Base from '../../layouts/Base.astro';
   <div class="section-head reveal">
     <div class="label">who this works for</div>
     <h2>The shape of buyer this fits.</h2>
-    <p>Three concrete subtypes. If one describes you, the engagement fits.</p>
+    <p>Four concrete subtypes. If one describes you, the engagement fits.</p>
   </div>
 
   <div class="for-grid">
+    <div class="for-card reveal">
+      <div class="check">✓</div>
+      <h4>Clinics and local service businesses</h4>
+      <p>Dental practices, driving schools, home services. Leads arrive from ads and search, and the follow-up is manual. Orbit Dental is the reference case: an AI agent answering, qualifying, and booking 700+ leads.</p>
+    </div>
     <div class="for-card reveal">
       <div class="check">✓</div>
       <h4>Bootstrapped SaaS founders</h4>
@@ -414,8 +427,15 @@ import Base from '../../layouts/Base.astro';
 .grant-cta:hover { background: var(--green); color: var(--bg-primary); }
 @media (max-width: 720px) { .grant-inner { grid-template-columns: 1fr; gap: 10px; } .grant-cta { text-align: center; } }
 
+/* Guarantee strip */
+.guarantee-strip { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 20px 26px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--green); margin-top: 6px; }
+.guarantee-strip .g-flag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: var(--green); text-transform: uppercase; padding: 5px 10px; border: 1px solid var(--green); white-space: nowrap; }
+.guarantee-strip .g-h { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; margin-bottom: 4px; }
+.guarantee-strip .g-sub { font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: var(--text-secondary); line-height: 1.6; max-width: 90ch; }
+@media (max-width: 720px) { .guarantee-strip { grid-template-columns: 1fr; gap: 10px; } }
+
 /* Who this works for positive filter */
-.for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.for-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .for-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 2px solid var(--green); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
 .for-card .check { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--green); font-weight: 700; line-height: 1; }
 .for-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em; line-height: 1.2; }

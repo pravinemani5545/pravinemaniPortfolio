@@ -57,9 +57,9 @@ const authed = Astro.cookies.get('pv_gate')?.value === PASSWORD;
 
 {authed && (
   <section class="page-hero">
-    <div class="breadcrumb"><span class="gr">$</span> cat ./private/roadmap.md</div>
-    <h1>Private roadmap.<br><span class="accent">What's shipped, what's next.</span></h1>
-    <p class="lead">Internal notes, not linked publicly. This page sits in a public git repo, so treat it as semi-public: build roadmap and recommendations only. Anything sensitive lives in Obsidian.</p>
+    <div class="breadcrumb"><span class="gr">$</span> cat ./private/90-day-plan.md</div>
+    <h1>90-day agency plan.<br><span class="accent">Jul 10 · Oct 7, 2026.</span></h1>
+    <p class="lead">The execution plan for the next quarter, built from the agency research pass on 2026-07-09. This page sits in a public git repo, so it stays semi-public: no prospect names, no outreach scripts, no client financials. Those live in Obsidian.</p>
     <div class="cta-row">
       <a href="/private/?logout=1" class="cta-btn secondary">Lock again</a>
     </div>
@@ -69,41 +69,78 @@ const authed = Astro.cookies.get('pv_gate')?.value === PASSWORD;
 {authed && (
   <section class="section roadmap">
 
-    <h2>Shipped</h2>
+    <h2>North star</h2>
     <ul class="proof-list">
-      <li>Voice and tone pass across all 22 pages, measured technical authority.</li>
-      <li>Sprint pricing set to fixed price. Badges and support windows standardized to 14 days.</li>
-      <li>Proof Library launched: hub, Full Campaign, and Lead Pipelines live.</li>
+      <li><strong>Exit day 90 at a $12-20k/mo run rate:</strong> 2-3 active retainers plus 1-2 sprints in flight.</li>
+      <li><strong>Positioning:</strong> outcome-first, vertical-anchored. Lead-response and patient/lead acquisition for clinics, local service businesses, and training companies. AI is the delivery mechanism, never the headline. The research is unambiguous: niche agencies close 40% more proposals and charge 2-3x generalist rates, and outcome-metric framing beats tech framing in every 2025-2026 dataset.</li>
+      <li><strong>Proof engine:</strong> every delivered engagement produces a numbered case study within 7 days of results landing, and every case study justifies a price test on the next quote.</li>
     </ul>
 
-    <h2>Build next, in order</h2>
-    <h3>Text-only, can ship anytime</h3>
+    <h2>The offer stack (live on /services)</h2>
     <ul class="proof-list">
-      <li><strong>Prompt + Evals.</strong> Eval suites with failure modes, test cases, and scoring. Highest technical-trust, no assets needed.</li>
-      <li><strong>MCP Servers.</strong> Tool lists, example commands, responses, and the auth model.</li>
-      <li><strong>Email Sequences.</strong> Full sample sequences with subject lines and branching logic.</li>
-      <li><strong>Workflow Automation.</strong> Input, output, schedule, and the human approval step.</li>
-      <li><strong>SEO + GEO.</strong> Page templates, schema JSON-LD, and a sample redirect map.</li>
-    </ul>
-    <h3>Needs real assets from you</h3>
-    <ul class="proof-list">
-      <li><strong>Voice Agents.</strong> Record 2 to 3 call audio demos from Vapi. Highest value once audio exists.</li>
-      <li><strong>Ad Creatives.</strong> Export creative images per industry (dental, med spa, gym, real estate).</li>
-      <li><strong>Dashboards.</strong> Screenshots. Reuse the CISNET and Orbit shots already in /public/case-studies/.</li>
-      <li><strong>Landing Pages.</strong> Before and after screenshots of rebuilds.</li>
-      <li><strong>UGC Video.</strong> Final clips or storyboards.</li>
+      <li><strong>Free workflow audit</strong> (48h, async) and the free scoping call: top of funnel, unchanged.</li>
+      <li><strong>Pilot Build, $750</strong> credited to Sprint: the paid probe. Push this in outbound; it converts skeptics without a sales cycle.</li>
+      <li><strong>Named sprints $2,500-$4,500</strong> (GEO, MCP, pSEO, lead pipeline). Candidate to add once validated in calls: a packaged clinic lead-response build at $7,500 with an appointments-captured guarantee. Validate the guarantee math on 3 real conversations before publishing it.</li>
+      <li><strong>Ops Retainer, $1,500/mo keep-it-running or $3,000/mo growth ops.</strong> Never below $1,500: below that the effective hourly is under break-even (64% of agencies price retainers too low; don't join them). Voice-agent hosting margin makes these compound.</li>
+      <li><strong>Risk reversal everywhere:</strong> the milestone-refund clause is now public on /services. Say it on every call.</li>
     </ul>
 
-    <h2>Recommendations</h2>
+    <h2>Phase 0 · Days 1-14 (Jul 10-23) · Proof + warm network</h2>
     <ul class="proof-list">
-      <li>Cross-link: add a "See samples" link from each service and sprint page to the matching proof page.</li>
-      <li>Feature the Full Campaign on the homepage, one strong proof link near the hero.</li>
-      <li>Add per-page OG images for the proof pages. They use the default OG right now.</li>
-      <li>Add a simple industry or use-case filter on the hub once 6 or more pages are live.</li>
-      <li>If this page ever holds sensitive notes, upgrade it: load content from a Vercel env var so it stays out of git, or move it to Obsidian.</li>
+      <li>Case studies upgraded with verified GSC and production numbers (shipped 2026-07-09, this deploy).</li>
+      <li>Record 2-3 Anna call-audio demos and ship the Voice Agents proof page. Highest-credibility asset that exists and isn't public yet.</li>
+      <li>Produce the Orbit and CISNET case studies as 1-page PDFs and 60-90s videos (auto-video pipeline). Three formats per case study is the converting pattern.</li>
+      <li>Warm pass: every past client and contact gets a personal note naming the new focus plus one specific introduction ask. Referrals are the #1 agency channel (66-75% of new business). Target: 2-3 warm introductions before day 14.</li>
+      <li>Ask Kartik and Mani for full-name, full-title testimonials and Google-visible reviews. The anonymized quotes are the single biggest credibility leak on the site.</li>
+      <li>Set up the owned email list on Resend (RESEND_PRAVINEMANI_KEY exists, unused) with a simple monthly build-notes issue. Stop routing the only capture to AIOpsForge.</li>
     </ul>
 
-    <div class="proof-note" style="margin-top: 24px;"><strong>Keep out of this page:</strong> pricing strategy, ICP scoring, prospect lists, DM templates, outreach plans. Those live in Obsidian under Areas/Work/Projects/pravinemani-consulting/. This repo is public.</div>
+    <h2>Phase 1 · Days 15-45 (Jul 24-Aug 23) · Outbound engine</h2>
+    <ul class="proof-list">
+      <li>Build a 1,500-2,500 contact GTA list: dental and specialty clinics, driving schools, home services, training companies. Trigger-qualified only: running ads, hiring front-desk, weak Google Business Profile, slow or no reply to a test inquiry.</li>
+      <li><strong>10 personalized video audits per weekday.</strong> Five minutes each: their missed-call test, their lead-response time, one concrete fix. Benchmarks from the research: personalized video pulls 10-16% replies vs 3.4% for text; ~50/week yields roughly 2 booked calls/week.</li>
+      <li>Two-call close: 15-25 min discovery with the outcome question, then a one-page proposal with the milestone-refund guarantee and the Pilot as the low-friction yes.</li>
+      <li>Target by day 45: first 1-2 sprint closes from cold, plus whatever the warm pass produced.</li>
+      <li>Content cadence stays minimal but real: one build-note per week from actual client work (LinkedIn + the new list). No thought-leadership filler.</li>
+    </ul>
+
+    <h2>Phase 2 · Days 46-90 (Aug 24-Oct 7) · Partnerships + compounding</h2>
+    <ul class="proof-list">
+      <li>Pitch 10 Toronto marketing and dental-marketing agencies a white-label build arm: they keep the client, I ship the systems. Partner referrals are the most under-used acquisition channel in every agency survey.</li>
+      <li>Book 1-2 local speaking or workshop slots (dental study clubs, small-business meetups). Fastest-rising channel for high-value clients.</li>
+      <li>Referral engineering: the ask happens at the case-study moment, when results land, not at contract end. Two asks per delivered engagement.</li>
+      <li>Convert every delivered sprint to a retainer at close ("keep it running" is the natural next sentence after handoff).</li>
+      <li>Raise the sprint floor after each new case study. New clients pay the new rate first.</li>
+      <li>AdBoost attribution data matures this quarter: when the tracker shows booked-call attribution, that becomes case study #3 with dollar figures.</li>
+    </ul>
+
+    <h2>Weekly scorecard (fill every Friday)</h2>
+    <ul class="proof-list">
+      <li>Video audits sent / replies / calls booked / proposals out / closes.</li>
+      <li>Pipeline value in writing (proposals outstanding).</li>
+      <li>MRR: retainers signed and active.</li>
+      <li>Proof shipped: case-study assets, testimonials collected, referral asks made.</li>
+      <li>If audits-sent is under 30 for two straight weeks, the plan is failing at the only step that feeds everything else. Fix that before touching anything downstream.</li>
+    </ul>
+
+    <h2>Failure modes to refuse</h2>
+    <ul class="proof-list">
+      <li>Selling "AI" instead of a named outcome. The 2025 MIT/PwC number: 42% of AI pilots produced zero financial impact because they weren't tied to an outcome metric.</li>
+      <li>Retainers under $1,500/mo. Custom demos before a signed Pilot. Unpaid scope to keep things pleasant.</li>
+      <li>Platform-building before a vertical win. AIOpsForge and product ideas stay parked until the agency run-rate target is hit.</li>
+      <li>Tool sprawl: tooling per offer stays under ~$500/yr. The margin is the business.</li>
+      <li>New service lanes. The three lanes on the site are the ceiling for this quarter.</li>
+    </ul>
+
+    <h2>Site backlog (carry-over)</h2>
+    <ul class="proof-list">
+      <li>Voice Agents proof page (needs the call audio above), then Prompt+Evals and MCP Servers proof pages.</li>
+      <li>Per-page OG images; publish the first essay or cut /writing/ from the nav.</li>
+      <li>Live GitHub feed in the hero terminal (GITHUB_TOKEN build-time fetch is already supported, currently hardcoded).</li>
+      <li>Pull live GSC and Bing Webmaster exports for the CISNET study refresh (~Jul 20 GSC recheck is already scheduled).</li>
+    </ul>
+
+    <div class="proof-note" style="margin-top: 24px;"><strong>Keep out of this page:</strong> prospect names and lists, outreach scripts, client financials, ICP scoring. Those live in Obsidian under Areas/Work/Projects/pravinemani-consulting/. This repo is public.</div>
 
   </section>
 )}

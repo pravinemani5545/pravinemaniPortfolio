@@ -121,11 +121,11 @@ const jsonLd = {
       <div class="cs-shots">
         <figure class="cs-shot">
           <img src="/case-studies/orbit/admin-dashboard.png" alt="Orbit lead-ops dashboard: funnel stat cards across the six stages and the live leads table, showing the stage, whether each lead was handed off by call or text, reward, and clinic. Patient names and phones are blurred." width="1280" height="723" loading="lazy" decoding="async" />
-          <figcaption>The live dashboard. Funnel counts across the six stages up top, every lead in one table — stage, whether it was handed off by call or text, reward, and clinic. Patient names and phones are blurred.</figcaption>
+          <figcaption>The live dashboard. Funnel counts across the six stages up top, every lead in one table: stage, whether it was handed off by call or text, reward, and clinic. Patient names and phones are blurred.</figcaption>
         </figure>
         <figure class="cs-shot">
           <img src="/case-studies/orbit/lead-drawer.png" alt="Per-lead detail drawer: contact and handed-off-via fields, qualification, and the full call history with the Anna call transcript and a play-recording link. Patient name and phone blurred." width="820" height="736" loading="lazy" decoding="async" />
-          <figcaption>The per-lead drawer. Every lead's qualification, whether it handed off by call or text, and the full call history — the Anna transcript and the recording — read in one place. Name and phone blurred.</figcaption>
+          <figcaption>The per-lead drawer. Every lead's qualification, whether it handed off by call or text, and the full call history, the Anna transcript and the recording, read in one place. Name and phone blurred.</figcaption>
         </figure>
         <figure class="cs-shot">
           <img src="/case-studies/orbit/admin-flow.png" alt="Admin-only lifecycle view: the automatic capture-to-hand-off phase, then the manual clinic and Orbit phases, with the full/partial and reward rules." width="1425" height="1473" loading="lazy" decoding="async" />
@@ -169,13 +169,13 @@ const jsonLd = {
         <div class="call-body">
           <div class="turn anna" data-start="0"><span class="ts">0:00</span><div class="bubble"><span class="who">Anna</span>Hi Jordan, it's Anna, a virtual assistant calling from Orbit about the promotion you signed up for. Is now an okay time?</div></div>
           <div class="turn caller" data-start="7.5"><div class="bubble"><span class="who">Caller</span>Yeah, sure.</div><span class="ts">0:07</span></div>
-          <div class="turn anna" data-start="8.78"><span class="ts">0:08</span><div class="bubble"><span class="who">Anna</span>Great — first, do you have dental insurance?</div></div>
+          <div class="turn anna" data-start="8.78"><span class="ts">0:08</span><div class="bubble"><span class="who">Anna</span>Great. First, do you have dental insurance?</div></div>
           <div class="turn caller" data-start="11.55"><div class="bubble"><span class="who">Caller</span>Yeah, with Sun Life.</div><span class="ts">0:11</span></div>
           <div class="turn anna" data-start="13.61"><span class="ts">0:13</span><div class="bubble"><span class="who">Anna</span>Perfect, Sun Life. We've got a few rewards: an Apple Watch, AirPods, or a gift card. Which sounds best to you?</div></div>
           <div class="turn caller" data-start="20.56"><div class="bubble"><span class="who">Caller</span>The Apple Watch.</div><span class="ts">0:20</span></div>
           <div class="turn anna" data-start="22.12"><span class="ts">0:22</span><div class="bubble"><span class="who">Anna</span>Great choice. What city are you in, so I can find your closest clinic?</div></div>
           <div class="turn caller" data-start="26.18"><div class="bubble"><span class="who">Caller</span>Downtown Toronto.</div><span class="ts">0:26</span></div>
-          <div class="turn anna" data-start="27.88"><span class="ts">0:27</span><div class="bubble"><span class="who">Anna</span>Perfect — I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
+          <div class="turn anna" data-start="27.88"><span class="ts">0:27</span><div class="bubble"><span class="who">Anna</span>Perfect. I'll connect you to our partner clinic now to book your new-patient visit. One moment.</div></div>
         </div>
         <audio class="call-audio" preload="none" src="/case-studies/orbit/anna-call.mp3"></audio>
         <div class="call-foot">
@@ -183,7 +183,7 @@ const jsonLd = {
           <span class="foot-meta">Sun Life · Apple Watch · Toronto</span>
           <span class="tag xfer">→ live-transferred to clinic</span>
         </div>
-        <figcaption>Plays as you scroll to it (tap play if your browser holds the audio). Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer. Voices are ElevenLabs — Anna's is the exact voice the live agent uses; the call is scripted for the case study, synthetic, no real patient.</figcaption>
+        <figcaption>Plays as you scroll to it (tap play if your browser holds the audio). Anna's real flow: AI disclosure, insurance, reward, clinic, then a live transfer. Voices are ElevenLabs. Anna's is the exact voice the live agent uses; the call is scripted for the case study, synthetic, no real patient.</figcaption>
       </figure>
 
       <script>
@@ -223,7 +223,7 @@ const jsonLd = {
 
           // Play while the call is the thing on screen; stop + rewind once it's mostly
           // scrolled past (either direction). We measure how much of the preview overlaps
-          // the viewport RELATIVE TO THE SMALLER of element/viewport — so a card taller
+          // the viewport RELATIVE TO THE SMALLER of element/viewport, so a card taller
           // than the screen still reads as "mostly gone" when you scroll past it, instead
           // of a lingering sliver keeping the audio alive. Hysteresis: start at >=55%,
           // stop at <=25%. (Browsers block audio autoplay until the visitor interacts with
@@ -315,8 +315,19 @@ const jsonLd = {
       </div>
       <p style="margin-top: 20px;">Every lead can be followed from the ad click to the reward. Clinic routing is automatic. The calling window and STOP handling run in code, not on a checklist.</p>
 
+      <h2 style="margin-top: 44px;">Running in production.</h2>
+      <p>The system has been calling and texting real patients since June 2026, and the platform kept growing after the initial three systems: a patient portal with OTP login and insurance-card upload, a recall CRM for the front desk, and a digital consent-forms portal now run alongside Anna. Operating volume as of early July 2026:</p>
+      <div class="impact-grid">
+        <div class="impact-card"><div class="k">LEADS IN THE PIPELINE</div><div class="v">700+</div><div class="desc">Every one tracked from ad click through qualification to booking, with automatic clinic routing across 7 partner clinics.</div></div>
+        <div class="impact-card"><div class="k">SMS IN ONE WEEK</div><div class="v">1,100+</div><div class="desc">Two-way qualification threads handled by the AI, with staff stepping in only on flagged replies.</div></div>
+        <div class="impact-card"><div class="k">RESPONSE TIME</div><div class="v">SECONDS</div><div class="desc">New leads get a text immediately and a call from Anna inside the compliant calling window. No lead waits on a human.</div></div>
+        <div class="impact-card"><div class="k">REWARD COHORT</div><div class="v">120+</div><div class="desc">Patients through the completion-reward program, verified and fulfilled through the same pipeline.</div></div>
+        <div class="impact-card"><div class="k">DAILY INTAKE</div><div class="v">30–50</div><div class="desc">Leads per day at current campaign volume, up from 8 at launch. The dialer fills up to 9 concurrent calls.</div></div>
+        <div class="impact-card"><div class="k">COMPLIANCE</div><div class="v">BUILT-IN</div><div class="desc">CASL consent and STOP handling, CRTC calling windows, PHIPA-conscious data handling. Enforced in code.</div></div>
+      </div>
+
       <div class="confidential">
-        <strong>Note:</strong> Conversion, lead-volume, and revenue numbers are the client's to disclose and aren't shown here.
+        <strong>Note:</strong> Volumes above are operating metrics from the system I run. Conversion rates, booking-to-revenue, and financial results are the client's to disclose and aren't shown here.
       </div>
 
       <p style="margin-top: 24px;"><a href="https://orbit-two-self.vercel.app" style="color: var(--green); border-bottom: 1px dashed var(--green);">View the live site →</a> <span style="color: var(--text-dim);">·</span> <a href="https://orbit-two-self.vercel.app/blog" style="color: var(--green); border-bottom: 1px dashed var(--green);">View the blog →</a></p>
