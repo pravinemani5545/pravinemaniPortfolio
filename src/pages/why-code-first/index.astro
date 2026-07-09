@@ -31,10 +31,9 @@ const jsonLd = {
 
     <div class="compare">
       <div class="compare-col">
-        <div class="ctop"><span class="lab">CODE-FIRST</span><span class="num">$73 / yr</span></div>
+        <div class="ctop"><span class="lab">CODE-FIRST</span><span class="num">~$313 / yr</span></div>
         <ul>
-          <li>Vercel Hobby: $0/mo</li>
-          <li>Vercel cron + serverless: free under 100K invocations</li>
+          <li>Vercel Pro: $20/mo, cron + serverless included</li>
           <li>Supabase free tier: covers it</li>
           <li>Resend free tier: 3K emails/mo</li>
           <li>Anthropic API at ~$0.20/day: $73/year</li>
@@ -42,19 +41,18 @@ const jsonLd = {
         </ul>
       </div>
       <div class="compare-col compare-bad">
-        <div class="ctop"><span class="lab">NO-CODE STACK</span><span class="num">$720 / yr</span></div>
+        <div class="ctop"><span class="lab">NO-CODE STACK</span><span class="num">$240+ / yr</span></div>
         <ul>
           <li>n8n Cloud Starter: $20/mo</li>
-          <li>Make Core: $9/mo</li>
           <li>Per-action quotas hit at ~5K events/mo</li>
           <li>Premium tier needed at scale</li>
-          <li>Each new workflow = new subscription</li>
+          <li>Each new tool in the chain = a new subscription</li>
           <li>$0 of it is yours when you stop paying</li>
         </ul>
       </div>
     </div>
 
-    <p>The 10x cost gap is the obvious signal. The lock-in underneath it compounds over time, and that's the part worth examining.</p>
+    <p>At steady state the dollar gap is small. The difference is what you own when you stop paying, and the ceiling you hit when volume grows. That lock-in is the part worth examining.</p>
 
     <p><em>Workflow logic should live in your repo, not in someone else's UI.</em></p>
 
@@ -98,16 +96,14 @@ const jsonLd = {
     <ul class="stack-list">
       <li><strong>Code execution:</strong> Vercel serverless functions + Vercel cron</li>
       <li><strong>State:</strong> Supabase (Postgres) or Vercel KV (Redis-style)</li>
-      <li><strong>AI:</strong> Anthropic API (Claude 4.8) with prompt caching from day one</li>
+      <li><strong>AI:</strong> Anthropic API with prompt caching from day one</li>
       <li><strong>Email:</strong> Resend (transactional) + Beehiiv (broadcast)</li>
       <li><strong>Payments:</strong> Stripe Checkout + webhook handler</li>
       <li><strong>Observability:</strong> Vercel logs + Sentry + Plausible</li>
       <li><strong>Auth:</strong> Supabase Auth (or Clerk for a managed option)</li>
       <li><strong>Version control:</strong> GitHub + Vercel preview deploys</li>
     </ul>
-    <p>Total platform cost for a 3-workflow business runs <strong>$73 / year plus API tokens.</strong> Compare that to your current SaaS bill.</p>
-
-    <p><em>The platform that runs your business should be one you already own.</em></p>
+    <p>Total platform cost for a 3-workflow business runs <strong>about $25/mo plus API tokens</strong>, and every added workflow rides the same bill.</p>
 
   </div>
 

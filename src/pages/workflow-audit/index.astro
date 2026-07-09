@@ -18,7 +18,7 @@ const jsonLd = {
 <section class="page-hero">
   <div class="breadcrumb"><span class="gr">$</span> ./audit --async --free --48h</div>
   <h1>Send a workflow.<br><span class="accent">Get a written audit in 48 hours.</span></h1>
-  <p class="lead">For founders, agency owners, and ops leads. Send a Loom or a short brief of one workflow. You get a one-page written response inside 48 hours: the three highest-impact automations ranked, where to start, what to skip, and rough cost and timeline. No charge, no sales call.</p>
+  <p class="lead">For founders, agency owners, and ops leads. Send a Loom or a short brief of one workflow. You get a one-page written response inside 48 hours: the three highest-impact automations ranked, where to start, what to skip, and rough cost and timeline. Free, and the reply is written, not a call.</p>
 </section>
 
 <section class="section">
@@ -37,7 +37,7 @@ const jsonLd = {
     <div class="how-card">
       <div class="how-step">03.</div>
       <h3>You decide what's next</h3>
-      <p>If one of the three is worth shipping, the next step is a paid Audit or a Sprint. Or you take the written audit and build it yourself. Both work.</p>
+      <p>If one of the three is worth shipping, the next step is a $750 Pilot Build or a Sprint. Or you take the written audit and build it yourself. Both work.</p>
     </div>
   </div>
 
@@ -50,7 +50,7 @@ const jsonLd = {
     <div class="intake-head">
       <div class="label">async audit · 5 fields · ~5 minutes to send</div>
       <h2>Send your workflow.</h2>
-      <p>This form goes straight to my inbox. Your email is only used for the audit reply.</p>
+      <p>This form goes straight to my inbox.</p>
     </div>
 
     <form class="intake-form" action="/api/contact/" method="POST">
@@ -96,12 +96,17 @@ const jsonLd = {
   <div class="section-head reveal">
     <div class="title-block">
       <div class="label">qualifier · who this is for</div>
-      <h2>Best fit for these four buyer types.</h2>
-      <p>If you don't match one of these, the audit won't produce a recommendation worth shipping. Read before sending.</p>
+      <h2>Best fit for these buyer types.</h2>
+      <p>The audit works when there is a live workflow to look at.</p>
     </div>
   </div>
 
   <div class="fit-grid">
+    <div class="fit-card good">
+      <div class="lab">GOOD FIT</div>
+      <h4>Clinic or local service business</h4>
+      <p>Leads arrive from ads and search, and follow-up is manual. The audit maps where response time and hand-offs are losing bookings, the same shape as the Orbit build.</p>
+    </div>
     <div class="fit-card good">
       <div class="lab">GOOD FIT</div>
       <h4>SaaS founder, 1-15 people</h4>
@@ -124,28 +129,7 @@ const jsonLd = {
     </div>
   </div>
 
-  <div class="fit-grid" style="margin-top: 14px;">
-    <div class="fit-card bad">
-      <div class="lab">NOT A FIT</div>
-      <h4>Pre-revenue solo founder</h4>
-      <p>Before revenue, the audit points back to shipping the product before automating operations. See /services/ for the timing.</p>
-    </div>
-    <div class="fit-card bad">
-      <div class="lab">NOT A FIT</div>
-      <h4>50+ person organization with internal engineering</h4>
-      <p>A one-page outside audit can't cover an organization that size. Your engineering team is closer to the work and better placed to scope and own it.</p>
-    </div>
-    <div class="fit-card bad">
-      <div class="lab">NOT A FIT</div>
-      <h4>"Broken Zapier" repair work</h4>
-      <p>The audit recommends code-first rebuilds, not patches to no-code platforms. If you want to keep the workflow on Zapier, this isn't the right match.</p>
-    </div>
-    <div class="fit-card bad">
-      <div class="lab">NOT A FIT</div>
-      <h4>Marketing strategy audit</h4>
-      <p>This is an operations and workflow audit. It doesn't cover positioning, copywriting, brand strategy, or paid-ad review. Those are different specialists.</p>
-    </div>
-  </div>
+  <p class="reveal" style="margin-top: 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; color: var(--text-dim); max-width: 76ch;">Not a fit: pre-revenue ideas without a live workflow, 50+ person orgs with internal engineering, no-code repair work, and marketing-strategy reviews. Those need different help, and the reply will say so.</p>
 </section>
 
 <section class="section">

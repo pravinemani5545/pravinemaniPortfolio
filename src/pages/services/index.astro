@@ -20,7 +20,8 @@ import Base from '../../layouts/Base.astro';
   <div class="section-head reveal">
     <div class="label">engagement shapes</div>
     <h2>How the engagement shapes work.</h2>
-    <p>Each shape is productized: fixed scope, fixed deliverables, written quote before signing. <strong style="color: var(--text-primary);">Scoping Call</strong> is the entry (free, 30 min). <strong style="color: var(--text-primary);">Pilot Build</strong> when you want one working piece before committing to a full build. <strong style="color: var(--text-primary);">Sprint</strong> when the workflow fits in one sentence. <strong style="color: var(--text-primary);">Custom</strong> for anything multi-workflow. <strong style="color: var(--text-primary);">Ops Retainer</strong> for maintenance and tuning of systems already shipped. Every paid shape is quoted on scope before signing.</p>
+    <p>Each shape is productized: fixed scope, fixed deliverables, written quote before signing. <strong style="color: var(--text-primary);">Scoping Call</strong> is the entry (free, 30 min). <strong style="color: var(--text-primary);">Pilot Build</strong> when you want one working piece before committing to a full build. <strong style="color: var(--text-primary);">Sprint</strong> when the workflow fits in one sentence. <strong style="color: var(--text-primary);">Custom</strong> for anything multi-workflow. <strong style="color: var(--text-primary);">Ops Retainer</strong> for maintenance and tuning of systems already shipped.</p>
+    <p class="ladder-timeline"><span class="gr">$</span> day 0: scoping call → +24h: written quote → day 2-3: pilot live → wk 2-3: sprint ships → +14d: fix window</p>
   </div>
 
   <!-- 00 · SCOPING CALL -->
@@ -149,7 +150,7 @@ import Base from '../../layouts/Base.astro';
     <div class="tier-body">
       <div class="col">
         <h4>WHAT IT IS</h4>
-        <p>For builds that exceed the scope of a Sprint. The engagement opens with the free scoping call and a written spec plus quote within 24 hours. Milestone-paid, with progress updates throughout and a demo at each milestone.</p>
+        <p>For builds that exceed the scope of a Sprint. The engagement opens with the free scoping call; the written spec and quote follow, typically within a week. Milestone-paid, with progress updates throughout and a demo at each milestone.</p>
         <p><strong>Reference engagement:</strong> CISNET marketing site rebuild. Next.js 16 migration, 200+ programmatic SEO pages, Facebook Lead Ads pipeline, custom admin portal. Three months, solo, shipped Q4 2025.</p>
         <p>Custom is the right shape for any scope that doesn't fit cleanly into one of the productized engagements above.</p>
       </div>
@@ -157,7 +158,7 @@ import Base from '../../layouts/Base.astro';
         <h4>DELIVERABLES</h4>
         <ul>
           <li>30-min scoping call (free)</li>
-          <li>Written spec within 24 hrs</li>
+          <li>Written spec + quote within a week</li>
           <li>Milestone-based delivery</li>
           <li>Your stack OR my recommended stack</li>
           <li>Daily progress updates</li>
@@ -189,7 +190,7 @@ import Base from '../../layouts/Base.astro';
       <div class="col">
         <h4>WHAT IT IS</h4>
         <p>A monthly engagement for clients whose systems I've already shipped. The retainer is structured around specific deliverables, not general access. Every hour goes against monitoring, prompt and eval maintenance, on-call response, or minor enhancements.</p>
-        <p>Two tiers. <strong>Keep-it-running, $1,500/mo:</strong> monitoring, on-call fixes, eval maintenance, monthly report. <strong>Growth ops, $3,000/mo:</strong> everything in the first tier plus one scoped enhancement shipped each month and a quarterly optimization pass against your numbers. Both carry a capped hour budget that resets monthly and doesn't roll over. Cancellable any month with 30 days' notice.</p>
+        <p>Two tiers. <strong>Keep-it-running, $1,500/mo, capped at 6 hours:</strong> monitoring, on-call fixes, eval maintenance, monthly report. <strong>Growth ops, $3,000/mo, capped at 15 hours:</strong> everything in the first tier plus one scoped enhancement shipped each month and a quarterly optimization pass against your numbers. Hours reset monthly and don't roll over. Cancellable any month with 30 days' notice.</p>
         <p><strong>Engagement rule:</strong> never sold cold. Only available after a Pilot Build, Sprint, or Custom build has shipped.</p>
       </div>
       <div class="col">
@@ -210,11 +211,11 @@ import Base from '../../layouts/Base.astro';
     </div>
   </div>
 
-  <div class="guarantee-strip reveal">
+  <div class="guarantee-strip reveal" id="guarantee">
     <div class="g-flag">THE GUARANTEE</div>
     <div class="g-body">
       <div class="g-h">Milestones are refundable. Scope is locked.</div>
-      <div class="g-sub">Every contract carries the same clause: miss an agreed milestone, and that milestone is refunded. The quote arrives in writing within 24 hours of the call, the price locks at signing, and every Sprint includes a 14-day post-launch fix window. You carry the upside; I carry the schedule risk.</div>
+      <div class="g-sub">Custom builds are milestone-paid: miss an agreed milestone and that milestone is refunded. Sprints lock scope and price at signing and carry a 14-day post-launch fix window. Every quote is written before any money moves.</div>
     </div>
   </div>
 </section>
@@ -276,7 +277,7 @@ import Base from '../../layouts/Base.astro';
     <div class="build-card reveal">
       <div class="icon-row"><div class="icon">▸</div><span class="num">BUILD 02</span></div>
       <h4>Customer Onboarding Sequence</h4>
-      <p>A new signup hits a Whop, Stripe, or Lemon Squeezy webhook, Claude personalizes the welcome, the subscriber gets tagged, and a Day-0 to Day-30 sequence fires automatically. Wired on the AOF stack.</p>
+      <p>A new signup hits a Whop, Stripe, or Lemon Squeezy webhook, Claude personalizes the welcome, the subscriber gets tagged, and a Day-0 to Day-30 sequence fires automatically. Wired on Vercel, Supabase, and Resend.</p>
       <div class="meta"><span>~$0.012/signup</span><span class="ev">SPRINT-READY</span></div>
     </div>
 
@@ -332,7 +333,7 @@ import Base from '../../layouts/Base.astro';
     <div class="build-card reveal">
       <div class="icon-row"><div class="icon">⚙</div><span class="num">BUILD 10</span></div>
       <h4>MCP Server (Custom)</h4>
-      <p>A custom Model Context Protocol server that connects Claude to your internal tools, data, or APIs as first-class actions. Past examples: a Notion MCP, a Linear MCP, a CRM MCP.</p>
+      <p>A custom Model Context Protocol server that connects Claude to your internal tools, data, or APIs as first-class actions. Public example: a multi-account Gmail organizer MCP, open source in skills-and-mcp.</p>
       <div class="meta"><span>2–4 DAYS</span><span class="ev">CUSTOM</span></div>
     </div>
 
@@ -355,14 +356,14 @@ import Base from '../../layouts/Base.astro';
     <p>If yours isn't here, ask on the call.</p>
   </div>
   <div class="faq-block">
-    <details class="faq-item"><summary>How does pricing work?</summary><p>Every paid engagement is quoted on scope after the free 30-minute scoping call. <span class="acc">The written quote lands inside 24 hours</span>: deliverables, milestones, timeline, total price. Once you accept it and sign, the price is locked; productized scope keeps it from moving. The Pilot Build is a flat $750, credited toward a Sprint if you proceed. Sprints are paid 50% on signing and 50% at delivery. Custom builds are milestone-paid against a staged schedule. Ops Retainer is monthly, cancellable with 30 days' notice. No hourly billing, no surprise invoices.</p></details>
+    <details class="faq-item"><summary>How does pricing work?</summary><p>Every paid engagement is quoted on scope after the free 30-minute scoping call. <span class="acc">For Pilots and Sprints the written quote lands inside 24 hours</span>; Custom builds get a written spec and quote within a week. Once you accept and sign, the price is locked. The Pilot Build is a flat $750, credited toward a Sprint if you proceed. Sprints are paid 50% on signing and 50% at delivery. Custom builds are milestone-paid against a staged schedule. Ops Retainer is monthly, cancellable with 30 days' notice. No hourly billing.</p></details>
     <details class="faq-item"><summary>What stack do you build on?</summary><p>My default stack is <span class="acc">Claude Code for development, Vercel for hosting + serverless + cron, Anthropic API for the AI layer, and Supabase for Postgres + auth + RLS.</span> Around that: TypeScript, Next.js, Tailwind v4, Resend for transactional email, Stripe for payments, Plausible for analytics. I'll work in your stack if it's modern. Next.js, Astro, Django, Rails, Laravel, FastAPI, Postgres are all in scope. I <strong>won't</strong> build on n8n, Make, or Zapier as the primary execution layer: they're fragile under load, expensive past 5K events/mo, and the visual graph becomes unreadable to anyone who joins the team after I leave.</p></details>
     <details class="faq-item"><summary>Who owns the code at the end?</summary><p><span class="acc">You. Outright.</span> Every engagement is work-for-hire under a written agreement. At the close you receive the full source code, the deployment access, every environment variable, every account credential, and the right to modify, extend, or sell the work without restriction. I retain no IP, no licensing rights, no royalty claims. If you stop working with me tomorrow, the system keeps running on infrastructure that's already in your name.</p></details>
-    <details class="faq-item"><summary>Why fixed price instead of hourly?</summary><p>Hourly billing pays the consultant to take longer. The consultant earns more by taking longer. The client earns peace of mind only by watching the clock. Both sides end up optimizing for the wrong thing. Fixed-price flips it: I'm incentivized to ship efficiently because overrun eats my margin, and you're incentivized to give clear feedback because every approved milestone gets you closer to the deliverable. A working production system is what we both want, and fixed-price is the structure that keeps us both focused on shipping it.</p></details>
+    <details class="faq-item"><summary>Why fixed price instead of hourly?</summary><p>Hourly billing pays the consultant to take longer. The client earns peace of mind only by watching the clock. Both sides end up optimizing for the wrong thing. Fixed-price flips it: I'm incentivized to ship efficiently because overrun eats my margin, and you're incentivized to give clear feedback because every approved milestone gets you closer to the deliverable. A working production system is what we both want, and fixed-price is the structure that keeps us both focused on shipping it.</p></details>
     <details class="faq-item"><summary>What if I'm in a different timezone?</summary><p>I'm based in Toronto on Eastern Time. Most communication is async by default: a shared Slack channel or email thread plus a recorded Loom walkthrough at each milestone. That keeps timezone gaps from blocking progress. Live calls happen at kickoff, milestone demos, and the closing retro. I'll book those in your timezone if it falls between 9am and 9pm Toronto time. If we're more than 8 hours apart, the engagement runs entirely in writing plus Loom updates, which most clients prefer anyway.</p></details>
-    <details class="faq-item"><summary>What if the scope changes mid-project?</summary><p>Sprints are productized fixed-scope builds, the scope is locked at the spec stage and the engagement ends at the agreed deliverable. If you realize you need more, it becomes a separate Sprint quoted at the close of the first. Custom builds are more flexible: anything outside the written spec gets a new written quote with a new timeline and price, surfaced as a change-order before any work happens. I won't silently absorb extra scope to keep the relationship pleasant, that ends in burnout for me and a quietly delayed deliverable for you.</p></details>
+    <details class="faq-item"><summary>What if the scope changes mid-project?</summary><p>Sprints are productized fixed-scope builds, the scope is locked at the spec stage and the engagement ends at the agreed deliverable. If you realize you need more, it becomes a separate Sprint quoted at the close of the first. Custom builds are more flexible: anything outside the written spec gets a new written quote with a new timeline and price, surfaced as a change-order before any work happens, never absorbed silently.</p></details>
     <details class="faq-item"><summary>Can you start next week?</summary><p>Sprints start within 5-7 days of signing, because the shape is productized and scoping is fast. Custom builds depend on current capacity: 2-3 weeks out so I can write a real spec first. A Pilot Build starts within a few days of signing, since it's a single scoped piece. The fastest path to a real answer on timing is the free 30-minute scoping call. I'll quote both price and earliest start date in the written quote inside 24 hours.</p></details>
-    <details class="faq-item"><summary>What if I'm not sure I need an AI engagement at all?</summary><p>Book the call anyway. The free 30 minutes is structured around figuring out what's actually broken, not selling you on a specific shape. If AI isn't the right fix, if the real problem is positioning, sales process, hiring, or your existing tool is already fine, I'll say so on the call and recommend who or what is a better next step. If it isn't the right fix, I'll say so and point you to who or what is. That's the call working as intended.</p></details>
+    <details class="faq-item"><summary>What if I'm not sure I need an AI engagement at all?</summary><p>Book the call anyway. The free 30 minutes is structured around figuring out what's actually broken, not selling you on a specific shape. If AI isn't the right fix, if the real problem is positioning, sales process, hiring, or your existing tool is already fine, I'll say so on the call and recommend who or what is a better next step. That's the call working as intended.</p></details>
   </div>
 </section>
 
@@ -426,6 +427,10 @@ import Base from '../../layouts/Base.astro';
 .grant-cta { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--green); text-transform: uppercase; padding: 8px 12px; border: 1px solid var(--green); white-space: nowrap; transition: all var(--dur-micro, 150ms) var(--ease); }
 .grant-cta:hover { background: var(--green); color: var(--bg-primary); }
 @media (max-width: 720px) { .grant-inner { grid-template-columns: 1fr; gap: 10px; } .grant-cta { text-align: center; } }
+
+/* Ladder timeline */
+.ladder-timeline { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; letter-spacing: 0.03em; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border); padding: 12px 16px; margin-top: 14px; overflow-x: auto; white-space: nowrap; }
+.ladder-timeline .gr { color: var(--green); }
 
 /* Guarantee strip */
 .guarantee-strip { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 20px 26px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--green); margin-top: 6px; }
