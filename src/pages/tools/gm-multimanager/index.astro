@@ -1,0 +1,41 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base
+  title="gm-multiManager · Pravine Mani"
+  description="A personal tool that gives Claude Code access to Gmail, Drive, Docs, Sheets, Slides and Calendar across the Google accounts I own. Runs locally on my Mac."
+  noindex={true}
+>
+
+<section class="page-hero">
+  <div class="breadcrumb"><span class="gr">$</span> ./gm-multimanager --about</div>
+  <h1>gm-multiManager.<br><span class="accent">One assistant, several Google accounts.</span></h1>
+  <p class="lead">A personal tool I built and run on my own Mac. It gives Claude Code access to Gmail, Drive, Docs, Sheets, Slides and Calendar across the Google accounts I own, so one assistant can search, read and organize all of them.</p>
+</section>
+
+<section class="section">
+  <div class="legal">
+    <h2>What it does</h2>
+    <ul class="proof-list">
+      <li><strong>Gmail:</strong> search, read, label, archive and filter mail. It has no permanent-delete tool.</li>
+      <li><strong>Drive, Docs, Sheets, Slides:</strong> search, read, create and edit files. Files can be moved to Drive's trash, never permanently deleted.</li>
+      <li><strong>Calendar:</strong> list, create, update and delete events. Guests are emailed only when I ask for it.</li>
+    </ul>
+
+    <h2>How it works</h2>
+    <ul class="proof-list">
+      <li>Runs locally as an MCP server on my Mac. Nothing is hosted and there's no backend.</li>
+      <li>Google OAuth refresh tokens are stored in the macOS login Keychain.</li>
+      <li>It acts only when I give Claude an instruction in my own session.</li>
+      <li>The source is public: <a href="https://github.com/pravinemani5545/skills-and-mcp/tree/main/mcp/gmail-organizer-mcp">github.com/pravinemani5545/skills-and-mcp</a>.</li>
+    </ul>
+
+    <h2>Who it's for</h2>
+    <p>Personal use only. It isn't offered as a service, and the only Google accounts connected to it are mine.</p>
+
+    <p class="meta"><a href="/tools/gm-multimanager/privacy/">Privacy policy</a> · <a href="/tools/gm-multimanager/terms/">Terms of service</a></p>
+  </div>
+</section>
+
+</Base>

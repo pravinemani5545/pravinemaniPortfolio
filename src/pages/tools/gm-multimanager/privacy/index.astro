@@ -1,0 +1,59 @@
+---
+import Base from '../../../../layouts/Base.astro';
+---
+
+<Base
+  title="gm-multiManager Privacy Policy · Pravine Mani"
+  description="Privacy policy for gm-multiManager, a personal tool that connects Claude Code to the Google accounts I own."
+  noindex={true}
+>
+
+<section class="page-hero">
+  <div class="breadcrumb"><span class="gr">$</span> cat ./gm-multimanager/privacy.md</div>
+  <h1>gm-multiManager<br><span class="accent">privacy policy.</span></h1>
+  <p class="lead">gm-multiManager is a personal tool that connects Claude Code to Google accounts I own. This page explains what it accesses, where that data goes, and how to remove access.</p>
+</section>
+
+<section class="section">
+  <div class="legal">
+    <p class="meta">Effective October 30, 2026</p>
+
+    <h2>Who runs it</h2>
+    <p>Pravine Mani, Toronto. The tool runs on my own Mac and is used only with Google accounts I own. It isn't offered to anyone else.</p>
+
+    <h2>What it accesses</h2>
+    <p>With the permissions granted at sign-in, it can access these Google services in each connected account:</p>
+    <ul class="proof-list">
+      <li><strong>Gmail:</strong> messages, labels and filters.</li>
+      <li><strong>Google Drive:</strong> files and folders, including Google Docs, Sheets and Slides.</li>
+      <li><strong>Google Calendar:</strong> calendars and events.</li>
+    </ul>
+    <p>It reads or changes this data only when I instruct Claude to, in my own session.</p>
+
+    <h2>How the data is used</h2>
+    <p>Only to carry out the request I make: searching, reading, organizing or editing my own mail, files and events. The data isn't sold, isn't used for advertising, and isn't used to build profiles.</p>
+
+    <h2>Where the data goes</h2>
+    <ul class="proof-list">
+      <li><strong>Google:</strong> requests go to Google's APIs to read or change the data.</li>
+      <li><strong>Anthropic:</strong> content I ask Claude about is sent to Claude as part of that conversation, under Anthropic's own terms and privacy policy.</li>
+      <li>No other third party receives it.</li>
+    </ul>
+
+    <h2>Storage</h2>
+    <p>The OAuth client credentials and each account's refresh token are stored in the macOS login Keychain on my Mac. The tool keeps no database and no server, and doesn't save copies of mail, files or events.</p>
+
+    <h2>Removing access</h2>
+    <p>An account's token is deleted from the Keychain with <code>gmail-accounts remove</code>. Access can also be revoked at any time from <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, which stops the tool from reaching that account.</p>
+
+    <h2>Changes</h2>
+    <p>Updates are posted on this page with a new effective date.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:pravinemaniva@gmail.com">pravinemaniva@gmail.com</a>.</p>
+
+    <p class="meta"><a href="/tools/gm-multimanager/">About gm-multiManager</a> · <a href="/tools/gm-multimanager/terms/">Terms of service</a></p>
+  </div>
+</section>
+
+</Base>
